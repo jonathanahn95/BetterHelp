@@ -18,25 +18,27 @@ const logoutCurrentUser = () => {
   };
 };
 
-export const receiveErrors = errors => ({
-  type: RECEIVE_SESSION_ERRORS,
-  errors
-});
+export const receiveErrors = errors => {
+  return {
+    type: RECEIVE_SESSION_ERRORS,
+    errors
+  };
+};
 
 
 export const signup = user => dispatch => (
   SessionAPIUtil.signup(user).then(user => (
     dispatch(receiveCurrentUser(user))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
   ))
 );
 
 export const login = user => dispatch => (
   SessionAPIUtil.login(user).then(user => (
     dispatch(receiveCurrentUser(user))
-  ), err => (
-    dispatch(receiveErrors(err.responseJSON))
+  ), errors => (
+    dispatch(receiveErrors(errors.responseJSON))
   ))
 );
 
