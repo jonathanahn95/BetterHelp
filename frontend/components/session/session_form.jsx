@@ -49,11 +49,11 @@ class SessionForm extends React.Component {
         {this.props.link}
         <label>
 
-          <input placeholder="Email" onChange={this.update('username')} type="text" value={this.props.username}></input>
+          <input placeholder="Email" onChange={this.update('email')} type="text" value={this.state.email}></input>
         </label>
         <label>
 
-          <input placeholder="Password" onChange={this.update('password')} type="password" value = {this.props.password}></input>
+          <input placeholder="Password" onChange={this.update('password')} type="password" value = {this.state.password}></input>
         </label>
 
         <input type="submit" value={this.props.formType}></input>
