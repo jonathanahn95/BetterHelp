@@ -15,25 +15,41 @@ class Splash extends React.Component {
   render() {
     if (this.props.currentUser) {
       return (
-        <div className="header">
-          <h3 className="name">BetterHelp</h3>
-          <button onClick={this.handleClick}>Log Out</button>
+        <div className="container">
+          <div className="header">
+            <div className='header-nav'>
+              <button className="logout" onClick={this.handleClick}>Log Out</button>
+            </div>
+          </div>
+          <div className="brand-name">
+            BetterHelp
+            <img className="img-logo" src="https://www.logolynx.com/images/logolynx/fc/fc2799793124eaf88bc00b8339adbac7.jpeg"></img>
+          </div>
         </div>
       );
     } else {
       return (
         <div >
-          <header className="header">
-            <h3 className="name">
+          <div className='container'>
+            <div className="header">
+              <div className="header-nav">
+                <p>logo</p>
+                <ul className="header-list">
+                  <Link className="log-in" to='/login'>Log In</Link>
+                  <Link className="sign-up" to='/signup'>Sign Up</Link>
+                </ul>
+              </div>
+            </div>
+            <div className="brand-name">
               BetterHelp
-            </h3>
-          </header>
-          <Link className="sign-up" to='/signup'>Sign Up</Link>
-          <Link className="log-in" to='/login'>Log In</Link>
+              <img className="img-logo" src="https://www.logolynx.com/images/logolynx/fc/fc2799793124eaf88bc00b8339adbac7.jpeg"></img>
+            </div>
+          </div>
         </div>
       );
     }
   }
 }
+
 
 export default Splash;

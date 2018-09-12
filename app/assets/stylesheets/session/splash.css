@@ -2,39 +2,76 @@
   border: 1px solid black
 } */
 
-.header {
-  /* border: 1px solid black; */
-  height: 600px;
-  /* position: relative; */
-}
-
-
-.name{
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  font-size: 40px;
-  font-weight: bold;
-  padding-top: 150px;
+.container {
+  min-height: 600px;
   background-image: url(https://s3-media1.fl.yelpcdn.com/bphoto/KJIsKeSdwKDyxAATlviI3A/o.jpg);
   background-size: cover;
-  height: 75%;
-  -webkit-text-fill-color: white;
-   -webkit-text-stroke-color: black;
-   -webkit-text-stroke-width: 2.00px;
+  /* display: flex; */
+  position: relative;
+  /* align-items: center; */
 }
 
-.sign-up{
+.header {
+  /* background-color: yellow; */
+  /* display: block; */
+  /* display: flex; */
   position: absolute;
-  top: 30px;
-  right: 200px;
+  left: 0px;
+  /* height: 100px; */
+  right: 0px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 0 auto; */
+  /* background-color: red; */
+}
+
+
+.header-list {
+  /* background-color: blue; */
+  display: flex;
+  /* margin-top: 15px;
+  margin-right: 180px; */
+  justify-content: space-around;
+}
+
+.header-list a {
+  margin-right: 50px;
+  margin-top: 20px;
+  width: 57px;
   color: white;
-  padding: 8px 23px ;
-  border: 2px solid white;
-  border-radius: 5px;
   text-decoration: none;
   font-family: Helvetica;
-  font-size: 16px;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.brand-name{
+  /* margin-top: 60px; */
+  font-size: 50px;
+  color: black;
+  text-shadow: 0 0 5px white;
+  font-family: Helvetica;
+
+  display: flex;
+  /* align-items: center; */
+  /* margin: 0 auto; */
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.sign-up {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 25px;
 }
 
 .sign-up:hover {
@@ -42,19 +79,21 @@
   color: gray;
 }
 
-.log-in{
-  position: absolute;
-  top: 34px;
-  right: 335px;
-  color: white;
-  /* border-radius: 5px; */
-  text-decoration: none;
-  font-family: Helvetica;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 7px 14px;
-}
-
 .log-in:hover {
   border-bottom: 2px solid white;
+}
+
+.logout{
+  color: black;
+  display: flex;
+  height: 15px;
+  width: 15px;
+  margin-right: 20px;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.img-logo {
+  height: 50px;
+  width: 50px;
 }

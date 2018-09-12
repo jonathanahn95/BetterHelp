@@ -1,0 +1,129 @@
+.login-header {
+  width: 100%;
+  height: 65px;
+  border: 1px solid red;
+  background-color: red;
+}
+
+.login-head {
+  display: flex;
+  justify-content: center;
+  margin-top:  20px;
+  font-family: Helvetica;
+  font-size: 28px;
+  font-weight: bold;
+  -webkit-text-fill-color: white;
+   -webkit-text-stroke-color: black;
+   -webkit-text-stroke-width: 2.00px;
+}
+
+.formtype-header {
+  color: red;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: bold;
+
+
+}
+
+.breakpoint {
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding-top: 40px;
+
+}
+
+
+.formtype-form {
+  display: block;
+  margin-top: 150px;
+  margin-left: 300px;
+  height: 300px;
+  width: 300px;
+}
+
+.sign-up-link {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+
+}
+
+.bottom-sign-up-link {
+  display: flex;
+  justify-content: left;
+  margin-top: 15px;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.email {
+  width: 95%;
+  padding: 6px;
+  margin-top: 20px;
+  margin-bottom:  8px;
+  font-size: 14px;
+  border: 1px solid gray;
+
+  border-radius: 3px ;
+}
+
+.password {
+  width: 95%;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid gray;
+
+  border-radius: 3px ;
+
+}
+
+.submit {
+  margin-top: 45px;
+  width: 100%;
+  background-color: red;
+  height: 45px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: 1px solid black;
+  box-shadow: 5px black;
+
+  border-radius:  3px;
+}
+
+
+.login-submit {
+  margin-top: 45px;
+  width: 100%;
+  border-color: #8d0005;
+  background-color: #d90007;
+
+  height: 45px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  border: 1px solid black;
+  box-shadow: 5px black;
+
+  border-radius:  3px;
+}
+
+.login-submit:hover{
+  background-color: #ed0008;
+  background: linear-gradient(#ed0008, #dd1600);
+  cursor: pointer;
+}
+
+.bottom-sign-up-link {
+  text-align: right;
+  color: #999;
+}
