@@ -44,7 +44,7 @@ class SessionForm extends React.Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <h1>{header === 'Signup' ? 'Sign Up for BetterHelp' : 'Login To BetterHelp'}</h1>
+        <h1 className="l">{header === 'Signup' ? 'Sign Up for BetterHelp' : 'Login To BetterHelp'}</h1>
         {this.renderErrors()}
         {this.props.link}
         <label>

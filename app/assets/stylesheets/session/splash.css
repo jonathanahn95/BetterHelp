@@ -1,0 +1,60 @@
+/* .header {
+  border: 1px solid black
+} */
+
+.header {
+  /* border: 1px solid black; */
+  height: 600px;
+  /* position: relative; */
+}
+
+
+.name{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 150px;
+  background-image: url(https://s3-media1.fl.yelpcdn.com/bphoto/KJIsKeSdwKDyxAATlviI3A/o.jpg);
+  background-size: cover;
+  height: 75%;
+  -webkit-text-fill-color: white;
+   -webkit-text-stroke-color: black;
+   -webkit-text-stroke-width: 2.00px;
+}
+
+.sign-up{
+  position: absolute;
+  top: 30px;
+  right: 200px;
+  color: white;
+  padding: 8px 23px ;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 16px;
+}
+
+.sign-up:hover {
+  background-color: white;
+  color: gray;
+}
+
+.log-in{
+  position: absolute;
+  top: 34px;
+  right: 335px;
+  color: white;
+  /* border-radius: 5px; */
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 7px 14px;
+}
+
+.log-in:hover {
+  border-bottom: 2px solid white;
+}

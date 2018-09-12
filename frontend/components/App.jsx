@@ -7,9 +7,7 @@ import { Route } from 'react-router-dom';
 
 const App = () => (
   <div>
-    <header>
-      BetterHelp
-    </header>
+
     <Route exact path="/" component={SplashContainer}/>
 
     <AuthRoute exact path="/login" component={loginFormContainer}/>

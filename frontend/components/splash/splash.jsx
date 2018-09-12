@@ -1,32 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-
-const Splash = ({ currentUser, logout }) => {
-
-  const sessionLinks = () => {
-    // debugger
-    return  (
-      <nav className="login-signup">
-        <Link to="/login">Login</Link>
-        &nbsp;&nbsp;
-        <Link to="/signup">Sign up!</Link>
-      </nav>
-    );
-  }
-  const personalGreeting = () =>  {
-    // debugger
-    return (
-      <hgroup className="header-group">
-        <h2 className="header-name">Hi, {currentUser.username}!</h2>
-        <button className="header-button" onClick={logout}>Log Out</button>
-      </hgroup>
-    );
+class Splash extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  return currentUser ? personalGreeting() : sessionLinks();
-};
+  handleClick(e) {
+    e.preventDefault();
+    this.props.logout();
+  }
 
+  render() {
+    if (this.props.currentUser) {
+      return (
+        <div className="header">
+          <h3 className="name">BetterHelp</h3>
+          <button onClick={this.handleClick}>Log Out</button>
+        </div>
+      );
+    } else {
+      return (
+        <div >
+          <header className="header">
+            <h3 className="name">
+              BetterHelp
+            </h3>
+          </header>
+          <Link className="sign-up" to='/signup'>Sign Up</Link>
+          <Link className="log-in" to='/login'>Log In</Link>
+        </div>
+      );
+    }
+  }
+}
 
 export default Splash;
