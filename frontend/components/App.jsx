@@ -12,6 +12,21 @@ const App = () => (
 
     <AuthRoute exact path="/login" component={LoginFormContainer}/>
     <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
+
+    <footer className="footer">
+        <ul className="about-list">
+          About
+          <li>
+            <a href="https://github.com/jonathanahn95/BetterHelp/wiki">BetterHelp Wiki</a>
+          </li>
+        </ul>
+        <img className="footerImg" src={window.footerCityscape}></img>
+        <ul className="discover-list">
+          Discover
+          <a href="https://github.com/jonathanahn95">Learn about me</a>
+        </ul>
+    </footer>
+
   </div>
 )
 

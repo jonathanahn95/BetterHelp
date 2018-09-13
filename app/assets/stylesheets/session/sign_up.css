@@ -71,7 +71,7 @@
 .submit {
   margin-top: 15px;
   width: 100%;
-  background-color: red;
+  background-color: #d5312d;
   height: 45px;
   color: white;
   font-size: 17px;
@@ -84,10 +84,62 @@
 
 .submit:hover {
   cursor: pointer;
+  background-color: red;
 }
 
 .image {
   display: block;
   margin-top: 145px;
   margin-left: 750px;
+}
+
+.signup-birthday {
+  font-size: 15px;
+  font-family: Helvetica;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.optional {
+  padding-left: 6px;
+  font-weight: normal;
+}
+
+.birthday {
+  display: flex;
+  justify-content: space-between;
+  /* padding-right: 4px */
+}
+
+.birthday select {
+  border: 1px solid #999;
+  font-size: 14px;
+  background-color: white;
+  color: gray;
+  /* padding-right: 4px; */
+  height: 30px;
+  padding: 7px;
+  /* width: 20px; */
+
+  /* padding: 15px; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  align-items: space-around;
+  width: 90px
+}
+
+.guest-demo {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #3b5998;
+  height: 40px;
+  color: white;
+  font-size: 15px;
+  margin-bottom: 15px;
+  /* padding-top: 10px; */
+  font-weight: bold;
+  border: 1px solid black;
+  box-shadow: 5px black;
+
+  border-radius:  3px;
 }

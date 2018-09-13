@@ -1,7 +1,12 @@
 class Api::UsersController < ApplicationController
 
   def create
+    # debugger
     @user = User.new(user_params)
+    new_bday = User.convert_to_date(user_params["birthday"])
+    @user.birthday = new_bday
+    
+
 
     if @user.save
       login(@user)
@@ -18,8 +23,7 @@ class Api::UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:password, :fname, :lname, :email, :zipcode)
+    params.require(:user).permit(:password, :fname, :lname, :email, :zipcode, birthday: [:month, :day, :year])
   end
-
 
 end

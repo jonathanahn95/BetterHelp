@@ -11,11 +11,13 @@ class Splash extends React.Component {
     e.preventDefault();
     this.props.logout();
   }
+  // <img className="container-img" src={window.splashBackground} />
 
   render() {
     if (this.props.currentUser) {
       return (
         <div className="container">
+
           <div className="header">
             <div className='header-nav'>
               <button className="logout" onClick={this.handleClick}>Log Out</button>
@@ -23,14 +25,16 @@ class Splash extends React.Component {
           </div>
           <div className="brand-name">
             BetterHelp
-            <img className="img-logo" src={window.handsUrl}></img>
+            <img className="img-logo" src={window.handsUrl} />
           </div>
+
         </div>
       );
     } else {
       return (
         <div >
           <div className='container'>
+
             <div className="header">
               <div className="header-nav">
                 <ul className="header-review">
@@ -47,19 +51,7 @@ class Splash extends React.Component {
               <img className="img-logo" src={window.handsUrl}></img>
             </div>
           </div>
-          <footer className="footer">
-              <ul className="about-list">
-                About
-                <li>
-                  <a href="https://github.com/jonathanahn95">BetterHelp Wiki</a>
-                </li>
-              </ul>
-              <img className="footerImg" src={window.footerCityscape}></img>
-              <ul className="discover-list">
-                Discover
-                <a href="https://github.com/jonathanahn95">Learn about me</a>
-              </ul>
-          </footer>
+
         </div>
       );
     }

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,7 +10,10 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
+
   <script type="text/javascript">
+
+    window.splashBackground = "<%= image_url(generate_random_pic) %>"
     window.handsUrl = "<%= image_url('logo.jpg') %>";
     window.formType = "<%= image_url('formtype.jpg') %>";
     window.footerCityscape =" <%= image_url('footer_cityscape.jpg')  %>"

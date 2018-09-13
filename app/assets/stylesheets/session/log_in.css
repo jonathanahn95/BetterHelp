@@ -45,10 +45,11 @@
 
 .formtype-form {
   display: block;
-  margin-top: 150px;
+  margin-top: 120px;
   margin-left: 300px;
-  height: 300px;
+  margin-bottom: 150px;
   width: 300px;
+
 }
 
 .sign-up-link {

@@ -10,11 +10,18 @@ class LogInForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.guestSignin = this.guestSignin.bind(this);
+
+  }
+
+  componentWillMount() {
+    this.props.clearErrors();
   }
 
   handleSubmit(e){
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    // this.props.clearErrors();
     this.props.processForm(user);
   }
 
@@ -26,20 +33,37 @@ class LogInForm extends React.Component {
     };
   }
 
+  guestSignin(e) {
+    e.preventDefault();
+      const user = {
+        email: "guest@demo.org",
+        password: "123123",
+        fname: "Guest",
+        lname: "Demo",
+        zipcode: "11364",
+        birthday: {
+          month: "Dec",
+          day: 8,
+          year: 1985
+        }
+      };
+      this.props.processForm(user);
+  }
+
+
   renderErrors() {
-  return(
-    <ul>
-      {this.props.errors.map((error, i) => (
-        <li key={`${i}`}>
-          {error}
-        </li>
-      ))}
-    </ul>
-  );
-}
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
 
   render(){
-
     const header = this.props.formType;
 
     return (
@@ -58,13 +82,13 @@ class LogInForm extends React.Component {
             New to BetterHelp?    {this.props.link}
           </h3>
           <br></br>
-
-        
-
-
+          <button className="guest-demo" onClick={this.guestSignin}>Guest Demo</button>
+          <br></br>
           <fieldset className="hr-line">
             <legend align="center">OR</legend>
           </fieldset>
+
+
           <label>
 
             <input className="email" placeholder="Email" onChange={this.update('email')} type="text" value={this.state.email}></input>
@@ -83,6 +107,7 @@ class LogInForm extends React.Component {
               New to BetterHelp?    {this.props.link}
             </h3>
         </form>
+
       </div>
     )
   }

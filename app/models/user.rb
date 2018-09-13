@@ -13,15 +13,24 @@ class User < ApplicationRecord
     user
   end
 
+  def self.convert_to_date(object)
+    year = object["year"].to_i
+    month = object["month"].to_i
+    day = object["day"].to_i
+    Date.new(year,month,day)
+  end
+  
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)
   end
 
+
   def valid_password?(password)
     bcryped_pw = BCrypt::Password.new(self.password_digest)
     bcryped_pw.is_password?(password)
   end
+
 
   def reset_token!
     self.session_token = SecureRandom.urlsafe_base64(16)
