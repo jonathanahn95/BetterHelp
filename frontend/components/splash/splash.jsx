@@ -11,12 +11,11 @@ class Splash extends React.Component {
     e.preventDefault();
     this.props.logout();
   }
-  // <img className="container-img" src={window.splashBackground} />
 
   render() {
     if (this.props.currentUser) {
       return (
-        <div className="container">
+        <div className="container" style={{backgroundImage: `url(${window.splashBackground})`}}>
 
           <div className="header">
             <div className='header-nav'>
@@ -33,7 +32,7 @@ class Splash extends React.Component {
     } else {
       return (
         <div >
-          <div className='container'>
+          <div className="container" style={{backgroundImage: `url(${window.splashBackground})`}}>
 
             <div className="header">
               <div className="header-nav">

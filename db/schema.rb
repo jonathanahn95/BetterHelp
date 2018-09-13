@@ -10,10 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_11_160820) do
+ActiveRecord::Schema.define(version: 2018_09_13_190607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "business_categories", force: :cascade do |t|
+    t.string "category", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category"], name: "index_business_categories_on_category"
+  end
+
+  create_table "businesses", force: :cascade do |t|
+    t.integer "owner_id"
+    t.string "name", null: false
+    t.string "address", null: false
+    t.string "hours", null: false
+    t.string "phone_number", null: false
+    t.string "website", null: false
+    t.string "city", null: false
+    t.string "state", null: false
+    t.integer "zip_code", null: false
+    t.integer "business_category_id", null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address"], name: "index_businesses_on_address", unique: true
+    t.index ["business_category_id"], name: "index_businesses_on_business_category_id"
+    t.index ["state"], name: "index_businesses_on_state"
+    t.index ["zip_code"], name: "index_businesses_on_zip_code"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "fname", null: false

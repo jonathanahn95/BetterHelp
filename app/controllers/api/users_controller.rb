@@ -3,9 +3,12 @@ class Api::UsersController < ApplicationController
   def create
     # debugger
     @user = User.new(user_params)
-    new_bday = User.convert_to_date(user_params["birthday"])
-    @user.birthday = new_bday
-    
+    # debugger
+    unless user_params["birthday"]["month"].length == 0 || user_params["birthday"]["year"].length || user_params["birthday"]["day"].length
+      new_bday = User.convert_to_date(user_params["birthday"])
+      @user.birthday = new_bday
+    end
+
 
 
     if @user.save
