@@ -9,6 +9,12 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
+  <script type="text/javascript">
+    window.handsUrl = "<%= image_url('logo.jpg') %>";
+    window.formType = "<%= image_url('formtype.jpg') %>";
+    window.footerCityscape =" <%= image_url('footer_cityscape.jpg')  %>"
+  </script>
+
   <body>
     <%= yield %>
   </body>

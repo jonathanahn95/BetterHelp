@@ -11,15 +11,15 @@
   padding: 6px;
   margin-right: 3px;
   border: 1px solid gray;
-  font-size: 12px;
-
+  font-size: 14px;
+  width: 120px;
   border-radius: 3px ;
 
 }
 
 .lname{
   padding: 6px;
-  font-size: 12px;
+  font-size: 14px;
 
   border: 1px solid gray;
 
@@ -29,11 +29,12 @@
 
 .zipcode{
   padding: 6px;
-  font-size: 12px;
+  font-size: 14px;
   width: 95%;
   margin-top: 20px;
 
   border: 1px solid gray;
+  margin-bottom:  10px;
 
   border-radius: 3px ;
 }
@@ -47,13 +48,28 @@
   font-family: Helvetica;
 }
 
-.month  {
-  margin: 5px;
+.bday {
+  color: black;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 14px;
+  /* letter-spacing: 1px; */
+  margin-top: 10px;
+  margin-right: 4px;
+
+}
+.optional {
   color: #999;
+  margin-top: 5px;
+
+  font-family: Helvetica;
+  font-size: 12px;
+
 }
 
+
 .submit {
-  margin-top: 45px;
+  margin-top: 15px;
   width: 100%;
   background-color: red;
   height: 45px;
@@ -64,4 +80,14 @@
   box-shadow: 5px black;
 
   border-radius:  3px;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
+.image {
+  display: block;
+  margin-top: 145px;
+  margin-left: 750px;
 }

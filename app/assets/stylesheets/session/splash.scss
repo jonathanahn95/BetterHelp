@@ -1,0 +1,176 @@
+/* .header {
+  border: 1px solid black
+} */
+
+.container {
+  min-height: 600px;
+  background-image: image_url('bakery.jpg');
+  background-size: cover;
+  /* display: flex; */
+  position: relative;
+  /* align-items: center; */
+}
+
+.header {
+  /* background-color: yellow; */
+  /* display: block; */
+  /* display: flex; */
+  position: absolute;
+  left: 0px;
+  /* height: 100px; */
+  right: 0px;
+}
+
+.header-review {
+  // border: 2px solid white;
+  text-decoration: none;
+  border-radius: 5px;
+  padding-left: 170px;
+  padding-top: 40px;
+  color: white;
+}
+
+.header-review a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-weight: bold;
+}
+
+.header-review a:hover {
+  border-bottom: 2px solid white;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  // align-items: flex-end;
+  /* margin: 0 auto; */
+  /* background-color: red; */
+}
+
+.logout {
+  text-align: right;
+  margin-left: auto;
+  margin-right: 15px;
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+
+
+.header-list {
+  /* background-color: blue; */
+  display: flex;
+  padding-right: 160px;
+  // right: 80%;
+  /* margin-top: 15px;
+  margin-right: 180px; */
+}
+
+.header-list a {
+  margin-right: 50px;
+  margin-top: 20px;
+  width: 57px;
+  color: white;
+  text-decoration: none;
+  font-family: Helvetica;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  font-size: 15px;
+  padding: 15px;
+}
+
+.brand-name{
+  /* margin-top: 60px; */
+  font-size: 50px;
+  color: black;
+  text-shadow: 0 0 5px white;
+  font-family: Helvetica;
+  -webkit-text-stroke: 1px black;
+  color: white;
+  text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+  display: flex;
+  /* align-items: center; */
+  /* margin: 0 auto; */
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.sign-up {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.sign-up:hover {
+  background-color: white;
+  color: gray;
+}
+
+.log-in:hover {
+  border-bottom: 2px solid white;
+}
+
+
+
+.img-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.about-list {
+
+  // margin-bottom:  auto;
+  // background-color: #f5f5f5;
+  color: red;
+  align-items: baseline;
+  font-size: 18px;
+  font-family: Helvetica;
+  padding-left: 80px;
+}
+
+.about-list a {
+  font-size: 16px;
+  text-decoration: none;
+
+}
+.discover-list {
+  color: red;
+  font-size: 18px;
+  font-family: Helvetica;
+
+}
+.discover-list a {
+  padding-right: 80px;
+  font-size: 16px;
+  text-decoration: none;
+}
+.discover-list a {
+  display: block;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerImg {
+  width: 50%
+}

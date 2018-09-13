@@ -2,7 +2,7 @@
   width: 100%;
   height: 65px;
   border: 1px solid red;
-  background-color: red;
+  background-color: #d90007;
 }
 
 .login-head {
@@ -29,13 +29,19 @@
 
 }
 
-.breakpoint {
-  width: 100%;
-  border-bottom: 1px solid gray;
-  padding-top: 40px;
 
+
+.hr-line{
+  border: none;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid transparent;
+  text-align: center;
+  color: gray;
 }
 
+.hr-line legend {
+  padding: 0 10px;
+}
 
 .formtype-form {
   display: block;
@@ -52,17 +58,35 @@
   font-family: Helvetica;
   font-size: 14px;
   font-weight: bold;
-
 }
 
-.bottom-sign-up-link {
-  display: flex;
-  justify-content: left;
-  margin-top: 15px;
+.sign-up-link a {
   text-decoration: none;
+  color: #0073bb;
+}
+
+.sign-up-link a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+.bottom-sign-up-link {
+  /* display: flex */
+  margin: 5px;
+  text-align: right;
+  color: #999;
+  font-size: 12px;
   font-family: Helvetica;
-  font-size: 10px;
-  font-weight: bold;
+}
+
+.bottom-sign-up-link a {
+  text-decoration: none;
+}
+
+.bottom-sign-up-link a:hover {
+  text-decoration: underline;
 }
 
 .email {
@@ -89,7 +113,7 @@
 .submit {
   margin-top: 45px;
   width: 100%;
-  background-color: red;
+  background-color: #d90007;
   height: 45px;
   color: white;
   font-size: 17px;
@@ -111,7 +135,7 @@
   color: white;
   font-size: 17px;
   font-weight: bold;
-  border: 1px solid black;
+  border: 1px solid rgb(141, 0, 5);
   box-shadow: 5px black;
 
   border-radius:  3px;
@@ -124,6 +148,12 @@
 }
 
 .bottom-sign-up-link {
-  text-align: right;
+  justify-content: flex-end;
   color: #999;
+}
+
+.image {
+  display: block;
+  margin-top: 145px;
+  margin-left: 750px;
 }

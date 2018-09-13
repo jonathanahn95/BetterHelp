@@ -23,7 +23,7 @@ class Splash extends React.Component {
           </div>
           <div className="brand-name">
             BetterHelp
-            <img className="img-logo" src="https://www.logolynx.com/images/logolynx/fc/fc2799793124eaf88bc00b8339adbac7.jpeg"></img>
+            <img className="img-logo" src={window.handsUrl}></img>
           </div>
         </div>
       );
@@ -33,7 +33,9 @@ class Splash extends React.Component {
           <div className='container'>
             <div className="header">
               <div className="header-nav">
-                <p>logo</p>
+                <ul className="header-review">
+                  <Link className="write-review" to="/review/">Write a Review</Link>
+                </ul>
                 <ul className="header-list">
                   <Link className="log-in" to='/login'>Log In</Link>
                   <Link className="sign-up" to='/signup'>Sign Up</Link>
@@ -42,9 +44,22 @@ class Splash extends React.Component {
             </div>
             <div className="brand-name">
               BetterHelp
-              <img className="img-logo" src="https://www.logolynx.com/images/logolynx/fc/fc2799793124eaf88bc00b8339adbac7.jpeg"></img>
+              <img className="img-logo" src={window.handsUrl}></img>
             </div>
           </div>
+          <footer className="footer">
+              <ul className="about-list">
+                About
+                <li>
+                  <a href="https://github.com/jonathanahn95">BetterHelp Wiki</a>
+                </li>
+              </ul>
+              <img className="footerImg" src={window.footerCityscape}></img>
+              <ul className="discover-list">
+                Discover
+                <a href="https://github.com/jonathanahn95">Learn about me</a>
+              </ul>
+          </footer>
         </div>
       );
     }

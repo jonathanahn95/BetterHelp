@@ -48,6 +48,7 @@ class LogInForm extends React.Component {
           <h1 className="login-head">
             BetterHelp
           </h1>
+          <img className='image' src={window.formType}></img>
         </header>
         <form className="formtype-form" onSubmit={this.handleSubmit}>
           <h2 className="formtype-header">{header === 'Signup' ? 'Sign Up for BetterHelp' : 'Log In To BetterHelp'}</h2>
@@ -58,9 +59,12 @@ class LogInForm extends React.Component {
           </h3>
           <br></br>
 
-          <h3 className="breakpoint">
+        
 
-          </h3>
+
+          <fieldset className="hr-line">
+            <legend align="center">OR</legend>
+          </fieldset>
           <label>
 
             <input className="email" placeholder="Email" onChange={this.update('email')} type="text" value={this.state.email}></input>
