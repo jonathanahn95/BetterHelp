@@ -3,6 +3,9 @@ class User < ApplicationRecord
   validates :fname, :lname, :zipcode, presence: true
   validates :password, length: { minimum: 6, allow_nil: true }
 
+  has_many :businesses
+  has_many :reviews
+
   attr_reader :password
 
   after_initialize :ensure_session_token
@@ -19,7 +22,7 @@ class User < ApplicationRecord
     day = object["day"].to_i
     Date.new(year,month,day)
   end
-  
+
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

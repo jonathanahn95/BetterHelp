@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
+import { Link } from 'react-router-dom';
+
 
 class SignUpForm extends React.Component {
 
@@ -20,6 +22,8 @@ class SignUpForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateBirthday = this.updateBirthday.bind(this);
+    this.guestSignin = this.guestSignin.bind(this);
+
   }
 
 
@@ -28,12 +32,11 @@ class SignUpForm extends React.Component {
   }
 
   handleSubmit(e){
-    
+
     e.preventDefault();
     const user = merge({}, this.state);
     // this.props.clearErrors();
     this.props.processForm(user);
-    // debugger;
   }
 
   update(field){
@@ -68,6 +71,16 @@ class SignUpForm extends React.Component {
 
 
 
+guestSignin(e) {
+  e.preventDefault();
+    const user = {
+      email: "guest@demo.org",
+      password: "123123"
+    };
+    this.props.login(user);
+}
+
+
   render(){
     // const errors = this.props.errors.map( (error,idx) => {
     //     return {error};
@@ -79,7 +92,8 @@ class SignUpForm extends React.Component {
       <div>
         <header className="login-header">
           <h1 className="login-head">
-            BetterHelp
+
+          <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
           </h1>
           <img className='image' src={window.formType}></img>
 
@@ -91,7 +105,8 @@ class SignUpForm extends React.Component {
               Connect with great local businesses
           </h2>
           <br></br>
-
+          <button className="guest-demo" onClick={this.guestSignin}>Guest Demo</button>
+          <br></br>
           <fieldset className="hr-line">
             <legend align="center">OR</legend>
           </fieldset>

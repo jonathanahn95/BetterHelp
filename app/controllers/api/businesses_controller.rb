@@ -2,11 +2,17 @@ class Api::BusinessesController < ApplicationController
 
 
   def show
+
     @business = Business.find(params[:id])
   end
 
   def index
-    @businesses = Business.all
+    # @businesses = Business.all
+    if params[:business_category_id]
+      @businesses = Business.where( business_category_id: params[:business_category_id])
+    else
+      @businesses = Business.all
+    end
   end
 
   def create

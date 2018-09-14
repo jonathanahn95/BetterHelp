@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class LogInForm extends React.Component {
 
@@ -70,8 +71,9 @@ class LogInForm extends React.Component {
       <div>
         <header className="login-header">
           <h1 className="login-head">
-            BetterHelp
+            <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
           </h1>
+
           <img className='image' src={window.formType}></img>
         </header>
         <form className="formtype-form" onSubmit={this.handleSubmit}>

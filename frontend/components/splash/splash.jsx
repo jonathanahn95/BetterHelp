@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BusinessCategoryIndexContainer from '../business_category/business_category_index_container';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -22,10 +23,10 @@ class Splash extends React.Component {
               <button className="logout" onClick={this.handleClick}>Log Out</button>
             </div>
           </div>
-          <div className="brand-name">
-            BetterHelp
-            <img className="img-logo" src={window.handsUrl} />
+          <div className="brand-name" >
+            <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
           </div>
+
 
         </div>
       );
@@ -45,10 +46,15 @@ class Splash extends React.Component {
                 </ul>
               </div>
             </div>
-            <div className="brand-name">
-              BetterHelp
-              <img className="img-logo" src={window.handsUrl}></img>
+            <div className="brand-name" >
+              <BusinessCategoryIndexContainer/>
+              <div className="search-bar-container">
+
+                <input className= "search" type="search"></input>
+              </div>
+              <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
             </div>
+
           </div>
 
         </div>

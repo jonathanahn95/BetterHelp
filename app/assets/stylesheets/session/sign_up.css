@@ -45,6 +45,7 @@
   text-align: right;
   color: #999;
   font-size: 12px;
+  padding-top: 7px;
   font-family: Helvetica;
 }
 
@@ -105,9 +106,15 @@
   font-weight: normal;
 }
 
+.small-brand-name{
+  height: 45px;
+  margin-bottom: 5px;
+}
+
 .birthday {
   display: flex;
   justify-content: space-between;
+  padding-top: 10px
   /* padding-right: 4px */
 }
 

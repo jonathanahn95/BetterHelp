@@ -4,8 +4,8 @@ module ApplicationHelper
   # ['bakery.jp']
 
   def generate_random_pic
-    
-    ["cupcake.jpg","random.jpg", "splash.jpg", "bakery.jpg"].sample
+
+    ["burgers.jpg","random.jpg", "splash.jpg", "cookie.jpg"].sample
   end
 
 

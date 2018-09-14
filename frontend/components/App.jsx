@@ -4,14 +4,20 @@ import SplashContainer from './splash/splash_container';
 import LoginFormContainer from './session/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route } from 'react-router-dom';
+import BusinessCategoryIndexContainer from './business_category/business_category_index_container';
+import BusinessesContainer from './businesses/businesses_container';
+
 
 const App = () => (
   <div>
 
     <Route exact path="/" component={SplashContainer}/>
-
+    <Route  exact path="/business_categories/:id" component={BusinessesContainer} />
     <AuthRoute exact path="/login" component={LoginFormContainer}/>
     <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
+
+
+
 
     <footer className="footer">
         <ul className="about-list">

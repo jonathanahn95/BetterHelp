@@ -1,0 +1,22 @@
+.business-categories {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 80px; */
+  z-index: 5px;
+}
+
+.business-categories li {
+  text-decoration: none;
+
+}
+
+.business-categories-list a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  /* color: white; */
+  font-family: Helvetica;
+  color: #0073bb;
+  /* padding-left: 300px; */
+
+}
