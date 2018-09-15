@@ -18,7 +18,8 @@ class Business extends React.Component {
 
         <div className="business-info">
           <div className="main-attributes">
-            <a href='{this.props.business.url}'>{this.props.business.name}</a>
+            <Link to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
+
           </div>
           <span className='secondary-attributes'>
               <li>

@@ -6,3 +6,11 @@ export const fetchBusinesses = () => {
     url: "api/businesses",
   });
 };
+
+export const fetchBusiness = (id) => {
+  debugger
+  return $.ajax({
+    method: 'GET',
+    url:  `api/businesses/${id}`
+  });
+};

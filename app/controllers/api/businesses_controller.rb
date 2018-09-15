@@ -2,7 +2,7 @@ class Api::BusinessesController < ApplicationController
 
 
   def show
-
+    # debugger
     @business = Business.find(params[:id])
   end
 

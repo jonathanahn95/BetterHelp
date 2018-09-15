@@ -35,5 +35,4 @@ Business.create!([
   {name: 'App Academy', address: "159 W 25th St", hours: "
     Mon	9:00 - 5:00 pm Tue	9:00 - 5:00 pm Wed	9:00 - 5:00 pm	Thu	9:00 - 5:00 pm Fri	9:00 - 5:00 pm Sat	9:00 - 5:00 pm Sun	9:00 - 5:00 pm",
   phone_number: '(123) 718-3213', website: 'https://www.appacademy.io/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[3].id ,latitude: 67.6723, longitude: 34.21 },
-
   ])

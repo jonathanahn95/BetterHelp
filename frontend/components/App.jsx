@@ -6,13 +6,14 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route } from 'react-router-dom';
 import BusinessCategoryIndexContainer from './business_category/business_category_index_container';
 import BusinessesContainer from './businesses/businesses_container';
-
+import BusinessShowContainer from './businesses/business_show_container';
 
 const App = () => (
   <div>
 
     <Route exact path="/" component={SplashContainer}/>
     <Route  exact path="/business_categories/:id" component={BusinessesContainer} />
+    <Route exact path="/businesses/:businessId" component={BusinessShowContainer } />
     <AuthRoute exact path="/login" component={LoginFormContainer}/>
     <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
 
