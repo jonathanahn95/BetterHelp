@@ -19,7 +19,6 @@ class BusinessShow extends React.Component {
             <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
           </h1>
         </header>
-
         <main className='top-shelf'>
           <div className='content'>
             <div className='page-header'>
@@ -27,7 +26,7 @@ class BusinessShow extends React.Component {
                 {this.props.business.name}
               </div>
               <div className='right'>
-                <button className='right-button'>Write a review</button>
+                <Link to={`/businesses/${this.props.business.id}/review`}><button className='right-button'>Write a review</button></Link>
               </div>
             </div>
             <div className='subheader'>

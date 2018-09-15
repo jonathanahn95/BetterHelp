@@ -11,5 +11,6 @@ class Business < ApplicationRecord
     optional: true
 
   has_many :reviews
-  
+
+
 end
