@@ -3,11 +3,11 @@ import { RECEIVE_SELECTED_BUSINESS_CATEGORIES  } from '../actions/business_categ
 
 export default (state = {}, action) => {
 
-  debugger
+  // debugger
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_SELECTED_BUSINESS_CATEGORIES:
-      debugger
+      // debugger
       return action.businesses;
     default:
       return state;

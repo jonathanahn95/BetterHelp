@@ -31,7 +31,7 @@ export const requestAllBusinesses = () => {
 export const requestSelectedBusinessCategories = selectedCategory => {
   return dispatch => {
     return BusinessCategoriesUtil.fetchSelectedBusinessCategories(selectedCategory).then(  selectedBusinessCategories => {
-      debugger
+      // debugger
       return dispatch(receiveSelectedBusinesses(selectedBusinessCategories));
     } );
   };

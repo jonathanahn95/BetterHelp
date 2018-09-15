@@ -1,13 +1,15 @@
 .business-categories {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   /* margin-top: 80px; */
   z-index: 5px;
+  margin-top: 20px;
+
 }
 
 .business-categories li {
   text-decoration: none;
-
+  color: white;
 }
 
 .business-categories-list a {
@@ -16,7 +18,12 @@
   font-weight: 700;
   /* color: white; */
   font-family: Helvetica;
-  color: #0073bb;
+  /* color: #0073bb; */
   /* padding-left: 300px; */
+  color: white;
 
+}
+
+.business-categories-container {
+  width: 400px;
 }

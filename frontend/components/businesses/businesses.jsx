@@ -14,14 +14,22 @@ class Businesses extends React.Component {
   render() {
     // debugger
     const businesses = this.props.businesses.map( business =>
-      <Business key={business.id}  business={business} />)
+      <Business key={business.id}  business={business}  />)
 
-
+        // debugger
     return (
       <div>
-        <ol>
-          {businesses}
-        </ol>
+        <header className="login-header">
+          <h1 className="login-head">
+            <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
+          </h1>
+        </header>
+
+        <div className="main-business-container">
+          <div className="business-container" >
+            {businesses}
+          </div>
+        </div>
       </div>
     )
   }

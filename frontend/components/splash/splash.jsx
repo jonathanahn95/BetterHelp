@@ -16,18 +16,41 @@ class Splash extends React.Component {
   render() {
     if (this.props.currentUser) {
       return (
-        <div className="container" style={{backgroundImage: `url(${window.splashBackground})`}}>
+        <div>
+          <div className="container" style={{backgroundImage: `url(${window.splashBackground})`}}>
 
-          <div className="header">
-            <div className='header-nav'>
-              <button className="logout" onClick={this.handleClick}>Log Out</button>
+            <div className="header">
+              <div className='header-nav'>
+                <ul className="header-review">
+                  <Link className="write-review" to="/businesses/">Write a Review</Link>
+                </ul>
+                <button className="logout" onClick={this.handleClick}>Log Out</button>
+              </div>
+            </div>
+            <div className="brand-name" >
+              <BusinessCategoryIndexContainer/>
+              <div className="search-bar-container">
+
+                <input className= "search" type="search"></input>
+              </div>
+              <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
+            </div>
+
+          </div>
+          <div className='slogan-container'>
+            <h3 className="slogan">
+              Find the Best Businesses in Town
+            </h3>
+          </div>
+          <div className="popular-categories-container">
+            <div className='popular-categories'>
+              <Link to={`/business_categories/9`}><img className="pop-cat" src={window.restaurant}></img></Link>
+              <Link to={`/business_categories/10`}><img className="pop-cat" src={window.homeServices}></img></Link>
+              <Link to={`/business_categories/11`}><img className="pop-cat" src={window.cafe}></img></Link>
+              <Link to={`/business_categories/12`}><img className="pop-cat" src={window.codingBootcamp}></img></Link>
+
             </div>
           </div>
-          <div className="brand-name" >
-            <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
-          </div>
-
-
         </div>
       );
     } else {
@@ -38,7 +61,7 @@ class Splash extends React.Component {
             <div className="header">
               <div className="header-nav">
                 <ul className="header-review">
-                  <Link className="write-review" to="/review/">Write a Review</Link>
+                  <Link className="write-review" to="/businesses/">Write a Review</Link>
                 </ul>
                 <ul className="header-list">
                   <Link className="log-in" to='/login'>Log In</Link>
@@ -55,6 +78,21 @@ class Splash extends React.Component {
               <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
             </div>
 
+          </div>
+
+          <div className='slogan-container'>
+            <h3 className="slogan">
+              Find the Best Businesses in Town
+            </h3>
+          </div>
+          <div className="popular-categories-container">
+            <div className='popular-categories'>
+              <Link to={`/business_categories/9`}><img className="pop-cat" src={window.restaurant}></img></Link>
+              <Link to={`/business_categories/10`}><img className="pop-cat" src={window.homeServices}></img></Link>
+              <Link to={`/business_categories/11`}><img className="pop-cat" src={window.cafe}></img></Link>
+              <Link to={`/business_categories/12`}><img className="pop-cat" src={window.codingBootcamp}></img></Link>
+
+            </div>
           </div>
 
         </div>

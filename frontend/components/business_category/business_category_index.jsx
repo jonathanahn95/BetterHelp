@@ -28,7 +28,7 @@ class BusinessCategoryIndex extends React.Component {
 
 
     return (
-      <div>
+      <div className='business-categories-container'>
         <ol className='business-categories'>
           {businessCategories}
 
