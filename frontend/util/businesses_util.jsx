@@ -8,7 +8,6 @@ export const fetchBusinesses = () => {
 };
 
 export const fetchBusiness = (id) => {
-  debugger
   return $.ajax({
     method: 'GET',
     url:  `api/businesses/${id}`

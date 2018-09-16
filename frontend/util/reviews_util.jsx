@@ -5,7 +5,6 @@ export const fetchAllReviews = (businessId) => {
   });
 };
 
-
 export const fetchReview = id => {
   return $.ajax({
     method: 'GET',
@@ -13,18 +12,19 @@ export const fetchReview = id => {
   });
 };
 
-export const createReview = businessId => {
-  debugger
+export const createReview = review => {
   return $.ajax({
     method: 'POST',
-    url: `api/businesses/${businessId}/reviews`
+    url: `api/businesses/${review.businessId}/reviews`,
+    data: { review }
   });
 };
 
-export const updateReview = id => {
+export const updateReview = review => {
+  debugger
   return $.ajax({
     method: 'PATCH',
-    url: `api/reviews/${id}`
+    url: `api/reviews/${review.id}`
   });
 };
 

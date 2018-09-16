@@ -8,15 +8,12 @@ import { Route } from 'react-router-dom';
 class Businesses extends React.Component {
 
   componentDidMount() {
-    // debugger
     this.props.requestSelectedBusinessCategories(this.props.category);
   }
   render() {
-    // debugger
     const businesses = this.props.businesses.map( business =>
       <Business key={business.id}  business={business}  />)
 
-        // debugger
     return (
       <div>
         <header className="login-header">

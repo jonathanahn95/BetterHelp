@@ -7,11 +7,29 @@ import { Route } from 'react-router-dom';
 class BusinessShow extends React.Component {
 
   componentDidMount() {
-    debugger
-    this.props.requestSingleBusiness(this.props.business.id);
+    this.props.requestSingleBusiness(this.props.match.params.businessId);
   }
+
   render() {
-    debugger
+    const business = this.props.business;
+    if(!this.props.business) {
+      return (
+        <div className='empty'/>
+      );
+    }
+
+    const reviewsArr = this.props.reviews && Object.values(this.props.reviews).map( review => {
+      return (
+        <div className='reviews-container'>
+          <li className='review-body'>{review.body}</li>
+          <li className='review-rating'>{review.rating}</li>
+          <button onClick={review => this.props.deleteReview(review.id)}>deltee</button>
+          <button onClick={review => this.props.history.push(`/businesses/reviews/${review.id}`)}>edit</button>
+        </div>
+      )
+    })
+
+
     return (
       <div>
         <header className="login-header">
@@ -23,10 +41,10 @@ class BusinessShow extends React.Component {
           <div className='content'>
             <div className='page-header'>
               <div className='left'>
-                {this.props.business.name}
+                {business.name}
               </div>
               <div className='right'>
-                <Link to={`/businesses/${this.props.business.id}/review`}><button className='right-button'>Write a review</button></Link>
+                <Link to={`/businesses/${business.id}/review`}><button className='right-button'>Write a review</button></Link>
               </div>
             </div>
             <div className='subheader'>
@@ -37,6 +55,82 @@ class BusinessShow extends React.Component {
             </div>
           </div>
         </main>
+        <div className='main-reviews-container'>
+          <div className='placeholder'>
+            placeholder
+            asdasdasd
+          </div>
+          <div className='reviews'>
+            { reviewsArr }
+          </div>
+          <div className="business-show-container">
+
+
+               <ul className="business-hours">
+                 <h1 className='header-hours'>Hours</h1>
+                   <li className='day-container'>
+                     <p className='day'>
+                       Mon:
+                     </p>
+                     <p>
+                       {business.hours[0]}
+                     </p>
+                   </li>
+                   <li className='day-container'>
+                     <p className='day'>
+                       Tues:
+                     </p>
+                     <p>
+                       {business.hours[1]}
+                     </p>
+                   </li>
+                   <li className='day-container'>
+                     <p className='day'>
+                       Wed:
+                     </p>
+                     <p>
+                       {business.hours[2]}
+                     </p>
+                   </li>
+                   <li className='day-container'>
+                     <p className='day'>
+                       Thurs:
+                     </p>
+                     <p>
+                       {business.hours[3]}
+                     </p>
+                   </li>
+                   <li className='day-container'>
+                     <p className='day'>
+                       Fri:
+                     </p>
+                     <p>
+                       {business.hours[4]}
+                     </p>
+                   </li>
+                   <li className='day-container'>
+                     <p className='day'>
+                       Sat:
+                     </p>
+                     <p>
+                       {business.hours[5]}
+                     </p>
+                   </li>
+                   <li className='day-container'>
+                     <p className='day'>
+                       Sun:
+                     </p>
+                     <p>
+                       {business.hours[6]}
+                     </p>
+                   </li>
+
+
+               </ul>
+
+
+           </div>
+        </div>
       </div>
     )
   }

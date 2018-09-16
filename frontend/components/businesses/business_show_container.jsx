@@ -2,21 +2,28 @@ import React from 'react';
 import { connect } from 'react-redux';
 import BusinessShow from './business_show';
 import { requestSingleBusiness } from '../../actions/businesses_actions';
+import { deleteReview, updateReview } from '../../actions/reviews_actions';
 
 
 const msp = (state,ownProps) => {
+  const fetchedBusiness = state.entities.businesses[ownProps.match.params.businessId];
+  let reviews;
+  if (fetchedBusiness){
+    reviews = fetchedBusiness.reviews;
+  }
 
-  debugger
   return {
-    business: state.entities.businesses[ownProps.match.params.businessId]
+    business: state.entities.businesses[ownProps.match.params.businessId],
+    reviews: reviews
   };
 };
 
 
 const mdp = dispatch => {
-  debugger
   return {
-    requestSingleBusiness: (id) => dispatch(requestSingleBusiness(id))
+    requestSingleBusiness: (id) => dispatch(requestSingleBusiness(id)),
+    updateReview: review => dispatch(updateReview(review)),
+    deleteReview: (id) => dispatch(deleteReview(id))
   };
 };
 

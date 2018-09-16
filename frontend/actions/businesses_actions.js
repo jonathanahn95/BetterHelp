@@ -39,17 +39,15 @@ export const requestAllBusinesses = () => {
 export const requestSelectedBusinessCategories = selectedCategory => {
   return dispatch => {
     return BusinessCategoriesUtil.fetchSelectedBusinessCategories(selectedCategory).then(  selectedBusinessCategories => {
-      // debugger
       return dispatch(receiveSelectedBusinesses(selectedBusinessCategories));
     } );
   };
 };
 
 export const requestSingleBusiness = id => {
-  debugger
+
   return dispatch => {
     return BusinessesApiUtil.fetchBusiness(id).then( business => {
-      debugger
       return dispatch(receiveBusiness(business));
     });
   };

@@ -5,14 +5,13 @@ import { createReview } from '../../actions/reviews_actions';
 import { requestSingleBusiness } from '../../actions/businesses_actions';
 
 const msp = (state ,ownProps) => {
-  debugger
   const errors = state.errors.review;
-  const businessId = ownProps.match.params.businessId;
-  const business = state.entities.businesses;
+  const business_id = ownProps.match.params.businessId;
+  const business = state.entities.businesses[ownProps.match.params.businessId];
   const review = {
     rating: '',
     body: '',
-    businessId: businessId,
+    business_id: business_id,
   };
   const formType = 'Write a Review';
   return {
@@ -24,7 +23,7 @@ const msp = (state ,ownProps) => {
 
 const mdp = dispatch =>{
   return {
-    action: (id) => dispatch(createReview(id)),
+    action: (review) => dispatch(createReview(review)),
     requestSingleBusiness: id => dispatch(requestSingleBusiness(id))
   };
 };

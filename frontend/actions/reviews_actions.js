@@ -13,10 +13,10 @@ export const receiveReview = review => {
   };
 };
 
-export const receiveAllReviews = reviews => {
+export const receiveAllReviews = review => {
   return {
     type: RECEIVE_ALL_REVIEWS,
-    reviews
+    review
   };
 };
 
@@ -52,9 +52,8 @@ export const fetchReview = id => {
 };
 
 export const createReview = business => {
-  debugger
   return dispatch => {
-    return ReviewApiUtil.createReview(business.businessId).then( review => {
+    return ReviewApiUtil.createReview(business).then( review => {
       return dispatch(receiveReview(review));
     }, errors => {
       return dispatch(receiveReviewErrors(errors.responseJSON));
@@ -62,9 +61,9 @@ export const createReview = business => {
   };
 };
 
-export const updateReview = id => {
+export const updateReview = review => {
   return dispatch => {
-    return ReviewApiUtil.updateReview(id).then( review => {
+    return ReviewApiUtil.updateReview(review).then( review => {
       return dispatch(receiveReview(review));
     }, errors => {
       return dispatch(receiveReviewErrors(errors.responseJSON));
@@ -72,10 +71,10 @@ export const updateReview = id => {
   };
 };
 
-export const deleteReview = id => {
+export const deleteReview = review => {
   return dispatch => {
-    return ReviewApiUtil.deleteReview(id).then( review => {
-      return dispatch(removeReview(review));
+    return ReviewApiUtil.deleteReview(review).then( review => {
+      return dispatch(removeReview(review.id));
     });
   };
 };
