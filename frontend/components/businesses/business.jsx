@@ -43,6 +43,11 @@ class Business extends React.Component {
               <li>
                 {this.props.business.city}
               </li>
+              <li>
+                {this.props.business.reviews[0].body}
+
+              </li>
+
             </div>
               <li>
 

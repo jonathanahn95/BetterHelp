@@ -24,6 +24,7 @@ class BusinessShow extends React.Component {
    }
 
   navigateToEdit(review) {
+    debugger
     return (e) => {
       this.props.history.push(`/businesses/${review.business_id}/reviews/${review.id}`);
     };
@@ -261,7 +262,7 @@ class BusinessShow extends React.Component {
   // </button>
 
   render() {
-    debugger
+
     const business = this.props.business;
     if(!this.props.business) {
       return (
@@ -272,13 +273,12 @@ class BusinessShow extends React.Component {
 
 
 
-    debugger
+
     const imagesArr = this.props.business.photos.slice(1).map( photo => {
-      return <img className="bus-show-pics" src={photo.image_url}></img>
+      return <img key={photo.id} className="bus-show-pics" src={photo.image_url}></img>
     })
 
     const reviewsArr = this.props.reviews.map( review => {
-      debugger
       return (
         <div className='reviews-container' key={review.id}>
           <div className='rating-created-at'>
@@ -291,8 +291,8 @@ class BusinessShow extends React.Component {
             <li>{review.user ? review.user.lname : ""}</li>
           </div>
           <div className='dub-container'>
-            <img onClick={e => this.props.deleteReview(review.id)} className="dub" src={window.trashBin}></img>
-            <img onClick={ this.navigateToEdit(review) } className="dub" src={window.edit}></img>
+            <img key="trash" onClick={e => this.props.deleteReview(review.id)} className="dub" src={window.trashBin}></img>
+            <img key="edit" onClick={ this.navigateToEdit(review) } className="dub" src={window.edit}></img>
           </div>
 
         </div>

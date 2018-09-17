@@ -22,11 +22,16 @@ class ReviewForm extends React.Component {
     this.props.clearErrors();
   }
 
+  componentDidMount() {
+    this.props.requestSingleBusiness(this.props.match.params.businessId);
+  }
+
 
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state).then(() => {
-      const businessId = this.props.review.business_id;
+      debugger
+      const businessId = this.state.business_id;
       this.props.history.push(`/businesses/${businessId}`)
     });
     // this.props.clearErrors();
@@ -49,7 +54,7 @@ class ReviewForm extends React.Component {
   }
 
   // <Link to={`/businesses/${this.props.business.id}/`}></Link>
-  // debugger
+  //
   // const business = this.props.business;
   // if(!this.props.business) {
   //   return (
@@ -157,7 +162,7 @@ giveOneStars() {
  }
 
   render() {
-    debugger
+
     return (
       <div>
         <header className="login-header">
@@ -165,7 +170,7 @@ giveOneStars() {
             <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
           </h1>
         </header>
-      
+
         {this.renderErrors()}
         <div className='contain-name-form'>
           <div className='review-form-business-name'>
