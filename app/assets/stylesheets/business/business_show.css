@@ -27,6 +27,10 @@
   /* align-items: center; */
 }
 
+.review-length {
+  
+}
+
 .left {
   font-size: 36px;
   text-shadow: 0 1px rgba(255,255,255,0.7);
@@ -36,8 +40,11 @@
   word-wrap: break-word !important;
   word-break: break-word !important;
   overflow-wrap: break-word !important;
+}
 
-
+bus-show-pics {
+  width: 10px;
+  height: 10px;
 }
 
 .right-button {
@@ -60,6 +67,8 @@
 
 .subheader {
   width: 100%;
+  display: flex;
+
 }
 
 .main-reviews-container {

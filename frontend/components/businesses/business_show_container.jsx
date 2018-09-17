@@ -7,13 +7,13 @@ import { deleteReview, updateReview } from '../../actions/reviews_actions';
 
 const msp = (state,ownProps) => {
   const fetchedBusiness = state.entities.businesses[ownProps.match.params.businessId];
-  let reviews;
+  let reviews = [];
   if (fetchedBusiness){
     reviews = fetchedBusiness.reviews;
   }
 
   return {
-    business: state.entities.businesses[ownProps.match.params.businessId],
+    business: fetchedBusiness,
     reviews: reviews
   };
 };

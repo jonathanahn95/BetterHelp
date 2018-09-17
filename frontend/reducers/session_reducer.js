@@ -2,7 +2,7 @@ import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER} from '../actions/sessions_ac
 
 
 const defaultState = {
-  currentUserId: null
+  id: null
 };
 
 const sessionReducer = (state = defaultState, action) => {

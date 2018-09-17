@@ -8,7 +8,7 @@ import { clearErrors } from '../../actions/sessions_actions';
 const msp = (state ,ownProps) => {
   const errors = state.errors.review;
   const business_id = ownProps.match.params.businessId;
-  const business = state.entities.businesses[ownProps.match.params.businessId];
+  const business = state.entities.businesses[ownProps.match.params.businessId] || {};
   const review = {
     rating: '',
     body: '',
@@ -18,7 +18,8 @@ const msp = (state ,ownProps) => {
   return {
     errors,
     review,
-    formType
+    formType,
+    business
   };
 };
 

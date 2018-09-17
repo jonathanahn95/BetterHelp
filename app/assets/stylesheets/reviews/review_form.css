@@ -7,6 +7,8 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
+    padding-left: 150px;
+
   }
 
   .review-form-container {
@@ -17,6 +19,28 @@
     padding: 18px;
   }
 
+.review-form-business-name {
+  font-size: 36px;
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  padding: 17px;
+  padding-left: 150px;
+
+
+}
+
+.contain-name-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+}
+
+.review-form {
+  height: 68%;
+
+}
 .one-star {
   background-color: #F2BC82;
 }
@@ -43,6 +67,7 @@ margin-bottom: 18px;
   display: block;
   width: 102%;
   border: 0;
+  padding-top: 20px;
 
 height: 100%;
 font-size: 18px;
@@ -115,6 +140,11 @@ text-align: center;
   border-radius: 3px;
 }
 
+.footer {
+  padding-top: 100px;
+
+}
+
 
 .review-form-rating-list>label:nth-child(5):hover,
 .review-form-rating-list>label:nth-child(5):hover ~ label{background-color: #F2BC82;}
@@ -130,4 +160,61 @@ text-align: center;
 .button-container {
   display: flex;
   align-items: flex-end;
+}
+
+
+.header-nav-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  min-height: 40px;
+
+  /* border: 1px solid; */
+  /* border-left: 1px solid #e6e6e6!important;
+border-right: 1px solid #e6e6e6!important; */
+}
+
+.sub1-head-nav-bar{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  /* border: 3px solid; */
+  /* justify-content: center; */
+
+
+}
+.ul-nav-bar-item {
+  display: flex;
+justify-content: space-around;
+text-decoration: none;
+font-size: 15px
+}
+
+.ul-nav-bar-item a{
+  padding: 0 30px;
+  text-decoration: none;
+  border-left: 1px solid #e6e6e6;
+border-right: 1px solid #e6e6e6;
+font-family: 'Helvetica Neue';
+color: #333;
+
+font-weight: 300px;
+min-height: 30px;
+   padding-top: 10px;
+   /* padding-right: 30px; */
+}
+
+.ul-nav-bar-item a:hover {
+  color: #0073bb;
+  cursor: pointer;
+}
+.sub2-head-nav-bar {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  /* border: 6px solid; */
+  justify-content: space-evenly;
+
 }

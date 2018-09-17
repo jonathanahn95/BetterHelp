@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
    }
   delete(window.currentUser);
 
-  const store = configureStore();
+  const store = configureStore(preloadedState);
   window.dispatch = store.dispatch;
   window.requestSingleBusiness = requestSingleBusiness;
   const root = document.getElementById('root');

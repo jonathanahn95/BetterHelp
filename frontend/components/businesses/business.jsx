@@ -7,21 +7,33 @@ class Business extends React.Component {
 
   // <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
 
+  componentWillReceiveProps(nextProps) {
+     if (this.props.match.params.businessId !== nextProps.match.params.businessId) {
+       this.props.requestSingleBusiness(nextProps.match.params.businessId);
+     }
+   }
   render() {
+    debugger
     return (
 
       <div className="large-wrapper">
 
         <div className="business-image">
-          <img className="business-pic" src={window.handsUrl}></img>
+          <img className="business-pic" src={this.props.business.photos[0].image_url}></img>
+
         </div>
 
         <div className="business-info">
           <div className="main-attributes">
-            <Link to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
-
+            <div className='link-page'>
+              <Link to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
+            </div>
+            <div className='review'>
+              {this.props.business.reviews.length} reviews
+            </div>
           </div>
           <span className='secondary-attributes'>
+              <div className='secondary-attributes-container'>
               <li>
                 {this.props.business.phone_number}
               </li>
@@ -31,15 +43,11 @@ class Business extends React.Component {
               <li>
                 {this.props.business.city}
               </li>
+            </div>
               <li>
-                {this.props.business.city}
+
               </li>
-              <li>
-                {this.props.business.city}
-              </li>
-              <li>
-                {this.props.business.city}
-              </li>
+
           </span>
         </div>
 

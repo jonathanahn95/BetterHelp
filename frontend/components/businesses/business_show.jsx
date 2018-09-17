@@ -16,6 +16,13 @@ class BusinessShow extends React.Component {
     this.props.requestSingleBusiness(this.props.match.params.businessId);
   }
 
+
+  componentWillReceiveProps(nextProps) {
+     if (this.props.match.params.businessId !== nextProps.match.params.businessId) {
+       this.props.requestSingleBusiness(nextProps.match.params.businessId);
+     }
+   }
+
   navigateToEdit(review) {
     return (e) => {
       this.props.history.push(`/businesses/${review.business_id}/reviews/${review.id}`);
@@ -254,6 +261,7 @@ class BusinessShow extends React.Component {
   // </button>
 
   render() {
+    debugger
     const business = this.props.business;
     if(!this.props.business) {
       return (
@@ -263,12 +271,25 @@ class BusinessShow extends React.Component {
 
 
 
-    const reviewsArr = this.props.reviews && Object.values(this.props.reviews).map( review => {
+
+    debugger
+    const imagesArr = this.props.business.photos.slice(1).map( photo => {
+      return <img className="bus-show-pics" src={photo.image_url}></img>
+    })
+
+    const reviewsArr = this.props.reviews.map( review => {
       debugger
       return (
         <div className='reviews-container' key={review.id}>
+          <div className='rating-created-at'>
+            <li className='review-rating'>{review.rating}</li>
+            <li className='review-created-at'>{review.created_at}</li>
+          </div>
           <li className='review-body'>{review.body}</li>
-          <li className='review-rating'>{review.rating}</li>
+          <div className='user-name'>
+            <li>{review.user ? review.user.fname : ""}</li>
+            <li>{review.user ? review.user.lname : ""}</li>
+          </div>
           <div className='dub-container'>
             <img onClick={e => this.props.deleteReview(review.id)} className="dub" src={window.trashBin}></img>
             <img onClick={ this.navigateToEdit(review) } className="dub" src={window.edit}></img>
@@ -280,7 +301,6 @@ class BusinessShow extends React.Component {
 
 
     return (
-      debugger
       <div>
         <header className="login-header">
           <h1 className="login-head">
@@ -292,6 +312,9 @@ class BusinessShow extends React.Component {
             <div className='page-header'>
               <div className='left'>
                 {business.name}
+                <div className='num-reviews'>
+                  {reviewsArr.length} reviews
+                </div>
                 <div className='num-reviews'>
                 </div>
               </div>
@@ -311,6 +334,7 @@ class BusinessShow extends React.Component {
                 </li>
               </div>
               <div className='show-pics'>
+                {imagesArr}
               </div>
             </div>
           </div>
@@ -321,7 +345,9 @@ class BusinessShow extends React.Component {
             { reviewsArr }
           </div>
           <div className="business-show-container">
+            <div className='imag'>
 
+            </div>
 
                <ul className="business-hours">
                  <h1 className='header-hours'>Hours</h1>

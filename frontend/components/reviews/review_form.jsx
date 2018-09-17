@@ -25,7 +25,6 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     this.props.action(this.state).then(() => {
       const businessId = this.props.review.business_id;
       this.props.history.push(`/businesses/${businessId}`)
@@ -41,7 +40,7 @@ class ReviewForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul className="ike-review-errors">
+      <ul className="review-errors">
         {this.props.errors.map((error, idx) => (
           <li key={`error-${idx}`}>{error}</li>
         ))}
@@ -156,7 +155,9 @@ giveOneStars() {
    document.getElementById("two").className =  " default";
    document.getElementById("one").className = " default";
  }
+
   render() {
+    debugger
     return (
       <div>
         <header className="login-header">
@@ -164,42 +165,49 @@ giveOneStars() {
             <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
           </h1>
         </header>
+      
         {this.renderErrors()}
-        <div className="main-review-form-container">
-          <div className="review-form-container">
-            <form className="review-form" onSubmit={this.handleSubmit}>
-              <ul className="review-form-rating-list" onMouseOver={this.clearRating} onMouseOut={this.clickedRating}>
-                <label id="one" className={this.giveOneStars()} >
-                  <i className="fa fa-star" aria-hidden="true"></i>
-                  <input type="radio" name="radio-rating" value="1" onClick={() => this.setState({ rating: 5 })} />
-                </label>
-                <label id="two" className={this.giveTwoStars()} >
-                  <i className="fa fa-star" aria-hidden="true"></i>
-                  <input type="radio" name="radio-rating" value="2" onClick={() => this.setState({ rating: 5 })} />
-                </label>
-                <label id="three" className={this.giveThreeStars()} >
-                  <i className="fa fa-star" aria-hidden="true"></i>
-                  <input type="radio" name="radio-rating" value="3" onClick={() => this.setState({ rating: 5 })} />
-                </label>
-                <label id="four" className={this.giveFourStars()} >
-                  <i className="fa fa-star" aria-hidden="true"></i>
-                  <input type="radio" name="radio-rating" value="4" onClick={() => this.setState({ rating: 5 })} />
-                </label>
-                <label id="five" className={this.giveFiveStars()} >
-                  <i className="fa fa-star" aria-hidden="true"></i>
-                  <input type="radio" name="radio-rating" value="5" onClick={() => this.setState({ rating: 5 })} />
-                </label>
-              </ul>
-
-              <textarea value={this.state.body} onChange={this.updateBody()} className="form-body" placeholder="Your review helps others learn about
-                      great local businesses.&#10;Please don't review this business
-                      if you received a freebie for writing this review, or if
-                      you're connected in any way to the owner or employees.">
-              </textarea>
-
-              <button className="review-form-button">{this.props.formType}</button>
-            </form>
+        <div className='contain-name-form'>
+          <div className='review-form-business-name'>
+            {this.props.business.name}
           </div>
+          <div className="main-review-form-container">
+            <div className="review-form-container">
+              <form className="review-form" onSubmit={this.handleSubmit}>
+                <ul className="review-form-rating-list" onMouseOver={this.clearRating} onMouseOut={this.clickedRating}>
+                  <label id="one" className={this.giveOneStars()} >
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <input type="radio" name="radio-rating" value="1" onClick={() => this.setState({ rating: 5 })} />
+                  </label>
+                  <label id="two" className={this.giveTwoStars()} >
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <input type="radio" name="radio-rating" value="2" onClick={() => this.setState({ rating: 5 })} />
+                  </label>
+                  <label id="three" className={this.giveThreeStars()} >
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <input type="radio" name="radio-rating" value="3" onClick={() => this.setState({ rating: 5 })} />
+                  </label>
+                  <label id="four" className={this.giveFourStars()} >
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    <input type="radio" name="radio-rating" value="4" onClick={() => this.setState({ rating: 5 })} />
+                  </label>
+                  <label id="five" className={this.giveFiveStars()} >
+                    <i className="fa fa-star" aria-hidden="true"><input type="radio" name="radio-rating" value="5" onClick={() => this.setState({ rating: 5 })} />
+
+                    </i>
+                  </label>
+                </ul>
+
+                <textarea value={this.state.body} onChange={this.updateBody()} className="form-body" placeholder="Your review helps others learn about
+                  great local businesses.&#10;Please don't review this business
+                  if you received a freebie for writing this review, or if
+                  you're connected in any way to the owner or employees.">
+                </textarea>
+
+                <button className="review-form-button">{this.props.formType}</button>
+              </form>
+            </div>
+        </div>
           <div className='button-container'>
           </div>
         </div>

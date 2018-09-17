@@ -8,7 +8,11 @@
 
 }
 
-
+.secondary-attributes-container {
+  display: flex;
+flex-direction: column;
+align-items: flex-end;
+}
 .large-wrapper {
   display: flex;
   justify-content: space-between;
@@ -24,11 +28,25 @@
   margin: 12px;
 
 }
+
+.user-name {
+  display: flex;
+}
+
+.rating-created-at {
+  display: flex;
+}
+.link-page {
+  display: flex;
+}
 .main-attributes a{
   color: #2473bb;
   font-family: Helvetica;
   font-weight: bold;
   text-decoration: none;
+  width: 20px;
+  display: flex;
+
   font-size: 19px;
   /* padding-top: 10px; */
 }
@@ -47,13 +65,15 @@
 .secondary-attributes {
 }
 .business-pic {
-  height: 100%;
-  width: 100%
+  min-height: 235px;
+  width: 105%;
+  padding-right: 5px;
 }
 .business-info{
   display: flex;
   min-width: 335px;
   min-height: 240px;
+  padding-left: 10px;
 
   justify-content: space-between;
 }
@@ -88,4 +108,72 @@
   min-height: 600px;
   width: 100%;
 
+}
+
+
+.header-nav-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  min-height: 40px;
+
+  /* border: 1px solid; */
+  /* border-left: 1px solid #e6e6e6!important;
+border-right: 1px solid #e6e6e6!important; */
+}
+
+.sub1-head-nav-bar{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  /* border: 3px solid; */
+  /* justify-content: center; */
+
+
+}
+.ul-nav-bar-item {
+  display: flex;
+justify-content: space-around;
+text-decoration: none;
+font-size: 15px
+}
+
+.ul-nav-bar-item a{
+  padding: 0 30px;
+  text-decoration: none;
+  border-left: 1px solid #e6e6e6;
+border-right: 1px solid #e6e6e6;
+font-family: 'Helvetica Neue';
+color: #333;
+
+font-weight: 300px;
+min-height: 30px;
+   padding-top: 10px;
+   /* padding-right: 30px; */
+}
+
+.ul-nav-bar-item a:hover {
+  color: #0073bb;
+  cursor: pointer;
+}
+.sub2-head-nav-bar {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  /* border: 6px solid; */
+  justify-content: space-evenly;
+
+}
+
+.nav-bar-item {
+  /* BORDER: 1px solid; */
+      /* margin-left: 40px; */
+      /* width: 100px; */
+}
+
+.nav-bar-item :hover {
+  /* color: #0073bb; */
+  cursor: pointer;
 }

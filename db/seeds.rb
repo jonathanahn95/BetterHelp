@@ -52,7 +52,34 @@ Business.create!([
     {user_id: users[0].id, business_id: businesses[1].id, rating: 2, body: 'Took forever to get my food and everyone there had an attitude. Probably will not come back to this location for a very long time' },
     {user_id: users[1].id, business_id: businesses[1].id, rating: 5, body: 'Who doesnt love Shake Shack! Burgers and fries all dayyyyyy' },
     {user_id: users[2].id, business_id: businesses[4].id, rating: 4, body: 'This place has changed me. Instructors are great and environment is great. I learned more than I could ever imagine. Coding for life!' },
-    {user_id: users[0].id, business_id: businesses[3].id, rating: 3, body: 'My go to spot to study and chat with friends over some coffee. Love the atmopshere and such a clean and tidy place.' }
+    {user_id: users[0].id, business_id: businesses[3].id, rating: 3, body: 'My go to spot to study and chat with friends over some coffee. Love the atmopshere and such a clean and tidy place.' },
+    {user_id: users[2].id, business_id: businesses[2].id, rating: 5, body: 'JC for the win!! I love my experience with dealing with them and I would definetly call them back if I ever had any issues. If my friends ever needed help then I would recommended them JC!' }
+
+
     ])
 
     reviews = Review.all
+
+
+  Photo.create!([
+    {business_id: businesses[0].id, image_url: 'assets/chip1.jpg'},
+    {business_id: businesses[0].id, image_url: 'assets/chip2.jpg'},
+    {business_id: businesses[0].id, image_url: 'assets/chip3.jpg'},
+    {business_id: businesses[0].id, image_url: 'assets/chip4.jpg'},
+    {business_id: businesses[1].id, image_url: 'assets/shake1.jpg'},
+    {business_id: businesses[1].id, image_url: 'assets/shake2.jpg'},
+    {business_id: businesses[1].id, image_url: 'assets/shake3.jpg'},
+    {business_id: businesses[1].id, image_url: 'assets/shake4.jpg'},
+    {business_id: businesses[2].id, image_url: 'assets/jc1.jpg'},
+    {business_id: businesses[2].id, image_url: 'assets/jc2.jpg'},
+    {business_id: businesses[2].id, image_url: 'assets/jc3.jpg'},
+    {business_id: businesses[2].id, image_url: 'assets/jc4.jpg'},
+    {business_id: businesses[3].id, image_url: 'assets/bb1.jpg'},
+    {business_id: businesses[3].id, image_url: 'assets/bb2.jpg'},
+    {business_id: businesses[3].id, image_url: 'assets/bb3.jpg'},
+    {business_id: businesses[3].id, image_url: 'assets/bb4.jpg'},
+    {business_id: businesses[4].id, image_url: 'assets/aa1.jpg'},
+    {business_id: businesses[4].id, image_url: 'assets/aa2.jpg'},
+    {business_id: businesses[4].id, image_url: 'assets/aa3.jpg'},
+    {business_id: businesses[4].id, image_url: 'assets/aa4.jpg'}
+    ])
