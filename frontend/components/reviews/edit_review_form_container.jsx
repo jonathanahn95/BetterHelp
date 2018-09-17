@@ -3,10 +3,12 @@ import ReviewForm from './review_form';
 import { updateReview, fetchReview } from '../../actions/reviews_actions';
 
 
+
 const msp = (state, ownProps) => {
-  const blankReview = { title: '', body: '', id: ownProps.match.params.id};
-  const review = state.entities.reviews[ownProps.match.params.id] || blankReview
-  debugger
+  // only way to get to this props should be thorugh the business show page
+  const businessId = ownProps.match.params.businessId;
+  const reviewId = ownProps.match.params.id;
+  const review = state.entities.businesses[businessId].reviews[reviewId];
   const errors = state.errors.review;
   const formType = "Update Review";
   return { review, errors, formType };

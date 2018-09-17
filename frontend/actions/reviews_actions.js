@@ -28,10 +28,10 @@ export const receiveReviewErrors = errors => {
 };
 
 
-export const removeReview = reviewId => {
+export const removeReview = review => {
   return {
     type: REMOVE_REVIEW,
-    reviewId
+    review
   };
 };
 
@@ -74,7 +74,7 @@ export const updateReview = review => {
 export const deleteReview = review => {
   return dispatch => {
     return ReviewApiUtil.deleteReview(review).then( review => {
-      return dispatch(removeReview(review.id));
+      return dispatch(removeReview(review));
     });
   };
 };

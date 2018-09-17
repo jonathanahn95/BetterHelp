@@ -5,11 +5,22 @@ import { Route } from 'react-router-dom';
 
 
 class BusinessShow extends React.Component {
+  constructor(props){
+    super(props);
+    this.navigateToEdit = this.navigateToEdit.bind(this);
+
+  }
+
 
   componentDidMount() {
     this.props.requestSingleBusiness(this.props.match.params.businessId);
   }
 
+  navigateToEdit(review) {
+    return (e) => {
+      this.props.history.push(`/businesses/${review.business_id}/reviews/${review.id}`)
+    }
+  }
   render() {
     const business = this.props.business;
     if(!this.props.business) {
@@ -23,8 +34,8 @@ class BusinessShow extends React.Component {
         <div className='reviews-container'>
           <li className='review-body'>{review.body}</li>
           <li className='review-rating'>{review.rating}</li>
-          <button onClick={review => this.props.deleteReview(review.id)}>deltee</button>
-          <button onClick={review => this.props.history.push(`/businesses/reviews/${review.id}`)}>edit</button>
+          <button onClick={e => this.props.deleteReview(review.id)}>deltee</button>
+          <button onClick={ this.navigateToEdit(review) }>edit</button>
         </div>
       )
     })

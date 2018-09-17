@@ -7,10 +7,6 @@ export default (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_REVIEWS:
       return merge({} , state, action.reviews);
-    case REMOVE_REVIEW:
-      let newState = merge({}, state);
-      delete newState[action.reviewId];
-      return newState;
     default:
       return state;
   }

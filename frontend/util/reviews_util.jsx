@@ -24,7 +24,8 @@ export const updateReview = review => {
   debugger
   return $.ajax({
     method: 'PATCH',
-    url: `api/reviews/${review.id}`
+    url: `api/reviews/${review.id}`,
+    data: { review }
   });
 };
 
