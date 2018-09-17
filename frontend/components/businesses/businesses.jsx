@@ -13,7 +13,7 @@ class Businesses extends React.Component {
   render() {
     const businesses = this.props.businesses.map( business =>
       <Business key={business.id}  business={business}  />)
-
+        debugger
     return (
       <div>
         <header className="login-header">

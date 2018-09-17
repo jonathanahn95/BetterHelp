@@ -18,6 +18,8 @@
 }
 
 .page-header {
+  padding-top: 150px;
+
   width: 100%;
   display: flex;
   min-height: 200px;
@@ -64,7 +66,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 3px solid red;
+  /* border: 3px solid red; */
   align-items: flex-start;
   min-width: 500px
 }
@@ -75,7 +77,9 @@
   padding: 50px;
   flex-direction: column;
   min-height: 100px;
-  flex-direction: column-reverse;
+  padding-left: 370px;
+
+  /* flex-direction: column-reverse; */
   list-style: none;
   width: 47%;
   font-family: Helvetica;
@@ -84,7 +88,7 @@
 
   justify-content: space-between;
 
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .reviews-container li {
@@ -93,6 +97,14 @@
 .reviews {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-right: 7px;
+  border-right: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+
 }
 .header-hours {
   font-size: 16px;
@@ -107,6 +119,10 @@
 .day-container {
   display: flex;
   /* flex-direction:  */
+  margin: 0;
+padding: 18px 0;
+/* border-bottom: 1px solid #e6e6e6; */
+padding-bottom: 17px;
 }
 .day {
   font-weight: bold;
@@ -116,13 +132,15 @@
 
 .business-show-container {
   width: 48%;
+  padding-left: 18px;
+
 
 }
 
 .business-hours {
   list-style: none;
       font-size: 14px;
-      border: 3px solid;
+      /* border: 3px solid; */
       width: 83%;
 }
 
@@ -136,10 +154,106 @@
   width: 65%;
 }
 
-/* .review-rating {
-  width: 102px;
-      height: 18px;
-      background: url(/assets/stars-7a1d87c….png);
-      background-position: 0px -402px;
-      margin-right: 6px;
-} */
+.bus-info {
+  display: flex;
+  font-size: 15px;
+  padding: 7px 0;
+
+}
+.more-business-info-container {
+  font-family: Helvetica;
+
+}
+
+
+
+.dub-container {
+  display: flex;
+  padding-left: 370px;
+  width: 20%;
+  justify-content: space-around;
+
+  flex-direction: row-reverse;
+}
+.dub {
+  display: inline-block;
+   padding: 5px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   font-size: 12px;
+   line-height: 1.5em;
+   color: #999;
+   background: transparent;
+   box-shadow: none;
+   white-space: nowrap;
+   -webkit-transition: all 0.3s ease;
+   transition: all 0.3s ease;
+   height: 20px;
+    width: 20px;
+
+
+}
+.more-business-info {
+  /* padding-left: 18px; */
+    padding-top: 25px;
+  font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 1.3125em;
+    color: #d32323;
+}
+
+.answer {
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+.bus-address{
+  font-weight: bold;
+  font-family: Helvetica;
+
+}
+
+.bus-city{
+  font-weight: bold;
+  font-family: Helvetica;
+
+}
+
+.bus-zipcode{
+  font-weight: bold;
+  font-family: Helvetica;
+
+}
+
+.info {
+  list-style: none;
+  width: 23%;
+    margin-left: 180px;
+    height: 390px;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.info li {
+  font-family: Helvetica;
+  font-size: 14px;
+}
+
+.bus-website {
+  color: #0073bb;
+}
+
+.review-body {
+  font-family: Helvetica;
+  font-size: 16px;
+
+}
+
+.num-reviews{
+  color: #666;
+  font-weight: normal;
+    font-size: 16px;
+    padding-top: 15px;
+}

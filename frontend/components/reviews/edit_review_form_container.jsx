@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ReviewForm from './review_form';
 import { updateReview, fetchReview } from '../../actions/reviews_actions';
+import { clearErrors } from '../../actions/sessions_actions';
 
 
 
@@ -17,7 +18,9 @@ const msp = (state, ownProps) => {
 const mdp = (dispatch) => {
   return {
     action: review => dispatch(updateReview(review)),
-    fetchReview: id => dispatch(fetchReview(id))
+    fetchReview: id => dispatch(fetchReview(id)),
+    clearErrors: () => dispatch(clearErrors())
+
   };
 };
 

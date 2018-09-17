@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import ReviewForm from './review_form';
 import { createReview } from '../../actions/reviews_actions';
 import { requestSingleBusiness } from '../../actions/businesses_actions';
+import { clearErrors } from '../../actions/sessions_actions';
 
 const msp = (state ,ownProps) => {
   const errors = state.errors.review;
@@ -24,7 +25,9 @@ const msp = (state ,ownProps) => {
 const mdp = dispatch =>{
   return {
     action: (review) => dispatch(createReview(review)),
-    requestSingleBusiness: id => dispatch(requestSingleBusiness(id))
+    requestSingleBusiness: id => dispatch(requestSingleBusiness(id)),
+    clearErrors: () => dispatch(clearErrors())
+
   };
 };
 

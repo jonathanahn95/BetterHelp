@@ -17,8 +17,20 @@
     padding: 18px;
   }
 
-.review-form {
-
+.one-star {
+  background-color: #F2BC82;
+}
+.two-star {
+  background-color: #FDC116;
+}
+.three-star {
+  background-color: #FF9151;
+}
+.four-star {
+  background-color: #F25A54;
+}
+.five-star {
+  background-color: #D4202B;
 }
 
 .form-rating-list {
@@ -29,7 +41,9 @@ margin-bottom: 18px;
 }
 .form-body {
   display: block;
-width: 100%;
+  width: 102%;
+  border: 0;
+
 height: 100%;
 font-size: 18px;
 resize: none;
@@ -51,6 +65,67 @@ padding: 10px 19px 10px 19px;
 margin: 18px 0;
 text-align: center;
 }
+
+.review-form-button:hover {
+  color: red;
+}
+
+.fa-trash {
+  display: inline-block;
+  width: 25px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #999;
+  background: transparent;
+  box-shadow: none;
+  white-space: nowrap;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.fa-pencil {
+  width: 18px;
+  height: 18px;
+}
+
+.fa-trash:hover {
+  background: #f8f8f8;
+  background: -webkit-linear-gradient(#fff, #eee);
+  background: linear-gradient(#fff, #eee);
+  text-decoration: none;
+  color: #333;
+  border-color: #cdcdcd;
+  border-color: rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.5);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.i{
+
+  color: white;
+  margin-left: 5px;
+  background-color: #d3d3d3;
+  border-radius: 3px;
+}
+
+
+.review-form-rating-list>label:nth-child(5):hover,
+.review-form-rating-list>label:nth-child(5):hover ~ label{background-color: #F2BC82;}
+.review-form-rating-list>label:nth-child(4):hover,
+.review-form-rating-list>label:nth-child(4):hover ~ label{background-color: #FDC116;}
+.review-form-rating-list>label:nth-child(3):hover,
+.review-form-rating-list>label:nth-child(3):hover ~ label{background-color: #FF9151;}
+.review-form-rating-list>label:nth-child(2):hover,
+.review-form-rating-list>label:nth-child(2):hover ~ label{background-color: #F25A54;}
+.review-form-rating-list>label:nth-child(1):hover,
+.review-form-rating-list>label:nth-child(1):hover ~ label{background-color: #D4202B;}
 
 .button-container {
   display: flex;

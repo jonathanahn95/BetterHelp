@@ -18,9 +18,241 @@ class BusinessShow extends React.Component {
 
   navigateToEdit(review) {
     return (e) => {
-      this.props.history.push(`/businesses/${review.business_id}/reviews/${review.id}`)
-    }
+      this.props.history.push(`/businesses/${review.business_id}/reviews/${review.id}`);
+    };
   }
+
+  moreBusinessInfo() {
+    return (
+      <ul className='more-business-info-container'>
+        <h1 className='more-business-info'>
+          More business info
+        </h1>
+        <li className='bus-info'>
+          <p>
+            Liked by Vegans
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Has Gluten-free Options
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Liked by Vegetarians
+          </p>
+            <p className='answer'>
+              Yes
+            </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Takes Reservations
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Delivery
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Take-out
+          </p>
+            <p className='answer'>
+              Yes
+            </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Accepts Credit Cards
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Accepts Apple Pay
+          </p>
+          <p className='answer'>
+            No
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Accepts Google Pay
+          </p>
+          <p className='answer'>
+            No
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Accepts Bitcoin
+          </p>
+          <p className='answer'>
+            No
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Good For Lunch
+          </p>
+          <p className='answer'>
+            Dinner
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Parking Street
+          </p>
+          <p className='answer'>
+            No
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Bike Parking
+          </p>
+          <p className='answer'>
+            No
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Wheelchair Accessible
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Good for Kids
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Good for Groups
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Attire Casual
+          </p>
+          <p className='answer'>
+            No
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Noise Level
+          </p>
+          <p className='answer'>
+            Average
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Alcohol Full
+          </p>
+          <p className='answer'>
+            Bar
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Outdoor Seating
+          </p>
+          <p className='answer'>
+            No
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Wi-Fi
+          </p>
+          <p className='answer'>
+            Free
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Has TV
+          </p>
+          <p className='answer'>
+            No
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Dogs Allowed
+          </p>
+          <p className='answer'>
+            No
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Waiter Service
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Caters
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            By Appointment Only
+          </p>
+          <p className='answer'>
+            No
+          </p>
+        </li>
+        <li className='bus-info'>
+          <p>
+            Gender Neutral Restrooms
+          </p>
+          <p className='answer'>
+            Yes
+          </p>
+        </li>
+      </ul>
+    )
+  }
+
+  // <button className='button-img' onClick={e => this.props.deleteReview(review.id)}><img className="dub" src={window.trashBin}></img></button>
+  // <button className='button-img' onClick={ this.navigateToEdit(review) }><img className="dub" src={window.trashBin}></img>
+  //
+  // </button>
+
   render() {
     const business = this.props.business;
     if(!this.props.business) {
@@ -29,19 +261,26 @@ class BusinessShow extends React.Component {
       );
     }
 
+
+
     const reviewsArr = this.props.reviews && Object.values(this.props.reviews).map( review => {
+      debugger
       return (
-        <div className='reviews-container'>
+        <div className='reviews-container' key={review.id}>
           <li className='review-body'>{review.body}</li>
           <li className='review-rating'>{review.rating}</li>
-          <button onClick={e => this.props.deleteReview(review.id)}>deltee</button>
-          <button onClick={ this.navigateToEdit(review) }>edit</button>
+          <div className='dub-container'>
+            <img onClick={e => this.props.deleteReview(review.id)} className="dub" src={window.trashBin}></img>
+            <img onClick={ this.navigateToEdit(review) } className="dub" src={window.edit}></img>
+          </div>
+
         </div>
       )
     })
 
 
     return (
+      debugger
       <div>
         <header className="login-header">
           <h1 className="login-head">
@@ -53,13 +292,23 @@ class BusinessShow extends React.Component {
             <div className='page-header'>
               <div className='left'>
                 {business.name}
+                <div className='num-reviews'>
+                </div>
               </div>
               <div className='right'>
                 <Link to={`/businesses/${business.id}/review`}><button className='right-button'>Write a review</button></Link>
               </div>
             </div>
             <div className='subheader'>
-              <div className='map'>
+              <div className='info'>
+                <li className='bus-address'>{business.address}</li>
+                <li className='bus-city'>{business.city}</li><li className='bus-state'>{business.state}</li><li className='bus-zipcode'>{business.zipcode}</li>
+                <li>
+                  {business.phone_number}
+                </li>
+                <li className='bus-website'>
+                  {business.website}
+                </li>
               </div>
               <div className='show-pics'>
               </div>
@@ -67,10 +316,7 @@ class BusinessShow extends React.Component {
           </div>
         </main>
         <div className='main-reviews-container'>
-          <div className='placeholder'>
-            placeholder
-            asdasdasd
-          </div>
+
           <div className='reviews'>
             { reviewsArr }
           </div>
@@ -135,10 +381,8 @@ class BusinessShow extends React.Component {
                        {business.hours[6]}
                      </p>
                    </li>
-
-
                </ul>
-
+               {this.moreBusinessInfo()}
 
            </div>
         </div>
