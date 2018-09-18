@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
+import ReactStars from 'react-stars';
 
 
 class BusinessShow extends React.Component {
@@ -282,6 +283,15 @@ class BusinessShow extends React.Component {
       return (
         <div className='reviews-container' key={review.id}>
           <div className='rating-created-at'>
+            <li className='review-rating'>
+            <ReactStars
+              count={5}
+              edit={false}
+              value={review.rating ? review.rating : 0}
+              size={24}
+              color2={'#ffd700'} />
+          </li>
+
             <li className='review-rating'>{review.rating}</li>
             <li className='review-created-at'>{review.created_at}</li>
           </div>
