@@ -20,16 +20,31 @@ export default (state = {}, action) => {
       // returns from backend as snake case
       businessId = action.review.business_id;
       reviewId = action.review.id;
-      newState[businessId].reviews.push(action.review);
+
+      reviews = [];
+      newState[businessId].reviews.forEach(review => {
+        if(review.id !== action.review.id) {
+          reviews.push(review);
+        } else {
+          reviews.push(action.review);
+        }
+      });
+
+      newState[businessId].reviews = reviews;
       return newState;
     case REMOVE_REVIEW:
       newState = merge({}, state);
       // returns from backend as snake case
       businessId = action.review.business_id;
       reviewId = action.review.id;
-      reviews = newState[businessId].reviews;
-      debugger
-      delete newState[businessId].reviews.find(rev => rev.id ===  reviewId);
+
+      reviews = [];
+      newState[businessId].reviews.forEach(review => {
+        if(review.id !== action.review.id) {
+          reviews.push(review);
+        }
+      });
+      newState[businessId].reviews = reviews;
       return newState;
     default:
       return state;

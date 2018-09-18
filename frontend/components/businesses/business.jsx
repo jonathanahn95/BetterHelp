@@ -12,10 +12,13 @@ class Business extends React.Component {
        this.props.requestSingleBusiness(nextProps.match.params.businessId);
      }
    }
-  render() {
-    debugger
-    return (
 
+  render() {
+    const review = this.props.business.reviews;
+    const reviewCount = review ? review.length : 0;
+    const reviewBody = review ? review.body : '';
+
+    return (
       <div className="large-wrapper">
 
         <div className="business-image">
@@ -29,7 +32,7 @@ class Business extends React.Component {
               <Link to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
             </div>
             <div className='review'>
-              {this.props.business.reviews.length} reviews
+              { reviewCount } reviews
             </div>
           </div>
           <span className='secondary-attributes'>
@@ -44,7 +47,7 @@ class Business extends React.Component {
                 {this.props.business.city}
               </li>
               <li>
-                {this.props.business.reviews[0].body}
+                {reviewBody}
 
               </li>
 

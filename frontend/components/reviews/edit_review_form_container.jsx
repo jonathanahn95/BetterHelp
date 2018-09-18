@@ -11,8 +11,9 @@ const msp = (state, ownProps) => {
   const businessId = ownProps.match.params.businessId;
   const reviewId = ownProps.match.params.id;
   const business = state.entities.businesses[ownProps.match.params.businessId] || {};
-  const review = (state.entities.businesses[businessId] && state.entities.businesses[businessId].reviews[reviewId]) || {};
-  debugger
+  // const review = (state.entities.businesses[businessId] && state.entities.businesses[businessId].reviews[reviewId]) || {};
+  const review = state.entities.businesses[businessId].reviews.find(rev => rev.id === parseInt(reviewId))
+
   const errors = state.errors.review;
   const formType = "Update Review";
   return { review, errors, formType, business };
