@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 
 
 const msp = (state, ownProps) => {
-  debugger
   return {
     businesses: state.entities.session
   };

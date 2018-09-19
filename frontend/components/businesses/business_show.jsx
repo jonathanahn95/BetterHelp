@@ -276,14 +276,12 @@ class BusinessShow extends React.Component {
     reviewScore = reviewScore.reduce( (acc, el) => { return acc + el}) / this.props.reviews.length
 
 
-    debugger
 
     const imagesArr = this.props.business.photos.slice(1).map( photo => {
       return <img key={photo.id} className="bus-show-pics" src={photo.image_url}></img>
     })
 
     const reviewsArr = this.props.reviews.map( review => {
-      debugger
       return (
       <div className='lets-see'>
         <div className='user-name'>
@@ -341,9 +339,10 @@ class BusinessShow extends React.Component {
             <div className='page-header'>
               <div className='left'>
                 {business.name}
-                <div className='num-reviews'>
+                <div className='num-reviews-container'>
 
                   <ReactStars
+                    className='stars'
                     count={5}
                     half={false}
                     value={reviewScore}
@@ -357,7 +356,21 @@ class BusinessShow extends React.Component {
                 </div>
               </div>
               <div className='right'>
-                <Link to={`/businesses/${business.id}/review`}><button className='right-button'>Write a review</button></Link>
+                <div className='right-review'>
+                  <Link to={`/businesses/${business.id}/review`}><button className='right-button'>Write a review</button></Link>
+                </div>
+                <div className='right-list'>
+                  <li className='right-photo'>
+                    Add Photo
+                  </li>
+                  <li className='right-share'>
+                    Share
+                  </li>
+                  <li className='right-save'>
+                    Save
+                  </li>
+                </div>
+
               </div>
             </div>
             <div className='subheader'>

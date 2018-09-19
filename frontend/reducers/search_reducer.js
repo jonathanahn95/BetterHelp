@@ -3,7 +3,6 @@ import { merge } from 'lodash';
 
 
 export default (state = {}, action) => {
-  debugger
   Object.freeze(state);
   switch (action.type) {
 
