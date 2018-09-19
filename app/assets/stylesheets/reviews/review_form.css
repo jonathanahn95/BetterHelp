@@ -163,18 +163,6 @@ text-align: center;
 }
 
 
-.header-nav-bar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  min-height: 40px;
-
-  /* border: 1px solid; */
-  /* border-left: 1px solid #e6e6e6!important;
-border-right: 1px solid #e6e6e6!important; */
-}
 
 .sub1-head-nav-bar{
   width: 80%;

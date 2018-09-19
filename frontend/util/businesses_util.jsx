@@ -7,6 +7,7 @@ export const fetchBusinesses = () => {
   });
 };
 
+
 export const fetchBusiness = (id) => {
   return $.ajax({
     method: 'GET',

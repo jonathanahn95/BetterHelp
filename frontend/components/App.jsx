@@ -9,6 +9,8 @@ import BusinessesContainer from './businesses/businesses_container';
 import BusinessShowContainer from './businesses/business_show_container';
 import CreateReviewFormContainer from './reviews/create_review_form_container';
 import EditReviewFormContainer from './reviews/edit_review_form_container';
+import BusinessIndexContainer from './businesses/business_index_container';
+
 const App = () => (
   <div>
 
@@ -16,10 +18,10 @@ const App = () => (
     <Route  exact path="/business_categories/:id" component={BusinessesContainer} />
     <ProtectedRoute exact path ="/businesses/:businessId/review" component={CreateReviewFormContainer} />
     <ProtectedRoute exact path ="/businesses/:businessId/reviews/:id" component={EditReviewFormContainer} />
+    <Route exact path ="/businesses" component={BusinessIndexContainer} />
     <Route exact path="/businesses/:businessId" component={BusinessShowContainer } />
     <AuthRoute exact path="/login" component={LoginFormContainer}/>
     <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
-
 
 
     <footer className="footer">

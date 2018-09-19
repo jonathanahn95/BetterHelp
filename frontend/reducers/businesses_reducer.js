@@ -1,6 +1,7 @@
 import { RECEIVE_SELECTED_BUSINESS_CATEGORIES  } from '../actions/business_category_actions';
-import { RECEIVE_BUSINESS } from '../actions/businesses_actions';
+import { RECEIVE_BUSINESS, RECEIVE_BUSINESSES } from '../actions/businesses_actions';
 import { RECEIVE_REVIEW, REMOVE_REVIEW } from '../actions/reviews_actions';
+import { RECEIVE_SEARCH_RESULTS } from '../actions/search_actions';
 import { merge } from 'lodash';
 
 
@@ -12,6 +13,8 @@ export default (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_SELECTED_BUSINESS_CATEGORIES:
+      return action.businesses;
+    case RECEIVE_BUSINESSES:
       return action.businesses;
     case RECEIVE_BUSINESS:
       return merge({}, state, { [action.business.id]: action.business });
@@ -46,6 +49,8 @@ export default (state = {}, action) => {
       });
       newState[businessId].reviews = reviews;
       return newState;
+      case RECEIVE_SEARCH_RESULTS:
+        return merge({}, state, action.results);
     default:
       return state;
   }

@@ -39,13 +39,6 @@ class SignUpForm extends React.Component {
     this.props.processForm(user);
   }
 
-  update(field){
-    return (e) => {
-      this.setState({
-        [field]: e.currentTarget.value
-      });
-    };
-  }
 
   updateBirthday(field) {
     return e => {

@@ -26,6 +26,13 @@ export const receiveBusiness = business => {
   };
 };
 
+export const receiveAllBusinesses = (businesses) => {
+  return {
+    type: RECEIVE_BUSINESSES,
+    businesses
+  };
+};
+
 export const requestAllBusinesses = () => {
   return dispatch => {
     return BusinessesApiUtil.fetchBusinesses().then( businesses => {

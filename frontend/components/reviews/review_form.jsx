@@ -25,7 +25,6 @@ class ReviewForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.action(this.state).then(() => {
-      debugger
       const businessId = this.state.business_id;
       this.props.history.push(`/businesses/${businessId}`)
     });
@@ -61,7 +60,6 @@ class ReviewForm extends React.Component {
 //
 
 ratingChanged(newRating) {
-  debugger
    this.setState({rating: newRating})
  }
 

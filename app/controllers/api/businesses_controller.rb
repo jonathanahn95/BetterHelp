@@ -5,12 +5,13 @@ class Api::BusinessesController < ApplicationController
   end
 
   def index
-    # @businesses = Business.all
-    if params[:business_category_id]
-      @businesses = Business.where( business_category_id: params[:business_category_id])
-    else
-      @businesses = Business.all
-    end
+    @businesses = params[:business_category_id] ? Business.where( business_category_id: params[:business_category_id]) : Business.all
+  end
+
+  def search
+    # debugger
+    @businesses = Business.where('name LIKE ?', "%#{params[:search]}%")
+    render :index
   end
 
   def create

@@ -16,13 +16,33 @@
   min-height: 500px;
 
 }
+.lets-see {
+  display: flex;
+  width: 95%;
+  border-bottom: 1px solid #e6e6e6;
 
+}
+
+.prof-pic {
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.user-name {
+  display: flex;
+  align-items: flex-start;
+  list-style: none;
+  padding-top: 30px;
+  padding-left: 120px;
+}
 .page-header {
-  padding-top: 150px;
+  padding-top: 113px;
+
 
   width: 100%;
   display: flex;
-  min-height: 200px;
+  min-height: 159px;
   justify-content: space-around;
   /* align-items: center; */
 }
@@ -31,6 +51,12 @@
 
 }
 
+.tidy {
+  padding-top: 20px;
+  width: 280px;
+  height: 280px;
+  padding-bottom: 20px;
+}
 .left {
   font-size: 36px;
   text-shadow: 0 1px rgba(255,255,255,0.7);
@@ -73,7 +99,7 @@ bus-show-pics {
 .main-reviews-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   /* border: 3px solid red; */
   align-items: flex-start;
   min-width: 500px
@@ -82,10 +108,10 @@ bus-show-pics {
 .reviews-container {
   /* width: 70%; */
   display: flex;
-  padding: 50px;
+  padding: 25px;
   flex-direction: column;
   min-height: 100px;
-  padding-left: 370px;
+  padding-left: 140px;
 
   /* flex-direction: column-reverse; */
   list-style: none;
@@ -99,6 +125,24 @@ bus-show-pics {
   /* border: 1px solid black; */
 }
 
+.fname1 {
+  padding-left: 15px;
+  padding-right: 3px;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: bold;
+  color: #0073bb;
+
+}
+
+.lname1 {
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: bold;
+  color: #0073bb;
+
+}
+
 .reviews-container li {
   text-decoration: none;
 }
@@ -110,7 +154,7 @@ bus-show-pics {
   align-items: center;
   margin-right: 7px;
   border-right: 1px solid #e6e6e6;
-  border-top: 1px solid #e6e6e6;
+  /* border-top: 1px solid #e6e6e6; */
   border-bottom: 1px solid #e6e6e6;
 
 }
@@ -253,9 +297,18 @@ padding-bottom: 17px;
   color: #0073bb;
 }
 
+.review-created-at {
+  padding-left: 15px;
+}
+
 .review-body {
-  font-family: Helvetica;
-  font-size: 16px;
+  font-family: inherit;
+  font-size: 15px;
+  padding-top: 15px;
+  width: 82%;
+  letter-spacing: 0.5px;
+  color: #333333;
+
 
 }
 

@@ -8,15 +8,14 @@ import { Route } from 'react-router-dom';
 class Businesses extends React.Component {
 
   componentDidMount() {
-    // debugger
     this.props.requestSelectedBusinessCategories(this.props.category);
   }
 
   componentDidUpdate(previousProps) {
-    debugger
+    // gets hit anytime comp receive new props/new state
+    // works same as componentWillReceiveProps
     if (previousProps.category !== this.props.category)
     {
-      debugger
       this.props.requestSelectedBusinessCategories(this.props.category);
     }
   }
@@ -41,7 +40,7 @@ class Businesses extends React.Component {
                   <Link to={`/business_categories/36`}><p className='nav-bar-item'>Bootcamps</p></Link>
                 </div>
                 <div className='review-bar-container'>
-                  <Link to={`/business_categories/4`}><p className='nav-bar-item'>Write a Review</p></Link>
+                  <Link to={`/businesses`}><p className='nav-bar-item'>Write a Review</p></Link>
                 </div>
               </ul>
             </div>

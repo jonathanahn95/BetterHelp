@@ -11,6 +11,7 @@ export const fetchBusinessCategories = () => {
 export const fetchSelectedBusinessCategories = (businessCategory) => {
   return $.ajax({
     method: 'GET',
-    url: `api/business_categories/${businessCategory}/businesses`
+    url: `api/business_categories/${businessCategory}/businesses`,
+
   });
 };

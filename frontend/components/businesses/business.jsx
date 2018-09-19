@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import ReactStars from 'react-stars';
 
 
 class Business extends React.Component {
@@ -15,7 +16,6 @@ class Business extends React.Component {
 
   render() {
     const review = this.props.business.reviews;
-    debugger
     const reviewCount = review ? review.length : 0;
     const reviewBody = reviewCount > 0 && review ? review[0].body : '';
 

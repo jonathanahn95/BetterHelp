@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessCategoryIndexContainer from '../business_category/business_category_index_container';
+import SearchFormContainer from '../search/search_form_container';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Splash extends React.Component {
             <div className="header">
               <div className='header-nav'>
                 <ul className="header-review">
-                  <Link className="write-review" to="/businesses/">Write a Review</Link>
+                  <Link className="write-review" to="/businesses">Write a Review</Link>
                 </ul>
                 <button className="logout" onClick={this.handleClick}>Log Out</button>
               </div>
@@ -30,8 +31,7 @@ class Splash extends React.Component {
             <div className="brand-name" >
               <BusinessCategoryIndexContainer/>
               <div className="search-bar-container">
-
-                <input className= "search" type="search"></input>
+                <SearchFormContainer/>
               </div>
               <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
             </div>

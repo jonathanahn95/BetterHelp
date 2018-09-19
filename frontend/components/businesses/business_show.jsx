@@ -25,7 +25,6 @@ class BusinessShow extends React.Component {
    }
 
   navigateToEdit(review) {
-    debugger
     return (e) => {
       this.props.history.push(`/businesses/${review.business_id}/reviews/${review.id}`);
     };
@@ -263,7 +262,6 @@ class BusinessShow extends React.Component {
   // </button>
 
   render() {
-
     const business = this.props.business;
     if(!this.props.business) {
       return (
@@ -271,17 +269,31 @@ class BusinessShow extends React.Component {
       );
     }
 
+    let reviewScore = []
+    const reviewAvg = this.props.reviews.forEach( review => {
+      reviewScore.push(review.rating)
+    })
+    reviewScore = reviewScore.reduce( (acc, el) => { return acc + el}) / this.props.reviews.length
 
 
-
+    debugger
 
     const imagesArr = this.props.business.photos.slice(1).map( photo => {
       return <img key={photo.id} className="bus-show-pics" src={photo.image_url}></img>
     })
 
     const reviewsArr = this.props.reviews.map( review => {
+      debugger
       return (
+      <div className='lets-see'>
+        <div className='user-name'>
+          <img className="prof-pic" src={window.profPic}></img>
+
+          <li className='fname1'>{review.user ? review.user.fname : ""}</li>
+          <li className='lname1'>{review.user ? review.user.lname : ""}</li>
+        </div>
         <div className='reviews-container' key={review.id}>
+
           <div className='rating-created-at'>
             <li className='review-rating'>
             <ReactStars
@@ -292,20 +304,16 @@ class BusinessShow extends React.Component {
               color2={'#ffd700'} />
           </li>
 
-            <li className='review-rating'>{review.rating}</li>
             <li className='review-created-at'>{review.created_at}</li>
           </div>
           <li className='review-body'>{review.body}</li>
-          <div className='user-name'>
-            <li>{review.user ? review.user.fname : ""}</li>
-            <li>{review.user ? review.user.lname : ""}</li>
-          </div>
           <div className='dub-container'>
             <img key="trash" onClick={e => this.props.deleteReview(review.id)} className="dub" src={window.trashBin}></img>
             <img key="edit" onClick={ this.navigateToEdit(review) } className="dub" src={window.edit}></img>
           </div>
 
         </div>
+      </div>
       )
     })
 
@@ -317,13 +325,33 @@ class BusinessShow extends React.Component {
             <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
           </h1>
         </header>
+        <ul className='ul-nav-bar-item1'>
+          <div className='nav-bar-container'>
+            <Link to={`/business_categories/33`}><p className='nav-bar-item'>Restaurant</p></Link>
+            <Link to={`/business_categories/34`}><p className='nav-bar-item'>Home Services</p></Link>
+            <Link to={`/business_categories/35`}><p className='nav-bar-item'>Cafes</p></Link>
+            <Link to={`/business_categories/36`}><p className='nav-bar-item'>Bootcamps</p></Link>
+          </div>
+          <div className='review-bar-container'>
+            <Link to={`/businesses/`}><p className='nav-bar-item'>Write a Review</p></Link>
+          </div>
+        </ul>
         <main className='top-shelf'>
           <div className='content'>
             <div className='page-header'>
               <div className='left'>
                 {business.name}
                 <div className='num-reviews'>
+
+                  <ReactStars
+                    count={5}
+                    half={false}
+                    value={reviewScore}
+                    onChange={this.ratingChanged}
+                    size={24}
+                    color2={'#ffd700'} />
                   {reviewsArr.length} reviews
+
                 </div>
                 <div className='num-reviews'>
                 </div>
@@ -356,6 +384,7 @@ class BusinessShow extends React.Component {
           </div>
           <div className="business-show-container">
             <div className='imag'>
+              <img className="tidy" src={window.tidy}></img>
 
             </div>
 
@@ -422,6 +451,7 @@ class BusinessShow extends React.Component {
 
            </div>
         </div>
+
       </div>
     )
   }
