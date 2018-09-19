@@ -1,4 +1,4 @@
-# json.business do
+
   json.extract!(
     @business,
     :id,
@@ -13,9 +13,14 @@
     :zip_code,
     :business_category_id,
     :latitude,
-    :longitude,
-    :photos)
-# end
+    :longitude)
+
+json.photos do
+  json.array! @business.photos do |photo|
+    json.photo_image_url url_for(photo)
+  end
+end
+
 
 json.reviews do
   json.array! @reviews do |review|

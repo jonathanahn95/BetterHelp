@@ -23,7 +23,7 @@ class Business extends React.Component {
       <div className="large-wrapper">
 
         <div className="business-image">
-          <img className="business-pic" src={this.props.business.photos[0].image_url}></img>
+          <img className="business-pic" src={this.props.business.photos[0].photo_image_url}></img>
 
         </div>
 

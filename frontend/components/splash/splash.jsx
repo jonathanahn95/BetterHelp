@@ -7,12 +7,17 @@ class Splash extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.state = this.props.businessCategories;
   }
 
   handleClick(e) {
     e.preventDefault();
     this.props.logout();
   }
+
+  // componentDidMount() {
+  //   this.props.fetchBusinessCategories();
+  // }
 
   render() {
     if (this.props.currentUser) {

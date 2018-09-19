@@ -15,7 +15,13 @@
       :business_category_id,
       :latitude,
       :longitude,
-      :photos,
       :reviews)
+    json.photos do
+      json.array! business.photos.each do |photo|
+        json.photo_image_url url_for(photo)
+      end
+    end
+
   end
+
 end

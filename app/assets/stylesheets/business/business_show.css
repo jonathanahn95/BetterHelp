@@ -19,6 +19,8 @@
 .lets-see {
   display: flex;
   width: 95%;
+  margin-left: 60px;
+
   border-bottom: 1px solid #e6e6e6;
 
 }
@@ -69,7 +71,15 @@
 }
 
 bus-show-pics {
-  width: 33px
+  width: 150px;
+
+}
+
+.show-pics {
+  display: flex;
+  margin-right: 50px;
+  height: 210px;
+padding-top: 80px;
 }
 
 .right-button {
@@ -318,6 +328,7 @@ padding-bottom: 17px;
 }
 
 .bus-show-pics:hover {
+  transform: scale(1.2);
   transition: all 1.7s ease-in-out;
   cursor: pointer;
 }

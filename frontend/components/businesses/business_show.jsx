@@ -276,9 +276,8 @@ class BusinessShow extends React.Component {
     reviewScore = reviewScore.reduce( (acc, el) => { return acc + el}) / this.props.reviews.length
 
 
-
     const imagesArr = this.props.business.photos.slice(1).map( photo => {
-      return <img key={photo.id} className="bus-show-pics" src={photo.image_url}></img>
+      return <img key={photo.id} className="bus-show-pics" src={photo.photo_image_url}></img>
     })
 
     const reviewsArr = this.props.reviews.map( review => {

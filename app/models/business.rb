@@ -11,7 +11,7 @@ class Business < ApplicationRecord
     optional: true
 
   has_many :reviews
-  has_many :photos
+  has_many_attached :photos
 
 
 end

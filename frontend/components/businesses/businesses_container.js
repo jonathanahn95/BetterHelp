@@ -5,7 +5,6 @@ import { requestSelectedBusinessCategories } from '../../actions/businesses_acti
 
 
 const msp = (state,ownProps) => {
-
   return {
     businesses: Object.values(state.entities.businesses),
     category: ownProps.match.params.id
