@@ -35,6 +35,8 @@
   display: flex;
   align-items: flex-start;
   list-style: none;
+  width: 50px;
+
   padding-top: 30px;
   padding-left: 120px;
 }
@@ -122,6 +124,8 @@ padding-top: 80px;
   flex-direction: column;
   min-height: 100px;
   padding-left: 140px;
+  margin-left: 25px;
+
 
   /* flex-direction: column-reverse; */
   list-style: none;

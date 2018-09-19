@@ -49,10 +49,11 @@ class Splash extends React.Component {
           </div>
           <div className="popular-categories-container">
             <div className='popular-categories'>
-              <Link to={`/business_categories/9`}><img className="pop-cat" src={window.restaurant}></img></Link>
-              <Link to={`/business_categories/10`}><img className="pop-cat" src={window.homeServices}></img></Link>
-              <Link to={`/business_categories/11`}><img className="pop-cat" src={window.cafe}></img></Link>
-              <Link to={`/business_categories/12`}><img className="pop-cat" src={window.codingBootcamp}></img></Link>
+              <Link to={`/business_categories/77`}><img className="pop-cat" src="https://s3.amazonaws.com/betterhelp-dev/restaurant.jpg
+"></img></Link>
+              <Link to={`/business_categories/78`}><img className="pop-cat" src={window.homeServices}></img></Link>
+              <Link to={`/business_categories/79`}><img className="pop-cat" src={window.cafe}></img></Link>
+              <Link to={`/business_categories/80`}><img className="pop-cat" src={window.codingBootcamp}></img></Link>
 
             </div>
           </div>
