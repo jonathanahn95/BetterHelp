@@ -13,5 +13,11 @@ class Business < ApplicationRecord
   has_many :reviews
   has_many_attached :photos
 
+  def self.in_bounds(bounds)
+    self.where("latitude < ?", bounds[:northEast][:latitude])
+    .where("latitude > ?", bounds[:southWest][:latitude])
+    .where("longitude > ?", bounds[:southWest][:longitude])
+    .where("longitude < ?", bounds[:northEast][:longitude])
+  end
 
 end

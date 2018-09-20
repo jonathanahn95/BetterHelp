@@ -6,6 +6,7 @@ class Api::BusinessesController < ApplicationController
 
   def index
     @businesses = params[:business_category_id] ? Business.where( business_category_id: params[:business_category_id]) : Business.all
+
   end
 
   def search
