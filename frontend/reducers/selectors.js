@@ -10,9 +10,9 @@ export const selectSearchedBusinessIds = results => {
 export const selectSearchBusinesses = (businesses, selectSearchedBusinessIds) => {
 
   let results = [];
-  debugger
+  
   businesses.forEach( business => {
-    if (business.id && selectSearchedBusinessIds.includes(business.id.toString())){
+    if (selectSearchedBusinessIds && business.id && selectSearchedBusinessIds.includes(business.id.toString())){
       results.push(business);
     }
   });

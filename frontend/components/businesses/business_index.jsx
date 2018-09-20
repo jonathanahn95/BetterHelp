@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import ReactStars from 'react-stars';
 import Business from './business';
-
+import BusinessMap from '../map/business_map';
+import MarkerManager from '../../util/marker_manager'
 
 class BusinessIndex extends React.Component {
   constructor(props){
@@ -20,9 +21,14 @@ class BusinessIndex extends React.Component {
 
 
   render() {
-    
-    const businesses = this.props.businesses.map( business =>
-      <Business key={business.id}  business={business}  />)
+
+    let businesses;
+    if (this.props.businesses) {
+       businesses = this.props.businesses.map( business =>
+        <Business key={business.id}  business={business}  />)
+    } else {
+      businesses = <div></div>
+    }
 
       return (
         <div>
@@ -52,6 +58,9 @@ class BusinessIndex extends React.Component {
               {businesses}
             </div>
           </div>
+          <BusinessMap businesses={businesses}/>
+            <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
+
         </div>
       )
   }

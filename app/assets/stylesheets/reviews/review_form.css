@@ -27,6 +27,12 @@
   padding-left: 150px;
 }
 . */
+
+.review-form-business-name {
+  padding: 20px 0;
+
+}
+
 .review-form-business-name > a {
   color: #0073bb;
   font-size: 36px;

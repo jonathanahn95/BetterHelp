@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Business from '../businesses/business';
+import BusinessMap from '../map/business_map';
 
 class SearchBusinessPage extends React.Component {
   constructor(props){
@@ -40,6 +41,9 @@ class SearchBusinessPage extends React.Component {
           {searchedBusinesses}
         </div>
       </div>
+      <BusinessMap/>
+        <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
+
     </div>
 
 

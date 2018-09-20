@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Search from './search';
 import { requestAllBusinesses } from '../../actions/businesses_actions';
-import BusinessIndex from '../businesses/business_index';
 
 
 const msp = (state,ownProps) => {
@@ -19,4 +18,4 @@ const mdp = dispatch => {
 };
 
 
-// export default connect(msp,mdp)(BusinessIndex);
+export default connect(msp,mdp)(Search);

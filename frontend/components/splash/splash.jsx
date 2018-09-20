@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import BusinessCategoryIndexContainer from '../business_category/business_category_index_container';
 import SearchFormContainer from '../search/search_form_container';
 import BusinessIndexContainer from '../businesses/business_index_container';
+import Business from '../businesses/business_index_container';
+import SplashBusinesses from './splash_businesses'
 
 class Splash extends React.Component {
   constructor(props) {
@@ -16,12 +18,21 @@ class Splash extends React.Component {
     this.props.logout();
   }
 
-  // componentDidMount() {
-  //   this.props.fetchBusinessCategories();
-  // }
+  componentDidMount() {
+
+    this.props.requestAllBusinesses();
+  }
 
   render() {
-    debugger
+    let businesses;
+    if (this.props.businesses){
+      businesses = this.props.businesses.slice(0,3).map( business =>
+        <SplashBusinesses key={business.id} business={business} />)
+    } else {
+      businesses = <div></div>
+    }
+
+
     if (this.props.currentUser) {
       return (
         <div>
@@ -43,20 +54,16 @@ class Splash extends React.Component {
               <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
 
             </div>
-
           </div>
           <div className='slogan-container'>
             <h3 className="slogan">
               Find the Best Businesses in Town
             </h3>
           </div>
-          <div className="popular-categories-container">
-            <div className='popular-categories'>
-              <Link to={`/business_categories/89`}><img className="pop-cat" src="https://s3.amazonaws.com/betterhelp-dev/new-res.jpg"></img></Link>
-              <Link to={`/business_categories/90`}><img className="pop-cat" src={window.homeServices}></img></Link>
-              <Link to={`/business_categories/91`}><img className="pop-cat" src={window.cafe}></img></Link>
-              <Link to={`/business_categories/92`}><img className="pop-cat" src={"https://s3.amazonaws.com/betterhelp-dev/node.jpg"}></img></Link>
-            </div>
+          <div className='hot-new-sign'> Hot & New Businesses </div>
+
+          <div className='display-bus'>
+            {businesses}
           </div>
         </div>
       );
@@ -91,14 +98,13 @@ class Splash extends React.Component {
               Find the Best Businesses in Town
             </h3>
           </div>
-          <div className="popular-categories-container">
-            <div className='popular-categories'>
-              <Link to={`/business_categories/89`}><img className="pop-cat" src="https://s3.amazonaws.com/betterhelp-dev/new-res.jpg"></img></Link>
-              <Link to={`/business_categories/90`}><img className="pop-cat" src={window.homeServices}></img></Link>
-              <Link to={`/business_categories/91`}><img className="pop-cat" src={window.cafe}></img></Link>
-              <Link to={`/business_categories/92`}><img className="pop-cat" src={"https://s3.amazonaws.com/betterhelp-dev/node.jpg"}></img></Link>
-            </div>
+
+          <div className='hot-new-sign'> Hot & New Businesses </div>
+
+          <div className='display-bus'>
+            {businesses}
           </div>
+          
         </div>
       );
     }

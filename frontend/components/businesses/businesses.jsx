@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Business from './business';
 import { Route } from 'react-router-dom';
+import BusinessMap from '../map/business_map';
 
 
 class Businesses extends React.Component {
@@ -52,6 +53,9 @@ class Businesses extends React.Component {
             {businesses}
           </div>
         </div>
+        <BusinessMap/>
+          <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
+
       </div>
     )
   }

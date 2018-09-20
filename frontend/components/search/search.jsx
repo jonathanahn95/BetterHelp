@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Business from '../businesses/business';
 import BusinessMap from '../map/business_map';
-import BusinessIndex from '../businesses/business_index';
+import BusinessIndexContainer from '../businesses/business_index_container';
 
 class Search extends React.Component {
 
@@ -12,8 +12,9 @@ class Search extends React.Component {
 
     return (
       <div id='map-container' ref='map'>
+        <BusinessIndexContainer/>
         <BusinessMap/>
-        <BusinessIndex/>
+
       </div>
 
     )

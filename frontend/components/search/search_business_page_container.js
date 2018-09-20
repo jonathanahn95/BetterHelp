@@ -5,7 +5,7 @@ import { searchBusinesses } from '../../actions/search_actions';
 import { selectSearchBusinesses } from '../../reducers/selectors';
 
 const msp = (state,ownProps) => {
-  debugger
+  
   let searchedBusIds = state.session.searchR;
   let businesses = Object.values(state.entities.businesses);
   return {

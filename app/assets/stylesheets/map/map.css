@@ -1,0 +1,14 @@
+#map-container {
+  position: relative;
+  left: 900px;
+  bottom: 1200px;
+}
+
+
+.under-map-pic {
+  left: 900px;
+  position: relative;
+  bottom: 1160px;
+  width: 300px;
+  height: 280px;
+}

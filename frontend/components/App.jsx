@@ -11,6 +11,7 @@ import CreateReviewFormContainer from './reviews/create_review_form_container';
 import EditReviewFormContainer from './reviews/edit_review_form_container';
 import BusinessIndexContainer from './businesses/business_index_container';
 import SearchBusinessPageContainer from './search/search_business_page_container';
+import SearchContainer from './search/search_container';
 
 const App = () => (
   <div>
