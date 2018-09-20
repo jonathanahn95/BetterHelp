@@ -4,6 +4,7 @@ export const RECEIVE_SEARCH_RESULTS = 'RECEIVE_SEARCH_RESULTS';
 
 
 const receiveSearchResults = results => {
+
   return {
     type: RECEIVE_SEARCH_RESULTS,
     results,

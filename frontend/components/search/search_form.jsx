@@ -8,17 +8,20 @@ class SearchForm extends React.Component {
     this.state = {
       searchData: ''
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   // //
   // componentDidMount() {
   //   this.props.searchBusinesses(this.state.searchData);
   // }
 
-  // handleSubmit(e){
-  //   e.preventDefault();
-  //   this.props.searchBusinesses(this.state.searchData);
-  // }
-  //
+  handleSubmit(e){
+    e.preventDefault();
+    this.props.searchBusinesses(this.state.searchData);
+    this.props.history.push(`/search?${this.state.searchData}`);
+  }
+
+
 
   update(field){
     return (e) => {
@@ -29,10 +32,9 @@ class SearchForm extends React.Component {
   }
 
   render() {
-    debugger
     return (
       <div>
-        <form onSubmit={() => this.props.searchBusinesses(this.state.searchData)}>
+        <form onSubmit={this.handleSubmit}>
           <input placeholder="restaurants, bootcamps, cafes..." onChange={this.update('searchData')} className= "search" type="search" value={this.state.searchData}></input>
             <button className="search-pic">Search</button>
         </form>

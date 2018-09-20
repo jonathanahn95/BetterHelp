@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BusinessCategoryIndexContainer from '../business_category/business_category_index_container';
 import SearchFormContainer from '../search/search_form_container';
+import BusinessIndexContainer from '../businesses/business_index_container';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class Splash extends React.Component {
   // }
 
   render() {
+    debugger
     if (this.props.currentUser) {
       return (
         <div>
@@ -39,6 +41,7 @@ class Splash extends React.Component {
                 <SearchFormContainer/>
               </div>
               <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
+
             </div>
 
           </div>
@@ -76,7 +79,7 @@ class Splash extends React.Component {
               <BusinessCategoryIndexContainer/>
               <div className="search-bar-container">
 
-                <input className= "search" type="search"></input>
+                <SearchFormContainer/>
               </div>
               <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
             </div>
@@ -96,7 +99,6 @@ class Splash extends React.Component {
               <Link to={`/business_categories/92`}><img className="pop-cat" src={"https://s3.amazonaws.com/betterhelp-dev/node.jpg"}></img></Link>
             </div>
           </div>
-
         </div>
       );
     }

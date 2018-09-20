@@ -20,7 +20,7 @@ class BusinessIndex extends React.Component {
 
 
   render() {
-    debugger
+    
     const businesses = this.props.businesses.map( business =>
       <Business key={business.id}  business={business}  />)
 

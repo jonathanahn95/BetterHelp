@@ -5,7 +5,7 @@ import { requestAllBusinesses } from '../../actions/businesses_actions';
 
 
 const msp = (state,ownProps) => {
-  debugger
+  
   return {
     businesses: Object.values(state.entities.businesses)
   };

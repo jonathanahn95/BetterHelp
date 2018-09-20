@@ -358,17 +358,7 @@ class BusinessShow extends React.Component {
                 <div className='right-review'>
                   <Link to={`/businesses/${business.id}/review`}><button className='right-button'>Write a review</button></Link>
                 </div>
-                <div className='right-list'>
-                  <li className='right-photo'>
-                    Add Photo
-                  </li>
-                  <li className='right-share'>
-                    Share
-                  </li>
-                  <li className='right-save'>
-                    Save
-                  </li>
-                </div>
+                
 
               </div>
             </div>

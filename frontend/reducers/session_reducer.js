@@ -9,7 +9,7 @@ const defaultState = {
 };
 
 const sessionReducer = (state = defaultState, action) => {
-  debugger
+
   switch(action.type){
     case RECEIVE_CURRENT_USER:{
       return {
@@ -21,6 +21,7 @@ const sessionReducer = (state = defaultState, action) => {
       return defaultState;
     }
     case RECEIVE_SEARCH_RESULTS:
+
       return {
         id: state.id,
         searchR: Object.keys(action.results)

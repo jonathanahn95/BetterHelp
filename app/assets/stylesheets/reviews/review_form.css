@@ -18,17 +18,26 @@
     height: 346px;
     padding: 18px;
   }
-
+/*
 .review-form-business-name {
   font-size: 36px;
   font-family: "Helvetica Neue";
   font-weight: bold;
   padding: 17px;
   padding-left: 150px;
+}
+. */
+.review-form-business-name > a {
   color: #0073bb;
+  font-size: 36px;
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  padding: 17px;
+  padding-left: 150px;
+  text-decoration: none;
 }
 
-.review-form-business-name:hover {
+.review-form-business-name > a:hover {
   text-decoration: underline;
   cursor: pointer;
 }

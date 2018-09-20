@@ -45,7 +45,7 @@ class Businesses extends React.Component {
               </ul>
             </div>
           <div>
-      </div>
+        </div>
 
         <div className="main-business-container">
           <div className="business-container" >
