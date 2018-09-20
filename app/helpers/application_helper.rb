@@ -5,7 +5,7 @@ module ApplicationHelper
 
   def generate_random_pic
 
-    ["burgers.jpg","random.jpg", "splash.jpg", "cookie.jpg"].sample
+    ["burgers.jpg","o.jpg", "splash.jpg", "cookie.jpg"].sample
   end
 
 

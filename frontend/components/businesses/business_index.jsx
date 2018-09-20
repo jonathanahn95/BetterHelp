@@ -20,6 +20,7 @@ class BusinessIndex extends React.Component {
 
 
   render() {
+    debugger
     const businesses = this.props.businesses.map( business =>
       <Business key={business.id}  business={business}  />)
 
@@ -33,10 +34,10 @@ class BusinessIndex extends React.Component {
           <div className='header-nav-bar'>
                 <ul className='ul-nav-bar-item1'>
                   <div className='nav-bar-container'>
-                    <Link to={`/business_categories/33`}><p className='nav-bar-item'>Restaurant</p></Link>
-                    <Link to={`/business_categories/34`}><p className='nav-bar-item'>Home Services</p></Link>
-                    <Link to={`/business_categories/35`}><p className='nav-bar-item'>Cafes</p></Link>
-                    <Link to={`/business_categories/36`}><p className='nav-bar-item'>Bootcamps</p></Link>
+                    <Link to={`/business_categories/89`}><p className='nav-bar-item'>Restaurant</p></Link>
+                    <Link to={`/business_categories/90`}><p className='nav-bar-item'>Home Services</p></Link>
+                    <Link to={`/business_categories/91`}><p className='nav-bar-item'>Cafes</p></Link>
+                    <Link to={`/business_categories/92`}><p className='nav-bar-item'>Bootcamps</p></Link>
                   </div>
                   <div className='review-bar-container'>
                     <Link to={`/businesses/`}><p className='nav-bar-item'>Write a Review</p></Link>

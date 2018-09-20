@@ -128,8 +128,8 @@ Business.create!([
   bb4.save!
 
   aa1 = businesses[4]
-  file16 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/aa1.jpg")
-  aa1.photos.attach(io: file16, filename: 'aa1.jpg')
+  file16 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/appa.jpg")
+  aa1.photos.attach(io: file16, filename: 'app-academy.jpg')
   aa1.save!
 
 

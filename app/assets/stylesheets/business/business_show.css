@@ -305,6 +305,8 @@ padding-bottom: 17px;
 .info li {
   font-family: Helvetica;
   font-size: 14px;
+  letter-spacing: 0.2px;
+
 }
 
 .bus-website {
@@ -313,14 +315,17 @@ padding-bottom: 17px;
 
 .review-created-at {
   padding-left: 15px;
+  margin-top: 4px;
+
 }
 
 .review-body {
   font-family: inherit;
   font-size: 15px;
+  letter-spacing: 0.2px;
+
   padding-top: 15px;
   width: 82%;
-  letter-spacing: 0.5px;
 
 }
 

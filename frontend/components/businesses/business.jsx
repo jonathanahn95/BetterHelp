@@ -19,6 +19,15 @@ class Business extends React.Component {
     const reviewCount = review ? review.length : 0;
     const reviewBody = reviewCount > 0 && review ? review[0].body : '';
 
+    let reviewScore = [];
+    review.forEach( review => {
+      reviewScore.push(review.rating);
+    });
+    reviewScore = reviewScore.reduce( (acc, el) => { return acc + el }) / review.length;
+
+
+
+
     return (
       <div className="large-wrapper">
 
@@ -33,21 +42,31 @@ class Business extends React.Component {
               <Link to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
             </div>
             <div className='review'>
-              { reviewCount } reviews
+              <ReactStars
+                className='stars'
+                count={5}
+                half={false}
+                value={reviewScore}
+                onChange={this.ratingChanged}
+                size={24}
+                color2={'#ffd700'} />
+              <p className='bus-num-rev'>
+                { reviewCount } reviews
+              </p>
             </div>
           </div>
           <span className='secondary-attributes'>
               <div className='secondary-attributes-container'>
-              <li>
+              <li className='bus-num'>
                 {this.props.business.phone_number}
               </li>
-              <li>
+              <li className='business-address'>
                 {this.props.business.address}
               </li>
-              <li>
+              <li className='business-city'>
                 {this.props.business.city}
               </li>
-              <li>
+              <li className='bus-review-body'>
                 {reviewBody}
 
               </li>

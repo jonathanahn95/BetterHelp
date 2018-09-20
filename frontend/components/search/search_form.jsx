@@ -9,7 +9,7 @@ class SearchForm extends React.Component {
       searchData: ''
     };
   }
-  //
+  // //
   // componentDidMount() {
   //   this.props.searchBusinesses(this.state.searchData);
   // }
@@ -29,9 +29,10 @@ class SearchForm extends React.Component {
   }
 
   render() {
+    debugger
     return (
       <div>
-        <form>
+        <form onSubmit={() => this.props.searchBusinesses(this.state.searchData)}>
           <input placeholder="restaurants, bootcamps, cafes..." onChange={this.update('searchData')} className= "search" type="search" value={this.state.searchData}></input>
             <button className="search-pic">Search</button>
         </form>

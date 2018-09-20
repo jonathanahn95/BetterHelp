@@ -10,6 +10,7 @@ export default (state = {}, action) => {
   let reviewId;
   let newState;
   let reviews;
+
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_SELECTED_BUSINESS_CATEGORIES:
@@ -50,6 +51,7 @@ export default (state = {}, action) => {
       newState[businessId].reviews = reviews;
       return newState;
       case RECEIVE_SEARCH_RESULTS:
+        debugger
         return merge({}, state, action.results);
     default:
       return state;

@@ -77,7 +77,8 @@ ratingChanged(newRating) {
         {this.renderErrors()}
         <div className='contain-name-form'>
           <div className='review-form-business-name'>
-            {this.props.business.name}
+            <Link to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
+
           </div>
           <div className="main-review-form-container">
             <div className="review-form-container">

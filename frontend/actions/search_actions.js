@@ -10,8 +10,10 @@ const receiveSearchResults = results => {
   };
 };
 
-export const searchBusinesses = searchData => {
+export const searchBusinesses = searchData => dispatch => {
+
   return SearchApiUtil.searchBusinesses(searchData).then( results => {
+
     return dispatch(receiveSearchResults(results));
   });
 };

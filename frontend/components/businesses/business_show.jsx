@@ -301,7 +301,7 @@ class BusinessShow extends React.Component {
               color2={'#ffd700'} />
           </li>
 
-            <li className='review-created-at'>{review.created_at}</li>
+            <li className='review-created-at'>{review.created_at.slice(0,10)}</li>
           </div>
           <li className='review-body'>{review.body}</li>
           <div className='dub-container'>
@@ -324,10 +324,10 @@ class BusinessShow extends React.Component {
         </header>
         <ul className='ul-nav-bar-item1'>
           <div className='nav-bar-container'>
-            <Link to={`/business_categories/33`}><p className='nav-bar-item'>Restaurant</p></Link>
-            <Link to={`/business_categories/34`}><p className='nav-bar-item'>Home Services</p></Link>
-            <Link to={`/business_categories/35`}><p className='nav-bar-item'>Cafes</p></Link>
-            <Link to={`/business_categories/36`}><p className='nav-bar-item'>Bootcamps</p></Link>
+            <Link to={`/business_categories/89`}><p className='nav-bar-item'>Restaurant</p></Link>
+            <Link to={`/business_categories/90`}><p className='nav-bar-item'>Home Services</p></Link>
+            <Link to={`/business_categories/91`}><p className='nav-bar-item'>Cafes</p></Link>
+            <Link to={`/business_categories/92`}><p className='nav-bar-item'>Bootcamps</p></Link>
           </div>
           <div className='review-bar-container'>
             <Link to={`/businesses/`}><p className='nav-bar-item'>Write a Review</p></Link>
@@ -396,7 +396,7 @@ class BusinessShow extends React.Component {
           </div>
           <div className="business-show-container">
             <div className='imag'>
-              <img className="tidy" src={window.tidy}></img>
+              <a href="https://github.com/jonathanahn95/"><img className="tidy" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
 
             </div>
 

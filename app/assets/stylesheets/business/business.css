@@ -19,6 +19,39 @@
 
 }
 
+.bus-review-body {
+  width: 375px;
+  margin-top: 14px;
+  letter-spacing: 0.2px;
+
+}
+
+.bus-num {
+  padding: 5px;
+}
+
+.business-city {
+  padding: 5px;
+}
+
+.business-address {
+  padding: 5px;
+}
+
+.review {
+  color: #666;
+  font-weight: normal;
+  font-family: arial;
+  font-size: 14px;
+  padding-top: 5px;
+  display: flex;
+  width: 195px;
+}
+
+.bus-num-rev {
+  padding-top: 4px;
+}
+
 .nav-bar-container a {
   text-decoration: none;
   border-left: 1px solid #e6e6e6!important;
@@ -48,20 +81,24 @@
   font-family: Arial;
   font-weight: bold;
   font-size: 13px;
-
 }
 
 .secondary-attributes-container {
   display: flex;
-flex-direction: column;
-align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: arial;
+  padding-right: 13px;
+  margin-right: 15px;
+
 }
+
 .large-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  width: 550px;
+  width: 675px;
   min-height: 220px;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
@@ -69,6 +106,7 @@ align-items: flex-end;
 }
 .main-attributes {
   margin: 12px;
+  padding-top: 5px;
 
 }
 
@@ -78,6 +116,8 @@ align-items: flex-end;
 }
 .link-page {
   display: flex;
+  margin-top: 14px;
+
 }
 .main-attributes a{
   color: #2473bb;
@@ -106,8 +146,9 @@ align-items: flex-end;
 .secondary-attributes {
 }
 .business-pic {
-  min-height: 235px;
-  width: 105%;
+  height: 210px;
+  border-radius: 5px;
+  width: 210px;
   padding-right: 5px;
 }
 .business-info{
@@ -115,6 +156,7 @@ align-items: flex-end;
   min-width: 335px;
   min-height: 240px;
   padding-left: 10px;
+  margin-left: 90px;
 
   justify-content: space-between;
 }

@@ -25,8 +25,12 @@
   font-weight: bold;
   padding: 17px;
   padding-left: 150px;
+  color: #0073bb;
+}
 
-
+.review-form-business-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .contain-name-form {

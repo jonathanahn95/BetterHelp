@@ -5,11 +5,15 @@ import { clearErrors } from '../../actions/sessions_actions';
 import SearchForm from './search_form';
 import errorsReducer from '../../reducers/errors_reducer';
 import { Link } from 'react-router-dom';
+import { selectSearchBusinesses } from '../../reducers/selectors';
 
 
 const msp = (state, ownProps) => {
+debugger
+  let searchedBusIds = state.session.searchR;
+  let businesses = Object.values(state.entities.businesses);
   return {
-    businesses: state.entities.session
+    searchedBusinesses: selectSearchBusinesses(businesses,searchedBusIds)
   };
 };
 
