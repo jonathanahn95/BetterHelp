@@ -57,9 +57,12 @@ class BusinessIndex extends React.Component {
             <div className="business-container" >
               {businesses}
             </div>
+            <div className='map-ad'>
+              <BusinessMap businesses={businesses}/>
+              <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
+            </div>
+
           </div>
-          <BusinessMap businesses={businesses}/>
-            <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
 
         </div>
       )

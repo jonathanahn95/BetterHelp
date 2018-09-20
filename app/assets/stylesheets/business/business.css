@@ -186,7 +186,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 30px;
   min-height: 600px;
   width: 100%;
