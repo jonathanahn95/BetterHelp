@@ -104,7 +104,7 @@ class Splash extends React.Component {
           <div className='display-bus'>
             {businesses}
           </div>
-          
+
         </div>
       );
     }

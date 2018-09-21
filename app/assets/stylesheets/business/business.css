@@ -25,6 +25,9 @@
   letter-spacing: 0.2px;
 
 }
+{
+  
+}
 
 .bus-num {
   padding: 5px;
@@ -82,7 +85,11 @@
   font-weight: bold;
   font-size: 13px;
 }
-
+.cat-ad-cont {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto
+}
 .secondary-attributes-container {
   display: flex;
   flex-direction: column;
@@ -117,6 +124,11 @@
 .link-page {
   display: flex;
   margin-top: 14px;
+
+}
+
+.map-ad {
+  margin-bottom: 580px;
 
 }
 .main-attributes a{
@@ -189,7 +201,9 @@
   flex-direction: row;
   padding-top: 30px;
   min-height: 600px;
-  width: 100%;
+  margin: auto;
+
+  width: 73%;
 
 }
 

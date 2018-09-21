@@ -9,9 +9,18 @@
 
 .search {
   border-radius: 4px 0 0 4px;
-  HEIGHT: 40px;
+  HEIGHT: 44px;
   width: 800px;
   color: rgb(200, 200, 200);
   font-size: 16px;
+  color: black;
 
+
+}
+
+
+.sear-ad-cont {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 580px;
 }

@@ -31,6 +31,10 @@
   height: 60px;
 }
 
+.show-buss-map {
+  /* height: 30%; */
+}
+
 .user-name {
   display: flex;
   align-items: flex-start;

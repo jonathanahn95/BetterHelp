@@ -39,7 +39,7 @@ class SplashBusinesses extends React.Component {
         </div>
 
         <li>{business.city}</li>
-        <li className='fire-opening'> <i class="fa fa-fire"></i> Opened 6 weeks ago </li>
+        <li className='fire-opening'> <i className="fa fa-fire"></i> Opened 6 weeks ago </li>
       </div>
     )
   }

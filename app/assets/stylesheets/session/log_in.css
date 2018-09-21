@@ -12,9 +12,9 @@
   font-family: Helvetica;
   font-size: 28px;
   font-weight: bold;
-  -webkit-text-fill-color: white;
+  /* -webkit-text-fill-color: white; */
    -webkit-text-stroke-color: black;
-   -webkit-text-stroke-width: 2.00px;
+   /* -webkit-text-stroke-width: 2.00px; */
 }
 
 .formtype-header {

@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import ReactStars from 'react-stars';
+import BusinessMap from '../map/business_map';
+import SearchFormContainer from '../search/search_form_container';
 
 
 class BusinessShow extends React.Component {
@@ -320,14 +322,16 @@ class BusinessShow extends React.Component {
         <header className="login-header">
           <h1 className="login-head">
             <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
+              <SearchFormContainer/>
+
           </h1>
         </header>
         <ul className='ul-nav-bar-item1'>
           <div className='nav-bar-container'>
-            <Link to={`/business_categories/89`}><p className='nav-bar-item'>Restaurant</p></Link>
-            <Link to={`/business_categories/90`}><p className='nav-bar-item'>Home Services</p></Link>
-            <Link to={`/business_categories/91`}><p className='nav-bar-item'>Cafes</p></Link>
-            <Link to={`/business_categories/92`}><p className='nav-bar-item'>Bootcamps</p></Link>
+            <Link to={`/business_categories/9`}><p className='nav-bar-item'>Restaurant</p></Link>
+            <Link to={`/business_categories/10`}><p className='nav-bar-item'>Home Services</p></Link>
+            <Link to={`/business_categories/11`}><p className='nav-bar-item'>Cafes</p></Link>
+            <Link to={`/business_categories/12`}><p className='nav-bar-item'>Bootcamps</p></Link>
           </div>
           <div className='review-bar-container'>
             <Link to={`/businesses/`}><p className='nav-bar-item'>Write a Review</p></Link>
@@ -336,6 +340,7 @@ class BusinessShow extends React.Component {
         <main className='top-shelf'>
           <div className='content'>
             <div className='page-header'>
+
               <div className='left'>
                 {business.name}
                 <div className='num-reviews-container'>
@@ -358,12 +363,16 @@ class BusinessShow extends React.Component {
                 <div className='right-review'>
                   <Link to={`/businesses/${business.id}/review`}><button className='right-button'>Write a review</button></Link>
                 </div>
-                
+
 
               </div>
             </div>
             <div className='subheader'>
               <div className='info'>
+                <div className='show-buss-map'>
+                  <BusinessMap/>
+                </div>
+
                 <li className='bus-address'>{business.address}</li>
                 <li className='bus-city'>{business.city}</li><li className='bus-state'>{business.state}</li><li className='bus-zipcode'>{business.zipcode}</li>
                 <li>

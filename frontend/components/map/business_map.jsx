@@ -26,9 +26,9 @@ class BusinessMap extends React.Component {
     this.MarkerManager = new MarkerManager(this.map);
   }
 
-    componentDidUpdate() {
-      this.MarkerManager.updateMarkers(this.props.businesses);
-    }
+    // componentDidUpdate() {
+    //   this.MarkerManager.updateMarkers(this.props.businesses);
+    // }
 
   render() {
 
