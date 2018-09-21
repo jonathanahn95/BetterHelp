@@ -27,7 +27,7 @@
 
 }
 
-.zipcode{
+.zipcode {
   padding: 6px;
   font-size: 14px;
   width: 95%;
@@ -40,7 +40,6 @@
 }
 
 .test {
-  /* display: flex */
   margin: 5px;
   text-align: right;
   color: #999;
@@ -54,7 +53,6 @@
   font-family: Helvetica;
   font-weight: bold;
   font-size: 14px;
-  /* letter-spacing: 1px; */
   margin-top: 10px;
   margin-right: 4px;
 
@@ -79,7 +77,6 @@
   font-weight: bold;
   border: 1px solid black;
   box-shadow: 5px black;
-
   border-radius:  3px;
 }
 
@@ -106,7 +103,7 @@
   font-weight: normal;
 }
 
-.small-brand-name{
+.small-brand-name {
   height: 45px;
   margin-bottom: 5px;
 }
@@ -115,7 +112,6 @@
   display: flex;
   justify-content: space-between;
   padding-top: 10px
-  /* padding-right: 4px */
 }
 
 .birthday select {
@@ -123,14 +119,8 @@
   font-size: 14px;
   background-color: white;
   color: gray;
-  /* padding-right: 4px; */
   height: 30px;
   padding: 7px;
-  /* width: 20px; */
-
-  /* padding: 15px; */
-  /* display: flex; */
-  /* flex-direction: row; */
   align-items: space-around;
   width: 90px
 }
@@ -143,7 +133,6 @@
   color: white;
   font-size: 15px;
   margin-bottom: 15px;
-  /* padding-top: 10px; */
   font-weight: bold;
   border: 1px solid black;
   box-shadow: 5px black;

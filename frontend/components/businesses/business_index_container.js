@@ -5,7 +5,7 @@ import { requestAllBusinesses } from '../../actions/businesses_actions';
 
 
 const msp = (state,ownProps) => {
-  
+
   return {
     businesses: Object.values(state.entities.businesses)
   };
@@ -14,7 +14,8 @@ const msp = (state,ownProps) => {
 
 const mdp = dispatch => {
   return {
-    requestAllBusinesses: () => dispatch(requestAllBusinesses())
+    requestAllBusinesses: () => dispatch(requestAllBusinesses()),
+    requestAllBusinessCategories: () => dispatch(requestAllBusinessCategories())
   };
 };
 

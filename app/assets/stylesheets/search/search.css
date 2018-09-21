@@ -1,10 +1,10 @@
 .search-pic {
   border-radius: 0 4px 4px 0;
-      border: 0;
-      background: #d32323;
-      padding: 14px 20px 13px;
-      -webkit-box-shadow: none;
-      box-shadow: none;
+  border: 0;
+  background: #d32323;
+  padding: 14px 20px 13px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .search {

@@ -4,17 +4,8 @@
 
 .container {
   min-height: 600px;
-  // background-image: image_url('bakery.jpg');
   background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-
-  /* display: flex; */
   position: relative;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // width: 100%;
 }
 
 .submit {
@@ -26,26 +17,19 @@
   display: flex
 }
 
-.find{
-
-}
 
 .fa-search {
   color: white;
   font-size: 17px;
 }
 .header {
-  /* background-color: yellow; */
-  /* display: block; */
-  /* display: flex; */
+
   position: absolute;
   left: 0px;
-  /* height: 100px; */
   right: 0px;
 }
 
 .header-review {
-  // border: 2px solid white;
   text-decoration: none;
   border-radius: 5px;
   padding-left: 170px;
@@ -71,15 +55,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin: 0 auto; */
-  /* background-color: red; */
+
 }
 
 .logout {
   text-align: right;
   text-shadow: 2px 2px 8px black;
 
-  // margin-left: auto;
   margin-right: 190px;
   background-color: transparent;
   border: transparent;
@@ -95,16 +77,12 @@
 
 
 .header-list {
-  /* background-color: blue; */
   display: flex;
   padding-right: 160px;
   width: 258px;
   padding-top: 20px;
   text-shadow: 2px 2px 8px black;
 
-  // right: 80%;
-  /* margin-top: 15px;
-  margin-right: 180px; */
 }
 
 .header-list a {
@@ -123,32 +101,6 @@
 }
 
 .brand-name{
-  /* margin-top: 60px; */
-  // font-size: 50px;
-  // color: black;
-  // text-shadow: 0 0 5px white;
-  // font-family: Helvetica;
-  // -webkit-text-stroke: 1px black;
-  // color: white;
-  // text-shadow:
-  //   3px 3px 0 #000,
-  //   -1px -1px 0 #000,
-  //   1px -1px 0 #000,
-  //  -1px 1px 0 #000,
-  //   1px 1px 0 #000;
-  //
-  // display: flex;
-  /* align-items: center; */
-  /* margin: 0 auto; */
-  // justify-content: center;
-  // position: absolute;
-  // top: 30%;
-  // height: 10px;
-  // height: 20px;
-  // width: 630px;
-  // background-size: cover;
-  // left: 50%;
-  // transform: translate(-50%,-50%);
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
@@ -187,8 +139,6 @@
 
 .about-list {
 
-  // margin-bottom:  auto;
-  // background-color: #f5f5f5;
   color: #d4312c;
   align-items: baseline;
   font-size: 16px;
@@ -228,7 +178,6 @@
 
 .slogan-container {
   display: flex;
-  // align-items: center;
   justify-content: center;
 }
 .slogan {
@@ -289,7 +238,6 @@
 }
 
 .splash-pics-container {
-  // display: flex;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   background: #fff;

@@ -1,7 +1,6 @@
 .business-categories {
   display: flex;
   justify-content: space-between;
-  /* margin-top: 80px; */
   z-index: 5px;
   margin-top: 20px;
   text-shadow: 2px 2px 8px black;
@@ -18,10 +17,7 @@
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
-  /* color: white; */
   font-family: Helvetica;
-  /* color: #0073bb; */
-  /* padding-left: 300px; */
   color: white;
 
 }

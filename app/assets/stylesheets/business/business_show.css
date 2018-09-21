@@ -31,10 +31,6 @@
   height: 60px;
 }
 
-.show-buss-map {
-  /* height: 30%; */
-}
-
 .user-name {
   display: flex;
   align-items: flex-start;
@@ -52,11 +48,6 @@
   display: flex;
   min-height: 159px;
   justify-content: space-evenly;
-  /* align-items: center; */
-}
-
-.review-length {
-
 }
 
 .tidy {
@@ -85,7 +76,7 @@ bus-show-pics {
   display: flex;
   margin-right: 50px;
   height: 210px;
-padding-top: 80px;
+  padding-top: 80px;
 }
 
 .right-button {
@@ -115,14 +106,11 @@ padding-top: 80px;
 .main-reviews-container {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  /* border: 3px solid red; */
   align-items: flex-start;
   min-width: 500px
 }
 
 .reviews-container {
-  /* width: 70%; */
   display: flex;
   padding: 25px;
   flex-direction: column;
@@ -131,7 +119,6 @@ padding-top: 80px;
   margin-left: 25px;
 
 
-  /* flex-direction: column-reverse; */
   list-style: none;
   width: 47%;
   font-family: Helvetica;
@@ -140,7 +127,6 @@ padding-top: 80px;
 
   justify-content: space-between;
 
-  /* border: 1px solid black; */
 }
 
 .fname1 {
@@ -172,7 +158,6 @@ padding-top: 80px;
   align-items: center;
   margin-right: 7px;
   border-right: 1px solid #e6e6e6;
-  /* border-top: 1px solid #e6e6e6; */
   border-bottom: 1px solid #e6e6e6;
 
 }
@@ -184,15 +169,13 @@ padding-top: 80px;
   font-family: Helvetica;
   padding-left: 5px;
   padding-bottom: 20px;
-
 }
+
 .day-container {
   display: flex;
-  /* flex-direction:  */
   margin: 0;
-padding: 18px 0;
-/* border-bottom: 1px solid #e6e6e6; */
-padding-bottom: 17px;
+  padding: 18px 0;
+  padding-bottom: 17px;
 }
 .day {
   font-weight: bold;
@@ -210,16 +193,13 @@ padding-bottom: 17px;
 .business-hours {
   list-style: none;
       font-size: 14px;
-      /* border: 3px solid; */
       width: 83%;
 }
 
 .business-hours li {
-  /* font-weight: bold; */
   font-family: Helvetica;
   display: flex;
   justify-content: space-between;
-  /* flex-direction: column; */
   padding: 5px;
   width: 65%;
 }
@@ -264,7 +244,6 @@ padding-bottom: 17px;
 
 }
 .more-business-info {
-  /* padding-left: 18px; */
     padding-top: 25px;
   font-weight: bold;
     margin-bottom: 6px;
@@ -278,19 +257,19 @@ padding-bottom: 17px;
   padding-left: 15px;
 }
 
-.bus-address{
+.bus-address {
   font-weight: bold;
   font-family: Helvetica;
 
 }
 
-.bus-city{
+.bus-city {
   font-weight: bold;
   font-family: Helvetica;
 
 }
 
-.bus-zipcode{
+.bus-zipcode {
   font-weight: bold;
   font-family: Helvetica;
 
@@ -360,14 +339,12 @@ padding-bottom: 17px;
   list-style: none;
 
   justify-content: space-between;
-  /* border: 1px solid; */
   PADDING-LEFT: 30px;
   padding-top: 2px;
   height: 25%;
 }
 
 .right-list li {
-  /* border: 1px solid; */
   font-family: Arial;
   padding: 7px 18px;
   color: #666;
@@ -385,7 +362,7 @@ padding-bottom: 17px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
-.num-reviews{
+.num-reviews {
   color: #666;
   font-weight: normal;
     font-size: 16px;

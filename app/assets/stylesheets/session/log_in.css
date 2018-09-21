@@ -12,9 +12,7 @@
   font-family: Helvetica;
   font-size: 28px;
   font-weight: bold;
-  /* -webkit-text-fill-color: white; */
    -webkit-text-stroke-color: black;
-   /* -webkit-text-stroke-width: 2.00px; */
 }
 
 .formtype-header {
@@ -31,7 +29,7 @@
 
 
 
-.hr-line{
+.hr-line {
   border: none;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid transparent;
@@ -75,7 +73,6 @@
 
 
 .bottom-sign-up-link {
-  /* display: flex */
   margin: 5px;
   text-align: right;
   color: #999;
@@ -143,7 +140,7 @@
   border-radius:  3px;
 }
 
-.login-submit:hover{
+.login-submit:hover {
   background-color: #ed0008;
   background: linear-gradient(#ed0008, #dd1600);
   cursor: pointer;

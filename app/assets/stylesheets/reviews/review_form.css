@@ -18,15 +18,7 @@
     height: 346px;
     padding: 18px;
   }
-/*
-.review-form-business-name {
-  font-size: 36px;
-  font-family: "Helvetica Neue";
-  font-weight: bold;
-  padding: 17px;
-  padding-left: 150px;
-}
-. */
+
 
 .review-form-business-name {
   padding: 20px 0;
@@ -88,26 +80,26 @@ margin-bottom: 18px;
   border: 0;
   padding-top: 20px;
 
-height: 100%;
-font-size: 18px;
-resize: none;
+  height: 100%;
+  font-size: 18px;
+  resize: none;
 }
 
-.review-form-button{
+.review-form-button {
   color: white;
-font-size: 14px;
-font-weight: 700;
-background-color: #d90007;
-background: linear-gradient(#d90007, #c91400);
-text-decoration: none;
-border-color: #8d0005;
-border-radius: 3px;
-min-width: 227px;
-min-height: 43px;
-align-items: center;
-padding: 10px 19px 10px 19px;
-margin: 18px 0;
-text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #d90007;
+  background: linear-gradient(#d90007, #c91400);
+  text-decoration: none;
+  border-color: #8d0005;
+  border-radius: 3px;
+  min-width: 227px;
+  min-height: 43px;
+  align-items: center;
+  padding: 10px 19px 10px 19px;
+  margin: 18px 0;
+  text-align: center;
 }
 
 .review-form-button:hover {
@@ -151,7 +143,7 @@ text-align: center;
   box-shadow: 0 1px 1px rgba(0,0,0,0.1), inset 0 1px 0 rgba(255,255,255,0.5);
 }
 
-.i{
+.i {
 
   color: white;
   margin-left: 5px;
@@ -165,16 +157,6 @@ text-align: center;
 }
 
 
-.review-form-rating-list>label:nth-child(5):hover,
-.review-form-rating-list>label:nth-child(5):hover ~ label{background-color: #F2BC82;}
-.review-form-rating-list>label:nth-child(4):hover,
-.review-form-rating-list>label:nth-child(4):hover ~ label{background-color: #FDC116;}
-.review-form-rating-list>label:nth-child(3):hover,
-.review-form-rating-list>label:nth-child(3):hover ~ label{background-color: #FF9151;}
-.review-form-rating-list>label:nth-child(2):hover,
-.review-form-rating-list>label:nth-child(2):hover ~ label{background-color: #F25A54;}
-.review-form-rating-list>label:nth-child(1):hover,
-.review-form-rating-list>label:nth-child(1):hover ~ label{background-color: #D4202B;}
 
 .button-container {
   display: flex;
@@ -183,34 +165,31 @@ text-align: center;
 
 
 
-.sub1-head-nav-bar{
+.sub1-head-nav-bar {
   width: 80%;
   display: flex;
   align-items: center;
-  /* border: 3px solid; */
-  /* justify-content: center; */
 
 
 }
 .ul-nav-bar-item {
   display: flex;
-justify-content: space-around;
-text-decoration: none;
-font-size: 15px
+  justify-content: space-around;
+  text-decoration: none;
+  font-size: 15px
 }
 
-.ul-nav-bar-item a{
+.ul-nav-bar-item a {
   padding: 0 30px;
   text-decoration: none;
   border-left: 1px solid #e6e6e6;
-border-right: 1px solid #e6e6e6;
-font-family: 'Helvetica Neue';
-color: #333;
+  border-right: 1px solid #e6e6e6;
+  font-family: 'Helvetica Neue';
+  color: #333;
 
-font-weight: 300px;
-min-height: 30px;
+  font-weight: 300px;
+  min-height: 30px;
    padding-top: 10px;
-   /* padding-right: 30px; */
 }
 
 .ul-nav-bar-item a:hover {
@@ -221,7 +200,6 @@ min-height: 30px;
   width: 60%;
   display: flex;
   align-items: center;
-  /* border: 6px solid; */
   justify-content: space-evenly;
 
 }
