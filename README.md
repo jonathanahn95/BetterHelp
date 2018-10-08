@@ -13,4 +13,11 @@ BetterHelp is a single-page web application inspired by Yelp. It is a local-sear
 ## Features
 
 
-### User Auth
+### Reviews
+Users are able to create, read, update, and delete reviews they have written for relevant businesses. Once a user writes a review, the review is then saved in the database with the `user_id`.
+![alt text](https://github.com/jonathanahn95/BetterHelp/blob/master/app/assets/images/git_review.png "Logo Title Text 1")
+
+Once the review is stored in the database, it will redirect you to the business show page where on `componentDidMount`, the relevant reviews for the business will be rendered along with the written review.
+
+![alt text](https://github.com/jonathanahn95/BetterHelp/blob/master/app/assets/images/git_reviews.png "Logo Title Text 1")
+
