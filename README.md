@@ -21,3 +21,16 @@ Once the review is stored in the database, it will redirect you to the business 
 
 ![alt text](https://github.com/jonathanahn95/BetterHelp/blob/master/app/assets/images/git_reviews.png "Logo Title Text 1")
 
+
+
+### Search
+One of BetterHelps core features is the ability to search for relavent businesses. Users are able to search for relevant businesses and upon submission, an AJAX Api request is made to the database where the businesses are filtered using ActiveRecord.
+
+```ruby
+  def search
+    @businesses = Business.where('name ILIKE ?', "%#{params[:search]}%")
+    render :index
+  end
+```
+
+## Future Implementations
