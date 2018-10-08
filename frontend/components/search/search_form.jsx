@@ -35,7 +35,7 @@ class SearchForm extends React.Component {
     return (
       <div className='sear-container'>
         <form onSubmit={this.handleSubmit}>
-          Find<input placeholder="restaurants, bootcamps, cafes..." onChange={this.update('searchData')} className= "search" type="search" value={this.state.searchData}></input>
+          <input placeholder="restaurants, bootcamps, cafes..." onChange={this.update('searchData')} className= "search" type="search" value={this.state.searchData}></input>
             <button  className="search-pic"><i className='fa fa-search'></i></button>
         </form>
       </div>
