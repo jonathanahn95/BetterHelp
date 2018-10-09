@@ -263,6 +263,22 @@ class BusinessShow extends React.Component {
   //
   // </button>
 
+  userReviews(review) {
+    debugger
+    if (this.props.session === review.user_id ){
+      return (
+        <div >
+          <img key="trash" onClick={e => this.props.deleteReview(review.id)} className="dub" src={window.trashBin}></img>
+          <img key="edit" onClick={ this.navigateToEdit(review) } className="dub" src={window.edit}></img>
+        </div>
+      )
+    } else {
+      return (
+        <div></div>
+      )
+    }
+  }
+
   render() {
     const business = this.props.business;
     if(!this.props.business) {
@@ -277,11 +293,10 @@ class BusinessShow extends React.Component {
     })
     reviewScore = reviewScore.reduce( (acc, el) => { return acc + el}) / this.props.reviews.length
 
-
     const imagesArr = this.props.business.photos.slice(1).map( photo => {
       return <img key={photo.id} className="bus-show-pics" src={photo.photo_image_url}></img>
     })
-
+    debugger
     const reviewsArr = this.props.reviews.map( review => {
       return (
       <div className='lets-see'>
@@ -292,7 +307,6 @@ class BusinessShow extends React.Component {
           <li className='lname1'>{review.user ? review.user.lname : ""}</li>
         </div>
         <div className='reviews-container' key={review.id}>
-
           <div className='rating-created-at'>
             <li className='review-rating'>
             <ReactStars
@@ -307,9 +321,9 @@ class BusinessShow extends React.Component {
           </div>
           <li className='review-body'>{review.body}</li>
           <div className='dub-container'>
-            <img key="trash" onClick={e => this.props.deleteReview(review.id)} className="dub" src={window.trashBin}></img>
-            <img key="edit" onClick={ this.navigateToEdit(review) } className="dub" src={window.edit}></img>
-          </div>
+
+            {this.userReviews(review)}
+         </div>
 
         </div>
       </div>

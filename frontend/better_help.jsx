@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import { requestSelectedBusinessCategories } from './actions/business_category_actions';
-import { requestSingleBusiness } from './actions/businesses_actions'
+import { requestSingleBusiness } from './actions/businesses_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let preloadedState;

@@ -7,6 +7,7 @@ import { deleteReview, updateReview } from '../../actions/reviews_actions';
 
 const msp = (state,ownProps) => {
   const fetchedBusiness = state.entities.businesses[ownProps.match.params.businessId];
+  debugger
   let reviews = [];
   if (fetchedBusiness){
     reviews = fetchedBusiness.reviews;
@@ -14,7 +15,8 @@ const msp = (state,ownProps) => {
 
   return {
     business: fetchedBusiness,
-    reviews: reviews
+    reviews: reviews,
+    session: state.session.id
   };
 };
 
