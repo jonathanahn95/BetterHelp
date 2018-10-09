@@ -16,8 +16,8 @@ class SearchBusinessPage extends React.Component {
   }
 
   render() {
-    let searchedBusinesses = this.props.searchedBusinesses.map( business =>
-       <Business key={business.id}  business={business}  />);
+    let searchedBusinesses = this.props.searchedBusinesses.map( (business, idx) =>
+       <Business key={business.id}  business={business} idx={idx} />);
 
     return (
       <div>

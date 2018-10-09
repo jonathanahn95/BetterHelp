@@ -27,7 +27,7 @@ class Business extends React.Component {
     reviewScore = reviewScore.reduce( (acc, el) => { return acc + el }) / review.length;
 
 
-
+    debugger
 
     return (
       <div className="large-wrapper">
@@ -40,6 +40,9 @@ class Business extends React.Component {
         <div className="business-info">
           <div className="main-attributes">
             <div className='link-page'>
+              <div className='link-page-numbers'>
+                {this.props.idx + 1.}.
+              </div>
               <Link to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
             </div>
             <div className='review'>

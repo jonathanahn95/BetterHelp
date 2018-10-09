@@ -21,6 +21,12 @@
 
 }
 
+.link-page-numbers {
+  font-weight: bold;
+  font-size: 17px;
+  padding-right: 10px;
+  font-family: Arial;
+}
 
 .bus-num {
   padding: 5px;
@@ -131,7 +137,7 @@
   text-decoration: none;
   display: flex;
 
-  font-size: 19px;
+  font-size: 17px;
 }
 
 .secondary-attributes {

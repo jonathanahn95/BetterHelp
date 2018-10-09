@@ -24,8 +24,8 @@ class Businesses extends React.Component {
 
 
   render() {
-    const businesses = this.props.businesses.map( business =>
-      <Business key={business.id}  business={business}  />)
+    const businesses = this.props.businesses.map( (business, idx) =>
+      <Business key={business.id}  business={business}  idx={idx}/>)
     return (
       <div>
         <header className="login-header">

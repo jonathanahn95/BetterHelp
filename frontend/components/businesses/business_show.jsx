@@ -274,7 +274,7 @@ class BusinessShow extends React.Component {
       )
     } else {
       return (
-        <div></div>
+        null
       )
     }
   }
@@ -375,7 +375,7 @@ class BusinessShow extends React.Component {
               </div>
               <div className='right'>
                 <div className='right-review'>
-                  <Link to={`/businesses/${business.id}/review`}><button className='right-button'>Write a review</button></Link>
+                  <Link to={`/businesses/${business.id}/review`}><button className='right-button'><i class="fa fa-star"></i>Write a Review</button></Link>
                 </div>
 
 

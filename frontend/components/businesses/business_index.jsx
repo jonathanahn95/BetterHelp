@@ -25,8 +25,8 @@ class BusinessIndex extends React.Component {
 
     let businesses;
     if (this.props.businesses) {
-       businesses = this.props.businesses.map( business =>
-        <Business key={business.id}  business={business}  />)
+       businesses = this.props.businesses.map( (business, idx) =>
+        <Business key={business.id}  business={business}  idx={idx} />)
     } else {
       businesses = <div></div>
     }

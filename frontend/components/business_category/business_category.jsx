@@ -7,7 +7,7 @@ class BusinessCategory extends React.Component {
 
 
   render() {
-
+    debugger
     return (
       <div>
         <li className='business-categories-list'>

@@ -18,8 +18,8 @@ class BusinessCategoryIndex extends React.Component {
   render() {
 
     //
-    const businessCategories = this.props.businessCategories.map( category =>
-      <BusinessCategory  key={category.id} category={category} />)
+    const businessCategories = this.props.businessCategories.map( (category, idx) =>
+      <BusinessCategory  key={category.id} category={category} idx={idx} />)
 
    //  const businessCategories = this.props.businessCategories.length > 0 ? this.props.businessCategories.map( category => {
    //  <BusinessCategory key={category.id} category={category} />
