@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Business from '../businesses/business';
 import BusinessMap from '../map/business_map';
 import SearchFormContainer from '../search/search_form_container';
+import SearchDropDown from '../search/search_drop_down';
 
 class SearchBusinessPage extends React.Component {
   constructor(props){
@@ -17,7 +18,11 @@ class SearchBusinessPage extends React.Component {
 
   render() {
     let searchedBusinesses = this.props.searchedBusinesses.map( (business, idx) =>
-       <Business key={business.id}  business={business} idx={idx} />);
+       <Business key={business.id}  business={business} idx={idx} />
+     );
+    let searchedBusinesses1 = this.props.searchedBusinesses.map( (business, idx) =>
+       <SearchDropDown key={business.id}  business={business} idx={idx} />
+     );
 
     return (
       <div>
@@ -25,7 +30,6 @@ class SearchBusinessPage extends React.Component {
           <h1 className="login-head">
             <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
               <SearchFormContainer/>
-
           </h1>
         </header>
         <ul className='ul-nav-bar-item1'>

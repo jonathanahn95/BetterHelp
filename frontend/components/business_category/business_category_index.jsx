@@ -39,7 +39,7 @@ class BusinessCategoryIndex extends React.Component {
 
 
 
-
+// business_category_index_container.js
 
 }
 

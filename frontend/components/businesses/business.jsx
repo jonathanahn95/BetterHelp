@@ -26,9 +26,6 @@ class Business extends React.Component {
     });
     reviewScore = reviewScore.reduce( (acc, el) => { return acc + el }) / review.length;
 
-
-    debugger
-
     return (
       <div className="large-wrapper">
 

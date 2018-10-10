@@ -56,7 +56,7 @@ class Businesses extends React.Component {
             {businesses}
           </div>
           <div className='cat-ad-cont'>
-            <BusinessMap/>
+            <BusinessMap businesses={this.props.businesses}/>
             <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
           </div>
         </div>

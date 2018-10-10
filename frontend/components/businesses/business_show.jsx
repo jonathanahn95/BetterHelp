@@ -14,11 +14,9 @@ class BusinessShow extends React.Component {
 
   }
 
-
   componentDidMount() {
     this.props.requestSingleBusiness(this.props.match.params.businessId);
   }
-
 
   componentWillReceiveProps(nextProps) {
      if (this.props.match.params.businessId !== nextProps.match.params.businessId) {
@@ -264,7 +262,7 @@ class BusinessShow extends React.Component {
   // </button>
 
   userReviews(review) {
-    debugger
+
     if (this.props.session === review.user_id ){
       return (
         <div >
@@ -296,7 +294,7 @@ class BusinessShow extends React.Component {
     const imagesArr = this.props.business.photos.slice(1).map( photo => {
       return <img key={photo.id} className="bus-show-pics" src={photo.photo_image_url}></img>
     })
-    debugger
+
     const reviewsArr = this.props.reviews.map( review => {
       return (
       <div className='lets-see'>
@@ -384,7 +382,7 @@ class BusinessShow extends React.Component {
             <div className='subheader'>
               <div className='info'>
                 <div className='show-buss-map'>
-                  <BusinessMap/>
+                  <BusinessMap business={this.props.business} single={true}/>
                 </div>
 
                 <li className='bus-address'>{business.address}</li>

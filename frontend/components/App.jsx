@@ -12,6 +12,7 @@ import EditReviewFormContainer from './reviews/edit_review_form_container';
 import BusinessIndexContainer from './businesses/business_index_container';
 import SearchBusinessPageContainer from './search/search_business_page_container';
 import SearchContainer from './search/search_container';
+import SearchDropDownContainer from './search/search_drop_down_container';
 
 const App = () => (
   <div>
@@ -23,6 +24,7 @@ const App = () => (
     <Route exact path ="/businesses" component={BusinessIndexContainer} />
     <Route exact path="/businesses/:businessId" component={BusinessShowContainer} />
     <Route exact path ="/search"  component={SearchBusinessPageContainer} />
+    <Route exact path ="/search/dropdown"  component={SearchBusinessPageContainer} />
     <AuthRoute exact path="/login" component={LoginFormContainer}/>
     <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
 
