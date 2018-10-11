@@ -171,7 +171,7 @@
 .business-container {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-direction: column;
   padding-top: 30px;
   min-height: 500px;
@@ -190,7 +190,6 @@
 
 .main-business-container {
   display: flex;
-  align-items: center;
   justify-content: space-around;
   flex-direction: row;
   padding-top: 30px;

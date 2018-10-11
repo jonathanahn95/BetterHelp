@@ -7,7 +7,6 @@ import { requestAllBusinessCategories } from '../../actions/business_category_ac
 
 
 const msp = (state,ownProps) => {
-  debugger
 
   return {
     businesses: Object.values(state.entities.businesses),

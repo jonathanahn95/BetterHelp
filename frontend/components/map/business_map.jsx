@@ -8,7 +8,7 @@ const mapOptions = {
     lat: 40.915494,
     lng: -74.002209
   },
-  zoom: 11
+  zoom: 2
 };
 
 const getCoordsObj = latlng => ({
@@ -35,13 +35,22 @@ class BusinessMap extends React.Component {
     this.MarkerManager = new MarkerManager(this.map);
     if (this.props.single) {
       this.MarkerManager.createMarkerFromBusiness(this.props.business);
+    } else  {
+      this.MarkerManager.updateMarkers(this.props.businesses);
+
     }
   }
 
-    // componentDidUpdate() {
-    //   this.MarkerManager.updateMarkers(this.props.businesses);
-    // }
-
+  componentDidUpdate() {
+    if (this.props.single) {
+      this.MarkerManager.createMarkerFromBusiness(this.props.business);
+      const business = this.props.business;
+      this.MarkerManager.createMarkerFromBusiness(this.props.business);
+      this.MarkerManager.updateMarkers([business]);
+    } else {
+      this.MarkerManager.updateMarkers(this.props.businesses);
+    }
+  }
 
   render() {
       return (

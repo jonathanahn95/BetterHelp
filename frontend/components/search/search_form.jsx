@@ -14,10 +14,6 @@ class SearchForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
-  // //
-  // componentDidMount() {
-  //   this.props.searchBusinesses(this.state.searchData);
-  // }
 
   handleSubmit(e){
     e.preventDefault();
@@ -40,7 +36,7 @@ class SearchForm extends React.Component {
        <SearchDropDown key={business.id}  business={business} idx={idx} />
      );
 
-        
+
 
     return (
       <div className={this.props.className}>

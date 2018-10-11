@@ -26,6 +26,7 @@ class Businesses extends React.Component {
 
 
   render() {
+    debugger
     let res, home, cafe, boot;
     if (this.props.businessCategories.length > 0){
       res = this.props.businessCategories[0].id;
@@ -66,7 +67,7 @@ class Businesses extends React.Component {
             {businesses}
           </div>
           <div className='cat-ad-cont'>
-            <BusinessMap businesses={this.props.businesses}/>
+            <BusinessMap businesses={this.props.businesses} multiple={true}/>
             <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
           </div>
         </div>
