@@ -49,7 +49,7 @@ class Splash extends React.Component {
             <div className="brand-name" >
               <BusinessCategoryIndexContainer/>
               <div className="search-bar-container">
-                <SearchFormContainer className={'jon'}/>
+                <SearchFormContainer className={'sear-container'}/>
               </div>
               <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
 
@@ -86,11 +86,10 @@ class Splash extends React.Component {
               <BusinessCategoryIndexContainer/>
               <div className="search-bar-container">
 
-                <SearchFormContainer />
+                <SearchFormContainer className={'sear-container'} />
               </div>
               <Link to="/"><img className="brand" src={window.betterHelpSplash}></img></Link>
             </div>
-
           </div>
 
           <div className='slogan-container'>

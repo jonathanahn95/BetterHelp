@@ -1,4 +1,4 @@
-.search-pic {
+.search-pic-sear-container {
   border-radius: 0 4px 4px 0;
   border: 0;
   background: #d32323;
@@ -7,7 +7,7 @@
   box-shadow: none;
 }
 
-.search {
+.search-sear-container {
   HEIGHT: 44px;
   border: none;
   width: 800px;
@@ -15,7 +15,7 @@
   font-size: 16px;
   color: black;
 }
-.location {
+.location-sear-container {
   border: none;
   width: 65%;
   HEIGHT: 44px;
@@ -24,7 +24,7 @@
   font-size: 16px;
   color: black;
 }
-.search-form {
+.search-form-sear-container {
   display: flex;
   width: 100%;
 
@@ -38,7 +38,7 @@
 }
 
 
-.drop-down {
+.drop-down-sear-container {
   background-color: white;
   width: 31%;
   position: absolute;
@@ -59,7 +59,7 @@
   padding: 20px;
 }
 
-.find {
+.find-sear-container {
 
   padding: 13px 13px 0;
   height: 70%;
@@ -71,7 +71,7 @@
   font-size: 18px;
 }
 
-.near {
+.near-sear-container {
   padding: 13px 13px 0;
   height: 70%;
   font-family: sans-serif;
@@ -83,5 +83,76 @@
 
 .search-bar-container {
   width: 65%;
+}
 
+
+
+
+
+
+
+.search-pic-nav-sear-container {
+  border-radius: 0 4px 4px 0;
+  border: 0;
+  background: #d32323;
+  /* padding: 14px 20px 13px; */
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.search-nav-sear-container {
+  /* HEIGHT: 44px; */
+  border: none;
+  width: 300px;
+  color: rgb(200, 200, 200);
+  font-size: 14px;
+  color: black;
+}
+
+.location-nav-sear-container {
+  border: none;
+  width: 65%;
+  HEIGHT: 34px;
+  width: 300px;
+  color: rgb(200, 200, 200);
+  font-size: 14px;
+  color: black;
+}
+
+.search-form-nav-sear-container {
+  display: flex;
+  width: 100%;
+}
+
+.drop-down-nav-sear-container {
+  background-color: white;
+  width: 25%;
+  position: absolute;
+  /* margin-top: 42px; */
+  z-index: 1;
+}
+
+.find-nav-sear-container {
+
+  padding: 11px 13px 0;
+  border-radius: 5px 0 0 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #666666;
+  background-color: white;
+  font-size: 14px;
+}
+
+.near-nav-sear-container {
+  padding: 11px 13px 0;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #666666;
+  background-color: white;
+  font-size: 14px;
+}
+
+.small-brand-name {
+  /* padding-right: 15px; */
+  padding: 0 15px 7px 0;
 }

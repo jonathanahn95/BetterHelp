@@ -29,7 +29,7 @@ class SearchBusinessPage extends React.Component {
         <header className="login-header">
           <h1 className="login-head">
             <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
-              <SearchFormContainer/>
+              <SearchFormContainer className={'nav-sear-container'}/>
           </h1>
         </header>
         <ul className='ul-nav-bar-item1'>

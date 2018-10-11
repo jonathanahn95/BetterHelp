@@ -30,7 +30,7 @@ class BusinessMap extends React.Component {
 
   componentDidMount() {
     // set the map to show SF
-    const map = this.refs.map
+    const map = this.refs.map;
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
     if (this.props.single) {

@@ -41,23 +41,24 @@ class SearchForm extends React.Component {
        <SearchDropDown key={business.id}  business={business} idx={idx} />
      );
 
+     debugger
     return (
-      <div className='sear-container'>
+      <div className={this.props.className}>
 
-        <form className='search-form' onSubmit={this.handleSubmit}>
-          <div className='find'>
+        <form className={`search-form` + `-${this.props.className}`} onSubmit={this.handleSubmit}>
+          <div className={'find' + `-${this.props.className}`}>
             Find
           </div>
-          <input placeholder="restaurants, bootcamps, cafes..." onChange={this.update('searchData')} className= "search" type="search" value={this.state.searchData}></input>
-          <div className='near'>
+          <input placeholder="restaurants, bootcamps, cafes..." onChange={this.update('searchData')} className={"search" + `-${this.props.className}`} type="search" value={this.state.searchData}></input>
+          <div className={'near' + `-${this.props.className}`}>
             Near
           </div>
-          <input placeholder="Current Location" onChange={this.update('searchLocation')} className= "location" type="search" value={this.state.searchLocation}></input>
+          <input placeholder="Current Location" onChange={this.update('searchLocation')} className={"location" + `-${this.props.className}`} type="search" value={this.state.searchLocation}></input>
 
-          <button  className="search-pic"><i className='fa fa-search'></i></button>
+          <button  className={"search-pic" + `-${this.props.className}`}><i className='fa fa-search'></i></button>
         </form>
 
-        <div className='drop-down'>
+        <div className={'drop-down' + `-${this.props.className}`}>
           {searchedBusinesses1}
         </div>
 
