@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { selectSearchBusinesses } from '../../reducers/selectors';
-import { searchBusinesses } from '../../actions/search_actions';
+import { searchBusinesses, clearSearch } from '../../actions/search_actions';
 import SearchDropDown from './search_drop_down';
 
 
 const msp = (state,ownProps) => {
-  
+      
   let searchedBusIds = state.session.searchR;
   let businesses = Object.values(state.entities.businesses);
   return {
@@ -18,6 +18,7 @@ const msp = (state,ownProps) => {
 const mdp = dispatch => {
 
   return {
+    clearSearch: () => dispatch(clearSearch()),
     searchBusinesses: (searchData) => dispatch(searchBusinesses(searchData))
   };
 };

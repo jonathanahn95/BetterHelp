@@ -9,11 +9,18 @@ class SearchForm extends React.Component {
     super(props);
     this.state = {
       searchData: '',
-      searchLocation: ''
+      searchLocation: '',
+      dropdown: "show"
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.keydown = this.keydown.bind(this);
 
   }
+
+  // componentWillUnmount(){
+  //   this.props.clearSearch();
+  //   debugger
+  // }
 
   handleSubmit(e){
     e.preventDefault();
@@ -22,31 +29,36 @@ class SearchForm extends React.Component {
   }
 
   update(field){
-    debugger
+
     return (e) => {
       this.setState({
-        [field]: e.currentTarget.value
+        [field]: e.currentTarget.value,
+        dropdown: "show",
       });
       this.props.searchBusinesses(this.state.searchData);
-
     };
+  }
+  keydown(e) {
+    if (e.keyCode === 13) {
+      this.setState({dropdown: "hide"});
+    } else if (e.keyCode === 8 && this.state.searchData.length <= 1){
+      this.setState({dropdown: "hide"});
+    }
   }
 
   render() {
     let searchedBusinesses1 = this.props.searchedBusinesses.map( (business, idx) =>
-       <SearchDropDown key={business.id}  business={business} idx={idx} />
+       <SearchDropDown key={business.id}  business={business} idx={idx} searchData={this.state.searchData}/>
      );
-
-
 
     return (
       <div className={this.props.className}>
-
         <form className={`search-form` + `-${this.props.className}`} onSubmit={this.handleSubmit}>
           <div className={'find' + `-${this.props.className}`}>
             Find
           </div>
-          <input placeholder="restaurants, bootcamps, cafes..." onChange={this.update('searchData')} className={"search" + `-${this.props.className}`} type="search" value={this.state.searchData}></input>
+          <input placeholder="restaurants, bootcamps, cafes..." onChange={this.update('searchData')} className={"search" + `-${this.props.className} `}
+             onKeyDown={this.keydown} type="search" value={this.state.searchData}></input>
           <div className={'near' + `-${this.props.className}`}>
             Near
           </div>
@@ -55,7 +67,7 @@ class SearchForm extends React.Component {
           <button  className={"search-pic" + `-${this.props.className}`}><i className='fa fa-search'></i></button>
         </form>
 
-        <div className={'drop-down' + `-${this.props.className}`}>
+        <div className={'drop-down' + `-${this.props.className} ${this.state.dropdown}`}>
           {searchedBusinesses1}
         </div>
 

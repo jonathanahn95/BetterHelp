@@ -1,4 +1,5 @@
 import * as SearchApiUtil from '../util/search_api_util';
+export const CLEAR_SEARCH = 'CLEAR_SEARCH';
 
 export const RECEIVE_SEARCH_RESULTS = 'RECEIVE_SEARCH_RESULTS';
 
@@ -12,9 +13,14 @@ const receiveSearchResults = results => {
 };
 
 export const searchBusinesses = searchData => dispatch => {
-
   return SearchApiUtil.searchBusinesses(searchData).then( results => {
-
     return dispatch(receiveSearchResults(results));
   });
+};
+
+export const clearSearch = () => {
+
+  return {
+    type: CLEAR_SEARCH,
+  };
 };

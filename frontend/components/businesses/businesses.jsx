@@ -26,7 +26,7 @@ class Businesses extends React.Component {
 
 
   render() {
-    debugger
+        
     let res, home, cafe, boot;
     if (this.props.businessCategories.length > 0){
       res = this.props.businessCategories[0].id;
