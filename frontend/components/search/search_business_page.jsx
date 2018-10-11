@@ -11,7 +11,6 @@ class SearchBusinessPage extends React.Component {
     super(props);
   }
 
-  //
   componentDidMount() {
     this.props.searchBusinesses(this.props.location.search.slice(1));
   }
@@ -48,7 +47,7 @@ class SearchBusinessPage extends React.Component {
           {searchedBusinesses}
         </div>
         <div className='sear-ad-cont'>
-          <BusinessMap/>
+          <BusinessMap businesses={this.props.searchedBusinesses}/>
           <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
         </div>
       </div>

@@ -30,16 +30,17 @@ BusinessCategory.create!([
 business_categories = BusinessCategory.all
 
 Business.create!([
+
   {name: 'Chipotle', address: "28 W 40th St", hours: ["10:45am - 11:00pm" , "10:45am - 11:00pm ",	"10:45am - 11:00pm",	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm"],
-  phone_number: '(212) 302-0650', website: 'https://www.chipotle.com/', city: "New York", state: "NY", zip_code: 10018, business_category_id: business_categories[0].id, latitude: 44.915495, longitude: -80.303601},
+  phone_number: '(212) 302-0650', website: 'https://www.chipotle.com/', city: "New York", state: "NY", zip_code: 10018, business_category_id: business_categories[0].id, latitude: 40.915495, longitude: -74.002210},
   {name: 'Shake Shack', address: "1 Old Fulton St", hours: ["9:45 am - 9:00 pm" ,"	9:45 am - 9:00 pm ",	"9:45 am - 9:00 pm"	,"9:45 am - 9:00 pm" ,"9:45 am - 9:00 pm" ,	"9:45 am - 9:00 pm" ,	"9:45 am - 9:00 pm"],
-  phone_number: '(347) 435-2676', website: 'https://www.shake-shack.com/', city: "Brooklyn", state: "NY", zip_code: 11201, business_category_id: business_categories[0].id, latitude: 50.451231, longitude: -60.632209 },
+  phone_number: '(347) 435-2676', website: 'https://www.shake-shack.com/', city: "Brooklyn", state: "NY", zip_code: 11201, business_category_id: business_categories[0].id, latitude: 41.615488, longitude: -74.002300 },
   {name: 'JC Landscaping and Design', address: "68-19 Woodhaven Blvd", hours: ["9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm"	,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm"],
-  phone_number: '(718) 672-7323', website: 'https://www.jcdesignscapes.com.com/', city: "Queens", state: "NY", zip_code: 11374, business_category_id: business_categories[1].id ,latitude: 99.012213, longitude: -40.239881 },
+  phone_number: '(718) 672-7323', website: 'https://www.jcdesignscapes.com.com/', city: "Queens", state: "NY", zip_code: 11374, business_category_id: business_categories[1].id ,latitude: 40.888888, longitude: -73.899999 },
   {name: 'Bean and Bean', address: "318 8th Ave", hours: ["9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm"	,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm"],
-  phone_number: '(646) 869-2070', website: 'https://beannbean.com.com/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[2].id, latitude: 105.321333, longitude: -77.271123 },
+  phone_number: '(646) 869-2070', website: 'https://beannbean.com.com/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[2].id, latitude: 41.231032, longitude: -73.701888 },
   {name: 'App Academy', address: "159 W 25th St", hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
-  phone_number: '(123) 718-3213', website: 'https://www.appacademy.io/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[3].id ,latitude: 67.672337, longitude: -34.265121 }
+  phone_number: '(123) 718-3213', website: 'https://www.appacademy.io/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[3].id ,latitude: 40.565213, longitude: -74.002218 }
   ])
 
   businesses = Business.all

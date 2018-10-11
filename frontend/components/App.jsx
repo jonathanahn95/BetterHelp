@@ -28,19 +28,31 @@ const App = () => (
     <AuthRoute exact path="/login" component={LoginFormContainer}/>
     <AuthRoute exact path="/signup" component={SignUpFormContainer}/>
 
-    <footer className="footer">
+    <div className='footer-container'>
+      <footer className="footer">
         <ul className="about-list">
           About
           <li>
-            <a href="https://github.com/jonathanahn95/BetterHelp/wiki">BetterHelp Wiki</a>
+            <a href="https://github.com/jonathanahn95/BetterHelp">About BetterHelp</a>
+            <a href="https://jonahn.io">About Me</a>
           </li>
         </ul>
-        <img className="footerImg" src={window.footerCityscape}></img>
-        <ul className="discover-list">
-          Discover
-          <a href="https://github.com/jonathanahn95">Learn about me</a>
+        <ul className='connect-list'>
+          Connect
+          <a href="https://github.com/jonathanahn95/">GitHub</a>
+          <a href="https://www.linkedin.com/in/jonathan-ahn-28981211b/">LinkedIn</a>
+          <a href="https://angel.co/jonathan-ahn-1">Angel List</a>
+
         </ul>
-    </footer>
+        <ul className="discover-list">
+          Other Projects
+          <a href="http://fatal-start.jonahn.io/">Fatal-Start</a>
+        </ul>
+      </footer>
+      <div className='footerImg-container'>
+        <img className="footerImg" src={window.footerCityscape}></img>
+      </div>
+    </div>
 
   </div>
 )

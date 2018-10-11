@@ -268,8 +268,8 @@ class BusinessShow extends React.Component {
     if (this.props.session === review.user_id ){
       return (
         <div >
-          <img key="trash" onClick={e => this.props.deleteReview(review.id)} className="dub" src={window.trashBin}></img>
           <img key="edit" onClick={ this.navigateToEdit(review) } className="dub" src={window.edit}></img>
+          <img key="trash" onClick={e => this.props.deleteReview(review.id)} className="dub" src={window.trashBin}></img>
         </div>
       )
     } else {
