@@ -87,7 +87,8 @@
 .cat-ad-cont {
   display: flex;
   flex-direction: column;
-  margin-bottom: auto
+  margin-right: auto;
+  /* padding-right: 60px; */
 }
 .secondary-attributes-container {
   display: flex;
@@ -127,6 +128,8 @@
 }
 
 .map-ad {
+  margin-right: auto;
+
   margin-bottom: 580px;
 
 }
@@ -175,7 +178,8 @@
   flex-direction: column;
   padding-top: 30px;
   min-height: 500px;
-  width: 75%;
+  /* width: 75%; */
+  margin: auto;
 }
 
 

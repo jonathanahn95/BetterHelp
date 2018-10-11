@@ -7,7 +7,8 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    padding-left: 150px;
+    /* padding-left: 150px; */
+    padding-right: 30px;
 
   }
 
@@ -21,7 +22,8 @@
 
 
 .review-form-business-name {
-  padding: 20px 0;
+  padding: 20px 640px 20px 0;
+  margin: auto;
 
 }
 
@@ -43,8 +45,8 @@
 .contain-name-form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
+  /* justify-content: space-around; */
+  /* align-items: flex-start; */
 
 }
 
