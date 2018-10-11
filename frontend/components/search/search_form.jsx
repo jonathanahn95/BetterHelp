@@ -32,7 +32,6 @@ class SearchForm extends React.Component {
       });
       this.props.searchBusinesses(this.state.searchData);
 
-      // this.renderBusinesses();
     };
   }
 
@@ -41,7 +40,8 @@ class SearchForm extends React.Component {
        <SearchDropDown key={business.id}  business={business} idx={idx} />
      );
 
-     debugger
+        
+
     return (
       <div className={this.props.className}>
 

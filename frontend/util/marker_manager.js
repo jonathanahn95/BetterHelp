@@ -17,13 +17,13 @@ export default class MarkerManager {
 
   createMarkerFromBusiness(business) {
     const position = new google.maps.LatLng(business.latitude, business.longitude);
-    debugger
+       
     const marker = new google.maps.Marker({
       position,
       map: this.map,
       businessId: business.id
     });
-    debugger
+       
     marker.addListener('click', () => this.handleClick(business));
     this.markers[marker.businessId] = marker;
   }
