@@ -18,7 +18,6 @@ class BusinessCategoryIndex extends React.Component {
   toggleIcons(category){
     switch (category.category) {
       case "Cafes":
-      debugger
       return "fas fa-coffee one";
       case "Restaurants":
       return "fal fa-utentils one";

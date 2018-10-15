@@ -10,11 +10,9 @@ import SearchFormContainer from '../search/search_form_container';
 //during the next few weeks, im going to study more and work on my projects. can i reach out to you next week?
 
 class Businesses extends React.Component {
-
   componentDidMount() {
     this.props.requestSelectedBusinessCategories(this.props.category);
     this.props.requestAllBusinessCategories();
-
   }
 
   componentDidUpdate(previousProps) {
@@ -30,11 +28,12 @@ class Businesses extends React.Component {
   render() {
 
     let res, home, cafe, boot;
-    if (this.props.businessCategories.length > 0){
-      res = this.props.businessCategories[0].id;
-      home = this.props.businessCategories[1].id;
-      cafe = this.props.businessCategories[2].id;
-      boot = this.props.businessCategories[3].id;
+    const businessCategory = this.props.businessCategories;
+    if (businessCategory.length > 0){
+      res = businessCategory[0].id;
+      home = businessCategory[1].id;
+      cafe = businessCategory[2].id;
+      boot = businessCategory[3].id;
     }
 
     const businesses = this.props.businesses.map( (business, idx) =>
