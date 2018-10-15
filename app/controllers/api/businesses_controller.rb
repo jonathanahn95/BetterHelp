@@ -9,7 +9,9 @@ class Api::BusinessesController < ApplicationController
   end
 
   def search
+    @business_categories = BusinessCategory.where('category ILIKE ?', "%#{params[:search]}%")
     @businesses = Business.where('name ILIKE ?', "%#{params[:search]}%")
+    
     render :index
   end
 

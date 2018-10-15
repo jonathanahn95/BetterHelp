@@ -21,7 +21,5 @@
         json.photo_image_url url_for(photo)
       end
     end
-
   end
-
 end

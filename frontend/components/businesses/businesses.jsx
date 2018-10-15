@@ -26,7 +26,7 @@ class Businesses extends React.Component {
 
 
   render() {
-        
+
     let res, home, cafe, boot;
     if (this.props.businessCategories.length > 0){
       res = this.props.businessCategories[0].id;
@@ -46,19 +46,18 @@ class Businesses extends React.Component {
 
           </h1>
         </header>
-        <div className='header-nav-bar'>
-              <ul className='ul-nav-bar-item1'>
-                <div className='nav-bar-container'>
-                  <Link to={`/business_categories/${res}`}><p className='nav-bar-item'>Restaurant</p></Link>
-                  <Link to={`/business_categories/${home}`}><p className='nav-bar-item'>Home Services</p></Link>
-                  <Link to={`/business_categories/${cafe}`}><p className='nav-bar-item'>Cafes</p></Link>
-                  <Link to={`/business_categories/${boot}`}><p className='nav-bar-item'>Bootcamps</p></Link>
-                </div>
-                <div className='review-bar-container'>
-                <Link to={`/businesses`}><p className='nav-bar-item'>Write a Review</p></Link>
-                </div>
-              </ul>
+          <ul className='ul-nav-bar-item2'>
+            <div className='nav-bar-container1'>
+              <Link className='nav-bar-container1-links' to={`/business_categories/${res}`}><i class="fas fa-utensils"></i><p >Restaurant</p></Link>
+              <Link className='nav-bar-container1-links' to={`/business_categories/${home}`}><i class="fas fa-home"></i><p >Home Services</p></Link>
+              <Link className='nav-bar-container1-links' to={`/business_categories/${cafe}`}><i class="fas fa-coffee"></i><p >Cafes</p></Link>
+              <Link className='nav-bar-container1-links' to={`/business_categories/${boot}`}><i class="fas fa-keyboard"></i><p >Bootcamps</p></Link>
             </div>
+            <div className='review-bar-container1'>
+              <Link className='review-bar-container1-link' to={`/businesses/`}><i class="fas fa-pen"></i><p >Write a Review</p></Link>
+            </div>
+          </ul>
+
           <div>
         </div>
 
@@ -67,7 +66,7 @@ class Businesses extends React.Component {
             {businesses}
           </div>
           <div className='cat-ad-cont'>
-            <BusinessMap businesses={this.props.businesses} multiple={true}/>
+            <BusinessMap id={'map-container'} businesses={this.props.businesses} multiple={true}/>
             <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
           </div>
         </div>

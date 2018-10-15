@@ -35,7 +35,9 @@ export const receiveAllBusinesses = (businesses) => {
 
 export const requestAllBusinesses = () => {
   return dispatch => {
+     
     return BusinessesApiUtil.fetchBusinesses().then( businesses => {
+       
       return dispatch(receiveAllBusinesses(businesses));
     });
   };

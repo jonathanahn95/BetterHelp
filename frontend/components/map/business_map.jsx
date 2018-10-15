@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import MarkerManager from '../../util/marker_manager';
 
+
+/// ayellapragada@gmail.com
 const mapOptions = {
   center: {
     lat: 40.915494,
@@ -10,6 +12,7 @@ const mapOptions = {
   },
   zoom: 7
 };
+
 
 const getCoordsObj = latlng => ({
   lat: latLng.lat(),
@@ -42,7 +45,7 @@ class BusinessMap extends React.Component {
 
   render() {
       return (
-        <div id='map-container' ref={ map => this.mapNode = map }>
+        <div id={this.props.id} ref={ map => this.mapNode = map }>
         </div>
       )
 

@@ -76,6 +76,8 @@ bus-show-pics {
 .show-pics {
   display: flex;
   height: 200px;
+  width: 45%;
+
 }
 
 .right-button {
@@ -97,10 +99,11 @@ bus-show-pics {
 }
 
 .subheader {
-  width: 100%;
+  width: 93%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: auto;
 }
 
 .main-reviews-container {
@@ -185,8 +188,14 @@ bus-show-pics {
 .business-show-container {
   width: 48%;
   padding-left: 18px;
+}
 
-
+#show-map-container {
+  width: 290px;
+  height: 150px;
+  margin: auto;
+margin-top: 6px;
+border: 1px solid #ccc;
 }
 
 .business-hours {
@@ -200,7 +209,7 @@ bus-show-pics {
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  width: 65%;
+  width: 45%;
 }
 
 .bus-info {
@@ -218,7 +227,7 @@ bus-show-pics {
 
 .dub-container {
   display: flex;
-  padding-left: 380px;
+  padding-left: 280px;
   width: 20%;
   justify-content: space-around;
 
@@ -276,10 +285,15 @@ bus-show-pics {
 
 .info {
   list-style: none;
-  width: 21%;
-    height: 390px;
+  width: 23%;
     background: #fff;
     border: 1px solid #ccc;
+}
+
+.show-li-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .info li {
@@ -317,10 +331,43 @@ bus-show-pics {
 
 .bus-show-pics:hover {
   transform: scale(1.2);
-  transition: all 1.7s ease-in-out;
+  transition: all 1.0s ease-in-out;
   cursor: pointer;
 }
 
+.bus-show-pics {
+  width: 33%;
+
+}
+
+
+.bus-state{
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.bus-zipcode{
+  padding-left: 5px;
+
+}
+
+.show-info-container{
+  display: flex;
+  padding-left: 20px;
+
+}
+.show-li-container {
+  padding: 10px;
+}
+
+.fa {
+  color: gray;
+}
+
+.fa-star{
+  color: white;
+
+}
 .stars {
   padding-right: 10px;
 }
@@ -363,4 +410,76 @@ bus-show-pics {
   font-weight: normal;
     font-size: 16px;
     padding-top: 15px;
+}
+
+
+        /* <ul className='ul-nav-bar-item1'>
+          <div className='nav-bar-container'>
+            <Link to={`/business_categories/${res}`}><i class="fas fa-utensils"></i><p className='nav-bar-item'>Restaurant</p></Link>
+            <Link to={`/business_categories/${home}`}><i class="fas fa-home"></i><p className='nav-bar-item'>Home Services</p></Link>
+            <Link to={`/business_categories/${cafe}`}><i class="fas fa-coffee"></i><p className='nav-bar-item'>Cafes</p></Link>
+            <Link to={`/business_categories/${boot}`}><i class="fas fa-keyboard"></i><p className='nav-bar-item'>Bootcamps</p></Link>
+          </div>
+          <div className='review-bar-container'>
+            <Link to={`/businesses/`}><i class="fas fa-pen"></i><p className='nav-bar-item'>Write a Review</p></Link>
+          </div>
+        </ul> */
+
+
+
+
+.ul-nav-bar-item2 {
+  display: flex;
+  justify-content: space-evenly;
+  height: 35px;
+  background: #fafafa!important;
+
+}
+
+.nav-bar-container1 {
+  display: flex;
+  width: 45%;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar-container1-links{
+  width: 25%;
+  border-left: 1px solid #e6e6e6!important;
+  border-right: 1px solid #e6e6e6!important;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+  font-family: Arial;
+  color: black;
+font-size: 13px;
+font-weight: bold;
+}
+.review-bar-container1{
+  display: flex;
+  align-items: center;
+  width: 12%;
+  /* border: 5px solid; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.review-bar-container1-link{
+  display: flex;
+  border-left: 1px solid #e6e6e6!important;
+  border-right: 1px solid #e6e6e6!important;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  justify-content: space-evenly;
+  text-decoration: none;
+  font-family: Arial;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
 }

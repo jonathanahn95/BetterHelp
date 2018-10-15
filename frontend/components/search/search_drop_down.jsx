@@ -11,8 +11,7 @@ class SearchDropDown extends React.Component {
 
     if (this.props.searchData.length === 0){
       return (
-        <div className='hide'>
-        </div>
+        null
       )
     } else {
       return (

@@ -347,17 +347,19 @@ class BusinessShow extends React.Component {
 
           </h1>
         </header>
-        <ul className='ul-nav-bar-item1'>
-          <div className='nav-bar-container'>
-            <Link to={`/business_categories/${res}`}><p className='nav-bar-item'>Restaurant</p></Link>
-            <Link to={`/business_categories/${home}`}><p className='nav-bar-item'>Home Services</p></Link>
-            <Link to={`/business_categories/${cafe}`}><p className='nav-bar-item'>Cafes</p></Link>
-            <Link to={`/business_categories/${boot}`}><p className='nav-bar-item'>Bootcamps</p></Link>
+
+        <ul className='ul-nav-bar-item2'>
+          <div className='nav-bar-container1'>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${res}`}><i class="fas fa-utensils"></i><p >Restaurant</p></Link>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${home}`}><i class="fas fa-home"></i><p >Home Services</p></Link>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${cafe}`}><i class="fas fa-coffee"></i><p >Cafes</p></Link>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${boot}`}><i class="fas fa-keyboard"></i><p >Bootcamps</p></Link>
           </div>
-          <div className='review-bar-container'>
-            <Link to={`/businesses/`}><p className='nav-bar-item'>Write a Review</p></Link>
+          <div className='review-bar-container1'>
+            <Link className='review-bar-container1-link' to={`/businesses/`}><i class="fas fa-pen"></i><p >Write a Review</p></Link>
           </div>
         </ul>
+
         <main className='top-shelf'>
           <div className='content'>
             <div className='page-header'>
@@ -384,24 +386,25 @@ class BusinessShow extends React.Component {
                 <div className='right-review'>
                   <Link to={`/businesses/${business.id}/review`}><button className='right-button'><i class="fa fa-star"></i>Write a Review</button></Link>
                 </div>
-
-
               </div>
             </div>
             <div className='subheader'>
               <div className='info'>
                 <div className='show-buss-map'>
-                  <BusinessMap business={this.props.business} single={true}/>
+                  <BusinessMap id={'show-map-container'} business={this.props.business} single={true}/>
                 </div>
-
-                <li className='bus-address'>{business.address}</li>
-                <li className='bus-city'>{business.city}</li><li className='bus-state'>{business.state}</li><li className='bus-zipcode'>{business.zipcode}</li>
-                <li>
-                  {business.phone_number}
-                </li>
-                <li className='bus-website'>
-                  {business.website}
-                </li>
+                <div className='show-li-container'>
+                  <li className='bus-address' ><i class="fa fa-map-marker-alt"></i>{business.address}</li>
+                  <div className='show-info-container'>
+                    <li className='bus-city'>{business.city},</li>
+                    <li className='bus-state'>{business.state}</li>
+                    <li className='bus-zipcode'>{business.zip_code}</li>
+                  </div>
+                  <li><i class="fa fa-phone"></i>{business.phone_number}</li>
+                  <li className='bus-website'>
+                    <i class="fa fa-directions"></i>{business.website}
+                  </li>
+              </div>
               </div>
               <div className='show-pics'>
                 {imagesArr}

@@ -25,6 +25,7 @@ class Splash extends React.Component {
 
   render() {
     let businesses;
+     
     if (this.props.businesses){
       businesses = this.props.businesses.slice(0,3).map( business =>
         <SplashBusinesses key={business.id} business={business} />)

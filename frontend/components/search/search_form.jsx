@@ -19,7 +19,7 @@ class SearchForm extends React.Component {
 
   // componentWillUnmount(){
   //   this.props.clearSearch();
-  //   debugger
+  //
   // }
 
   handleSubmit(e){
@@ -29,7 +29,6 @@ class SearchForm extends React.Component {
   }
 
   update(field){
-
     return (e) => {
       this.setState({
         [field]: e.currentTarget.value,
@@ -38,6 +37,7 @@ class SearchForm extends React.Component {
       this.props.searchBusinesses(this.state.searchData);
     };
   }
+
   keydown(e) {
     if (e.keyCode === 13) {
       this.setState({dropdown: "hide"});
@@ -62,7 +62,7 @@ class SearchForm extends React.Component {
           <div className={'near' + `-${this.props.className}`}>
             Near
           </div>
-          <input placeholder="Current Location" onChange={this.update('searchLocation')} className={"location" + `-${this.props.className}`} type="search" value={this.state.searchLocation}></input>
+          <input placeholder="Current Location" onChange={this.update('searchLocation')} className={"location" + `-${this.props.className}`} onKeyDown={this.keydown} type="search" value={this.state.searchLocation}></input>
 
           <button  className={"search-pic" + `-${this.props.className}`}><i className='fa fa-search'></i></button>
         </form>
