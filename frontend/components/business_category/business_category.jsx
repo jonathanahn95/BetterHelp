@@ -8,7 +8,7 @@ class BusinessCategory extends React.Component {
     return (
       <div>
         <li className='business-categories-list'>
-          <Link to={`/business_categories/${this.props.category.id}`}>{this.props.category.category}</Link>
+          <Link to={`/business_categories/${this.props.category.id}`}><i class={this.props.className}></i>{this.props.category.category}</Link>
         </li>
       </div>
     )

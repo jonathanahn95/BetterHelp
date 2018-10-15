@@ -15,11 +15,27 @@ class BusinessCategoryIndex extends React.Component {
 
   }
 
+  toggleIcons(category){
+    switch (category.category) {
+      case "Cafes":
+      debugger
+      return "fas fa-coffee one";
+      case "Restaurants":
+      return "fal fa-utentils one";
+      case "Home Services one":
+      return "fas fa-home";
+      case "Bootcamps":
+      return "fas fa-keyboard one";
+      default:
+      return "fa fa-utensils one";
+    }
+  }
+
   render() {
 
     //
     const businessCategories = this.props.businessCategories.map( (category, idx) =>
-      <BusinessCategory  key={category.id} category={category} idx={idx} />)
+      <BusinessCategory  className={this.toggleIcons(category)} key={category.id} category={category} idx={idx} />)
 
    //  const businessCategories = this.props.businessCategories.length > 0 ? this.props.businessCategories.map( category => {
    //  <BusinessCategory key={category.id} category={category} />

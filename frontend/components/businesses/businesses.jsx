@@ -7,6 +7,8 @@ import BusinessMap from '../map/business_map';
 import SearchFormContainer from '../search/search_form_container';
 
 
+//during the next few weeks, im going to study more and work on my projects. can i reach out to you next week?
+
 class Businesses extends React.Component {
 
   componentDidMount() {
@@ -46,17 +48,17 @@ class Businesses extends React.Component {
 
           </h1>
         </header>
-          <ul className='ul-nav-bar-item2'>
-            <div className='nav-bar-container1'>
-              <Link className='nav-bar-container1-links' to={`/business_categories/${res}`}><i class="fas fa-utensils"></i><p >Restaurant</p></Link>
-              <Link className='nav-bar-container1-links' to={`/business_categories/${home}`}><i class="fas fa-home"></i><p >Home Services</p></Link>
-              <Link className='nav-bar-container1-links' to={`/business_categories/${cafe}`}><i class="fas fa-coffee"></i><p >Cafes</p></Link>
-              <Link className='nav-bar-container1-links' to={`/business_categories/${boot}`}><i class="fas fa-keyboard"></i><p >Bootcamps</p></Link>
-            </div>
-            <div className='review-bar-container1'>
-              <Link className='review-bar-container1-link' to={`/businesses/`}><i class="fas fa-pen"></i><p >Write a Review</p></Link>
-            </div>
-          </ul>
+        <ul className='ul-nav-bar-item2'>
+          <div className='nav-bar-container1'>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${res}`}><i class="fas fa-utensils"></i><p >Restaurant</p></Link>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${home}`}><i class="fas fa-home"></i><p >Home Services</p></Link>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${cafe}`}><i class="fas fa-coffee"></i><p >Cafes</p></Link>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${boot}`}><i class="fas fa-keyboard"></i><p >Bootcamps</p></Link>
+          </div>
+          <div className='review-bar-container1'>
+            <Link className='review-bar-container1-link' to={`/businesses/`}><i class="fas fa-pen"></i><p >Write a Review</p></Link>
+          </div>
+        </ul>
 
           <div>
         </div>
@@ -65,7 +67,7 @@ class Businesses extends React.Component {
           <div className="business-container" >
             {businesses}
           </div>
-          <div className='cat-ad-cont'>
+          <div className='map-ad'>
             <BusinessMap id={'map-container'} businesses={this.props.businesses} multiple={true}/>
             <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
           </div>
