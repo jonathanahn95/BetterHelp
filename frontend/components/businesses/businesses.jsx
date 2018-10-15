@@ -24,9 +24,7 @@ class Businesses extends React.Component {
     }
   }
 
-
   render() {
-
     let res, home, cafe, boot;
     const businessCategory = this.props.businessCategories;
     if (businessCategory.length > 0){

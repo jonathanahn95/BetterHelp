@@ -24,7 +24,7 @@ class BusinessMap extends React.Component {
   componentDidMount() {
     const map = this.refs.map;
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map);
+    this.MarkerManager = new MarkerManager(this.map,  this.handleMarkerClick.bind(this));
     if (this.props.single) {
       this.MarkerManager.createMarkerFromBusiness(this.props.business);
     } else  {
@@ -41,6 +41,11 @@ class BusinessMap extends React.Component {
     } else {
       this.MarkerManager.updateMarkers(this.props.businesses);
     }
+  }
+
+  handleMarkerClick(business) {
+    const url = `https://www.google.com/maps/place/${business.address}`;
+      window.open(url);
   }
 
   render() {
