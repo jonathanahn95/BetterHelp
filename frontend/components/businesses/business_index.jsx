@@ -63,14 +63,14 @@ class BusinessIndex extends React.Component {
             <div className='awaits-container'>
                 <h1 className='write-first-review'>Your First Review Awaits</h1>
                 <h2 className='need-help-p'>Review your favorite businesses and share your experiences with our community. Need a little help getting started?</h2>
-                <div><SearchFormContainer className={'write-review-search'}/></div>
+                <div><SearchFormContainer className={'nav-sear-container'}/></div>
             </div>
             <img className="write-pic" src="https://s3.amazonaws.com/betterhelp-dev/first_review.png"></img>
           </div>
 
           <div className="write-review-main-business-container">
             <div className='recent-businesses'>
-              Been to these Businesses Recently?
+              Been to these businesses recently?
             </div>
             <div className="write-review-business-container" >
               {businesses}

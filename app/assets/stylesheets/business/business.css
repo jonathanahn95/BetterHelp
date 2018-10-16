@@ -281,39 +281,6 @@
   justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-.search-form-write-review-search {
-  display: flex;
-  justify-content: space-around;
-
-}
-
-
-.search-write-review-search {
-  background: white;
-  border: transparent;
-}
-
-.find-write-review-search {
-  background: white;
-}
-
-.near-write-review-search {
-  background: white;
-}
-
-.location-write-review-search {
-  background: white;
-  border: transparent;
-}
-
 .recent-businesses {
   font-weight: 700;
   margin-bottom: 6px;
