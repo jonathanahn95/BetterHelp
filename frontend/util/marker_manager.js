@@ -3,7 +3,6 @@ export default class MarkerManager {
     this.map = map;
     this.handleClick = handleClick;
     this.markers = {};
-    debugger
   }
   updateMarkers(businesses) {
     const businessesObj = {};
