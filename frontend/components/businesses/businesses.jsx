@@ -6,9 +6,6 @@ import { Route } from 'react-router-dom';
 import BusinessMap from '../map/business_map';
 import SearchFormContainer from '../search/search_form_container';
 
-
-//during the next few weeks, im going to study more and work on my projects. can i reach out to you next week?
-
 class Businesses extends React.Component {
   componentDidMount() {
     this.props.requestSelectedBusinessCategories(this.props.category);
