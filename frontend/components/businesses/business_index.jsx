@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import ReactStars from 'react-stars';
-import Business from './business';
+import BusinessToWriteReview from './business_to_write_review';
 import BusinessMap from '../map/business_map';
 import MarkerManager from '../../util/marker_manager';
 import SearchFormContainer from '../search/search_form_container';
@@ -34,7 +34,7 @@ class BusinessIndex extends React.Component {
     let businesses;
     if (this.props.businesses) {
        businesses = this.props.businesses.map( (business, idx) =>
-        <Business key={business.id}  business={business}  idx={idx} />)
+        <BusinessToWriteReview key={business.id}  business={business}  idx={idx} />)
     } else {
       businesses = <div></div>
     }
@@ -59,20 +59,22 @@ class BusinessIndex extends React.Component {
             </div>
           </ul>
 
-              <div>
-              </div>
+          <div className='first-review-container'>
+            <div className='awaits-container'>
+                <h1 className='write-first-review'>Your First Review Awaits</h1>
+                <h2 className='need-help-p'>Review your favorite businesses and share your experiences with our community. Need a little help getting started?</h2>
+                <div><SearchFormContainer className={'write-review-search'}/></div>
+            </div>
+            <img className="write-pic" src="https://s3.amazonaws.com/betterhelp-dev/first_review.png"></img>
+          </div>
 
-          <div className="main-business-container">
-            <div className="business-container" >
+          <div className="write-review-main-business-container">
+            <div className='recent-businesses'>
+              Been to these Businesses Recently?
+            </div>
+            <div className="write-review-business-container" >
               {businesses}
             </div>
-            <div className='map-ad'>
-              <BusinessMap id={'map-container'} businesses={this.props.businesses}/>
-              <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
-            </div>
-            <div>
-            </div>
-
           </div>
 
         </div>

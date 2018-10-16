@@ -224,12 +224,12 @@
   padding: 0 30px;
   text-decoration: none;
   border-left: 1px solid #e6e6e6;
-border-right: 1px solid #e6e6e6;
-font-family: 'Helvetica Neue';
-color: #333;
+  border-right: 1px solid #e6e6e6;
+  font-family: 'Helvetica Neue';
+  color: #333;
 
-font-weight: 300px;
-min-height: 30px;
+  font-weight: 300px;
+  min-height: 30px;
    padding-top: 10px;
 }
 
@@ -241,4 +241,157 @@ min-height: 30px;
 
 .nav-bar-item :hover {
   cursor: pointer;
+}
+
+
+.first-review-container {
+  min-height: 220px;
+  position: relative;
+  padding-top: 15px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+}
+
+.write-first-review {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 30px;
+  line-height: 1.2em;
+  font-family: Arial;
+}
+
+.need-help-p {
+  width: 99%;
+  font-weight: 400;
+  padding: 12px 0;
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 1.3125em;
+  font-family: Arial;
+  color: #333;
+}
+.awaits-container {
+  width: 44%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+.search-form-write-review-search {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+.search-write-review-search {
+  background: white;
+  border: transparent;
+}
+
+.find-write-review-search {
+  background: white;
+}
+
+.near-write-review-search {
+  background: white;
+}
+
+.location-write-review-search {
+  background: white;
+  border: transparent;
+}
+
+.recent-businesses {
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: 21px;
+  line-height: 1.28571em;
+  color: #d32323;
+  font-family: Arial;
+  margin: 40px 0 20px 280px;
+}
+
+.search-pic-write-review-search {
+  color: #fff;
+  border-color: #8d0005;
+  box-shadow: 0 1px 1px rgba(0,0,0,.3);
+  background-color: #d90007;
+  background: linear-gradient(#d90007,#c91400);
+  font-size: 12px;
+  line-height: 1.5em;
+  width: 32px;
+}
+
+.write-review-business-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.write-review-business-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 78%;
+  margin: auto;
+  justify-content: flex-start;
+  justify-content: center;
+
+}
+.write-review-main-business-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.write-review-large-wrapper {
+  display: flex;
+  width: 38%;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  align-items: center;
+  margin: 10px;
+
+}
+
+.write-review-secondary-attributes-container {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  justify-content: space-around;
+  padding: 0 0 20px 8px;
+}
+
+.write-review-business-info {
+  height: 100%;
+  font-family: arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.write-review-bus-name {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0073bb;
+}
+
+.write-review-review {
+  padding-left: 10px;
+}
+.write-review-link-page {
+  padding: 10px;
+
 }
