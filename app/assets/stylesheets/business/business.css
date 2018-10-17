@@ -463,3 +463,11 @@
   color: #d32323;
   font-family: arial;
 }
+
+.recent-activity-wrapper {
+  display: flex;
+  font-family: arial;
+  border-bottom: 1px solid #e6e6e6;
+  width: 67%;
+  margin: 100px 0 60px 235px;
+}
