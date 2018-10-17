@@ -93,9 +93,19 @@ class Splash extends React.Component {
           <div className='review-bus'>
             {reviews}
           </div>
-          <div className='category-bus'>
-            {businessCategories}
+  
+          <div className='browse-category-container'>
+            <div className='browse-category-wrapper'>
+              <div className='browse-category'>
+                Browse Businesses By Category
+              </div>
+            </div>
+            <div className='category-bus'>
+              {businessCategories}
+            </div>
           </div>
+
+
 
         </div>
       );
@@ -145,8 +155,16 @@ class Splash extends React.Component {
           <div className='review-bus'>
             {reviews}
           </div>
-          <div className='category-bus'>
-            {businessCategories}
+
+          <div className='browse-category-container'>
+            <div className='browse-category-wrapper'>
+              <div className='browse-category'>
+                Browse Businesses By Category
+              </div>
+            </div>
+            <div className='category-bus'>
+              {businessCategories}
+            </div>
           </div>
 
 
