@@ -337,6 +337,7 @@
 .write-review-secondary-attributes-container {
   display: flex;
   width: 100%;
+  font-size: 15px;
   list-style: none;
   justify-content: space-around;
   padding: 0 0 20px 8px;

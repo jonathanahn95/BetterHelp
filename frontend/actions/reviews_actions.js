@@ -13,10 +13,10 @@ export const receiveReview = review => {
   };
 };
 
-export const receiveAllReviews = review => {
+export const receiveAllReviews = reviews => {
   return {
     type: RECEIVE_ALL_REVIEWS,
-    review
+    reviews
   };
 };
 
@@ -35,9 +35,19 @@ export const removeReview = review => {
   };
 };
 
+
+
 export const fetchAllReviews = businessId => {
   return dispatch => {
     return ReviewApiUtil.fetchAllReviews(businessId).then( reviews => {
+      return dispatch(receiveAllReviews(reviews));
+    });
+  };
+};
+
+export const fetchAllUnrelatedReviews = () => {
+  return dispatch => {
+    return ReviewApiUtil.fetchAllUnrelatedReviews().then( reviews => {
       return dispatch(receiveAllReviews(reviews));
     });
   };

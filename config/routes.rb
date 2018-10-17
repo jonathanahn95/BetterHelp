@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :business_categories, only: [:index, :create, :show] do
       resources :businesses, only: [:index]
     end
-    resources :reviews, only: [:show, :destroy, :update ]
-  
+    resources :reviews, only: [:show, :destroy, :update, :index]
+
   end
 end

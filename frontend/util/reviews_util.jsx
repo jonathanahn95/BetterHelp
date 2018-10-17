@@ -5,6 +5,13 @@ export const fetchAllReviews = (businessId) => {
   });
 };
 
+export const fetchAllUnrelatedReviews = () => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/reviews`
+  });
+};
+
 export const fetchReview = id => {
   return $.ajax({
     method: 'GET',

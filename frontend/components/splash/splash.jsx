@@ -4,7 +4,9 @@ import BusinessCategoryIndexContainer from '../business_category/business_catego
 import SearchFormContainer from '../search/search_form_container';
 import BusinessIndexContainer from '../businesses/business_index_container';
 import Business from '../businesses/business_index_container';
-import SplashBusinesses from './splash_businesses'
+import SplashBusinesses from './splash_businesses';
+import SplashReviews from './splash_reviews';
+import SplashBusinessCategories from './splash_business_categories';
 
 class Splash extends React.Component {
   constructor(props) {
@@ -19,13 +21,29 @@ class Splash extends React.Component {
   }
 
   componentDidMount() {
-
     this.props.requestAllBusinesses();
+    this.props.fetchAllUnrelatedReviews();
   }
 
   render() {
     let businesses;
-     
+    let reviews  = this.props.reviews;
+    let businessCategories;
+
+    if (this.props.businessCategories){
+      businessCategories = this.props.businessCategories.map( category =>
+        <SplashBusinessCategories key={category.id} category={category} />)
+    } else {
+      businessCategories = <div></div>
+
+    }
+    if (this.props.reviews){
+      reviews = this.props.reviews.slice(0,3).map( review =>
+        <SplashReviews key={review.id} review={review} />)
+    } else {
+      reviews = <div></div>
+    }
+
     if (this.props.businesses){
       businesses = this.props.businesses.slice(0,3).map( business =>
         <SplashBusinesses key={business.id} business={business} />)
@@ -66,6 +84,13 @@ class Splash extends React.Component {
           <div className='display-bus'>
             {businesses}
           </div>
+          <div className='review-bus'>
+            {reviews}
+          </div>
+          <div className='category-bus'>
+            {businessCategories}
+          </div>
+
         </div>
       );
     } else {
@@ -104,6 +129,13 @@ class Splash extends React.Component {
           <div className='display-bus'>
             {businesses}
           </div>
+          <div className='review-bus'>
+            {reviews}
+          </div>
+          <div className='category-bus'>
+            {businessCategories}
+          </div>
+
 
         </div>
       );
