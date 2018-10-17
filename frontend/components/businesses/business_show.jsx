@@ -64,7 +64,7 @@ class BusinessShow extends React.Component {
     }
 
     let reviewScore = []
-    const reviewAvg = this.props.reviews.forEach( review => {
+    const reviewAvg = this.props.reviews.reverse().forEach( review => {
       reviewScore.push(review.rating)
     })
     reviewScore = reviewScore.reduce( (acc, el) => { return acc + el}) / this.props.reviews.length

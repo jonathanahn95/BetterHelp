@@ -38,7 +38,7 @@ class Splash extends React.Component {
 
     }
     if (this.props.reviews){
-      reviews = this.props.reviews.slice(0,9).map( review =>
+      reviews = this.props.reviews.reverse().slice(0,9).map( review =>
         <SplashReviews key={review.id} review={review} />)
     } else {
       reviews = <div></div>
@@ -93,7 +93,7 @@ class Splash extends React.Component {
           <div className='review-bus'>
             {reviews}
           </div>
-  
+
           <div className='browse-category-container'>
             <div className='browse-category-wrapper'>
               <div className='browse-category'>
