@@ -15,7 +15,7 @@
 }
 
 .bus-review-body {
-  width: 375px;
+  width: 394px;
   margin-top: 14px;
   letter-spacing: 0.2px;
 
@@ -112,9 +112,7 @@
   padding-right: 20px;
 }
 .main-attributes {
-  margin: 12px;
-  padding-top: 5px;
-
+  margin: 19px;
 }
 
 
@@ -167,9 +165,8 @@
   min-width: 335px;
   min-height: 240px;
   padding-left: 10px;
-  margin-left: 90px;
-
-  justify-content: space-between;
+  margin-left: 65px;
+  justify-content: space-around;
 }
 
 .business-container {
@@ -177,7 +174,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  padding-top: 30px;
   min-height: 500px;
 }
 
@@ -198,9 +194,7 @@
   padding-top: 30px;
   min-height: 600px;
   margin: auto;
-
-  width: 73%;
-
+  width: 67%;
 }
 
 
