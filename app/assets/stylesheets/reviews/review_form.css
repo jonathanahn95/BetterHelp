@@ -22,9 +22,7 @@
 
 
 .review-form-business-name {
-  padding: 20px 640px 20px 0;
-  margin: auto;
-
+  margin-bottom: 20px;
 }
 
 .review-form-business-name > a {
@@ -32,8 +30,6 @@
   font-size: 36px;
   font-family: "Helvetica Neue";
   font-weight: bold;
-  padding: 17px;
-  padding-left: 150px;
   text-decoration: none;
 }
 
@@ -204,4 +200,13 @@ margin-bottom: 18px;
   align-items: center;
   justify-content: space-evenly;
 
+}
+.contain-name-form-wrapper {
+  width: 45%;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
 }

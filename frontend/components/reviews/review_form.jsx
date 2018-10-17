@@ -76,32 +76,35 @@ ratingChanged(newRating) {
 
         {this.renderErrors()}
         <div className='contain-name-form'>
-          <div className='review-form-business-name'>
-            <Link to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
+          <div className='contain-name-form-wrapper'>
+            <div className='review-form-business-name'>
+              <Link to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
 
-          </div>
-          <div className="main-review-form-container">
-            <div className="review-form-container">
-              <form className="review-form" onSubmit={this.handleSubmit}>
-
-                <ReactStars
-                  count={5}
-                  half={false}
-                  value={this.state.rating ? this.state.rating : 0}
-                  onChange={this.ratingChanged}
-                  size={24}
-                  color2={'#ffd700'} />
-
-                <textarea value={this.state.body} onChange={this.updateBody()} className="form-body" placeholder="Your review helps others learn about
-                  great local businesses.&#10;Please don't review this business
-                  if you received a freebie for writing this review, or if
-                  you're connected in any way to the owner or employees.">
-                </textarea>
-
-                <button className="review-form-button">{this.props.formType}</button>
-              </form>
             </div>
-        </div>
+            <div className="main-review-form-container">
+              <div className="review-form-container">
+                <form className="review-form" onSubmit={this.handleSubmit}>
+
+                  <ReactStars
+                    count={5}
+                    half={false}
+                    value={this.state.rating ? this.state.rating : 0}
+                    onChange={this.ratingChanged}
+                    size={24}
+                    color2={'#ffd700'} />
+
+                  <textarea value={this.state.body} onChange={this.updateBody()} className="form-body" placeholder="Your review helps others learn about
+                    great local businesses.&#10;Please don't review this business
+                    if you received a freebie for writing this review, or if
+                    you're connected in any way to the owner or employees.">
+                  </textarea>
+
+                  <button className="review-form-button">{this.props.formType}</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
           <div className='button-container'>
           </div>
         </div>
