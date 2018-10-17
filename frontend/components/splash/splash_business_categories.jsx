@@ -8,11 +8,9 @@ class SplashBusinessCategories extends React.Component {
 
 
   render() {
-    debugger
-
     return (
       <div>
-  
+
       </div>
     )
   }

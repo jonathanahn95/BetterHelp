@@ -337,7 +337,7 @@ border: 1px solid #ccc;
 
 .bus-show-pics {
   width: 33%;
-
+  object-fit: cover;
 }
 
 

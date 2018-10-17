@@ -38,12 +38,11 @@ class Splash extends React.Component {
 
     }
     if (this.props.reviews){
-      reviews = this.props.reviews.slice(0,3).map( review =>
+      reviews = this.props.reviews.slice(0,9).map( review =>
         <SplashReviews key={review.id} review={review} />)
     } else {
       reviews = <div></div>
     }
-
     if (this.props.businesses){
       businesses = this.props.businesses.slice(0,3).map( business =>
         <SplashBusinesses key={business.id} business={business} />)
@@ -84,6 +83,13 @@ class Splash extends React.Component {
           <div className='display-bus'>
             {businesses}
           </div>
+
+          <div className='recent-activity-wrapper'>
+            <div className='recent-activity'>
+              Recent Activities
+            </div>
+          </div>
+
           <div className='review-bus'>
             {reviews}
           </div>
@@ -129,6 +135,13 @@ class Splash extends React.Component {
           <div className='display-bus'>
             {businesses}
           </div>
+
+          <div className='recent-activity-wrapper'>
+            <div className='recent-activity'>
+              Recent Activity
+            </div>
+          </div>
+
           <div className='review-bus'>
             {reviews}
           </div>

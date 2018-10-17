@@ -18,7 +18,6 @@ class BusinessShow extends React.Component {
   componentDidMount() {
     this.props.requestSingleBusiness(this.props.match.params.businessId);
     this.props.requestAllBusinessCategories();
-
   }
 
   componentWillReceiveProps(nextProps) {
@@ -69,7 +68,7 @@ class BusinessShow extends React.Component {
       reviewScore.push(review.rating)
     })
     reviewScore = reviewScore.reduce( (acc, el) => { return acc + el}) / this.props.reviews.length
-
+    debugger
     const imagesArr = this.props.business.photos.slice(1).map( photo => {
       return <img key={photo.id} className="bus-show-pics" src={photo.photo_image_url}></img>
     })

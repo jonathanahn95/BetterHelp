@@ -18,7 +18,6 @@ const msp = (state,ownProps) => {
     reviews: reviews,
     session: state.session.id,
     businessCategories: Object.values(state.entities.businessCategories)
-
   };
 };
 
