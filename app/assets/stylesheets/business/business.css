@@ -441,7 +441,7 @@
 
 .activity-review-body {
   border-bottom: 1px solid #e6e6e6;
-  padding: 0 0 10px 0;
+  padding: 0 0 10px 3px;
   font-family: sans-serif;
   font-size: 15px;
 }
@@ -525,4 +525,12 @@
   font-weight: 700;
   font-size: 15px;
   margin-bottom: 25px;
+}
+
+.splash-link {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
 }

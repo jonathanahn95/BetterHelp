@@ -8,7 +8,7 @@ class SplashBusinessCategories extends React.Component {
 
 
   toggleIcons(category){
-    switch (category) {
+    switch (category.category) {
       case "Cafes":
       return "https://s3.amazonaws.com/betterhelp-dev/coff.png";
       case "Restaurant":
@@ -23,14 +23,16 @@ class SplashBusinessCategories extends React.Component {
   }
 
   render() {
-    const category = this.props.category.category;
+    const category = this.props.category;
     return (
+
       <div className='splash-category-wrapper'>
         <div className='splash-cat-pic-wrapper'>
-          <img className='splash-cat-pic' src={this.toggleIcons(category)}></img>
+        <Link className='splash-link' to={`/business_categories/${category.id}`}><img className='splash-cat-pic' src={this.toggleIcons(category)}></img></Link>
         </div>
+
         <div className='splash-category-name'>
-          {category}
+          <Link className='splash-link' to={`/business_categories/${category.id}`}>{category.category}</Link>
         </div>
       </div>
     )

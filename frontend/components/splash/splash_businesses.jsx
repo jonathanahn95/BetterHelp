@@ -33,7 +33,7 @@ class SplashBusinesses extends React.Component {
               size={24}
               color2={'#ffd700'} />
           </li>
-          <li>
+          <li className='splash-star-num-reviews'>
             {numReviews} reviews
           </li>
         </div>
