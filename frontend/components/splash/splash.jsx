@@ -13,6 +13,8 @@ class Splash extends React.Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = this.props.businessCategories;
+    this.toggleClass = this.toggleClass.bind(this);
+    this.state = {hidden: true};
   }
 
   handleClick(e) {
@@ -24,6 +26,12 @@ class Splash extends React.Component {
     this.props.requestAllBusinesses();
     this.props.fetchAllUnrelatedReviews();
   }
+
+  toggleClass() {
+     const currentState = this.state.hidden;
+     this.setState({ hidden: !currentState });
+   }
+
 
   render() {
     let businesses;
@@ -51,6 +59,13 @@ class Splash extends React.Component {
     }
 
 
+    let toggle = "dropped-down-list-hidden";
+    let hiddenCar = 'fas fa-caret-up-hidden'
+    if (!this.state.hidden === true) {
+      toggle = "dropped-down-list";
+      hiddenCar = 'fas fa-caret-up'
+    }
+
     if (this.props.currentUser) {
       return (
         <div>
@@ -61,7 +76,41 @@ class Splash extends React.Component {
                 <ul className="header-review">
                   <Link className="write-review" to="/businesses">Write a Review</Link>
                 </ul>
-                <button className="logout" onClick={this.handleClick}>Log Out</button>
+                  <div className='logout'>
+                    <img onClick={this.toggleClass} className='drop-down-pic' src='https://s3.amazonaws.com/betterhelp-dev/dropdown.png'></img>
+                    <div onClick={this.toggleClass} className='caret-drop-down'><i class="fas fa-caret-down"></i></div>
+                  </div>
+
+              </div>
+
+
+              <i className={hiddenCar}></i>
+              <div className={toggle}>
+                <div className='dropped-down-first'>
+                  <img  className='dropped-down-pic' src='https://s3.amazonaws.com/betterhelp-dev/dropdown.png'></img>
+                  <div  className='dropped-down-info-wrapper'>
+                    <div className='dropped-down-name'>
+                      <div className='dropped-down-fname'>
+                        {this.props.currentUser.fname}
+                      </div>
+                      <div>
+                        {this.props.currentUser.lname}
+                      </div>
+                    </div>
+                    <div className='dropped-down-location'>
+                      Manhattan, NY
+                    </div>
+                  </div>
+                </div>
+                <div className='dropped-down-about'>
+                  <div>
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div className='dropped-down-about-me'>
+                    About Me
+                  </div>
+                </div>
+                <button className="dropped-down-logout-btn" onClick={this.handleClick}>Log Out</button>
               </div>
             </div>
             <div className="brand-name" >
@@ -93,7 +142,6 @@ class Splash extends React.Component {
           <div className='review-bus'>
             {reviews}
           </div>
-
           <div className='browse-category-container'>
             <div className='browse-category-wrapper'>
               <div className='browse-category'>

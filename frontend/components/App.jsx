@@ -13,6 +13,7 @@ import BusinessIndexContainer from './businesses/business_index_container';
 import SearchBusinessPageContainer from './search/search_business_page_container';
 import SearchContainer from './search/search_container';
 import SearchDropDownContainer from './search/search_drop_down_container';
+// import ProfileContainer from './user/profile_container';
 
 const App = () => (
   <div>
