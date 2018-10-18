@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { requestSingleBusiness } from '../../actions/businesses_actions';
+import ReactStars from 'react-stars';
 
 class UserReview extends React.Component {
   componentDidMount() {
@@ -8,8 +9,9 @@ class UserReview extends React.Component {
   }
 
   render() {
-    const reviewBus = this.props.review.business_id;
-    const matchedBus = this.props.business[this.props.review.business_id];
+    const review = this.props.review;
+    const reviewBus = review.business_id;
+    const matchedBus = this.props.business[review.business_id];
     let busName;
     let bus;
     let photo;
@@ -22,20 +24,32 @@ class UserReview extends React.Component {
       photo = '';
       bus = '';
     }
-
+    debugger
     return (
       <div>
         <div>
           <div>
-            {busName}
             <img src={photo}></img>
           </div>
           <div>
-            {this.props.review.body}
+            {busName}
+            <div>
+              {bus.address}
+            </div>
           </div>
+
           <div>
-            {bus.address}
+            {review.created_at.slice(0,10)}
           </div>
+        </div>
+        <ReactStars
+          count={5}
+          edit={false}
+          value={review.rating}
+          size={24}
+          color2={'#ffd700'} />
+        <div>
+          {review.body}
         </div>
       </div>
     )
