@@ -22,6 +22,7 @@ class Businesses extends React.Component {
   }
 
   render() {
+    
     let res, home, cafe, boot;
     const businessCategory = this.props.businessCategories;
     if (businessCategory.length > 0){
@@ -30,6 +31,7 @@ class Businesses extends React.Component {
       cafe = businessCategory[2].id;
       boot = businessCategory[3].id;
     }
+
 
     const businesses = this.props.businesses.map( (business, idx) =>
       <Business key={business.id}  business={business}  idx={idx}/>)
@@ -55,6 +57,18 @@ class Businesses extends React.Component {
         </ul>
 
           <div>
+        </div>
+        <div className='top-results-wrapper'>
+          <div className='top-results-wrapper2'>
+            <div className='top-res-name'>
+              <div className='top-results-home'>
+                Top {this.props.businessCategoryName} Results
+              </div>
+            </div>
+            <div className='top-res-cat'>
+              in New York, NY
+            </div>
+          </div>
         </div>
 
         <div className="main-business-container">

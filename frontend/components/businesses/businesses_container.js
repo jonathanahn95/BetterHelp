@@ -6,11 +6,21 @@ import { requestAllBusinessCategories } from '../../actions/business_category_ac
 
 
 const msp = (state,ownProps) => {
+
+  let businessCategoryName;
+  if (state.entities.businessCategories){
+    Object.values(state.entities.businessCategories).forEach( category => {
+      if (category.id.toString() === ownProps.match.params.id){
+        businessCategoryName = category.category;
+      }
+    });
+  }
+  
   return {
     businesses: Object.values(state.entities.businesses),
     category: ownProps.match.params.id,
-    businessCategories: Object.values(state.entities.businessCategories)
-
+    businessCategories: Object.values(state.entities.businessCategories),
+    businessCategoryName
   };
 };
 

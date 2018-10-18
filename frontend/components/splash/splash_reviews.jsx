@@ -11,7 +11,7 @@ class SplashReviews extends React.Component {
     const review = this.props.review;
     const user = this.props.review.user;
     const business = this.props.review.business;
-    
+    debugger
     return (
       <div className='activity-wrapper'>
         <div className="activity-user-info">
