@@ -4,6 +4,7 @@ import BusinessCategoryIndexContainer from '../business_category/business_catego
 import SearchFormContainer from '../search/search_form_container';
 import BusinessIndexContainer from '../businesses/business_index_container';
 import Business from '../businesses/business_index_container';
+import UserReview from './user_reviews'
 
 class Profile extends React.Component {
   constructor(props) {
@@ -24,6 +25,23 @@ class Profile extends React.Component {
       cafe = this.props.businessCategories[2].id;
       boot = this.props.businessCategories[3].id;
     }
+
+    let reviewLength;
+    if (this.props.reviews){
+      reviewLength =
+      <div className='num-of-reviews'>
+        You have {this.props.reviews.length} written reviews
+      </div>
+    }
+
+    let userReviews;
+    if (this.props.reviews){
+      userReviews = this.props.reviews.map( review => {
+        return <UserReview review={review}/>
+      })
+	}
+
+
     return (
       <div>
         <header className="login-header">
@@ -45,12 +63,26 @@ class Profile extends React.Component {
           </div>
         </ul>
 
-        <div className='top-results-wrapper'>
-          <div className='top-results-wrapper2'>
-            <img className='drop-down-pic' src='https://s3.amazonaws.com/betterhelp-dev/dropdown.png'></img>
-
+        <div className='user-prof-wrapper'>
+          <img className='user-prof-picture' src='https://s3.amazonaws.com/betterhelp-dev/dropdown.png'></img>
+          <div className='user-prof-wrapper2'>
+            <div className='user-prof-full-name'>
+              <div className='user-prof-fname'>
+                {this.props.currentUser.fname}
+              </div>
+              <div>
+                {this.props.currentUser.lname}
+              </div>
+            </div>
+            <div className='user-prof-location'>
+              Manhattan, NY
+            </div>
           </div>
         </div>
+
+        {reviewLength}
+
+        {userReviews}
       </div>
     )
   }
