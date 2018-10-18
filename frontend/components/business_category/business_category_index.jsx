@@ -21,8 +21,8 @@ class BusinessCategoryIndex extends React.Component {
       return "fas fa-coffee one";
       case "Restaurants":
       return "fal fa-utentils one";
-      case "Home Services one":
-      return "fas fa-home";
+      case "Home Services":
+      return "fas fa-home one";
       case "Bootcamps":
       return "fas fa-keyboard one";
       default:
