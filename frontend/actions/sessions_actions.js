@@ -48,6 +48,13 @@ export const clearErrors = () => {
 };
 
 
+
+export const fetchCurrentUser = user => dispatch => {
+  return SessionAPIUtil.currentUser(user).then( user => {
+    return dispatch(receiveCurrentUser(user));
+  });
+};
+
 export const signup = user => dispatch => (
   SessionAPIUtil.signup(user).then(user => (
     dispatch(receiveCurrentUser(user))

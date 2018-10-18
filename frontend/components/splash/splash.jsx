@@ -90,12 +90,8 @@ class Splash extends React.Component {
                   <img  className='dropped-down-pic' src='https://s3.amazonaws.com/betterhelp-dev/dropdown.png'></img>
                   <div  className='dropped-down-info-wrapper'>
                     <div className='dropped-down-name'>
-                      <div className='dropped-down-fname'>
-                        {this.props.currentUser.fname}
-                      </div>
-                      <div>
-                        {this.props.currentUser.lname}
-                      </div>
+                      <Link className='user-prof-link'to={`/user_prof/${this.props.currentUser.id}`}><div className='dropped-down-fname'>{this.props.currentUser.fname}</div></Link>
+                      <Link className='user-prof-link'to={`/user_prof/${this.props.currentUser.id}`}><div className='dropped-down-fname'>{this.props.currentUser.lname}</div></Link>
                     </div>
                     <div className='dropped-down-location'>
                       Manhattan, NY
@@ -107,7 +103,7 @@ class Splash extends React.Component {
                     <i class="fas fa-user"></i>
                   </div>
                   <div className='dropped-down-about-me'>
-                    About Me
+                    <Link className='user-prof-link'to={`/user_prof/${this.props.currentUser.id}`}><p>About Me</p></Link>
                   </div>
                 </div>
                 <button className="dropped-down-logout-btn" onClick={this.handleClick}>Log Out</button>
