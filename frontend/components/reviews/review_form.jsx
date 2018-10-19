@@ -99,7 +99,11 @@ ratingChanged(newRating) {
                     you're connected in any way to the owner or employees.">
                   </textarea>
 
-                  <button className="review-form-button">{this.props.formType}</button>
+                  <button className="review-form-button">
+                    <div className='review-form-button-formtype'>
+                      {this.props.formType}
+                    </div>
+                  </button>
                 </form>
               </div>
             </div>
