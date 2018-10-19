@@ -30,7 +30,8 @@ class Business extends React.Component {
       <div className="large-wrapper">
 
         <div className="business-image">
-          <img className="business-pic" src={this.props.business.photos[0].photo_image_url}></img>
+          <Link className='rev-edit-link'to={`/businesses/${this.props.business.id}/`}>
+<img className="business-pic" src={this.props.business.photos[0].photo_image_url}></img></Link>
 
         </div>
 

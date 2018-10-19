@@ -35,11 +35,11 @@ class UserReview extends React.Component {
         <div className='user-review-wrapper1'>
           <div className='rev-pic-ad'>
             <div>
-              <img className='user-prof-rev-pic'src={photo}></img>
+              <Link className='rev-edit-link'to={`/businesses/${bus.id}/`}><img className='user-prof-rev-pic'src={photo}></img></Link>
             </div>
             <div className='rev-ad'>
               <div className='rev-bus-name'>
-                {busName}
+                <Link className='rev-edit-link'to={`/businesses/${bus.id}/`}>{busName}</Link>
               </div>
               <div>
                 {bus.address}
