@@ -11,7 +11,7 @@ class SplashReviews extends React.Component {
     const review = this.props.review;
     const user = this.props.review.user;
     const business = this.props.review.business;
-    
+
     return (
       <div className='activity-wrapper'>
         <div className="activity-user-info">
@@ -39,7 +39,7 @@ class SplashReviews extends React.Component {
               <ReactStars
                 className='stars'
                 count={5}
-                half={false}
+                edit={false}
                 value={review.rating}
                 size={20}
                 color2={'#ffd700'} />

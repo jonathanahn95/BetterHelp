@@ -47,7 +47,7 @@ class Business extends React.Component {
               <ReactStars
                 className='stars'
                 count={5}
-                half={false}
+                edit={false}
                 value={reviewScore}
                 onChange={this.ratingChanged}
                 size={24}

@@ -88,11 +88,10 @@ class BusinessShow extends React.Component {
             <ReactStars
               count={5}
               edit={false}
-              value={review.rating ? review.rating : 0}
+              value={review.rating }
               size={24}
               color2={'#ffd700'} />
           </li>
-
             <li className='review-created-at'>{review.created_at.slice(0,10)}</li>
           </div>
           <li className='review-body'>{review.body}</li>
@@ -147,7 +146,7 @@ class BusinessShow extends React.Component {
                   <ReactStars
                     className='stars'
                     count={5}
-                    half={false}
+                    edit={false}
                     value={reviewScore}
                     onChange={this.ratingChanged}
                     size={24}
