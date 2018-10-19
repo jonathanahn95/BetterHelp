@@ -11,6 +11,7 @@ import { businessInfo } from './business_info';
 class BusinessShow extends React.Component {
   constructor(props){
     super(props);
+    debugger
     this.navigateToEdit = this.navigateToEdit.bind(this);
 
   }
@@ -68,7 +69,6 @@ class BusinessShow extends React.Component {
       reviewScore.push(review.rating)
     })
     reviewScore = reviewScore.reduce( (acc, el) => { return acc + el}) / this.props.reviews.length
-    debugger
     const imagesArr = this.props.business.photos.slice(1).map( photo => {
       return <img key={photo.id} className="bus-show-pics" src={photo.photo_image_url}></img>
     })

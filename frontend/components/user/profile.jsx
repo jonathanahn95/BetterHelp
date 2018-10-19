@@ -82,7 +82,9 @@ class Profile extends React.Component {
 
         {reviewLength}
 
-        {userReviews}
+        <div className='user-reviews-wrapper'>
+          {userReviews}
+        </div>
       </div>
     )
   }
