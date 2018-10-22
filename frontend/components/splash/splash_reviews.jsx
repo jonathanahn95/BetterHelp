@@ -1,16 +1,37 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ReactStars from 'react-stars';
+import { requestSingleBusiness, requestAllBusinesses } from '../../actions/businesses_actions';
 
 
 class SplashReviews extends React.Component {
 
+  componentDidMount(){
+    // this.props.requestSingleBusiness(this.props.review.business_id);
+    this.props.requestAllBusinesses();
+  }
 
   render() {
     const review = this.props.review;
     const user = this.props.review.user;
-    const business = this.props.review.business;
+    const business = this.props.business;
+    const businessLength = Object.values(this.props.business).length;
+    let matchedBusiness = business[review.business_id];
+    let photo;
+    if (matchedBusiness){
+      const randomNum = Math.floor(Math.random() * businessLength);
+      debugger
+      if (randomNum > 0){
+        debugger
+        photo = matchedBusiness.photos[Math.floor(randomNum * 0.5)].photo_image_url;
+      } else {
+        photo = matchedBusiness.photos[0].photo_image_url;
+      }
+    } else {
+      matchedBusiness = '';
+    }
 
     return (
       <div className='activity-wrapper'>
@@ -28,11 +49,11 @@ class SplashReviews extends React.Component {
               </div>
             </div>
           </div>
-          <div>
-            <img className="splash-review-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img>
+          <div className='splash-review-pic-wrapper'>
+            <img className="splash-review-pic" src={photo}></img>
           </div>
           <div className='activity-bus-name'>
-            {business.name}
+            {matchedBusiness.name}
           </div>
           <div className='activity-review-wrapper'>
             <div className='activity-stars'>
@@ -55,6 +76,23 @@ class SplashReviews extends React.Component {
 
 }
 
-export default withRouter(SplashReviews);
+
+const mapStateToProps = (state) => {
+
+  return {
+    business: state.entities.businesses
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deleteReview: (id) => dispatch(deleteReview(id)),
+    updateReview: review => dispatch(updateReview(review)),
+    requestSingleBusiness: (id) => dispatch(requestSingleBusiness(id)),
+    requestAllBusinesses: () => dispatch(requestAllBusinesses())
+  }
+}
+// export default withRouter(SplashReviews);
+export default connect(mapStateToProps, mapDispatchToProps)(SplashReviews);
 
 // <Route path="" component={bic} render(()=>{}</Route>)

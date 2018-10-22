@@ -47,7 +47,7 @@ class BusinessToWriteReview extends React.Component {
               <ReactStars
                 className='write-review-stars'
                 count={5}
-                half={false}
+                edit={false}
                 value={reviewScore}
                 onChange={this.ratingChanged}
                 size={24}
