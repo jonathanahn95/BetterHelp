@@ -40,10 +40,19 @@ Business.create!([
   {name: 'Bean and Bean', address: "318 8th Ave", hours: ["9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm"	,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm"],
   phone_number: '(646) 869-2070', website: 'https://beannbean.com.com/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[2].id, latitude: 41.231032, longitude: -73.701888 },
   {name: 'App Academy', address: "159 W 25th St", hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
-  phone_number: '(123) 718-3213', website: 'https://www.appacademy.io/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[3].id ,latitude: 40.565213, longitude: -74.002218 }
+  phone_number: '(929) 718-3213', website: 'https://www.appacademy.io/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[3].id ,latitude: 41.565213, longitude: -73.002218 },
+  {name: 'Warrior Fitness Boot Camp', address: "240 Wtythe Ave", hours: ["7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"	,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"],
+  phone_number: '(718) 718-3213', website: 'http://www.warriorfitnessbootcamp.com/', city: "Brooklyn", state: "NY", zip_code: 11249, business_category_id: business_categories[3].id ,latitude: 40.565213, longitude: -74.002218 }
+  # {name: 'Trooper Fitness', address: "226 E 54th St", hours: ["7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"	,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"],
+  # phone_number: '(347) 718-3213', website: 'https://trooperfitness.com/', city: "New York", state: "NY", zip_code: 11249, business_category_id: business_categories[3].id ,latitude: 40.111111, longitude: -73.002218 },
+  # {name: 'Flatiron School', address: "11 Broadway, hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
+  # phone_number: '(929) 718-3213', website: 'https://flatironschool.com', city: "New York", state: "NY", zip_code: 10004, business_category_id: business_categories[3].id ,latitude: 41.631133, longitude: -72.002218 },
+  # {name: 'Fullstack Academy', address: "11 Broadway, hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
+  # phone_number: '(718) 718-3213', website: 'https://www.fullstackacademy.com/', city: "New York", state: "NY", zip_code: 10004, business_category_id: business_categories[3].id ,latitude: 40.331133, longitude: -72.002218 },
   ])
 
   businesses = Business.all
+
   chip1 = businesses[0]
   file = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/chip1.jpg')
   chip1.photos.attach(io: file, filename: 'chip1.jpg')
@@ -153,6 +162,25 @@ Business.create!([
 
 
 
+  chip5 = businesses[5]
+  p = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war4.png')
+  chip5.photos.attach(io: p, filename: 'war4.png')
+  chip5.save!
+
+  chip6 = businesses[5]
+  p2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war3.png')
+  chip6.photos.attach(io: p2, filename: 'war3.png')
+  chip6.save!
+
+  chip7 = businesses[5]
+  p3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war2.png')
+  chip7.photos.attach(io: p3, filename: 'war2.png')
+  chip7.save!
+
+  chip8 = businesses[5]
+  p4 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war.png')
+  chip8.photos.attach(io: p4, filename: 'war.png')
+  chip8.save!
 
 
   Review.create!([
@@ -185,6 +213,9 @@ Business.create!([
     {user_id: users[1].id, business_id: businesses[2].id, rating: 5, body: "I would give them 6 stars if I could. From start to finish this team was amazing. From the thoughtful design process to the execution, and constant communication along the way, Liaison were true professionals and a pleasure to work with. We would highly recommend working with Markus, Kalman and the Liaison team for your next landscaping project." },
     {user_id: users[0].id, business_id: businesses[2].id, rating: 5, body: "Markus and his team were fantastic. Markus was super nice, inventive, humble, responsive, extremely reasonable, easy to work with, accommodating and it is clear he takes pride in the final product. He went out of his way on more than one occasion to make us happy and to ensure perfection. His team is highly professional and hard-working. We felt comfortable having them at the house while the work was completed. " },
     {user_id: users[0].id, business_id: businesses[2].id, rating: 5, body: "I hired Liaison Landscapes to help me with the buying and installation of plants and with irrigation. It was an all around great experience to work with Markus and his crew, and I would highly recommend them to others for their landscape needs. Some highlights: 1) To obtain a quote was easy and quick. Liaison came in competitively priced and was available to get started on the project right away. Both of these items are not all that trivial in this busy real estate development market in SF." },
+    {user_id: users[3].id, business_id: businesses[5].id, rating: 3, body: "This is the hardest workout I've done, and I have trained for and run in four marathons.  It's also, bizarrely, a really fun experience." },
+    {user_id: users[3].id, business_id: businesses[5].id, rating: 5, body: "The name doesn't lie. Do you like being pushed by a trainer? Do you like intense workouts and are motivated by group workouts? Look no further." },
+    {user_id: users[3].id, business_id: businesses[5].id, rating: 4, body: "LOVE this place! I came for the first time about 3 weeks ago and was immediately hooked, now I can't go a few days without signing up for a class. Luckily I live right around the corner so no complaints there!" },
     ])
 
     reviews = Review.all
