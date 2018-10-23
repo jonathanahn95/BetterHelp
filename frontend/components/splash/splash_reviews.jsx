@@ -37,6 +37,7 @@ class SplashReviews extends React.Component {
         <div className="activity-user-info">
           <div className='activity-wrapper-1'>
             <div className='activity-user-pic'>
+
               <img className="splash-user-pic" src={window.profPic}></img>
             </div>
             <div className='activity-user-name'>
@@ -49,10 +50,10 @@ class SplashReviews extends React.Component {
             </div>
           </div>
           <div className='splash-review-pic-wrapper'>
-            <img className="splash-review-pic" src={photo}></img>
+            <Link to={`/businesses/${matchedBusiness.id}`}><img className="splash-review-pic" src={photo}></img></Link>
           </div>
           <div className='activity-bus-name'>
-            {matchedBusiness.name}
+            <Link className='splash-review-bus-name' to={`/businesses/${matchedBusiness.id}`}>{matchedBusiness.name}</Link>
           </div>
           <div className='activity-review-wrapper'>
             <div className='activity-stars'>

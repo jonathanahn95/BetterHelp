@@ -26,7 +26,7 @@ class BusinessToWriteReview extends React.Component {
       <div className="write-review-large-wrapper">
 
         <div className="write-review-business-image">
-          <img className="write-review-business-pic" src={this.props.business.photos[0].photo_image_url}></img>
+          <Link className='write-review-bus-name' to={`/businesses/${this.props.business.id}`}><img className="write-review-business-pic" src={this.props.business.photos[0].photo_image_url}></img></Link>
         </div>
         <div className="write-review-business-info">
           <div className="write-review-main-attributes">

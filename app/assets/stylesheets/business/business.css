@@ -622,3 +622,8 @@ align-items: end;
   font-weight: 700;
   margin: auto;
 }
+
+.splash-review-bus-name {
+  text-decoration: none;
+  color: #0073bb;
+}
