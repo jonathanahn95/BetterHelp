@@ -22,7 +22,7 @@ class Businesses extends React.Component {
   }
 
   render() {
-    
+
     let res, home, cafe, boot;
     const businessCategory = this.props.businessCategories;
     if (businessCategory.length > 0){
@@ -31,10 +31,15 @@ class Businesses extends React.Component {
       cafe = businessCategory[2].id;
       boot = businessCategory[3].id;
     }
+    let selectedBusCategories = [];
+    this.props.businesses.forEach( business => {
+      if (this.props.category === business.business_category_id.toString()){
+        selectedBusCategories.push(business);
+      }
+    });
 
-
-    const businesses = this.props.businesses.map( (business, idx) =>
-      <Business key={business.id}  business={business}  idx={idx}/>)
+    const businesses = selectedBusCategories.map( (business, idx) =>
+        <Business key={business.id}  business={business}  idx={idx}/>)
     return (
       <div>
         <header className="login-header">
@@ -76,7 +81,7 @@ class Businesses extends React.Component {
             {businesses}
           </div>
           <div className='map-ad'>
-            <BusinessMap id={'map-container'} businesses={this.props.businesses} multiple={true}/>
+            <BusinessMap id={'map-container'} businesses={selectedBusCategories} multiple={true}/>
             <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
           </div>
         </div>

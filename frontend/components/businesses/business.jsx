@@ -8,11 +8,12 @@ class Business extends React.Component {
 
   // <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
 
-  componentWillReceiveProps(nextProps) {
-     if (this.props.match.params.businessId !== nextProps.match.params.businessId) {
-       this.props.requestSingleBusiness(nextProps.match.params.businessId);
-     }
-   }
+  // componentWillReceiveProps(nextProps) {
+  //    if (this.props.match.params.businessId !== nextProps.match.params.businessId) {
+  //      debugger
+  //      this.props.requestSingleBusiness(nextProps.match.params.businessId);
+  //    }
+  //  }
 
   render() {
 

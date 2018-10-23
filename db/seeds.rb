@@ -33,6 +33,8 @@ Business.create!([
 
   {name: 'Chipotle', address: "28 W 40th St", hours: ["10:45am - 11:00pm" , "10:45am - 11:00pm ",	"10:45am - 11:00pm",	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm"],
   phone_number: '(212) 302-0650', website: 'https://www.chipotle.com/', city: "New York", state: "NY", zip_code: 10018, business_category_id: business_categories[0].id, latitude: 40.915495, longitude: -74.002210},
+  {name: 'Burger and Lobster', address: "39 W 19th St", hours: ["10:45am - 11:00pm" , "10:45am - 11:00pm ",	"10:45am - 11:00pm",	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm"],
+  phone_number: '(646) 833-7532', website: 'https://www.burgerandlobster.com/', city: "New York", state: "NY", zip_code: 10018, business_category_id: business_categories[0].id, latitude: 41.915495, longitude: -74.002210},
   {name: 'Shake Shack', address: "1 Old Fulton St", hours: ["9:45 am - 9:00 pm" ,"	9:45 am - 9:00 pm ",	"9:45 am - 9:00 pm"	,"9:45 am - 9:00 pm" ,"9:45 am - 9:00 pm" ,	"9:45 am - 9:00 pm" ,	"9:45 am - 9:00 pm"],
   phone_number: '(347) 435-2676', website: 'https://www.shake-shack.com/', city: "Brooklyn", state: "NY", zip_code: 11201, business_category_id: business_categories[0].id, latitude: 41.615488, longitude: -74.002300 },
   {name: 'JC Landscaping and Design', address: "68-19 Woodhaven Blvd", hours: ["9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm"	,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm"],
@@ -53,6 +55,9 @@ Business.create!([
   phone_number: '(929) 718-3213', website: 'https://flatironschool.com', city: "New York", state: "NY", zip_code: 10004, business_category_id: business_categories[3].id ,latitude: 41.631133, longitude: -72.002218 },
   {name: 'Fullstack Academy', address: "48 W 42 E", hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
   phone_number: '(718) 718-3213', website: 'https://www.fullstackacademy.com/', city: "New York", state: "NY", zip_code: 10004, business_category_id: business_categories[3].id ,latitude: 40.331133, longitude: -72.002218 },
+  {name: 'Coffee Project NY', address: "239 E 5th St", hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
+  phone_number: '(929) 718-3213', website: 'https://coffeeprojectny.com', city: "New York", state: "NY", zip_code: 10004, business_category_id: business_categories[2].id ,latitude: 40.333111, longitude: -71.002218 },
+
   ])
 
   businesses = Business.all.sort_by { |bus| bus.name }
@@ -99,187 +104,226 @@ Business.create!([
   bb4.photos.attach(io: file15, filename: 'bb4.jpg')
   bb4.save!
 
+  bl1 = businesses[2]
+  blp1 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bl1.jpg")
+  bl1.photos.attach(io: blp1, filename: 'bl1.jpg')
+  bl1.save!
 
-  cad1 = businesses[2]
+  bl2 = businesses[2]
+  blp2 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bl2.jpg")
+  bl2.photos.attach(io: blp2, filename: 'bl2.jpg')
+  bl2.save!
+
+  bl3 = businesses[2]
+  blp3 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bl3.jpg")
+  bl3.photos.attach(io: blp3, filename: 'bl3.jpg')
+  bl3.save!
+
+  bl4 = businesses[2]
+  blp4 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bl4.jpg")
+  bl4.photos.attach(io: blp4, filename: 'bl4.jpg')
+  bl4.save!
+
+  cad1 = businesses[3]
   cadp1 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/cad1.png')
   cad1.photos.attach(io: cadp1, filename: 'cad1.png')
   cad1.save!
 
-  cad2 = businesses[2]
+  cad2 = businesses[3]
   cadp2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/cad2.png')
   cad2.photos.attach(io: cadp2, filename: 'cad2.png')
   cad2.save!
 
-  cad3 = businesses[2]
+  cad3 = businesses[3]
   cadp3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/cad3.png')
   cad3.photos.attach(io: cadp3, filename: 'cad3.png')
   cad3.save!
 
-  cad4 = businesses[2]
+  cad4 = businesses[3]
   cadp3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/cad4.png')
   cad4.photos.attach(io: cadp3, filename: 'cad4.png')
   cad4.save!
 
-  chip1 = businesses[3]
+  chip1 = businesses[4]
   file = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/chip1.jpg')
   chip1.photos.attach(io: file, filename: 'chip1.jpg')
   chip1.save!
 
-  chip2 = businesses[3]
+  chip2 = businesses[4]
   file1 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/chip2.jpg")
   chip2.photos.attach(io: file1, filename: 'chip2.jpg')
   chip2.save!
 
-  chip3 = businesses[3]
+  chip3 = businesses[4]
   file2 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/chip3.jpg")
   chip3.photos.attach(io: file2, filename: 'chip3.jpg')
   chip3.save!
 
-  chip4 = businesses[3]
+  chip4 = businesses[4]
   file3 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/chip4.jpg")
   chip4.photos.attach(io: file3, filename: 'chip4.jpg')
   chip4.save!
 
-  fi1 = businesses[4]
+  cny1 = businesses[5]
+  cnyp1 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/cny1.png")
+  cny1.photos.attach(io: cnyp1, filename: 'cny1.png')
+  cny1.save!
+
+  cny2 = businesses[5]
+  cnyp2 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/cny2.png")
+  cny2.photos.attach(io: cnyp2, filename: 'cny2.png')
+  cny2.save!
+
+  cny3 = businesses[5]
+  cnyp3 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/cny3.png")
+  cny3.photos.attach(io: cnyp3, filename: 'cny3.png')
+  cny3.save!
+
+  cny4 = businesses[5]
+  cnyp4 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/cny4.png")
+  cny4.photos.attach(io: cnyp4, filename: 'cny4.png')
+  cny4.save!
+
+  fi1 = businesses[6]
   fip1 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fi1.png")
   fi1.photos.attach(io: fip1, filename: 'fi1.png')
   fi1.save!
 
-  fi2 = businesses[4]
+  fi2 = businesses[6]
   fip2 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fi2.png")
   fi2.photos.attach(io: fip2, filename: 'fi2.png')
   fi2.save!
 
-  fi3 = businesses[4]
+  fi3 = businesses[6]
   fip3 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fi3.png")
   fi3.photos.attach(io: fip3, filename: 'fi3.png')
   fi3.save!
 
-  fi4 = businesses[4]
+  fi4 = businesses[6]
   fip4 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fi4.png")
   fi4.photos.attach(io: fip4, filename: 'fi4.png')
   fi4.save!
 
-  fs1 = businesses[5]
+  fs1 = businesses[7]
   fsp1 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fs1.png")
   fs1.photos.attach(io: fsp1, filename: 'fs1.png')
   fs1.save!
 
-  fs2 = businesses[5]
+  fs2 = businesses[7]
   fsp2 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fs2.png")
   fs2.photos.attach(io: fsp2, filename: 'fs2.png')
   fs2.save!
 
-  fs3 = businesses[5]
+  fs3 = businesses[7]
   fsp3 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fs3.png")
   fs3.photos.attach(io: fsp3, filename: 'fs3.png')
   fs3.save!
 
-  fs4 = businesses[5]
+  fs4 = businesses[7]
   fsp4 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fs4.png")
   fs4.photos.attach(io: fsp4, filename: 'fs4.png')
   fs4.save!
 
-  jc1 = businesses[6]
+  jc1 = businesses[8]
   file8 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc1.jpg")
   jc1.photos.attach(io: file8, filename: 'jc1.jpg')
   jc1.save!
 
-  jc2 = businesses[6]
+  jc2 = businesses[8]
   file9 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc2.jpg")
   jc2.photos.attach(io: file9, filename: 'jc2.jpg')
   jc2.save!
 
-  jc3 = businesses[6]
+  jc3 = businesses[8]
   file10 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc3.jpg")
   jc3.photos.attach(io: file10, filename: 'jc3.jpg')
   jc3.save!
 
-  jc4 = businesses[6]
+  jc4 = businesses[8]
   file11 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc4.jpg")
   jc4.photos.attach(io: file11, filename: 'jc4.jpg')
   jc4.save!
 
-  ss1 = businesses[7]
+  ss1 = businesses[9]
   file4 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake1.jpg")
   ss1.photos.attach(io: file4, filename: 'shake1.jpg')
   ss1.save!
 
-  ss2 = businesses[7]
+  ss2 = businesses[9]
   file5 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake2.jpg")
   ss2.photos.attach(io: file5, filename: 'shake2.jpg')
   ss2.save!
 
-  ss3 = businesses[7]
+  ss3 = businesses[9]
   file6 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake3.jpg")
   ss3.photos.attach(io: file6, filename: 'shake3.jpg')
   ss3.save!
 
-  ss4 = businesses[7]
+  ss4 = businesses[9]
   file7 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake4.jpg")
   ss4.photos.attach(io: file7, filename: 'shake4.jpg')
   ss4.save!
 
-  bb1 = businesses[8]
+  bb1 = businesses[10]
   bp1 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp1.png')
   bb1.photos.attach(io: bp1, filename: 'bp1.png')
   bb1.save!
 
-  bb2 = businesses[8]
+  bb2 = businesses[10]
   bp2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp2.png')
   bb2.photos.attach(io: bp2, filename: 'bp2.png')
   bb2.save!
 
-  bb3 = businesses[8]
+  bb3 = businesses[10]
   bp3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp3.png')
   bb3.photos.attach(io: bp3, filename: 'bp3.png')
   bb3.save!
 
-  bb4 = businesses[8]
+  bb4 = businesses[10]
   bp4 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp4.png')
   bb4.photos.attach(io: bp4, filename: 'bp4.png')
   bb4.save!
 
-  chip5 = businesses[9]
+  chip5 = businesses[11]
   p = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war4.png')
   chip5.photos.attach(io: p, filename: 'war4.png')
   chip5.save!
 
-  chip6 = businesses[9]
+  chip6 = businesses[11]
   p2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war3.png')
   chip6.photos.attach(io: p2, filename: 'war3.png')
   chip6.save!
 
-  chip7 = businesses[9]
+  chip7 = businesses[11]
   p3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war2.png')
   chip7.photos.attach(io: p3, filename: 'war2.png')
   chip7.save!
 
-  chip8 = businesses[9]
+  chip8 = businesses[11]
   p4 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war.png')
   chip8.photos.attach(io: p4, filename: 'war.png')
   chip8.save!
 
 
-  wn1 = businesses[10]
+  wn1 = businesses[12]
   wnp1 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/wn1.png')
   wn1.photos.attach(io: wnp1, filename: 'wn1.png')
   wn1.save!
 
 
-  wn2 = businesses[10]
+  wn2 = businesses[12]
   wnp2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/wn2.png')
   wn2.photos.attach(io: wnp2, filename: 'wn2.png')
   wn2.save!
 
 
-  wn3 = businesses[10]
+  wn3 = businesses[12]
   wnp3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/wn3.png')
   wn3.photos.attach(io: wnp3, filename: 'wn3.png')
   wn3.save!
 
 
-  wn4 = businesses[10]
+  wn4 = businesses[12]
   wnp4 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/wn4.png')
   wn4.photos.attach(io: wnp4, filename: 'wn4.png')
   wn4.save!
@@ -334,6 +378,8 @@ Business.create!([
     {user_id: users[0].id, business_id: businesses[8].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
     {user_id: users[0].id, business_id: businesses[9].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
     {user_id: users[0].id, business_id: businesses[10].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
+    {user_id: users[0].id, business_id: businesses[11].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
+    {user_id: users[0].id, business_id: businesses[12].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
     ])
 
     reviews = Review.all

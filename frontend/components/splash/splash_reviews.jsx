@@ -21,13 +21,13 @@ class SplashReviews extends React.Component {
     let matchedBusiness = business[review.business_id];
     let photo;
     if (matchedBusiness){
-      const x = Math.floor(Math.random() * businessLength);
-      const y = Math.floor(x * 0.5);
-      if (x > 0 && y < 4){
-        photo = matchedBusiness.photos[y].photo_image_url;
-      } else {
+      // const x = Math.floor(Math.random() * businessLength);
+      // const y = Math.floor(x * 0.5);
+      // if (x > 0 && y < 4){
+      //   photo = matchedBusiness.photos[y].photo_image_url;
+      // } else {
         photo = matchedBusiness.photos[0].photo_image_url;
-      }
+    //   }
     } else {
       matchedBusiness = '';
     }
