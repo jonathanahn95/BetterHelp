@@ -36,171 +36,254 @@ Business.create!([
   {name: 'Shake Shack', address: "1 Old Fulton St", hours: ["9:45 am - 9:00 pm" ,"	9:45 am - 9:00 pm ",	"9:45 am - 9:00 pm"	,"9:45 am - 9:00 pm" ,"9:45 am - 9:00 pm" ,	"9:45 am - 9:00 pm" ,	"9:45 am - 9:00 pm"],
   phone_number: '(347) 435-2676', website: 'https://www.shake-shack.com/', city: "Brooklyn", state: "NY", zip_code: 11201, business_category_id: business_categories[0].id, latitude: 41.615488, longitude: -74.002300 },
   {name: 'JC Landscaping and Design', address: "68-19 Woodhaven Blvd", hours: ["9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm"	,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm" ,	"9:00 am - 5:00 pm"],
-  phone_number: '(718) 672-7323', website: 'https://www.jcdesignscapes.com.com/', city: "Queens", state: "NY", zip_code: 11374, business_category_id: business_categories[1].id ,latitude: 40.888888, longitude: -73.899999 },
+  phone_number: '(718) 672-7323', website: 'https://www.jcdesignscapes.com/', city: "Queens", state: "NY", zip_code: 11374, business_category_id: business_categories[1].id ,latitude: 40.888888, longitude: -73.899999 },
   {name: 'Bean and Bean', address: "318 8th Ave", hours: ["9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm"	,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm" ,	"9:45 am - 10:30 pm"],
-  phone_number: '(646) 869-2070', website: 'https://beannbean.com.com/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[2].id, latitude: 41.231032, longitude: -73.701888 },
+  phone_number: '(646) 869-2070', website: 'https://beannbean.com/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[2].id, latitude: 41.339181, longitude: -73.703888 },
+  {name: 'White Noise Coffee', address: "41-02 162st", hours: ["8:45 am - 10:30 pm" ,	"8:45 am - 10:30 pm" ,	"8:45 am - 10:30 pm"	,	"8:45 am - 10:30 pm" ,	"10:45 am - 10:30 pm" ,	"8:45 am - 10:30 pm" ,	"8:45 am - 10:30 pm"],
+  phone_number: '(646) 869-2070', website: 'https://beannbean.com/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[2].id, latitude: 41.111222, longitude: -73.701888 },
+  {name: 'Cafe de Cupping', address: "150-07 Northern Blvd", hours: ["8:45 am - 10:30 pm" ,	"8:45 am - 10:30 pm" ,	"8:45 am - 10:30 pm"	,	"8:45 am - 10:30 pm" ,	"10:45 am - 10:30 pm" ,	"8:45 am - 10:30 pm" ,	"8:45 am - 10:30 pm"],
+  phone_number: '(646) 869-2070', website: 'https://cafedecupping.com/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[2].id, latitude: 41.231032, longitude: -73.701888 },
   {name: 'App Academy', address: "159 W 25th St", hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
   phone_number: '(929) 718-3213', website: 'https://www.appacademy.io/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[3].id ,latitude: 41.565213, longitude: -73.002218 },
   {name: 'Warrior Fitness Boot Camp', address: "240 Wtythe Ave", hours: ["7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"	,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"],
   phone_number: '(718) 718-3213', website: 'http://www.warriorfitnessbootcamp.com/', city: "Brooklyn", state: "NY", zip_code: 11249, business_category_id: business_categories[3].id ,latitude: 40.565213, longitude: -74.002218 },
   {name: 'Trooper Fitness', address: "226 E 54th St", hours: ["7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"	,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"],
-  phone_number: '(347) 718-3213', website: 'https://trooperfitness.com/', city: "New York", state: "NY", zip_code: 11249, business_category_id: business_categories[3].id ,latitude: 40.111111, longitude: -73.002218 }
-  # {name: 'Flatiron School', address: "11 Broadway, hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
-  # phone_number: '(929) 718-3213', website: 'https://flatironschool.com', city: "New York", state: "NY", zip_code: 10004, business_category_id: business_categories[3].id ,latitude: 41.631133, longitude: -72.002218 },
-  # {name: 'Fullstack Academy', address: "11 Broadway, hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
-  # phone_number: '(718) 718-3213', website: 'https://www.fullstackacademy.com/', city: "New York", state: "NY", zip_code: 10004, business_category_id: business_categories[3].id ,latitude: 40.331133, longitude: -72.002218 },
+  phone_number: '(347) 718-3213', website: 'https://trooperfitness.com/', city: "New York", state: "NY", zip_code: 11249, business_category_id: business_categories[3].id ,latitude: 40.900000, longitude: -74.002218 },
+  {name: 'Flatiron School', address: "11 Broadway", hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
+  phone_number: '(929) 718-3213', website: 'https://flatironschool.com', city: "New York", state: "NY", zip_code: 10004, business_category_id: business_categories[3].id ,latitude: 41.631133, longitude: -72.002218 },
+  {name: 'Fullstack Academy', address: "48 W 42 E", hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
+  phone_number: '(718) 718-3213', website: 'https://www.fullstackacademy.com/', city: "New York", state: "NY", zip_code: 10004, business_category_id: business_categories[3].id ,latitude: 40.331133, longitude: -72.002218 },
   ])
 
-  businesses = Business.all
+  businesses = Business.all.sort_by { |bus| bus.name }
 
-  chip1 = businesses[0]
-  file = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/chip1.jpg')
-  chip1.photos.attach(io: file, filename: 'chip1.jpg')
-  chip1.save!
-
-  chip2 = businesses[0]
-  file1 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/chip2.jpg")
-  chip2.photos.attach(io: file1, filename: 'chip2.jpg')
-  chip2.save!
-
-  chip3 = businesses[0]
-  file2 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/chip3.jpg")
-  chip3.photos.attach(io: file2, filename: 'chip3.jpg')
-  chip3.save!
-
-  chip4 = businesses[0]
-  file3 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/chip4.jpg")
-  chip4.photos.attach(io: file3, filename: 'chip4.jpg')
-  chip4.save!
-
-  ss1 = businesses[1]
-  file4 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake1.jpg")
-  ss1.photos.attach(io: file4, filename: 'shake1.jpg')
-  ss1.save!
-
-  ss2 = businesses[1]
-  file5 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake2.jpg")
-  ss2.photos.attach(io: file5, filename: 'shake2.jpg')
-  ss2.save!
-
-  ss3 = businesses[1]
-  file6 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake3.jpg")
-  ss3.photos.attach(io: file6, filename: 'shake3.jpg')
-  ss3.save!
-
-  ss4 = businesses[1]
-  file7 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake4.jpg")
-  ss4.photos.attach(io: file7, filename: 'shake4.jpg')
-  ss4.save!
-
-
-  jc1 = businesses[2]
-  file8 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc1.jpg")
-  jc1.photos.attach(io: file8, filename: 'jc1.jpg')
-  jc1.save!
-
-
-  jc2 = businesses[2]
-  file9 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc2.jpg")
-  jc2.photos.attach(io: file9, filename: 'jc2.jpg')
-  jc2.save!
-
-
-  jc3 = businesses[2]
-  file10 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc3.jpg")
-  jc3.photos.attach(io: file10, filename: 'jc3.jpg')
-  jc3.save!
-
-
-  jc4 = businesses[2]
-  file11 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc4.jpg")
-  jc4.photos.attach(io: file11, filename: 'jc4.jpg')
-  jc4.save!
-
-  bb1 = businesses[3]
-  file12 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bb1.jpg")
-  bb1.photos.attach(io: file12, filename: 'bb1.jpg')
-  bb1.save!
-
-  bb2 = businesses[3]
-  file13 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bb2.jpg")
-  bb2.photos.attach(io: file13, filename: 'bb2.jpg')
-  bb2.save!
-
-  bb3 = businesses[3]
-  file14 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bb3.jpg")
-  bb3.photos.attach(io: file14, filename: 'bb3.jpg')
-  bb3.save!
-
-  bb4 = businesses[3]
-  file15 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bb4.jpg")
-  bb4.photos.attach(io: file15, filename: 'bb4.jpg')
-  bb4.save!
-
-  aa1 = businesses[4]
+  aa1 = businesses[0]
   file16 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/appa.jpg")
   aa1.photos.attach(io: file16, filename: 'app-academy.jpg')
   aa1.save!
 
 
-  aa2 = businesses[4]
+  aa2 = businesses[0]
   file17 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/aa2.jpg")
   aa2.photos.attach(io: file17, filename: 'aa2.jpg')
   aa2.save!
 
 
-  aa3 = businesses[4]
+  aa3 = businesses[0]
   file18 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/aa3.jpg")
   aa3.photos.attach(io: file18, filename: 'aa3.jpg')
   aa3.save!
 
-
-  aa4 = businesses[4]
+  aa4 = businesses[0]
   file19 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/aa4.jpg")
   aa4.photos.attach(io: file19, filename: 'aa4.jpg')
   aa4.save!
 
+  bb1 = businesses[1]
+  file12 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bb1.jpg")
+  bb1.photos.attach(io: file12, filename: 'bb1.jpg')
+  bb1.save!
+
+  bb2 = businesses[1]
+  file13 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bb2.jpg")
+  bb2.photos.attach(io: file13, filename: 'bb2.jpg')
+  bb2.save!
+
+  bb3 = businesses[1]
+  file14 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bb3.jpg")
+  bb3.photos.attach(io: file14, filename: 'bb3.jpg')
+  bb3.save!
+
+  bb4 = businesses[1]
+  file15 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/bb4.jpg")
+  bb4.photos.attach(io: file15, filename: 'bb4.jpg')
+  bb4.save!
 
 
-  chip5 = businesses[5]
-  p = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war4.png')
-  chip5.photos.attach(io: p, filename: 'war4.png')
-  chip5.save!
+  cad1 = businesses[2]
+  cadp1 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/cad1.png')
+  cad1.photos.attach(io: cadp1, filename: 'cad1.png')
+  cad1.save!
 
-  chip6 = businesses[5]
-  p2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war3.png')
-  chip6.photos.attach(io: p2, filename: 'war3.png')
-  chip6.save!
+  cad2 = businesses[2]
+  cadp2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/cad2.png')
+  cad2.photos.attach(io: cadp2, filename: 'cad2.png')
+  cad2.save!
 
-  chip7 = businesses[5]
-  p3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war2.png')
-  chip7.photos.attach(io: p3, filename: 'war2.png')
-  chip7.save!
+  cad3 = businesses[2]
+  cadp3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/cad3.png')
+  cad3.photos.attach(io: cadp3, filename: 'cad3.png')
+  cad3.save!
 
-  chip8 = businesses[5]
-  p4 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war.png')
-  chip8.photos.attach(io: p4, filename: 'war.png')
-  chip8.save!
+  cad4 = businesses[2]
+  cadp3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/cad4.png')
+  cad4.photos.attach(io: cadp3, filename: 'cad4.png')
+  cad4.save!
 
-  bb1 = businesses[6]
+  chip1 = businesses[3]
+  file = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/chip1.jpg')
+  chip1.photos.attach(io: file, filename: 'chip1.jpg')
+  chip1.save!
+
+  chip2 = businesses[3]
+  file1 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/chip2.jpg")
+  chip2.photos.attach(io: file1, filename: 'chip2.jpg')
+  chip2.save!
+
+  chip3 = businesses[3]
+  file2 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/chip3.jpg")
+  chip3.photos.attach(io: file2, filename: 'chip3.jpg')
+  chip3.save!
+
+  chip4 = businesses[3]
+  file3 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/chip4.jpg")
+  chip4.photos.attach(io: file3, filename: 'chip4.jpg')
+  chip4.save!
+
+  fi1 = businesses[4]
+  fip1 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fi1.png")
+  fi1.photos.attach(io: fip1, filename: 'fi1.png')
+  fi1.save!
+
+  fi2 = businesses[4]
+  fip2 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fi2.png")
+  fi2.photos.attach(io: fip2, filename: 'fi2.png')
+  fi2.save!
+
+  fi3 = businesses[4]
+  fip3 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fi3.png")
+  fi3.photos.attach(io: fip3, filename: 'fi3.png')
+  fi3.save!
+
+  fi4 = businesses[4]
+  fip4 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fi4.png")
+  fi4.photos.attach(io: fip4, filename: 'fi4.png')
+  fi4.save!
+
+  fs1 = businesses[5]
+  fsp1 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fs1.png")
+  fs1.photos.attach(io: fsp1, filename: 'fs1.png')
+  fs1.save!
+
+  fs2 = businesses[5]
+  fsp2 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fs2.png")
+  fs2.photos.attach(io: fsp2, filename: 'fs2.png')
+  fs2.save!
+
+  fs3 = businesses[5]
+  fsp3 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fs3.png")
+  fs3.photos.attach(io: fsp3, filename: 'fs3.png')
+  fs3.save!
+
+  fs4 = businesses[5]
+  fsp4 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/fs4.png")
+  fs4.photos.attach(io: fsp4, filename: 'fs4.png')
+  fs4.save!
+
+  jc1 = businesses[6]
+  file8 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc1.jpg")
+  jc1.photos.attach(io: file8, filename: 'jc1.jpg')
+  jc1.save!
+
+  jc2 = businesses[6]
+  file9 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc2.jpg")
+  jc2.photos.attach(io: file9, filename: 'jc2.jpg')
+  jc2.save!
+
+  jc3 = businesses[6]
+  file10 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc3.jpg")
+  jc3.photos.attach(io: file10, filename: 'jc3.jpg')
+  jc3.save!
+
+  jc4 = businesses[6]
+  file11 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/jc4.jpg")
+  jc4.photos.attach(io: file11, filename: 'jc4.jpg')
+  jc4.save!
+
+  ss1 = businesses[7]
+  file4 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake1.jpg")
+  ss1.photos.attach(io: file4, filename: 'shake1.jpg')
+  ss1.save!
+
+  ss2 = businesses[7]
+  file5 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake2.jpg")
+  ss2.photos.attach(io: file5, filename: 'shake2.jpg')
+  ss2.save!
+
+  ss3 = businesses[7]
+  file6 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake3.jpg")
+  ss3.photos.attach(io: file6, filename: 'shake3.jpg')
+  ss3.save!
+
+  ss4 = businesses[7]
+  file7 = EzDownload.open("https://s3.amazonaws.com/betterhelp-dev/shake4.jpg")
+  ss4.photos.attach(io: file7, filename: 'shake4.jpg')
+  ss4.save!
+
+  bb1 = businesses[8]
   bp1 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp1.png')
   bb1.photos.attach(io: bp1, filename: 'bp1.png')
   bb1.save!
 
-  bb2 = businesses[6]
+  bb2 = businesses[8]
   bp2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp2.png')
   bb2.photos.attach(io: bp2, filename: 'bp2.png')
   bb2.save!
 
-  bb3 = businesses[6]
+  bb3 = businesses[8]
   bp3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp3.png')
   bb3.photos.attach(io: bp3, filename: 'bp3.png')
   bb3.save!
 
-  bb4 = businesses[6]
+  bb4 = businesses[8]
   bp4 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp4.png')
   bb4.photos.attach(io: bp4, filename: 'bp4.png')
   bb4.save!
+
+  chip5 = businesses[9]
+  p = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war4.png')
+  chip5.photos.attach(io: p, filename: 'war4.png')
+  chip5.save!
+
+  chip6 = businesses[9]
+  p2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war3.png')
+  chip6.photos.attach(io: p2, filename: 'war3.png')
+  chip6.save!
+
+  chip7 = businesses[9]
+  p3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war2.png')
+  chip7.photos.attach(io: p3, filename: 'war2.png')
+  chip7.save!
+
+  chip8 = businesses[9]
+  p4 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/war.png')
+  chip8.photos.attach(io: p4, filename: 'war.png')
+  chip8.save!
+
+
+  wn1 = businesses[10]
+  wnp1 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/wn1.png')
+  wn1.photos.attach(io: wnp1, filename: 'wn1.png')
+  wn1.save!
+
+
+  wn2 = businesses[10]
+  wnp2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/wn2.png')
+  wn2.photos.attach(io: wnp2, filename: 'wn2.png')
+  wn2.save!
+
+
+  wn3 = businesses[10]
+  wnp3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/wn3.png')
+  wn3.photos.attach(io: wnp3, filename: 'wn3.png')
+  wn3.save!
+
+
+  wn4 = businesses[10]
+  wnp4 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/wn4.png')
+  wn4.photos.attach(io: wnp4, filename: 'wn4.png')
+  wn4.save!
+
 
 
 
@@ -243,7 +326,14 @@ Business.create!([
     {user_id: users[3].id, business_id: businesses[6].id, rating: 4, body: "My crossfit journey began as i was getting ready for my sons 6th birthday celebration." },
     {user_id: users[1].id, business_id: businesses[6].id, rating: 4, body: "Update:  I am also completely addicted to Cris's MetCon lunchtime classes.  He is one of the best trainers I've ever had - offers excellent explanations and constant support throughout a session." },
     {user_id: users[2].id, business_id: businesses[6].id, rating: 5, body: "This is probably one of the BEST gyms I've ever been to in NYC. It's so good, that I've been spreading the Trooper gospel since I became a member (you can ask all my friends about how much I've annoyed them about it), but it's only because this place is legit!" },
-    {user_id: users[0].id, business_id: businesses[6].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
+    {user_id: users[0].id, business_id: businesses[7].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
+    {user_id: users[0].id, business_id: businesses[7].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
+    {user_id: users[0].id, business_id: businesses[7].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
+    {user_id: users[0].id, business_id: businesses[3].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
+    {user_id: users[0].id, business_id: businesses[3].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
+    {user_id: users[0].id, business_id: businesses[8].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
+    {user_id: users[0].id, business_id: businesses[9].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
+    {user_id: users[0].id, business_id: businesses[10].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
     ])
 
     reviews = Review.all

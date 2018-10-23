@@ -17,7 +17,7 @@ class SplashBusinesses extends React.Component {
     reviewScore = reviewScore.reduce( (acc,el) => {return acc + el } ) / numReviews;
 
 
-
+    debugger
 
     return (
       <div className='splash-pics-container'>

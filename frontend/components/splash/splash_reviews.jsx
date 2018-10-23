@@ -21,11 +21,10 @@ class SplashReviews extends React.Component {
     let matchedBusiness = business[review.business_id];
     let photo;
     if (matchedBusiness){
-      const randomNum = Math.floor(Math.random() * businessLength);
-      debugger
-      if (randomNum > 0){
-        debugger
-        photo = matchedBusiness.photos[Math.floor(randomNum * 0.5)].photo_image_url;
+      const x = Math.floor(Math.random() * businessLength);
+      const y = Math.floor(x * 0.5);
+      if (x > 0 && y < 4){
+        photo = matchedBusiness.photos[y].photo_image_url;
       } else {
         photo = matchedBusiness.photos[0].photo_image_url;
       }
