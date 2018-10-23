@@ -28,6 +28,10 @@
   padding-right: 10px;
 }
 
+.show-li-container li {
+  padding: 2px 0;
+}
+
 .prof-pic {
   border-radius: 10px;
   width: 60px;
