@@ -42,9 +42,9 @@ Business.create!([
   {name: 'App Academy', address: "159 W 25th St", hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
   phone_number: '(929) 718-3213', website: 'https://www.appacademy.io/', city: "Manhattan", state: "NY", zip_code: 10001, business_category_id: business_categories[3].id ,latitude: 41.565213, longitude: -73.002218 },
   {name: 'Warrior Fitness Boot Camp', address: "240 Wtythe Ave", hours: ["7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"	,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"],
-  phone_number: '(718) 718-3213', website: 'http://www.warriorfitnessbootcamp.com/', city: "Brooklyn", state: "NY", zip_code: 11249, business_category_id: business_categories[3].id ,latitude: 40.565213, longitude: -74.002218 }
-  # {name: 'Trooper Fitness', address: "226 E 54th St", hours: ["7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"	,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"],
-  # phone_number: '(347) 718-3213', website: 'https://trooperfitness.com/', city: "New York", state: "NY", zip_code: 11249, business_category_id: business_categories[3].id ,latitude: 40.111111, longitude: -73.002218 },
+  phone_number: '(718) 718-3213', website: 'http://www.warriorfitnessbootcamp.com/', city: "Brooklyn", state: "NY", zip_code: 11249, business_category_id: business_categories[3].id ,latitude: 40.565213, longitude: -74.002218 },
+  {name: 'Trooper Fitness', address: "226 E 54th St", hours: ["7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"	,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm" ,	"7:00 - 5:00 pm"],
+  phone_number: '(347) 718-3213', website: 'https://trooperfitness.com/', city: "New York", state: "NY", zip_code: 11249, business_category_id: business_categories[3].id ,latitude: 40.111111, longitude: -73.002218 }
   # {name: 'Flatiron School', address: "11 Broadway, hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
   # phone_number: '(929) 718-3213', website: 'https://flatironschool.com', city: "New York", state: "NY", zip_code: 10004, business_category_id: business_categories[3].id ,latitude: 41.631133, longitude: -72.002218 },
   # {name: 'Fullstack Academy', address: "11 Broadway, hours: ["9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"	,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm" ,	"9:00 - 5:00 pm"],
@@ -182,6 +182,30 @@ Business.create!([
   chip8.photos.attach(io: p4, filename: 'war.png')
   chip8.save!
 
+  bb1 = businesses[6]
+  bp1 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp1.png')
+  bb1.photos.attach(io: bp1, filename: 'bp1.png')
+  bb1.save!
+
+  bb2 = businesses[6]
+  bp2 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp2.png')
+  bb2.photos.attach(io: bp2, filename: 'bp2.png')
+  bb2.save!
+
+  bb3 = businesses[6]
+  bp3 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp3.png')
+  bb3.photos.attach(io: bp3, filename: 'bp3.png')
+  bb3.save!
+
+  bb4 = businesses[6]
+  bp4 = EzDownload.open('https://s3.amazonaws.com/betterhelp-dev/bp4.png')
+  bb4.photos.attach(io: bp4, filename: 'bp4.png')
+  bb4.save!
+
+
+
+
+
 
   Review.create!([
     {user_id: users[0].id, business_id: businesses[0].id, rating: 4, body: 'I love this place and I would def come back here. Customer service was great and I was able to enjoy my meal in peace. Definetly going to come back.' },
@@ -214,8 +238,12 @@ Business.create!([
     {user_id: users[0].id, business_id: businesses[2].id, rating: 5, body: "Markus and his team were fantastic. Markus was super nice, inventive, humble, responsive, extremely reasonable, easy to work with, accommodating and it is clear he takes pride in the final product. He went out of his way on more than one occasion to make us happy and to ensure perfection. His team is highly professional and hard-working. We felt comfortable having them at the house while the work was completed. " },
     {user_id: users[0].id, business_id: businesses[2].id, rating: 5, body: "I hired Liaison Landscapes to help me with the buying and installation of plants and with irrigation. It was an all around great experience to work with Markus and his crew, and I would highly recommend them to others for their landscape needs. Some highlights: 1) To obtain a quote was easy and quick. Liaison came in competitively priced and was available to get started on the project right away. Both of these items are not all that trivial in this busy real estate development market in SF." },
     {user_id: users[3].id, business_id: businesses[5].id, rating: 3, body: "This is the hardest workout I've done, and I have trained for and run in four marathons.  It's also, bizarrely, a really fun experience." },
-    {user_id: users[3].id, business_id: businesses[5].id, rating: 5, body: "The name doesn't lie. Do you like being pushed by a trainer? Do you like intense workouts and are motivated by group workouts? Look no further." },
-    {user_id: users[3].id, business_id: businesses[5].id, rating: 4, body: "LOVE this place! I came for the first time about 3 weeks ago and was immediately hooked, now I can't go a few days without signing up for a class. Luckily I live right around the corner so no complaints there!" },
+    {user_id: users[0].id, business_id: businesses[5].id, rating: 5, body: "The name doesn't lie. Do you like being pushed by a trainer? Do you like intense workouts and are motivated by group workouts? Look no further." },
+    {user_id: users[1].id, business_id: businesses[5].id, rating: 4, body: "LOVE this place! I came for the first time about 3 weeks ago and was immediately hooked, now I can't go a few days without signing up for a class. Luckily I live right around the corner so no complaints there!" },
+    {user_id: users[3].id, business_id: businesses[6].id, rating: 4, body: "My crossfit journey began as i was getting ready for my sons 6th birthday celebration." },
+    {user_id: users[1].id, business_id: businesses[6].id, rating: 4, body: "Update:  I am also completely addicted to Cris's MetCon lunchtime classes.  He is one of the best trainers I've ever had - offers excellent explanations and constant support throughout a session." },
+    {user_id: users[2].id, business_id: businesses[6].id, rating: 5, body: "This is probably one of the BEST gyms I've ever been to in NYC. It's so good, that I've been spreading the Trooper gospel since I became a member (you can ask all my friends about how much I've annoyed them about it), but it's only because this place is legit!" },
+    {user_id: users[0].id, business_id: businesses[6].id, rating: 4, body: "I really enjoy working out at Trooper and have met people (whom I now call my friends) with similar goals, which makes everything easier and so much more fun." },
     ])
 
     reviews = Review.all

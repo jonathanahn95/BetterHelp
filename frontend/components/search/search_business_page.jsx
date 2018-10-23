@@ -13,9 +13,20 @@ class SearchBusinessPage extends React.Component {
 
   componentDidMount() {
     this.props.searchBusinesses(this.props.location.search.slice(1));
+    this.props.requestAllBusinessCategories();
   }
 
   render() {
+
+    let res, home, cafe, boot;
+    const businessCategory = this.props.businessCategories;
+    if (businessCategory.length > 0){
+      res = businessCategory[0].id;
+      home = businessCategory[1].id;
+      cafe = businessCategory[2].id;
+      boot = businessCategory[3].id;
+    }
+
     let searchedBusinesses = this.props.searchedBusinesses.map( (business, idx) =>
        <Business key={business.id}  business={business} idx={idx} />
      );
@@ -31,15 +42,15 @@ class SearchBusinessPage extends React.Component {
               <SearchFormContainer className={'nav-sear-container'}/>
           </h1>
         </header>
-        <ul className='ul-nav-bar-item1'>
-          <div className='nav-bar-container'>
-            <Link to={`/business_categories/9`}><p className='nav-bar-item'>Restaurant</p></Link>
-            <Link to={`/business_categories/10`}><p className='nav-bar-item'>Home Services</p></Link>
-            <Link to={`/business_categories/11`}><p className='nav-bar-item'>Cafes</p></Link>
-            <Link to={`/business_categories/12`}><p className='nav-bar-item'>Bootcamps</p></Link>
+        <ul className='ul-nav-bar-item2'>
+          <div className='nav-bar-container1'>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${res}`}><i class="fas fa-utensils"></i><p >Restaurant</p></Link>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${home}`}><i class="fas fa-home"></i><p >Home Services</p></Link>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${cafe}`}><i class="fas fa-coffee"></i><p >Cafes</p></Link>
+            <Link className='nav-bar-container1-links' to={`/business_categories/${boot}`}><i class="fas fa-keyboard"></i><p >Bootcamps</p></Link>
           </div>
-          <div className='review-bar-container'>
-            <Link to={`/businesses/`}><p className='nav-bar-item'>Write a Review</p></Link>
+          <div className='review-bar-container1'>
+            <Link className='review-bar-container1-link' to={`/businesses/`}><i class="fas fa-pen"></i><p >Write a Review</p></Link>
           </div>
         </ul>
       <div className="main-business-container">
@@ -47,7 +58,7 @@ class SearchBusinessPage extends React.Component {
           {searchedBusinesses}
         </div>
         <div className='sear-ad-cont'>
-          <BusinessMap businesses={this.props.searchedBusinesses}/>
+          <BusinessMap id={'map-container'} businesses={this.props.searchedBusinesses}/>
           <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
         </div>
       </div>
