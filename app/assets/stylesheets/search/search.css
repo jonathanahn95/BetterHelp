@@ -161,7 +161,8 @@
 
 .login-signup-nav{
   display: flex;
-  width: 20%;
+  width: 17%;
+  justify-content: space-evenly;
 }
 
 .login-sear-nav {

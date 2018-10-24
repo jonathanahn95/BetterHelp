@@ -111,12 +111,12 @@ class SearchForm extends React.Component {
       debugger
       return (
         <div className='login-signup-nav'>
-          <div className='login-sear-nav'>
+        <Link className="log-in" to='/login'>  <div className='login-sear-nav'>
             Log In
-          </div>
-          <div className='signup-sear-nav'>
+          </div></Link>
+        <Link className="log-in" to='/signup'>  <div className='signup-sear-nav'>
             Sign Up
-          </div>
+          </div></Link>
         </div>
       )
     }
