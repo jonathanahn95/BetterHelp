@@ -105,9 +105,14 @@
 
 .small-brand-name {
   height: 40px;
+  padding-right: 15px;
   /* margin-bottom: 5px; */
 }
-
+.small-brand-name2{
+  height: 40px;
+  padding-right: 15px;
+  padding-left: 170px;
+}
 .birthday {
   display: flex;
   justify-content: space-between;

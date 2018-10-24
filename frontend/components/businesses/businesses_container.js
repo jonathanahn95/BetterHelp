@@ -15,8 +15,9 @@ const msp = (state,ownProps) => {
       }
     });
   }
-  
+
   return {
+    currentUser: state.entities.users[state.session.id],
     businesses: Object.values(state.entities.businesses),
     category: ownProps.match.params.id,
     businessCategories: Object.values(state.entities.businessCategories),

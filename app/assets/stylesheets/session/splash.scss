@@ -366,6 +366,20 @@ margin-top: 6px;
   font-size: 15px;
 }
 
+.logout-nav {
+  text-align: right;
+  text-shadow: 2px 2px 8px black;
+
+  margin-right: 190px;
+  background-color: transparent;
+  border: transparent;
+  color: white;
+  padding-left: 10px;
+  display: flex;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 .dropped-down-list {
   position: absolute;
   left: 995px;
@@ -433,6 +447,24 @@ margin-top: 6px;
 
   margin: auto;
 }
+
+.dropped-down-about2 {
+  border-top: 1px solid #e6e6e6;
+  padding: 6px;
+  width: 90%;
+  display: flex;
+  border-bottom: 1px solid #e6e6e6;
+  margin: auto;
+  align-items: center;
+
+}
+
+.dropped-down-about2-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .fa-user {
   padding-right: 5px;
   color:gray

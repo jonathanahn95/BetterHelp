@@ -10,17 +10,26 @@ class SearchForm extends React.Component {
     this.state = {
       searchData: '',
       searchLocation: '',
-      dropdown: "show"
+      dropdown: "show",
+      hidden: true
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.keydown = this.keydown.bind(this);
-
+    this.toggleClass = this.toggleClass.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.toggleIcon = this.toggleIcon.bind(this);
   }
 
   // componentWillUnmount(){
   //   this.props.clearSearch();
   //
   // }
+
+
+  handleClick(e) {
+    e.preventDefault();
+    this.props.logout();
+  }
 
   handleSubmit(e){
     e.preventDefault();
@@ -46,10 +55,78 @@ class SearchForm extends React.Component {
     }
   }
 
+  toggleClass() {
+     const currentState = this.state.hidden;
+     this.setState({ hidden: !currentState });
+   }
+
+  toggleIcon(){
+    if (this.props.className === 'sear-container'){
+      return (
+        <div></div>
+      )
+    }
+    else if (this.props.userLoggedIn === 'nav-sear-container-true'){
+      let toggle = "dropped-down-list-hidden";
+      let hiddenCar = 'fas fa-caret-up-hidden'
+      if (!this.state.hidden === true) {
+        toggle = "dropped-down-list1";
+        hiddenCar = 'fas fa-caret-up three'
+      }
+
+      return (
+        <div>
+        <div className='logout-nav'>
+          <img onClick={this.toggleClass} className='drop-down-pic' src='https://s3.amazonaws.com/betterhelp-dev/dropdown.png'></img>
+          <div onClick={this.toggleClass} className='caret-drop-down'><i class="fas fa-caret-down"></i></div>
+        </div>
+        <i className={hiddenCar}></i>
+        <div className={toggle}>
+          <div className='dropped-down-first'>
+            <img  className='dropped-down-pic' src='https://s3.amazonaws.com/betterhelp-dev/dropdown.png'></img>
+            <div  className='dropped-down-info-wrapper'>
+              <div className='dropped-down-name'>
+                <Link className='user-prof-link'to={`/user_prof/${this.props.currentUser.id}`}><div className='dropped-down-fname'>{this.props.currentUser.fname}</div></Link>
+                <Link className='user-prof-link'to={`/user_prof/${this.props.currentUser.id}`}><div className='dropped-down-fname'>{this.props.currentUser.lname}</div></Link>
+              </div>
+              <div className='dropped-down-location'>
+                Manhattan, NY
+              </div>
+            </div>
+          </div>
+          <div className='dropped-down-about2'>
+            <div>
+              <i class="fas fa-user"></i>
+            </div>
+            <div className='dropped-down-about-me'>
+              <Link className='user-prof-link'to={`/user_prof/${this.props.currentUser.id}`}><p>About Me</p></Link>
+            </div>
+          </div>
+          <button className="dropped-down-logout-btn" onClick={this.handleClick}>Log Out</button>
+        </div>
+    </div>
+
+      )
+    } else if (this.props.userLoggedIn === 'nav-sear-container-false'){
+      debugger
+      return (
+        <div className='login-signup-nav'>
+          <div className='login-sear-nav'>
+            Log In
+          </div>
+          <div className='signup-sear-nav'>
+            Sign Up
+          </div>
+        </div>
+      )
+    }
+  }
+
   render() {
     let searchedBusinesses1 = this.props.searchedBusinesses.map( (business, idx) =>
        <SearchDropDown key={business.id}  business={business} idx={idx} searchData={this.state.searchData}/>
      );
+     let brandName;
 
     return (
       <div className={this.props.className}>
@@ -65,11 +142,13 @@ class SearchForm extends React.Component {
           <input placeholder="Current Location" onChange={this.update('searchLocation')} className={"location" + `-${this.props.className}`} onKeyDown={this.keydown} type="search" value={this.state.searchLocation}></input>
 
           <button  className={"search-pic" + `-${this.props.className}`}><i className='fa fa-search'></i></button>
+          {this.toggleIcon()}
         </form>
 
         <div className={'drop-down' + `-${this.props.className} ${this.state.dropdown}`}>
           {searchedBusinesses1}
         </div>
+
 
       </div>
     )

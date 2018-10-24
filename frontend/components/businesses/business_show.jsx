@@ -61,9 +61,7 @@ class BusinessShow extends React.Component {
         <div className='empty'/>
       );
     }
-
-    debugger
-
+    
     let reviewScore = []
     const reviewAvg = this.props.reviews.reverse().forEach( review => {
       reviewScore.push(review.rating)

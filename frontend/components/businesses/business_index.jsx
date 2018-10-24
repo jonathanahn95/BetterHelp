@@ -39,6 +39,7 @@ class BusinessIndex extends React.Component {
       businesses = <div></div>
     }
 
+
       return (
         <div>
           <header className="login-header">
