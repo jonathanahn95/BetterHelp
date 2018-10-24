@@ -522,7 +522,7 @@ align-items: end;
 .category-bus {
   display: flex;
   width: 80%;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .splash-category-wrapper {
@@ -539,7 +539,6 @@ align-items: end;
   font-weight: bold;
   font-size: 14px;
   border-radius: 4px;
-  margin: 15px;
 }
 
 .splash-cat-pic-wrapper {

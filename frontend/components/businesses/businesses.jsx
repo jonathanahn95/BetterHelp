@@ -38,8 +38,22 @@ class Businesses extends React.Component {
       }
     });
 
+    let map;
+    if (this.props.businesses.length > 0){
+      map =
+       <div>
+        <div></div>
+        <div className='map-ad'>
+          <BusinessMap id={'map-container'} businesses={selectedBusCategories} multiple={true}/>
+          <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
+        </div>
+      </div>
+    }
+
     const businesses = selectedBusCategories.map( (business, idx) =>
         <Business key={business.id}  business={business}  idx={idx}/>)
+
+
     return (
       <div>
         <header className="login-header">
@@ -80,11 +94,8 @@ class Businesses extends React.Component {
           <div className="business-container" >
             {businesses}
           </div>
-          <div className='map-ad'>
-            <BusinessMap id={'map-container'} businesses={selectedBusCategories} multiple={true}/>
-            <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
-          </div>
-        </div>
+          {map}
+       </div>
 
       </div>
     )

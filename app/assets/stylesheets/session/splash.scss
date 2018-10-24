@@ -106,10 +106,14 @@
 }
 
 .sign-up:hover {
-  background-color: white;
-  color: gray;
+  background: #fff;
+  text-shadow: none;
+  color: #666;
 }
 
+.browse-category-wrapper {
+  padding-bottom: 15px;
+}
 .log-in:hover {
   border-bottom: 2px solid white;
 }

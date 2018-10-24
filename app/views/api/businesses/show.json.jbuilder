@@ -11,6 +11,7 @@
     :city ,
     :state,
     :zip_code,
+    :price,
     :business_category_id,
     :latitude,
     :longitude)

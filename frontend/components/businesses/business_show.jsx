@@ -11,9 +11,7 @@ import { businessInfo } from './business_info';
 class BusinessShow extends React.Component {
   constructor(props){
     super(props);
-    debugger
     this.navigateToEdit = this.navigateToEdit.bind(this);
-
   }
 
   componentDidMount() {
@@ -58,11 +56,13 @@ class BusinessShow extends React.Component {
 
   render() {
     const business = this.props.business;
-    if(!this.props.business) {
+    if(!business) {
       return (
         <div className='empty'/>
       );
     }
+
+    debugger
 
     let reviewScore = []
     const reviewAvg = this.props.reviews.reverse().forEach( review => {
@@ -159,7 +159,9 @@ class BusinessShow extends React.Component {
               </div>
               <div className='right'>
                 <div className='right-review'>
-                  <Link to={`/businesses/${business.id}/review`}><button className='right-button'><i class="fa fa-star"></i>Write a Review</button></Link>
+                  <div className='right-review1'>
+                    <Link to={`/businesses/${business.id}/review`}><button className='right-button'><i class="fa fa-star"></i>Write a Review</button></Link>
+                  </div>
                 </div>
               </div>
             </div>

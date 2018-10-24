@@ -26,15 +26,16 @@ class SplashBusinessCategories extends React.Component {
     const category = this.props.category;
     return (
 
-      <div className='splash-category-wrapper'>
+      <Link className='splash-link' to={`/business_categories/${category.id}`}><div className='splash-category-wrapper'>
         <div className='splash-cat-pic-wrapper'>
-        <Link className='splash-link' to={`/business_categories/${category.id}`}><img className='splash-cat-pic' src={this.toggleIcons(category)}></img></Link>
+        <img className='splash-cat-pic' src={this.toggleIcons(category)}></img>
         </div>
 
         <div className='splash-category-name'>
-          <Link className='splash-link' to={`/business_categories/${category.id}`}>{category.category}</Link>
+          {category.category}
         </div>
       </div>
+    </Link>
     )
   }
 
