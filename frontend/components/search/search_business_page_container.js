@@ -10,6 +10,7 @@ const msp = (state,ownProps) => {
   let searchedBusIds = state.session.searchR;
   let businesses = Object.values(state.entities.businesses);
   return {
+    currentUser: state.entities.users[state.session.id],
     searchedBusinesses: selectSearchBusinesses(businesses,searchedBusIds),
     businessCategories: Object.values(state.entities.businessCategories),
   };

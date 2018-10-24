@@ -126,7 +126,6 @@ class SearchForm extends React.Component {
     let searchedBusinesses1 = this.props.searchedBusinesses.map( (business, idx) =>
        <SearchDropDown key={business.id}  business={business} idx={idx} searchData={this.state.searchData}/>
      );
-     let brandName;
 
     return (
       <div className={this.props.className}>

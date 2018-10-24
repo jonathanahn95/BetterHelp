@@ -9,6 +9,7 @@ import { requestAllBusinessCategories } from '../../actions/business_category_ac
 const msp = (state,ownProps) => {
 
   return {
+    currentUser: state.entities.users[state.session.id],
     businesses: Object.values(state.entities.businesses),
     businessCategories: Object.values(state.entities.businessCategories)
   };
