@@ -34,7 +34,7 @@ Business.create!([
   {name: 'Burger and Lobster', address: "39 W 19th St", hours: ["10:45am - 11:00pm" , "10:45am - 11:00pm ",	"10:45am - 11:00pm",	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm"],
   phone_number: '(646) 833-7532', website: 'https://www.burgerandlobster.com/', city: "New York", state: "NY", zip_code: 10018, business_category_id: business_categories[0].id, latitude: 41.915495, longitude: -74.002210, price: 2},
   {name: 'Juliana’s Pizza', address: "19 Old Fulton St", hours: ["10:45am - 11:00pm" , "10:45am - 11:00pm ",	"10:45am - 11:00pm",	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm"],
-  phone_number: '(718) 596-6700', website: 'https://julianaspizza.com/', city: "New York", state: "NY", zip_code: 10018, business_category_id: business_categories[0].id, latitude: 41.915495, longitude: -74.502210},
+  phone_number: '(718) 596-6700', website: 'https://julianaspizza.com/', city: "New York", state: "NY", zip_code: 10018, business_category_id: business_categories[0].id, latitude: 41.915495, longitude: -74.502210, price: 2},
   {name: 'Joe’s Shanghai', address: "9 Pell St", hours: ["10:45am - 11:00pm" , "10:45am - 11:00pm ",	"10:45am - 11:00pm",	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm"],
   phone_number: '(718) 596-6700', website: 'https://joeshanghairestaurants.com', city: "New York", state: "NY", zip_code: 10018, business_category_id: business_categories[0].id, latitude: 41.115495, longitude: -74.502210},
   {name: 'Chipotle', address: "28 W 40th St", hours: ["10:45am - 11:00pm" , "10:45am - 11:00pm ",	"10:45am - 11:00pm",	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm" ,	"10:45am - 11:00pm"],

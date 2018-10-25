@@ -9,11 +9,44 @@ import SearchDropDown from '../search/search_drop_down';
 class SearchBusinessPage extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      price: '',
+    };
+    this.pushToUrl = this.pushToUrl.bind(this);
+    this.pushTo = this.pushTo.bind(this);
   }
 
   componentDidMount() {
     this.props.searchBusinesses(this.props.location.search.slice(1));
     this.props.requestAllBusinessCategories();
+  }
+
+  componentWillReceiveProps(nextProps){
+    debugger
+
+    if (this.props.location.search.slice(1) !== nextProps.location.search.slice(1)){
+      this.props.searchBusinesses(nextProps.location.search.slice(1));
+    }
+  }
+
+  pushToUrl(){
+    if (this.state.price === ""){
+      this.setState({ price: '1' });
+      this.props.history.push(`/search?price=${this.state.price}`);
+    } else {
+      this.setState({ price: '' });
+      this.props.history.push(`/search?price=${this.state.price}`);
+    }
+  }
+  pushTo(){
+    if (this.state.price === ""){
+      this.setState({ price: '2' });
+      this.props.history.push(`/search?price=${this.state.price}`);
+    } else {
+      this.setState({ price: '' });
+      this.props.history.push(`/search?price=${this.state.price}`);
+    }
+
   }
 
   render() {
@@ -36,7 +69,6 @@ class SearchBusinessPage extends React.Component {
 
      let brandName;
      if (this.props.currentUser){
-       debugger
        brandName = 'small-brand-name2'
      } else {
        brandName = 'small-brand-name'
@@ -62,6 +94,51 @@ class SearchBusinessPage extends React.Component {
             <Link className='review-bar-container1-link' to={`/businesses/`}><i class="fas fa-pen"></i><p >Write a Review</p></Link>
           </div>
         </ul>
+
+        <div className='top-results-wrapper'>
+          <div className='top-results-wrapper2'>
+            <div className='top-category-results'>
+              <div className='top-res-name'>
+                <div className='top-results-home'>
+                  Top Search Results
+                </div>
+              </div>
+              <div className='top-res-cat'>
+                in New York, NY
+              </div>
+            </div>
+            <div className='top-results-wrapper3'>
+              <ul className='top-wrapper3-sec-1'>
+                <li className='sec-1-li' onClick={this.pushToUrl}>$</li>
+                <li className='sec-2-li' onClick={this.pushTo}>$$</li>
+                <li className='sec-3-li'>$$$</li>
+                <li className='sec-4-li'>$$$$</li>
+              </ul>
+              <div className='top-wrapper3-sec-2'>
+                <div className='sec-2-noise'>
+                  Noise Level:
+                </div>
+                <ul className='sec-2-noise-levels'>
+                  <li className='noise-1-li'>Quiet</li>
+                  <li className='noise-2-li' >Average</li>
+                  <li className='noise-3-li' >Loud</li>
+                  <li className='noise-4-li' >Very Loud</li>
+                </ul>
+              </div>
+              <div className='top-wrapper3-sec-3'>
+                <div className='sec-3-del'>
+                  Delivers:
+                </div>
+                <ul className='sec-3-del-options'>
+                  <li >
+                    Yes
+                  </li>
+                  <li>No</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       <div className="main-business-container">
         <div className="business-container" >
           {searchedBusinesses}

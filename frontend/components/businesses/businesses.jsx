@@ -86,13 +86,45 @@ class Businesses extends React.Component {
         </div>
         <div className='top-results-wrapper'>
           <div className='top-results-wrapper2'>
-            <div className='top-res-name'>
-              <div className='top-results-home'>
-                Top {this.props.businessCategoryName} Results
+            <div className='top-category-results'>
+              <div className='top-res-name'>
+                <div className='top-results-home'>
+                  Top {this.props.businessCategoryName} Results
+                </div>
+              </div>
+              <div className='top-res-cat'>
+                in New York, NY
               </div>
             </div>
-            <div className='top-res-cat'>
-              in New York, NY
+            <div className='top-results-wrapper3'>
+              <ul className='top-wrapper3-sec-1'>
+                <li className='sec-1-li'>$</li>
+                <li className='sec-2-li'>$$</li>
+                <li className='sec-3-li'>$$$</li>
+                <li className='sec-4-li'>$$$$</li>
+              </ul>
+              <div className='top-wrapper3-sec-2'>
+                <div className='sec-2-noise'>
+                  Noise Level:
+                </div>
+                <ul className='sec-2-noise-levels'>
+                  <li className='noise-1-li'>Quiet</li>
+                  <li className='noise-2-li' >Average</li>
+                  <li className='noise-3-li' >Loud</li>
+                  <li className='noise-4-li' >Very Loud</li>
+                </ul>
+              </div>
+              <div className='top-wrapper3-sec-3'>
+                <div className='sec-3-del'>
+                  Delivers:
+                </div>
+                <ul className='sec-3-del-options'>
+                  <li >
+                    Yes
+                  </li>
+                  <li>No</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

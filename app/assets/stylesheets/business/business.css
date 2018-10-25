@@ -590,16 +590,147 @@ align-items: end;
 
 .top-results-wrapper2{
   display: flex;
+  width: 100%;
   padding-right: 60px;
-  margin: 40px 0 40px 230px;
+  flex-direction: column;
   justify-content: space-evenly;
+}
+
+.top-category-results {
+  display: flex;
+  margin-left: 200px;
+}
+
+.top-results-wrapper3{
+  display: flex;
+  width: 85%;
+  justify-content: space-around;
+  margin-left: 130px;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.top-wrapper3-sec-1 {
+  display: flex;
+}
+
+.top-wrapper3-sec-2 {
+  display: flex;
+  width: 33%;
+  justify-content: space-around;
+}
+
+.sec-2-noise{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.sec-2-noise-levels {
+  display: flex;
+}
+
+.top-wrapper3-sec-3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sec-3-del-options {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+}
+
+.sec-3-del {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.sec-3-del-options li {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 15px;
+}
+
+.sec-1-li {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-2-li {
+  height: 30px;
+  width: 35px;
+  display: flex;
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-3-li {
+  height: 30px;
+  width: 40px;
+  display: flex;
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+}
+.sec-4-li {
+  height: 30px;
+  width: 45px;
+  display: flex;
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+}
+
+.noise-1-li {
+  height: 30px;
+  width: 55px;
+  display: flex;
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+}
+
+.noise-4-li {
+  height: 30px;
+  width: 85px;
+  display: flex;
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+}
+
+.noise-2-li {
+  height: 30px;
+  width: 75px;
+  display: flex;
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+}
+
+.noise-3-li {
+  height: 30px;
+  width: 55px;
+  display: flex;
+  border: 1px solid gray;
+  align-items: center;
+  justify-content: center;
 }
 
 .top-res-cat {
   font-size: 19px;
   line-height: 1.28571em;
   font-family: arial;
-  margin: auto;
   display: flex;
   padding-top: 1px;
   align-items: center;
