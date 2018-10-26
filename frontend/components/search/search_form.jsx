@@ -108,7 +108,6 @@ class SearchForm extends React.Component {
 
       )
     } else if (this.props.userLoggedIn === 'nav-sear-container-false'){
-      debugger
       return (
         <div className='login-signup-nav'>
         <Link className="log-in" to='/login'>  <div className='login-sear-nav'>

@@ -11,9 +11,19 @@ class SearchBusinessPage extends React.Component {
     super(props);
     this.state = {
       price: '',
+      noise: "",
+      delivery: ""
     };
-    this.pushToUrl = this.pushToUrl.bind(this);
-    this.pushTo = this.pushTo.bind(this);
+    this.priceOne = this.priceOne.bind(this);
+    this.priceTwo = this.priceTwo.bind(this);
+    this.priceThree = this.priceThree.bind(this);
+    this.priceFour = this.priceFour.bind(this);
+    this.noiseQuiet = this.noiseQuiet.bind(this);
+    this.noiseAverage = this.noiseAverage.bind(this);
+    this.noiseLoud = this.noiseLoud.bind(this);
+    this.noiseVeryLoud = this.noiseVeryLoud.bind(this);
+    this.deliveryYes = this.deliveryYes.bind(this);
+    this.deliveryNo = this.deliveryNo.bind(this);
   }
 
   componentDidMount() {
@@ -22,31 +32,106 @@ class SearchBusinessPage extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    debugger
 
     if (this.props.location.search.slice(1) !== nextProps.location.search.slice(1)){
       this.props.searchBusinesses(nextProps.location.search.slice(1));
     }
   }
 
-  pushToUrl(){
+  priceOne(){
     if (this.state.price === ""){
       this.setState({ price: '1' });
-      this.props.history.push(`/search?price=${this.state.price}`);
+      this.props.history.push(`/search`);
     } else {
       this.setState({ price: '' });
       this.props.history.push(`/search?price=${this.state.price}`);
     }
   }
-  pushTo(){
+  priceTwo(){
     if (this.state.price === ""){
       this.setState({ price: '2' });
-      this.props.history.push(`/search?price=${this.state.price}`);
+      this.props.history.push(`/search`);
     } else {
       this.setState({ price: '' });
       this.props.history.push(`/search?price=${this.state.price}`);
     }
+  }
+  priceThree(){
+    if (this.state.price === ""){
+      this.setState({ price: '3' });
+      this.props.history.push(`/search`);
+    } else {
+      this.setState({ price: '' });
+      this.props.history.push(`/search?price=${this.state.price}`);
+    }
+  }
+  priceFour(){
+    if (this.state.price === ""){
+      this.setState({ price: '4' });
+      this.props.history.push(`/search`);
+    } else {
+      this.setState({ price: '' });
+      this.props.history.push(`/search?price=${this.state.price}`);
+    }
+  }
 
+  noiseQuiet(){
+    if (this.state.noise === ""){
+      this.setState({ noise: 'quiet' });
+      this.props.history.push(`/search`);
+    } else {
+      this.setState({ noise: '' });
+      this.props.history.push(`/search?noise=${this.state.noise}`);
+    }
+  }
+
+  noiseAverage(){
+    if (this.state.noise === ""){
+      this.setState({ noise: 'average' });
+      this.props.history.push(`/search`);
+    } else {
+      this.setState({ noise: '' });
+      this.props.history.push(`/search?noise=${this.state.noise}`);
+    }
+  }
+
+  noiseLoud(){
+    if (this.state.noise === ""){
+      this.setState({ noise: 'loud' });
+      this.props.history.push(`/search`);
+    } else {
+      this.setState({ noise: '' });
+      this.props.history.push(`/search?noise=${this.state.noise}`);
+    }
+  }
+
+  noiseVeryLoud(){
+    if (this.state.noise === ""){
+      this.setState({ noise: 'very loud' });
+      this.props.history.push(`/search`);
+    } else {
+      this.setState({ noise: '' });
+      this.props.history.push(`/search?noise=${this.state.noise}`);
+    }
+  }
+
+  deliveryNo(){
+    if (this.state.delivery === ""){
+      this.setState({ delivery: "false" });
+      this.props.history.push(`/search`);
+    } else {
+      this.setState({ delivery: '' });
+      this.props.history.push(`/search?delivery=${this.state.delivery}`);
+    }
+  }
+  deliveryYes(){
+    if (this.state.delivery === ""){
+      this.setState({ delivery: "true" });
+      this.props.history.push(`/search`);
+    } else {
+      this.setState({ delivery: '' });
+      this.props.history.push(`/search?delivery=${this.state.delivery}`);
+    }
   }
 
   render() {
@@ -59,7 +144,6 @@ class SearchBusinessPage extends React.Component {
       cafe = businessCategory[2].id;
       boot = businessCategory[3].id;
     }
-
     let searchedBusinesses = this.props.searchedBusinesses.map( (business, idx) =>
        <Business key={business.id}  business={business} idx={idx} />
      );
@@ -109,20 +193,20 @@ class SearchBusinessPage extends React.Component {
             </div>
             <div className='top-results-wrapper3'>
               <ul className='top-wrapper3-sec-1'>
-                <li className='sec-1-li' onClick={this.pushToUrl}>$</li>
-                <li className='sec-2-li' onClick={this.pushTo}>$$</li>
-                <li className='sec-3-li'>$$$</li>
-                <li className='sec-4-li'>$$$$</li>
+                <li className='sec-1-li' onClick={this.priceOne}>$</li>
+                <li className='sec-2-li' onClick={this.priceTwo}>$$</li>
+                <li className='sec-3-li' onClick={this.priceThree}>$$$</li>
+                <li className='sec-4-li' onClick={this.priceFour}>$$$$</li>
               </ul>
               <div className='top-wrapper3-sec-2'>
                 <div className='sec-2-noise'>
                   Noise Level:
                 </div>
                 <ul className='sec-2-noise-levels'>
-                  <li className='noise-1-li'>Quiet</li>
-                  <li className='noise-2-li' >Average</li>
-                  <li className='noise-3-li' >Loud</li>
-                  <li className='noise-4-li' >Very Loud</li>
+                  <li className='noise-1-li' onClick={this.noiseQuiet}>Quiet</li>
+                  <li className='noise-2-li' onClick={this.noiseAverage}>Average</li>
+                  <li className='noise-3-li' onClick={this.noiseLoud}>Loud</li>
+                  <li className='noise-4-li' onClick={this.noiseVeryLoud}>Very Loud</li>
                 </ul>
               </div>
               <div className='top-wrapper3-sec-3'>
@@ -130,10 +214,10 @@ class SearchBusinessPage extends React.Component {
                   Delivers:
                 </div>
                 <ul className='sec-3-del-options'>
-                  <li >
+                  <li onClick={this.deliveryYes}>
                     Yes
                   </li>
-                  <li>No</li>
+                  <li onClick={this.deliveryNo}>No</li>
                 </ul>
               </div>
             </div>

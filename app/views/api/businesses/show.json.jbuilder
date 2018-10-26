@@ -10,6 +10,7 @@
     :website,
     :city ,
     :state,
+    :price,
     :zip_code,
     :price,
     :business_category_id,

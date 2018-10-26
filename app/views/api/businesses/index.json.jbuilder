@@ -7,6 +7,7 @@
       :name,
       :address,
       :hours,
+      :price,
       :phone_number,
       :website,
       :city ,

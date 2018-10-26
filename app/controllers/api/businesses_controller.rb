@@ -10,13 +10,18 @@ class Api::BusinessesController < ApplicationController
 
   def search
     # @business_categories = BusinessCategory.where('category ILIKE ?', "%#{params[:search]}%")
-
     if params[:search].include?("price")
-      debugger
-      @businesses = Business.where('price ILIKE ?', "%#{params[:search]}%")
-
+      price = params[:search][-1]
+      @businesses = Business.where(price: price)
+    elsif params[:search].include?("noise")
+      filter_by = params[:search].split("=")[-1]
+      @businesses = Business.where(noise: filter_by)
+    elsif params[:search].include?("delivery")
+      filter_by_two = params[:search].split("=")[-1]
+      @businesses = Business.where(delivery: filter_by_two)
+    else
+      @businesses = Business.where('name ILIKE ?', "%#{params[:search]}%")
     end
-    @businesses = Business.where('name ILIKE ?', "%#{params[:search]}%")
 
     render :index
   end
