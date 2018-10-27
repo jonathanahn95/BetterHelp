@@ -377,12 +377,14 @@
 } */
 
 .review-bus {
-  flex-wrap: wrap;
+
+flex-wrap: wrap;
 width: 70%;
 display: flex;
 padding-bottom: 50px;
 margin: auto;
-align-items: end;
+padding-left: 20px;
+justify-content: center;
 }
 /* .activity-wrapper {
   width: 30.33%;
