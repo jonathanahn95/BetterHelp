@@ -70,23 +70,27 @@ class Businesses extends React.Component {
 
           </h1>
         </header>
-        <ul className='ul-nav-bar-item2'>
-          <div className='nav-bar-container1'>
-            <Link className='nav-bar-container1-links' to={`/business_categories/${res}`}><i class="fas fa-utensils"></i><p >Restaurant</p></Link>
-            <Link className='nav-bar-container1-links' to={`/business_categories/${home}`}><i class="fas fa-home"></i><p >Home Services</p></Link>
-            <Link className='nav-bar-container1-links' to={`/business_categories/${cafe}`}><i class="fas fa-coffee"></i><p >Cafes</p></Link>
-            <Link className='nav-bar-container1-links' to={`/business_categories/${boot}`}><i class="fas fa-keyboard"></i><p >Bootcamps</p></Link>
-          </div>
-          <div className='review-bar-container1'>
-            <Link className='review-bar-container1-link' to={`/businesses/`}><i class="fas fa-pen"></i><p >Write a Review</p></Link>
-          </div>
-        </ul>
+        <div className='ul-nav-bar-item2-wrapper'>
+          <ul className='ul-nav-bar-item2'>
+            <div className='nav-bar-container1'>
+              <Link className='nav-bar-container1-links' to={`/business_categories/${res}`}><i className="fas fa-utensils"></i><p >Restaurant</p></Link>
+              <Link className='nav-bar-container1-links' to={`/business_categories/${home}`}><i className="fas fa-home"></i><p >Home Services</p></Link>
+              <Link className='nav-bar-container1-links' to={`/business_categories/${cafe}`}><i className="fas fa-coffee"></i><p >Cafes</p></Link>
+              <Link className='nav-bar-container1-links' to={`/business_categories/${boot}`}><i className="fas fa-keyboard"></i><p >Bootcamps</p></Link>
+            </div>
+            <div className='review-bar-container1'>
+              <Link className='review-bar-container1-link' to={`/businesses/`}><i className="fas fa-pen"></i><p >Write a Review</p></Link>
+            </div>
+          </ul>
+        </div>
+
 
           <div>
         </div>
         <div className='top-results-wrapper'>
           <div className='top-results-wrapper2'>
             <div className='top-category-results'>
+              <div className='top-category-results1'>
               <div className='top-res-name'>
                 <div className='top-results-home'>
                   Top {this.props.businessCategoryName} Results
@@ -94,6 +98,10 @@ class Businesses extends React.Component {
               </div>
               <div className='top-res-cat'>
                 in New York, NY
+              </div>
+            </div>
+              <div className='show-num-bus'>
+                Showing 1-{businesses.length} of 20
               </div>
             </div>
             <div className='top-results-wrapper3'>

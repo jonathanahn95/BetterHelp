@@ -438,12 +438,17 @@ border: 1px solid #ccc;
         </ul> */
 
 
-
+.ul-nav-bar-item2-wrapper {
+  background: #fafafa!important;
+width: 100%
+}
 
 .ul-nav-bar-item2 {
   display: flex;
   justify-content: space-evenly;
   height: 35px;
+  width: 97%;
+margin: auto;
   background: #fafafa!important;
 
 }

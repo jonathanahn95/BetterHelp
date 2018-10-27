@@ -55,17 +55,19 @@ class BusinessIndex extends React.Component {
                 <SearchFormContainer className={'nav-sear-container'}/>
             </h1>
           </header>
-          <ul className='ul-nav-bar-item2'>
-            <div className='nav-bar-container1'>
-              <Link className='nav-bar-container1-links' to={`/business_categories/${res}`}><i className="fas fa-utensils"></i><p >Restaurant</p></Link>
-              <Link className='nav-bar-container1-links' to={`/business_categories/${home}`}><i className="fas fa-home"></i><p >Home Services</p></Link>
-              <Link className='nav-bar-container1-links' to={`/business_categories/${cafe}`}><i className="fas fa-coffee"></i><p >Cafes</p></Link>
-              <Link className='nav-bar-container1-links' to={`/business_categories/${boot}`}><i className="fas fa-keyboard"></i><p >Bootcamps</p></Link>
-            </div>
-            <div className='review-bar-container1'>
-              <Link className='review-bar-container1-link' to={`/businesses/`}><i className="fas fa-pen"></i><p >Write a Review</p></Link>
-            </div>
-          </ul>
+          <div className='ul-nav-bar-item2-wrapper'>
+            <ul className='ul-nav-bar-item2'>
+              <div className='nav-bar-container1'>
+                <Link className='nav-bar-container1-links' to={`/business_categories/${res}`}><i className="fas fa-utensils"></i><p >Restaurant</p></Link>
+                <Link className='nav-bar-container1-links' to={`/business_categories/${home}`}><i className="fas fa-home"></i><p >Home Services</p></Link>
+                <Link className='nav-bar-container1-links' to={`/business_categories/${cafe}`}><i className="fas fa-coffee"></i><p >Cafes</p></Link>
+                <Link className='nav-bar-container1-links' to={`/business_categories/${boot}`}><i className="fas fa-keyboard"></i><p >Bootcamps</p></Link>
+              </div>
+              <div className='review-bar-container1'>
+                <Link className='review-bar-container1-link' to={`/businesses/`}><i className="fas fa-pen"></i><p >Write a Review</p></Link>
+              </div>
+            </ul>
+          </div>
 
           <div className='first-review-container'>
             <div className='awaits-container'>
