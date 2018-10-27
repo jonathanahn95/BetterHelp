@@ -10,7 +10,13 @@ class Api::BusinessesController < ApplicationController
 
   def search
     # @business_categories = BusinessCategory.where('category ILIKE ?', "%#{params[:search]}%")
-    if params[:search].include?("price")
+    if params["price2"]
+      price = params[:search][-1]
+      price2 = params["price2"].to_i
+      @bus = Business.where(price: price)
+      @bus1 = Business.where(price: price2)
+      @businesses = @bus1 + @bus
+    elsif params[:search].include?("price")
       price = params[:search][-1]
       @businesses = Business.where(price: price)
     elsif params[:search].include?("noise")
@@ -45,7 +51,7 @@ class Api::BusinessesController < ApplicationController
     .require(:business)
     .permit(:owner_id, :name, :address, :hours, :phone_number,
     :website, :city, :state, :zip_code,
-    :business_category_id, :latitude, :longitude, :price)
+    :business_category_id, :latitude, :longitude, :price, :delivery, :noise)
   end
 
 end

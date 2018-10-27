@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import SearchDropDown from '../search/search_drop_down';
 import BusinessCategory from '../business_category/business_category';
+import {DebounceInput} from 'react-debounce-input';
 
 class SearchForm extends React.Component {
   constructor(props){
@@ -14,7 +15,6 @@ class SearchForm extends React.Component {
       hidden: true
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.keydown = this.keydown.bind(this);
     this.toggleClass = this.toggleClass.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.toggleIcon = this.toggleIcon.bind(this);
@@ -40,19 +40,11 @@ class SearchForm extends React.Component {
   update(field){
     return (e) => {
       this.setState({
-        [field]: e.currentTarget.value,
+        [field]: e.target.value,
         dropdown: "show",
       });
       this.props.searchBusinesses(this.state.searchData);
     };
-  }
-
-  keydown(e) {
-    if (e.keyCode === 13) {
-      this.setState({dropdown: "hide"});
-    } else if (e.keyCode === 8 && this.state.searchData.length <= 1){
-      this.setState({dropdown: "hide"});
-    }
   }
 
   toggleClass() {
@@ -132,8 +124,14 @@ class SearchForm extends React.Component {
           <div className={'find' + `-${this.props.className}`}>
             Find
           </div>
-          <input placeholder="restaurants, bootcamps, cafes..." onChange={this.update('searchData')} className={"search" + `-${this.props.className} `}
-             onKeyDown={this.keydown} type="search" value={this.state.searchData}></input>
+          <DebounceInput
+           placeholder="restaurants, bootcamps, cafes..."
+           className={"search" + `-${this.props.className} `}
+           minLength={1}
+           debounceTimeout={300}
+           value={this.state.searchData}
+           onChange={this.update('searchData')} />
+
           <div className={'near' + `-${this.props.className}`}>
             Near
           </div>

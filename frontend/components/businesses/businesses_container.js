@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Businesses from './businesses';
 import { requestSelectedBusinessCategories } from '../../actions/businesses_actions';
 import { requestAllBusinessCategories } from '../../actions/business_category_actions';
+import { searchBusinesses } from '../../actions/search_actions';
 
 
 const msp = (state,ownProps) => {
@@ -28,6 +29,7 @@ const msp = (state,ownProps) => {
 
 const mdp = dispatch => {
   return {
+    searchBusinesses: (searchData) => dispatch(searchBusinesses(searchData)),
     requestSelectedBusinessCategories: (businessCategory) => dispatch(requestSelectedBusinessCategories(businessCategory)),
     requestAllBusinessCategories: () => dispatch(requestAllBusinessCategories())
 

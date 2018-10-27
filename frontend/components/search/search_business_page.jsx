@@ -14,16 +14,16 @@ class SearchBusinessPage extends React.Component {
       noise: "",
       delivery: ""
     };
-    this.priceOne = this.priceOne.bind(this);
-    this.priceTwo = this.priceTwo.bind(this);
-    this.priceThree = this.priceThree.bind(this);
-    this.priceFour = this.priceFour.bind(this);
-    this.noiseQuiet = this.noiseQuiet.bind(this);
-    this.noiseAverage = this.noiseAverage.bind(this);
-    this.noiseLoud = this.noiseLoud.bind(this);
-    this.noiseVeryLoud = this.noiseVeryLoud.bind(this);
-    this.deliveryYes = this.deliveryYes.bind(this);
-    this.deliveryNo = this.deliveryNo.bind(this);
+    // this.priceOne = this.priceOne.bind(this);
+    // this.priceTwo = this.priceTwo.bind(this);
+    // this.priceThree = this.priceThree.bind(this);
+    // this.priceFour = this.priceFour.bind(this);
+    // this.noiseQuiet = this.noiseQuiet.bind(this);
+    // this.noiseAverage = this.noiseAverage.bind(this);
+    // this.noiseLoud = this.noiseLoud.bind(this);
+    // this.noiseVeryLoud = this.noiseVeryLoud.bind(this);
+    // this.deliveryYes = this.deliveryYes.bind(this);
+    // this.deliveryNo = this.deliveryNo.bind(this);
   }
 
   componentDidMount() {
@@ -32,110 +32,38 @@ class SearchBusinessPage extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-
     if (this.props.location.search.slice(1) !== nextProps.location.search.slice(1)){
       this.props.searchBusinesses(nextProps.location.search.slice(1));
     }
   }
 
-  priceOne(){
-    if (this.state.price === ""){
-      this.setState({ price: '1' });
-      this.props.history.push(`/search`);
-    } else {
-      this.setState({ price: '' });
-      this.props.history.push(`/search?price=${this.state.price}`);
-    }
-  }
-  priceTwo(){
-    if (this.state.price === ""){
-      this.setState({ price: '2' });
-      this.props.history.push(`/search`);
-    } else {
-      this.setState({ price: '' });
-      this.props.history.push(`/search?price=${this.state.price}`);
-    }
-  }
-  priceThree(){
-    if (this.state.price === ""){
-      this.setState({ price: '3' });
-      this.props.history.push(`/search`);
-    } else {
-      this.setState({ price: '' });
-      this.props.history.push(`/search?price=${this.state.price}`);
-    }
-  }
-  priceFour(){
-    if (this.state.price === ""){
-      this.setState({ price: '4' });
-      this.props.history.push(`/search`);
-    } else {
-      this.setState({ price: '' });
-      this.props.history.push(`/search?price=${this.state.price}`);
-    }
-  }
+  update(field){
+    if (this.state.price === "") {
+      return (e) => {
 
-  noiseQuiet(){
-    if (this.state.noise === ""){
-      this.setState({ noise: 'quiet' });
-      this.props.history.push(`/search`);
+        this.setState({
+          [field]: e.target.value,
+        });
+        this.props.searchBusinesses(`price=${e.target.value}`);
+      };
     } else {
-      this.setState({ noise: '' });
-      this.props.history.push(`/search?noise=${this.state.noise}`);
-    }
-  }
-
-  noiseAverage(){
-    if (this.state.noise === ""){
-      this.setState({ noise: 'average' });
-      this.props.history.push(`/search`);
-    } else {
-      this.setState({ noise: '' });
-      this.props.history.push(`/search?noise=${this.state.noise}`);
-    }
-  }
-
-  noiseLoud(){
-    if (this.state.noise === ""){
-      this.setState({ noise: 'loud' });
-      this.props.history.push(`/search`);
-    } else {
-      this.setState({ noise: '' });
-      this.props.history.push(`/search?noise=${this.state.noise}`);
-    }
-  }
-
-  noiseVeryLoud(){
-    if (this.state.noise === ""){
-      this.setState({ noise: 'very loud' });
-      this.props.history.push(`/search`);
-    } else {
-      this.setState({ noise: '' });
-      this.props.history.push(`/search?noise=${this.state.noise}`);
-    }
-  }
-
-  deliveryNo(){
-    if (this.state.delivery === ""){
-      this.setState({ delivery: "false" });
-      this.props.history.push(`/search`);
-    } else {
-      this.setState({ delivery: '' });
-      this.props.history.push(`/search?delivery=${this.state.delivery}`);
-    }
-  }
-  deliveryYes(){
-    if (this.state.delivery === ""){
-      this.setState({ delivery: "true" });
-      this.props.history.push(`/search`);
-    } else {
-      this.setState({ delivery: '' });
-      this.props.history.push(`/search?delivery=${this.state.delivery}`);
+      return (e) => {
+        if (this.state.price === e.target.value){
+          this.setState({
+            [field]: "",
+          });
+          this.props.searchBusinesses(``);
+        } else {
+          this.setState({
+            [field]: e.target.value,
+          });
+          this.props.searchBusinesses(`price=${this.state.price}&price2=${e.target.value}`);
+        }
+      };
     }
   }
 
   render() {
-
     let res, home, cafe, boot;
     const businessCategory = this.props.businessCategories;
     if (businessCategory.length > 0){
@@ -193,20 +121,20 @@ class SearchBusinessPage extends React.Component {
             </div>
             <div className='top-results-wrapper3'>
               <ul className='top-wrapper3-sec-1'>
-                <li className='sec-1-li' onClick={this.priceOne}>$</li>
-                <li className='sec-2-li' onClick={this.priceTwo}>$$</li>
-                <li className='sec-3-li' onClick={this.priceThree}>$$$</li>
-                <li className='sec-4-li' onClick={this.priceFour}>$$$$</li>
+                <li className='sec-1-li' onClick={this.update(("price"))} value="1">$</li>
+                <li className='sec-2-li' onClick={this.update(("price"))} value="2">$$</li>
+                <li className='sec-3-li' onClick={this.update(("price"))} value="3">$$$</li>
+                <li className='sec-4-li' onClick={this.update(("price"))} value="4">$$$$</li>
               </ul>
               <div className='top-wrapper3-sec-2'>
                 <div className='sec-2-noise'>
                   Noise Level:
                 </div>
                 <ul className='sec-2-noise-levels'>
-                  <li className='noise-1-li' onClick={this.noiseQuiet}>Quiet</li>
-                  <li className='noise-2-li' onClick={this.noiseAverage}>Average</li>
-                  <li className='noise-3-li' onClick={this.noiseLoud}>Loud</li>
-                  <li className='noise-4-li' onClick={this.noiseVeryLoud}>Very Loud</li>
+                  <li className='noise-1-li'  onClick={this.update(("quiet"))} value="2">Quiet</li>
+                  <li className='noise-2-li'  onClick={this.update(("average"))} value="2">Average</li>
+                  <li className='noise-3-li'  onClick={this.update(("loud"))} value="2">Loud</li>
+                  <li className='noise-4-li' onClick={this.update(("very loud"))} value="2">Very Loud</li>
                 </ul>
               </div>
               <div className='top-wrapper3-sec-3'>
@@ -214,10 +142,10 @@ class SearchBusinessPage extends React.Component {
                   Delivers:
                 </div>
                 <ul className='sec-3-del-options'>
-                  <li onClick={this.deliveryYes}>
+                  <li>
                     Yes
                   </li>
-                  <li onClick={this.deliveryNo}>No</li>
+                  <li>No</li>
                 </ul>
               </div>
             </div>
