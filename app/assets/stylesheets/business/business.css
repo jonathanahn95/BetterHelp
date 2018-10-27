@@ -602,6 +602,23 @@ align-items: end;
   display: flex;
 }
 
+.selectedToggleClass{
+  background-color: rgb(196, 242, 164)!important;
+  border: 1px solid black!important;
+}
+.selectedToggleClass2{
+  background-color: rgb(196, 242, 164)!important;
+  border: 1px solid black!important;
+}
+.selectedToggleClass3{
+  background-color: rgb(196, 242, 164)!important;
+  border: 1px solid black!important;
+}
+.selectedToggleClass4{
+  background-color: rgb(196, 242, 164)!important;
+  border: 1px solid black!important;
+}
+
 .show-num-bus {
   font-family: arial;
 font-size: 14px;

@@ -9,15 +9,15 @@ import SearchDropDown from '../search/search_drop_down';
 class SearchBusinessPage extends React.Component {
   constructor(props){
     super(props);
-    this.state = {
-      price: '',
-      noise: "",
-      delivery: ""
-    };
-    // this.priceOne = this.priceOne.bind(this);
-    // this.priceTwo = this.priceTwo.bind(this);
-    // this.priceThree = this.priceThree.bind(this);
-    // this.priceFour = this.priceFour.bind(this);
+    this.price1 = "";
+    this.price2 = "";
+    this.price3 = "";
+    this.price4 = "";
+    this.priceOne = this.priceOne.bind(this);
+    this.priceTwo = this.priceTwo.bind(this);
+    this.priceThree = this.priceThree.bind(this);
+    this.priceFour = this.priceFour.bind(this);
+
     // this.noiseQuiet = this.noiseQuiet.bind(this);
     // this.noiseAverage = this.noiseAverage.bind(this);
     // this.noiseLoud = this.noiseLoud.bind(this);
@@ -36,35 +36,76 @@ class SearchBusinessPage extends React.Component {
       this.props.searchBusinesses(nextProps.location.search.slice(1));
     }
   }
-
-  update(field){
-    if (this.state.price === "") {
-      return (e) => {
-
-        this.setState({
-          [field]: e.target.value,
-        });
-        this.props.searchBusinesses(`price=${e.target.value}`);
-      };
-    } else {
-      return (e) => {
-        if (this.state.price === e.target.value){
-          this.setState({
-            [field]: "",
-          });
-          this.props.searchBusinesses(``);
-        } else {
-          this.setState({
-            [field]: e.target.value,
-          });
-          this.props.searchBusinesses(`price=${this.state.price}&price2=${e.target.value}`);
-        }
-      };
-    }
-  }
+  //
+  // update(field){
+  //   if (this.state.price === "") {
+  //     return (e) => {
+  //       debugger
+  //       this.setState({
+  //         [field]: e.target.value,
+  //       });
+  //       this.props.searchBusinesses(`price=${e.target.value}`);
+  //     };
+  //   } else {
+  //     return (e) => {
+  //       if (this.state.price === e.target.value){
+  //         this.setState({
+  //           [field]: "",
+  //         });
+  //         this.props.searchBusinesses(``);
+  //       } else {
+  //         this.setState({
+  //           [field]: e.target.value,
+  //         });
+  //         this.props.searchBusinesses(`price=${this.state.price}&price2=${e.target.value}`);
+  //       }
+  //     };
+  //   }
+  // }
 
   priceOne(){
-
+    if (this.price1 === ""){
+      this.price1 = 1;
+      this.props.searchBusinesses(`price=${this.price1}`);
+      this.toggleClass = `selectedToggleClass`;
+    } else {
+      this.price1 = "";
+      this.props.searchBusinesses(``);
+      this.toggleClass = '';
+    }
+  }
+  priceTwo(){
+    if (this.price2 === ""){
+      this.price2 = 2;
+      this.props.searchBusinesses(`price=${this.price2}`);
+      this.toggleClass2 = `selectedToggleClass2`;
+    } else {
+      this.price2 = "";
+      this.props.searchBusinesses(``);
+      this.toggleClass2 = '';
+    }
+  }
+  priceThree(){
+    if (this.price3 === ""){
+      this.price3 = 3;
+      this.props.searchBusinesses(`price=${this.price3}`);
+      this.toggleClass3 = `selectedToggleClass3`;
+    } else {
+      this.price3 = "";
+      this.props.searchBusinesses(``);
+      this.toggleClass3 = '';
+    }
+  }
+  priceFour(){
+    if (this.price4 === ""){
+      this.price4 = 4;
+      this.props.searchBusinesses(`price=${this.price4}`);
+      this.toggleClass4 = `selectedToggleClass4`;
+    } else {
+      this.price4 = "";
+      this.props.searchBusinesses(``);
+      this.toggleClass4 = '';
+    }
   }
 
   render() {
@@ -133,20 +174,20 @@ class SearchBusinessPage extends React.Component {
             </div>
             <div className='top-results-wrapper3'>
               <ul className='top-wrapper3-sec-1'>
-                <li className='sec-1-li' onClick={this.update(("price"))} value="1">$</li>
-                <li className='sec-2-li' onClick={this.update(("price"))} value="2">$$</li>
-                <li className='sec-3-li' onClick={this.update(("price"))} value="3">$$$</li>
-                <li className='sec-4-li' onClick={this.update(("price"))} value="4">$$$$</li>
+                <li className={`sec-1-li ${this.toggleClass}`} onClick={this.priceOne} value="1">$</li>
+                <li className={`sec-2-li ${this.toggleClass2}`} onClick={this.priceTwo} value="2">$$</li>
+                <li className={`sec-3-li ${this.toggleClass3}`} onClick={this.priceThree}value="3">$$$</li>
+                <li className={`sec-4-li ${this.toggleClass4}`} onClick={this.priceFour} value="4">$$$$</li>
               </ul>
               <div className='top-wrapper3-sec-2'>
                 <div className='sec-2-noise'>
                   Noise Level:
                 </div>
                 <ul className='sec-2-noise-levels'>
-                  <li className='noise-1-li'  onClick={this.update(("quiet"))} value="2">Quiet</li>
-                  <li className='noise-2-li'  onClick={this.update(("average"))} value="2">Average</li>
-                  <li className='noise-3-li'  onClick={this.update(("loud"))} value="2">Loud</li>
-                  <li className='noise-4-li' onClick={this.update(("very loud"))} value="2">Very Loud</li>
+                  <li className='noise-1-li'  >Quiet</li>
+                  <li className='noise-2-li' >Average</li>
+                  <li className='noise-3-li'  >Loud</li>
+                  <li className='noise-4-li' >Very Loud</li>
                 </ul>
               </div>
               <div className='top-wrapper3-sec-3'>
