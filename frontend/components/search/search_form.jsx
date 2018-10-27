@@ -53,7 +53,7 @@ class SearchForm extends React.Component {
    }
 
   toggleIcon(){
-    if (this.props.className === 'sear-container'){
+    if (this.props.show === 'false' ||this.props.className === 'sear-container'){
       return (
         <div></div>
       )

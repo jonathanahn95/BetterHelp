@@ -73,7 +73,7 @@ class BusinessIndex extends React.Component {
             <div className='awaits-container'>
                 <h1 className='write-first-review'>Your First Review Awaits</h1>
                 <h2 className='need-help-p'>Review your favorite businesses and share your experiences with our community. Need a little help getting started?</h2>
-                <div><SearchFormContainer className={'nav-sear-container'}/></div>
+                <div><SearchFormContainer show={'false'} className={'nav-sear-container'}/></div>
             </div>
             <img className="write-pic" src="https://s3.amazonaws.com/betterhelp-dev/first_review.png"></img>
           </div>
