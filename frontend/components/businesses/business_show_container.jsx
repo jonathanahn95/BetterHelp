@@ -16,6 +16,7 @@ const msp = (state,ownProps) => {
   return {
     business: fetchedBusiness,
     reviews: reviews,
+    currentUser: state.entities.users[state.session.id],
     session: state.session.id,
     businessCategories: Object.values(state.entities.businessCategories)
   };

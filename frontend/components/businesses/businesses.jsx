@@ -56,7 +56,6 @@ class Businesses extends React.Component {
 
     let brandName;
     if (this.props.currentUser){
-      debugger
       brandName = 'small-brand-name2'
     } else {
       brandName = 'small-brand-name'

@@ -15,6 +15,7 @@ class SplashReviews extends React.Component {
 
   render() {
     const review = this.props.review;
+    debugger
     const user = this.props.review.user;
     const business = this.props.business;
     const businessLength = Object.values(this.props.business).length;

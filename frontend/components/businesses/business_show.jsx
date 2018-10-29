@@ -54,7 +54,16 @@ class BusinessShow extends React.Component {
     }
   }
 
+
+
   render() {
+    let brandName;
+    if (this.props.currentUser){
+      brandName = 'small-brand-name2'
+    } else {
+      brandName = 'small-brand-name'
+    }
+    
     const business = this.props.business;
     if(!business) {
       return (
@@ -115,7 +124,7 @@ class BusinessShow extends React.Component {
       <div>
         <header className="login-header">
           <h1 className="login-head">
-            <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
+            <Link to="/"><img className={brandName} src={window.betterHelpSplash}></img></Link>
               <SearchFormContainer className={'nav-sear-container'}/>
 
           </h1>
@@ -271,5 +280,3 @@ class BusinessShow extends React.Component {
 }
 
 export default withRouter(BusinessShow);
-
-// <Route path="" component={bic} render(()=>{}</Route>)

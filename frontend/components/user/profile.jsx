@@ -41,12 +41,20 @@ class Profile extends React.Component {
       })
 	}
 
+  let brandName;
+  if (this.props.currentUser){
+    brandName = 'small-brand-name2'
+  } else {
+    brandName = 'small-brand-name'
+  }
+
+
 
     return (
       <div>
         <header className="login-header">
           <h1 className="login-head">
-            <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
+            <Link to="/"><img className={brandName} src={window.betterHelpSplash}></img></Link>
               <SearchFormContainer className={'nav-sear-container'}/>
 
           </h1>

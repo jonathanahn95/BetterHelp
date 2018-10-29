@@ -35,8 +35,6 @@ export const removeReview = review => {
   };
 };
 
-
-
 export const fetchAllReviews = businessId => {
   return dispatch => {
     return ReviewApiUtil.fetchAllReviews(businessId).then( reviews => {
@@ -77,6 +75,16 @@ export const updateReview = review => {
       return dispatch(receiveReview(review));
     }, errors => {
       return dispatch(receiveReviewErrors(errors.responseJSON));
+    });
+  };
+};
+
+export const updateReviewAttribute = review => {
+  debugger
+  return dispatch => {
+    return ReviewApiUtil.updateReview(review).then( review => {
+      debugger
+      return dispatch(receiveReview(review));
     });
   };
 };

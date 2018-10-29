@@ -500,3 +500,74 @@ font-weight: bold;
   font-size: 13px;
   font-weight: bold;
 }
+
+.bonus-container {
+
+    display: flex;
+    padding-top: 30px;
+        justify-content: space-between;}
+
+.three-options {
+  display: flex;
+}
+
+.three-options li {
+
+      border-radius: 3px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+      background: linear-gradient(#fff, #f7f7f7);
+      border-color: #ccc;
+      color: #666;
+      background-color: #f7f7f7;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      cursor: pointer;
+      padding: 8px 10px;
+      font-size: 12px;
+      border: 1px solid;
+      margin-right: 4px;
+      width: 100%;
+      display: flex;
+      font-weight: bold;
+      font-family: arial;
+      text-align: center;
+}
+
+.like {
+
+      border-radius: 3px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+      background: linear-gradient(#fff, #f7f7f7);
+      border-color: #ccc;
+      color: #666;
+      background-color: #f7f7f7;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      cursor: pointer;
+      padding: 8px 10px;
+      font-size: 12px;
+      border: 1px solid;
+      margin-right: 4px;
+      display: flex;
+      font-weight: bold;
+      font-family: arial;
+      text-align: center;
+}
+
+.useful {
+  padding: 0 5px;
+}
+
+.funny {
+  padding: 0 5px;
+}
+
+.cool {
+  padding: 0 5px;
+}
+
+.like1 {
+  padding: 0 5px;
+}
