@@ -51,8 +51,7 @@ export default (state = {}, action) => {
       newState[businessId].reviews = reviews;
       return newState;
       case RECEIVE_SEARCH_RESULTS:
-
-        return merge({}, state, action.results);
+        return action.results;
     default:
       return state;
   }

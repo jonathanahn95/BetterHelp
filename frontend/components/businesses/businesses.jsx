@@ -7,17 +7,83 @@ import BusinessMap from '../map/business_map';
 import SearchFormContainer from '../search/search_form_container';
 
 class Businesses extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      price: [],
+      noise: [],
+      delivery: [],
+    };
+    this.addtoArray = this.addtoArray.bind(this);
+  }
+
   componentDidMount() {
     this.props.requestSelectedBusinessCategories(this.props.category);
     this.props.requestAllBusinessCategories();
   }
 
-  componentDidUpdate(previousProps) {
-    // gets hit anytime comp receive new props/new state
-    // works same as componentWillReceiveProps
-    if (previousProps.category !== this.props.category)
-    {
-      this.props.requestSelectedBusinessCategories(this.props.category);
+  // componentDidUpdate(previousProps,nextState) {
+  //   debugger
+  //   // gets hit anytime comp receive new props/new state
+  //   // works same as componentWillReceiveProps
+  //   if (this.state !== nextState){
+  //     // debugger
+  //     this.props.searchBusinesses(nextState);
+  //   }
+  //   if (previousProps.category !== this.props.category){
+  //     this.props.requestSelectedBusinessCategories(this.props.category);
+  //   }
+  // }
+
+  componentWillUpdate(nextProps, nextState) {
+    if (this.state !== nextState){
+      // debugger
+      this.props.searchBusinesses(this.generateQuery(nextState));
+    } else if (nextProps.category !== this.props.category){
+      this.setState({
+        price: [],
+        noise: [],
+        delivery: [],
+      });
+      this.props.requestSelectedBusinessCategories(nextProps.category);
+    }
+  }
+
+  generateQuery(nextState) {
+    const queries = Object.keys(nextState);
+    let queryString = '';
+    queries.forEach(query => {
+      queryString += `${query}=(${nextState[query]})&`;
+    });
+    return queryString;
+  }
+
+
+  addtoArray(field){
+    return(e) => {
+      const val = e.target.value;
+
+      let newArr = this.state[field];
+      if (newArr.includes(val)){
+        newArr = newArr.filter( ele => ele !== val);
+      } else {
+        newArr.push(val);
+      }
+      this.setState({
+        [field]: newArr
+      });
+    };
+  }
+
+  renderToggle(type,val){
+    if (type === 'price' &&  this.state.price.includes(val)){
+      return `${type}-${val}-li-toggle`;
+    } else if (type === 'noise' && this.state.noise.includes(val)){
+      return `${type}-${val}-li-toggle`;
+    } else if (type === 'delivery' && this.state.delivery.includes(val)){
+      return `${type}-${val}-li-toggle`;
+    } else {
+      return `${type}-${val}-li`;
     }
   }
 
@@ -38,6 +104,25 @@ class Businesses extends React.Component {
       }
     });
 
+
+
+    let businesses = selectedBusCategories.map( (business, idx) =>
+        <Business key={business.id}  business={business}  idx={idx}/>)
+
+    if (this.state.price.length > 0 || this.state.noise.length > 0 || this.state.delivery.length > 0){
+      businesses = this.props.businesses.map( (business, idx) =>
+          <Business key={business.id}  business={business}  idx={idx}/>)
+      selectedBusCategories = this.props.businesses
+    }
+
+    let brandName;
+    if (this.props.currentUser){
+      brandName = 'small-brand-name2'
+    } else {
+      brandName = 'small-brand-name'
+    }
+
+
     let map;
     if (this.props.businesses.length > 0){
       map =
@@ -48,17 +133,6 @@ class Businesses extends React.Component {
           <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
         </div>
       </div>
-    }
-
-    const businesses = selectedBusCategories.map( (business, idx) =>
-        <Business key={business.id}  business={business}  idx={idx}/>)
-
-
-    let brandName;
-    if (this.props.currentUser){
-      brandName = 'small-brand-name2'
-    } else {
-      brandName = 'small-brand-name'
     }
     return (
       <div>
@@ -105,20 +179,20 @@ class Businesses extends React.Component {
             </div>
             <div className='top-results-wrapper3'>
               <ul className='top-wrapper3-sec-1'>
-                <li className='sec-1-li'>$</li>
-                <li className='sec-2-li'>$$</li>
-                <li className='sec-3-li'>$$$</li>
-                <li className='sec-4-li'>$$$$</li>
+                <li className={this.renderToggle('price',1)} onClick={this.addtoArray('price')} value="1">$</li>
+                <li className={this.renderToggle('price',2)} onClick={this.addtoArray('price')} value="2">$$</li>
+                <li className={this.renderToggle('price',3)} onClick={this.addtoArray('price')} value="3">$$$</li>
+                <li className={this.renderToggle('price',4)} onClick={this.addtoArray('price')} value="4">$$$$</li>
               </ul>
               <div className='top-wrapper3-sec-2'>
                 <div className='sec-2-noise'>
                   Noise Level:
                 </div>
                 <ul className='sec-2-noise-levels'>
-                  <li className='noise-1-li'>Quiet</li>
-                  <li className='noise-2-li' >Average</li>
-                  <li className='noise-3-li' >Loud</li>
-                  <li className='noise-4-li' >Very Loud</li>
+                  <li className={this.renderToggle('noise',1)} onClick={this.addtoArray('noise')} value="1"  >Quiet</li>
+                  <li className={this.renderToggle('noise',2)} onClick={this.addtoArray('noise')} value='2' >Average</li>
+                  <li className={this.renderToggle('noise',3)} onClick={this.addtoArray('noise')} value='3'  >Loud</li>
+                  <li className={this.renderToggle('noise',4)} onClick={this.addtoArray('noise')} value='4' >Very Loud</li>
                 </ul>
               </div>
               <div className='top-wrapper3-sec-3'>
@@ -126,10 +200,10 @@ class Businesses extends React.Component {
                   Delivers:
                 </div>
                 <ul className='sec-3-del-options'>
-                  <li >
+                  <li  className={this.renderToggle('delivery',1)} onClick={this.addtoArray('delivery')} value='1'>
                     Yes
                   </li>
-                  <li>No</li>
+                  <li className={this.renderToggle('delivery',0)} onClick={this.addtoArray('delivery')} value='0'>No</li>
                 </ul>
               </div>
             </div>

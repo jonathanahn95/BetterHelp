@@ -13,9 +13,8 @@ const receiveSearchResults = results => {
 };
 
 export const searchBusinesses = searchData => dispatch => {
-   // debugger
+  debugger
   return SearchApiUtil.searchBusinesses(searchData).then( results => {
-    // debugger
     return dispatch(receiveSearchResults(results));
   });
 };

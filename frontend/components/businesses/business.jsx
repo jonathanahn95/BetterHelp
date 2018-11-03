@@ -15,6 +15,7 @@ class Business extends React.Component {
   //  }
 
   render() {
+    
 
     const review = this.props.business.reviews;
     const reviewCount = review ? review.length : 0;
