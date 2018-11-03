@@ -9,21 +9,12 @@ import SearchDropDown from '../search/search_drop_down';
 class SearchBusinessPage extends React.Component {
   constructor(props){
     super(props);
-    this.price1 = "";
-    this.price2 = "";
-    this.price3 = "";
-    this.price4 = "";
-    this.priceOne = this.priceOne.bind(this);
-    this.priceTwo = this.priceTwo.bind(this);
-    this.priceThree = this.priceThree.bind(this);
-    this.priceFour = this.priceFour.bind(this);
-
-    // this.noiseQuiet = this.noiseQuiet.bind(this);
-    // this.noiseAverage = this.noiseAverage.bind(this);
-    // this.noiseLoud = this.noiseLoud.bind(this);
-    // this.noiseVeryLoud = this.noiseVeryLoud.bind(this);
-    // this.deliveryYes = this.deliveryYes.bind(this);
-    // this.deliveryNo = this.deliveryNo.bind(this);
+    this.state = {
+      price: [],
+      noise: [],
+      delivery: [],
+    };
+    this.addtoArray = this.addtoArray.bind(this);
   }
 
   componentDidMount() {
@@ -31,84 +22,98 @@ class SearchBusinessPage extends React.Component {
     this.props.requestAllBusinessCategories();
   }
 
-  componentWillReceiveProps(nextProps){
-    if (this.props.location.search.slice(1) !== nextProps.location.search.slice(1)){
-      this.props.searchBusinesses(nextProps.location.search.slice(1));
-    }
-  }
-  //
-  // update(field){
-  //   if (this.state.price === "") {
-  //     return (e) => {
-  //       debugger
-  //       this.setState({
-  //         [field]: e.target.value,
-  //       });
-  //       this.props.searchBusinesses(`price=${e.target.value}`);
-  //     };
-  //   } else {
-  //     return (e) => {
-  //       if (this.state.price === e.target.value){
-  //         this.setState({
-  //           [field]: "",
-  //         });
-  //         this.props.searchBusinesses(``);
-  //       } else {
-  //         this.setState({
-  //           [field]: e.target.value,
-  //         });
-  //         this.props.searchBusinesses(`price=${this.state.price}&price2=${e.target.value}`);
-  //       }
-  //     };
+  // componentWillReceiveProps(nextProps){
+  //   debugger
+  //   if (this.props.location.search.slice(1) !== nextProps.location.search.slice(1)){
+  //     this.props.searchBusinesses(nextProps.location.search.slice(1));
   //   }
   // }
 
-  priceOne(){
-    if (this.price1 === ""){
-      this.price1 = 1;
-      this.props.searchBusinesses(`price=${this.price1}`);
-      this.toggleClass = `selectedToggleClass`;
-    } else {
-      this.price1 = "";
-      this.props.searchBusinesses(``);
-      this.toggleClass = '';
-    }
-  }
-  priceTwo(){
-    if (this.price2 === ""){
-      this.price2 = 2;
-      this.props.searchBusinesses(`price=${this.price2}`);
-      this.toggleClass2 = `selectedToggleClass2`;
-    } else {
-      this.price2 = "";
-      this.props.searchBusinesses(``);
-      this.toggleClass2 = '';
-    }
-  }
-  priceThree(){
-    if (this.price3 === ""){
-      this.price3 = 3;
-      this.props.searchBusinesses(`price=${this.price3}`);
-      this.toggleClass3 = `selectedToggleClass3`;
-    } else {
-      this.price3 = "";
-      this.props.searchBusinesses(``);
-      this.toggleClass3 = '';
-    }
-  }
-  priceFour(){
-    if (this.price4 === ""){
-      this.price4 = 4;
-      this.props.searchBusinesses(`price=${this.price4}`);
-      this.toggleClass4 = `selectedToggleClass4`;
-    } else {
-      this.price4 = "";
-      this.props.searchBusinesses(``);
-      this.toggleClass4 = '';
+  componentWillUpdate(nextProps, nextState) {
+    if (this.state !== nextState){
+      this.props.searchBusinesses(nextState);
     }
   }
 
+  addtoArray(field){
+    return(e) => {
+      const val = e.target.value;
+
+      let newArr = this.state[field];
+      if (newArr.includes(val)){
+        newArr = newArr.filter( ele => ele !== val);
+        this.toggle(field,val);
+      } else {
+        newArr.push(val);
+        this.toggle(field,val);
+      }
+      this.setState({
+        [field]: newArr
+      });
+    };
+  }
+
+  toggle(type,val){
+    debugger
+    if (type === 'price' &&  this.state.price.includes(val)){
+      return `${type}-${val}-li-toggle`;
+    } else if (type === 'noise' && this.state.noise.includes(val)){
+      return `${type}-${val}-li-toggle`;
+    } else if (type === 'delivery' && this.state.delivery.includes(val)){
+      return `${type}-${val}-li-toggle`;
+    } else {
+      return `${type}-${val}-li`;
+    }
+  }
+
+  //
+  // priceOne(){
+  //   if (this.price1 === ""){
+  //     this.price1 = 1;
+  //     this.props.searchBusinesses(`price=${this.price1}`);
+  //     this.toggleClass = `selectedToggleClass`;
+  //   } else {
+  //     this.price1 = "";
+  //     this.props.searchBusinesses(``);
+  //     this.toggleClass = '';
+  //   }
+  // }
+  // priceTwo(){
+  //   if (this.price2 === ""){
+  //     this.price2 = 2;
+  //     this.props.searchBusinesses(`price=${this.price2}`);
+  //     this.toggleClass2 = `selectedToggleClass2`;
+  //   } else {
+  //     this.price2 = "";
+  //     this.props.searchBusinesses(``);
+  //     this.toggleClass2 = '';
+  //   }
+  // }
+  // priceThree(){
+  //   if (this.price3 === ""){
+  //     this.price3 = 3;
+  //     this.props.searchBusinesses(`price=${this.price3}`);
+  //     this.toggleClass3 = `selectedToggleClass3`;
+  //   } else {
+  //     this.price3 = "";
+  //     this.props.searchBusinesses(``);
+  //     this.toggleClass3 = '';
+  //   }
+  // }
+  // priceFour(){
+  //   if (this.price4 === ""){
+  //     this.price4 = 4;
+  //     this.props.searchBusinesses(`price=${this.price4}`);
+  //     this.toggleClass4 = `selectedToggleClass4`;
+  //   } else {
+  //     this.price4 = "";
+  //     this.props.searchBusinesses(``);
+  //     this.toggleClass4 = '';
+  //   }
+  // }
+
   render() {
+    console.log(this.state);
     let res, home, cafe, boot;
     const businessCategory = this.props.businessCategories;
     if (businessCategory.length > 0){
@@ -131,7 +136,7 @@ class SearchBusinessPage extends React.Component {
        brandName = 'small-brand-name'
      }
 
-
+     // debugger
     return (
       <div>
         <header className="login-header">
@@ -174,20 +179,20 @@ class SearchBusinessPage extends React.Component {
             </div>
             <div className='top-results-wrapper3'>
               <ul className='top-wrapper3-sec-1'>
-                <li className={`sec-1-li ${this.toggleClass}`} onClick={this.priceOne} value="1">$</li>
-                <li className={`sec-2-li ${this.toggleClass2}`} onClick={this.priceTwo} value="2">$$</li>
-                <li className={`sec-3-li ${this.toggleClass3}`} onClick={this.priceThree}value="3">$$$</li>
-                <li className={`sec-4-li ${this.toggleClass4}`} onClick={this.priceFour} value="4">$$$$</li>
+                <li className={this.toggle('price',1)} onClick={this.addtoArray('price')} value="1">$</li>
+                <li className={this.toggle('price',2)} onClick={this.addtoArray('price')} value="2">$$</li>
+                <li className={this.toggle('price',3)} onClick={this.addtoArray('price')} value="3">$$$</li>
+                <li className={this.toggle('price',4)} onClick={this.addtoArray('price')} value="4">$$$$</li>
               </ul>
               <div className='top-wrapper3-sec-2'>
                 <div className='sec-2-noise'>
                   Noise Level:
                 </div>
                 <ul className='sec-2-noise-levels'>
-                  <li className='noise-1-li'  >Quiet</li>
-                  <li className='noise-2-li' >Average</li>
-                  <li className='noise-3-li'  >Loud</li>
-                  <li className='noise-4-li' >Very Loud</li>
+                  <li className={this.toggle('noise',1)} onClick={this.addtoArray('noise')} value="1"  >Quiet</li>
+                  <li className={this.toggle('noise',2)} onClick={this.addtoArray('noise')} value='2' >Average</li>
+                  <li className={this.toggle('noise',3)} onClick={this.addtoArray('noise')} value='3'  >Loud</li>
+                  <li className={this.toggle('noise',4)} onClick={this.addtoArray('noise')} value='4' >Very Loud</li>
                 </ul>
               </div>
               <div className='top-wrapper3-sec-3'>
@@ -195,10 +200,10 @@ class SearchBusinessPage extends React.Component {
                   Delivers:
                 </div>
                 <ul className='sec-3-del-options'>
-                  <li>
+                  <li  className={this.toggle('delivery',1)} onClick={this.addtoArray('delivery')} value='1'>
                     Yes
                   </li>
-                  <li>No</li>
+                  <li className={this.toggle('delivery',0)} onClick={this.addtoArray('delivery')} value='0'>No</li>
                 </ul>
               </div>
             </div>

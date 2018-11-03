@@ -9,22 +9,66 @@ class Api::BusinessesController < ApplicationController
   end
 
   def search
+
     # @business_categories = BusinessCategory.where('category ILIKE ?', "%#{params[:search]}%")
-    if params["price2"]
-      price = params[:search][-1]
-      price2 = params["price2"].to_i
-      @bus = Business.where(price: price)
-      @bus1 = Business.where(price: price2)
-      @businesses = @bus1 + @bus
-    elsif params[:search].include?("price")
-      price = params[:search][-1]
-      @businesses = Business.where(price: price)
-    elsif params[:search].include?("noise")
-      filter_by = params[:search].split("=")[-1]
-      @businesses = Business.where(noise: filter_by)
-    elsif params[:search].include?("delivery")
-      filter_by_two = params[:search].split("=")[-1]
-      @businesses = Business.where(delivery: filter_by_two)
+    @businesses = []
+    if params[:price] && params[:noise] && params[:delivery]
+      prices = params[:price].split(",")
+      prices.each do |price|
+        @businesses =  @businesses + Business.where(price: price.to_i)
+      end
+      noises =  params[:noise].split(",")
+      noises.each do |noise|
+        @businesses = @businesses.select { |bus| bus.noise == noise.to_i} + Business.where(noise: noise.to_i)
+      end
+      deliveries =  params[:delivery].split(",")
+      deliveries.each do |delivery|
+        @businesses = @businesses.select { |bus| bus.delivery == delivery.to_i} + Business.where(delivery: delivery.to_i)
+      end
+    elsif params[:price] && params[:noise]
+      prices = params[:price].split(",")
+      prices.each do |price|
+        @businesses =  @businesses + Business.where(price: price.to_i)
+      end
+      noises =  params[:noise].split(",")
+      noises.each do |noise|
+        @businesses = @businesses.select { |bus| bus.noise == noise.to_i} + Business.where(noise: noise.to_i)
+      end
+    elsif params[:price] && params[:delivery]
+      prices = params[:price].split(",")
+      prices.each do |price|
+        @businesses =  @businesses + Business.where(price: price.to_i)
+      end
+      deliveries =  params[:delivery].split(",")
+      deliveries.each do |delivery|
+        @businesses = @businesses.select { |bus| bus.delivery == delivery.to_i} + Business.where(delivery: delivery.to_i)
+      end
+    elsif params[:noise] && params[:delivery]
+      noises = params[:noise].split(",")
+      noises.each do |noise|
+        @businesses =  @businesses + Business.where(noise: noise.to_i)
+      end
+      deliveries =  params[:delivery].split(",")
+      deliveries.each do |delivery|
+        @businesses = @businesses.select { |bus| bus.delivery == delivery.to_i} + Business.where(delivery: delivery.to_i)
+      end
+    elsif params[:noise]
+      noises =  params[:noise].split(",")
+      noises.each do |noise|
+        @businesses = @businesses + Business.where(noise: noise.to_i)
+      end
+    elsif params[:delivery]
+      deliveries = params[:delivery].split(",")
+      deliveries.each do |delivery|
+        @businesses =  @businesses + Business.where(delivery: delivery.to_i)
+      end
+    elsif params[:price]
+      prices = params[:price].split(",")
+      prices.each do |price|
+        @businesses =  @businesses + Business.where(price: price.to_i)
+      end
+    elsif params[:search] == "[object Object]"
+      @businesses = Business.where('name ILIKE ?', "%%")
     else
       @businesses = Business.where('name ILIKE ?', "%#{params[:search]}%")
     end

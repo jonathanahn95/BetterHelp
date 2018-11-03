@@ -42,7 +42,7 @@ const App = () => (
         <ul className='connect-list'>
           Connect
           <a href="https://github.com/jonathanahn95/">GitHub</a>
-          <a href="https://www.linkedin.com/in/jonathan-ahn-28981211b/">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/jonathanahn95/">LinkedIn</a>
           <a href="https://angel.co/jonathan-ahn-1">Angel List</a>
 
         </ul>

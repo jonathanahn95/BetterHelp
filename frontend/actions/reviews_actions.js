@@ -80,10 +80,10 @@ export const updateReview = review => {
 };
 
 export const updateReviewAttribute = review => {
-  debugger
+   
   return dispatch => {
     return ReviewApiUtil.updateReview(review).then( review => {
-      debugger
+       
       return dispatch(receiveReview(review));
     });
   };
