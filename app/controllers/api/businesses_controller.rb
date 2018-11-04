@@ -81,19 +81,26 @@ class Api::BusinessesController < ApplicationController
 
     # Business.where(price: param_queries[:price].slice(1..-2).split(","),noise:1,delivery:1)
     # Business.where(price: 1,noise: 1,delivery:1)
-    # debugger
-    query_matches = ""
-    param_queries = {price: params[:price], noise: params[:noise], delivery: params[:delivery]}
-    selected_queries = param_queries.select {|k,v| v.length > 2}
-    selected_queries.keys.each_with_index do |query,idx|
-      if idx != selected_queries.length - 1
-        query_matches << "#{query} IN  #{selected_queries[query]} AND "
-      else
-        query_matches << "#{query} IN  #{selected_queries[query]} "
+
+    if params[:dropdown]
+      @businesses = Business.where('name ILIKE ?', "%#{params[:name]}%")
+    else
+      query_matches = ""
+      param_queries = {price: params[:price], noise: params[:noise], delivery: params[:delivery],name: params[:name]}
+      selected_queries = param_queries.select {|k,v| v.length > 2}
+      selected_queries.keys.each_with_index do |query,idx|
+        if idx != selected_queries.length - 1
+          query_matches << "#{query} IN  #{selected_queries[query]} AND "
+        else
+          query_matches << "#{query} IN  #{selected_queries[query]} "
+        end
       end
+      # Business.where("price IN  (3,4) AND  noise IN (1)")
+      @businesses = Business.where(query_matches)
+
+
     end
-    # Business.where("price IN  (3,4) AND  noise IN (1)")
-    @businesses = Business.where(query_matches)
+
     render :index
   end
 

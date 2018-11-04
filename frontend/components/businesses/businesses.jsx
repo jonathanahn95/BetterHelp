@@ -13,6 +13,7 @@ class Businesses extends React.Component {
       price: [],
       noise: [],
       delivery: [],
+      name: ''
     };
     this.addtoArray = this.addtoArray.bind(this);
   }
@@ -23,11 +24,9 @@ class Businesses extends React.Component {
   }
 
   // componentDidUpdate(previousProps,nextState) {
-  //   debugger
   //   // gets hit anytime comp receive new props/new state
   //   // works same as componentWillReceiveProps
   //   if (this.state !== nextState){
-  //     // debugger
   //     this.props.searchBusinesses(nextState);
   //   }
   //   if (previousProps.category !== this.props.category){
@@ -37,7 +36,6 @@ class Businesses extends React.Component {
 
   componentWillUpdate(nextProps, nextState) {
     if (this.state !== nextState){
-      // debugger
       this.props.searchBusinesses(this.generateQuery(nextState));
     } else if (nextProps.category !== this.props.category){
       this.setState({

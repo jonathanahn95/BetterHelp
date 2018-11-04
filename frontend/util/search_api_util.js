@@ -1,5 +1,4 @@
 // export const searchBusinesses = (searchData) => {
-// // debugger
 // if (searchData.price && searchData.price.length > 0 && searchData.noise && searchData.noise.length > 0 && searchData.delivery && searchData.delivery.length > 0){
 //   return $.ajax({
 //     method: 'GET',
@@ -16,13 +15,11 @@
 //     url: `api/businesses/search/?price=${searchData.price}&delivery=${searchData.delivery}`,
 //   });
 // } else if (searchData.noise && searchData.noise.length > 0 && searchData.delivery && searchData.delivery.length > 0) {
-//   debugger
 //   return $.ajax({
 //     method: 'GET',
 //     url: `api/businesses/search/?noise=${searchData.noise}&delivery=${searchData.delivery}`,
 //   });
 // } else if (searchData.price && searchData.price.length > 0) {
-//   debugger
 //   return $.ajax({
 //     method: 'GET',
 //     url: `api/businesses/search/?price=${searchData.price}`,
@@ -45,7 +42,6 @@
 // }};
 
 export const searchBusinesses = (query)  => {
-  debugger
 	return $.ajax({
 		method: 'GET',
 		url: `api/businesses/search/?${query}`

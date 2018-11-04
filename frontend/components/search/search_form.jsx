@@ -9,7 +9,7 @@ class SearchForm extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      searchData: '',
+      name: '',
       searchLocation: '',
       dropdown: "show",
       hidden: true
@@ -25,6 +25,11 @@ class SearchForm extends React.Component {
   //
   // }
 
+  componentDidMount(){
+    this.setState({
+      name: ''
+    });
+  }
 
   handleClick(e) {
     e.preventDefault();
@@ -33,8 +38,9 @@ class SearchForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.searchBusinesses(this.state.searchData);
-    this.props.history.push(`/search?${this.state.searchData}`);
+    this.props.searchBusinesses(this.state.name);
+    this.setState({ name: ''});
+    this.props.history.push(`/search?${this.state.name}`);
   }
 
   update(field){
@@ -43,7 +49,7 @@ class SearchForm extends React.Component {
         [field]: e.target.value,
         dropdown: "show",
       });
-      this.props.searchBusinesses(this.state.searchData);
+      this.props.searchBusinesses(`dropdown=(true)&price=()&noise=()&delivery=()&name=${this.state.name}`);
     };
   }
 
@@ -115,7 +121,7 @@ class SearchForm extends React.Component {
 
   render() {
     let searchedBusinesses1 = this.props.searchedBusinesses.map( (business, idx) =>
-       <SearchDropDown key={business.id}  business={business} idx={idx} searchData={this.state.searchData}/>
+       <SearchDropDown key={business.id}  business={business} idx={idx} name={this.state.name} />
      );
 
     return (
@@ -129,8 +135,8 @@ class SearchForm extends React.Component {
            className={"search" + `-${this.props.className} `}
            minLength={1}
            debounceTimeout={300}
-           value={this.state.searchData}
-           onChange={this.update('searchData')} />
+           value={this.state.name}
+           onChange={this.update('name')} />
 
           <div className={'near' + `-${this.props.className}`}>
             Near

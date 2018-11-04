@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 class SearchDropDown extends React.Component {
 
   componentWillUnmount(){
+    // this.props.clearSearch()
   }
 
   render() {
 
-    if (this.props.searchData.length === 0){
+    if (this.props.name.length === 0){
       return (
         null
       )

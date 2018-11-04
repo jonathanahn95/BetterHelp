@@ -13,6 +13,7 @@ class SearchBusinessPage extends React.Component {
       price: [],
       noise: [],
       delivery: [],
+      name: ''
     };
     this.addtoArray = this.addtoArray.bind(this);
     // this.generateQuery = this.generateQuery.bind(this);
@@ -20,12 +21,16 @@ class SearchBusinessPage extends React.Component {
   }
 
   componentDidMount() {
-    this.props.searchBusinesses(this.props.location.search.slice(1));
-    this.props.requestAllBusinessCategories();
+
+    if (this.props.location.search.slice(1).length > 0){
+      this.props.searchBusinesses(`dropdown=(true)&price=()&noise=()&delivery=()&name=${this.props.location.search.slice(1)}`);
+    } else  {
+      this.props.searchBusinesses(this.generateQuery(this.state));
+      this.props.requestAllBusinessCategories();
+    }
   }
 
   // componentWillReceiveProps(nextProps){
-  //   debugger
   //   if (this.props.location.search.slice(1) !== nextProps.location.search.slice(1)){
   //     this.props.searchBusinesses(nextProps.location.search.slice(1));
   //   }
@@ -37,13 +42,11 @@ class SearchBusinessPage extends React.Component {
   	queries.forEach(query => {
   		queryString += `${query}=(${nextState[query]})&`;
   	});
-    debugger
   	return queryString;
   }
 
   componentWillUpdate(nextProps, nextState) {
     if (this.state !== nextState){
-      debugger
       this.props.searchBusinesses(this.generateQuery(nextState));
     }
   }
