@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  min-height: 545px;
+  min-height: 435px;
 }
 
 .content {
@@ -13,10 +13,9 @@
   background: #f5f5f5;
   border-bottom: 1px solid #e6e6e6;
   min-width: 100%;
-  min-height: 500px;
-
+  height: 350px;
 }
-.lets-see {
+.revi-wrapper {
   display: flex;
   margin-left: 60px;
   width: 65%;
@@ -47,13 +46,12 @@
   padding-top: 30px;
 }
 .page-header {
-  padding-top: 113px;
-
-
-  width: 100%;
+  padding-top: 53px;
+  width: 90%;
   display: flex;
-  min-height: 159px;
-  justify-content: space-evenly;
+  min-height: 100px;
+  justify-content: space-around;
+  margin: auto;
 }
 
 .tidy {
@@ -107,6 +105,18 @@ bus-show-pics {
   align-items: center;
   justify-content: center;
   margin: auto;
+}
+
+.rec-reviews {
+  display: flex;
+  font-weight: 700;
+  margin-left: 270px;
+  color: #d32323;
+  font-size: 22px;
+  font-family: sans-serif;
+  padding-bottom: 15px;
+  width: 46.4%;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .main-reviews-container {
@@ -163,8 +173,6 @@ bus-show-pics {
   align-items: flex-end;
   padding-right: 60px;
   border-right: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
-
 }
 .header-hours {
   font-size: 16px;
@@ -331,7 +339,7 @@ border: 1px solid #ccc;
 .review-created-at {
   padding-left: 15px;
   margin-top: 4px;
-
+  color: #666;
 }
 
 .review-body {
@@ -341,6 +349,73 @@ border: 1px solid #ccc;
 
   padding-top: 15px;
 
+}
+
+.today-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e6e6e6;
+  width: 58%;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.today-hours-wrapper {
+  display: flex;
+align-items: center;
+height: 36px;
+}
+
+.price-range-wrapper {
+  display: flex;
+align-items: center;
+height: 36px;
+}
+
+.price-range-icon {
+  width: 34px;
+display: flex;
+justify-content: center;
+font-weight: 700;
+color: #999;
+padding-right: 10px;
+margin-left: 8px;
+}
+
+.clock-a-icon {
+  width: 34px;
+display: flex;
+justify-content: center;
+font-weight: 700;
+color: #999;
+padding-right: 10px;
+margin-left: 8px;
+}
+
+.today-hours {
+  border-bottom: 1px solid #e6e6e6;
+  height: inherit;
+  width: 76%;
+  display: flex;
+  align-items: center;
+}
+
+.today {
+  margin-right: 44px;
+}
+
+.price {
+  margin-right: 12px;
+}
+
+.today-hour{
+  font-weight: 700;
+  font-size: 13.5px;
+}
+
+.range-type {
+  font-weight: 700;
+  font-size: 13.5px;
 }
 
 .num-reviews-container {

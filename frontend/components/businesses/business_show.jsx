@@ -54,6 +54,21 @@ class BusinessShow extends React.Component {
     }
   }
 
+  priceRange(){
+    switch(this.props.business.price){
+      case 1:
+      return "Cheap";
+      case 2:
+      return "Moderate";
+      case 3:
+      return 'Expensive';
+      case 4:
+      return 'Very Expensive';
+      default:
+      return 'Cheap';
+    }
+  }
+
 
 
   render() {
@@ -63,7 +78,7 @@ class BusinessShow extends React.Component {
     } else {
       brandName = 'small-brand-name'
     }
-    
+
     const business = this.props.business;
     if(!business) {
       return (
@@ -82,7 +97,7 @@ class BusinessShow extends React.Component {
 
     const reviewsArr = this.props.reviews.map( review => {
       return (
-      <div className='lets-see'>
+      <div className='revi-wrapper'>
         <div className='user-name'>
           <img className="prof-pic" src={window.profPic}></img>
 
@@ -199,12 +214,39 @@ class BusinessShow extends React.Component {
             </div>
           </div>
         </main>
+        <div className='rec-reviews'>
+            Recommended Reviews for {this.props.business.name}
+        </div>
         <div className='main-reviews-container'>
 
           <div className='reviews'>
             { reviewsArr }
           </div>
           <div className="business-show-container">
+
+            <div className='today-info-wrapper'>
+              <ul className='today-hours-wrapper'>
+               <li className="clock-a-icon">
+                <i class="fa fa-clock"></i>
+                </li>
+               <li className="today-hours">
+                 <div className="today">Today</div>
+                 <div className="today-hour">{business.hours[0]}</div>
+               </li>
+             </ul>
+             <ul className='price-range-wrapper'>
+               <li className="price-range-icon">
+                <i class="fa fa-dollar-sign"></i>
+              </li>
+               <li className="today-hours">
+                 <div className="price">Price range</div>
+                 <div className="range-type">{this.priceRange()}</div>
+               </li>
+             </ul>
+           </div>
+
+
+
             <div className='imag'>
               <a href="https://github.com/jonathanahn95/"><img className="tidy" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
 
