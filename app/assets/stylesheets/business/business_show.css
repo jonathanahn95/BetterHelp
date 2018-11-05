@@ -308,6 +308,15 @@ border: 1px solid #ccc;
   justify-content: center;
 }
 
+.stars-text {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  font-family: sans-serif;
+  margin-left: 20px;
+}
 .info li {
   font-family: Helvetica;
   font-size: 14px;
@@ -327,7 +336,7 @@ border: 1px solid #ccc;
 
 .review-body {
   font-family: inherit;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 0.2px;
 
   padding-top: 15px;

@@ -63,6 +63,23 @@ ratingChanged(newRating) {
    this.setState({rating: newRating})
  }
 
+ ratingMessage() {
+  switch(this.state.rating) {
+    case 1:
+      return <p id="rating-message">Eek! Methinks not.</p>
+    case 2:
+      return <p id="rating-message">"Meh. I've experienced better."</p>
+    case 3:
+      return <p id="rating-message">A-OK.</p>
+    case 4:
+      return <p id="rating-message">Yay! I'm a fan.</p>
+    case 5:
+      return <p id="rating-message">Woohoo! As good as it gets!</p>
+    default:
+      return <p id="rating-message">Select your rating</p>
+  }
+}
+
 
   render() {
 
@@ -85,13 +102,19 @@ ratingChanged(newRating) {
               <div className="review-form-container">
                 <form className="review-form" onSubmit={this.handleSubmit}>
 
-                  <ReactStars
-                    count={5}
-                    half={false}
-                    value={this.state.rating ? this.state.rating : 0}
-                    onChange={this.ratingChanged}
-                    size={24}
-                    color2={'#ffd700'} />
+                  <div className='stars-text'>
+
+                    <ReactStars
+                      count={5}
+                      half={false}
+                      value={this.state.rating ? this.state.rating : 0}
+                      onChange={this.ratingChanged}
+                      size={24}
+                      color2={'#ffd700'} />
+                    <div className="text">
+                      {this.ratingMessage()}
+                    </div>
+                  </div>
 
                   <textarea value={this.state.body} onChange={this.updateBody()} className="form-body" placeholder="Your review helps others learn about
                     great local businesses.&#10;Please don't review this business
@@ -108,6 +131,8 @@ ratingChanged(newRating) {
               </div>
             </div>
           </div>
+
+
 
           <div className='button-container'>
           </div>
