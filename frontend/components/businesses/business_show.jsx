@@ -39,7 +39,6 @@ class BusinessShow extends React.Component {
   // </button>
 
   userReviews(review) {
-
     if (this.props.session === review.user_id ){
       return (
         <div >
@@ -96,6 +95,8 @@ class BusinessShow extends React.Component {
     })
 
     const reviewsArr = this.props.reviews.map( review => {
+      debugger
+
       return (
       <div className='revi-wrapper'>
         <div className='user-name'>

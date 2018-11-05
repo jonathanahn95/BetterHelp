@@ -38,8 +38,7 @@ class SearchForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    debugger
-    this.props.searchBusinesses(`dropdown=(true)&price=()&noise=()&delivery=()&name=${this.state.name}`);
+    this.props.requestDropdownBusinesses(`dropdown=(true)&price=()&noise=()&delivery=()&name=${this.state.name}`);
     this.setState({ name: ''});
     this.props.history.push(`/search?${this.state.name}`);
   }
@@ -50,7 +49,7 @@ class SearchForm extends React.Component {
         [field]: e.target.value,
         dropdown: "show",
       });
-      this.props.searchBusinesses(`dropdown=(true)&price=()&noise=()&delivery=()&name=${this.state.name}`);
+      this.props.requestDropdownBusinesses(`dropdown=(true)&price=()&noise=()&delivery=()&name=${this.state.name}`);
     };
   }
 

@@ -23,18 +23,13 @@ class SearchBusinessPage extends React.Component {
   componentDidMount() {
 
     if (this.props.location.search.slice(1).length > 0){
+      debugger
       this.props.searchBusinesses(`dropdown=(true)&price=()&noise=()&delivery=()&name=${this.props.location.search.slice(1)}`);
     } else  {
       this.props.searchBusinesses(this.generateQuery(this.state));
       this.props.requestAllBusinessCategories();
     }
   }
-
-  // componentWillReceiveProps(nextProps){
-  //   if (this.props.location.search.slice(1) !== nextProps.location.search.slice(1)){
-  //     this.props.searchBusinesses(nextProps.location.search.slice(1));
-  //   }
-  // }
 
   generateQuery(nextState) {
   	const queries = Object.keys(nextState);
@@ -46,10 +41,15 @@ class SearchBusinessPage extends React.Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
+    debugger
     if (this.state !== nextState){
       this.props.searchBusinesses(this.generateQuery(nextState));
+    } else if (nextProps.location.search !== this.props.location.search){
+      this.props.searchBusinesses(`dropdown=(true)&price=()&noise=()&delivery=()&name=${nextProps.location.search.slice(1)}`);
     }
   }
+
+
 
   addtoArray(field){
     return(e) => {

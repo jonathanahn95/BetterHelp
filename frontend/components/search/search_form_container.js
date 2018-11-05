@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchBusinesses, clearSearch } from '../../actions/search_actions';
+import { requestDropdownBusinesses, clearSearch } from '../../actions/search_actions';
 import { clearErrors } from '../../actions/sessions_actions';
 import SearchForm from './search_form';
 import { logout } from  '../../actions/sessions_actions';
@@ -16,12 +16,13 @@ const msp = (state, ownProps) => {
   }
 
   let searchedBusIds = state.session.searchR;
-  let businesses = Object.values(state.entities.businesses);
+  let businesses = Object.values(state.entities.searches);
+  
   return {
     currentUser: state.entities.users[state.session.id],
     userLoggedIn: userProf,
     businessCategories: Object.values(state.entities.businessCategories),
-    searchedBusinesses: selectSearchBusinesses(businesses,searchedBusIds)
+    searchedBusinesses: businesses
   };
 };
 
@@ -30,7 +31,7 @@ const mapDispatchToProps = dispatch => {
     clearSearch: () => dispatch(clearSearch()),
     logout: () => dispatch(logout()),
     requestAllBusinessCategories: () => dispatch(requestAllBusinessCategories()),
-    searchBusinesses: (searchData) => dispatch(searchBusinesses(searchData)),
+    requestDropdownBusinesses: (searchData) => dispatch(requestDropdownBusinesses(searchData)),
     clearErrors: () => dispatch(clearErrors())
   };
 };
