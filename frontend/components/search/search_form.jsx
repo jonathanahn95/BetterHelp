@@ -38,7 +38,8 @@ class SearchForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.searchBusinesses(this.state.name);
+    debugger
+    this.props.searchBusinesses(`dropdown=(true)&price=()&noise=()&delivery=()&name=${this.state.name}`);
     this.setState({ name: ''});
     this.props.history.push(`/search?${this.state.name}`);
   }
