@@ -87,18 +87,14 @@ class Businesses extends React.Component {
 
   renderFilterText(){
     if ( this.props.businesses.length === 0){
-      debugger
-      return 'No Results'
+      return 'No Results';
     } else if (this.state.price.length > 0 || this.state.noise.length > 0 || this.state.delivery.length > 0){
-      debugger
       return 'Top Filtered Results';
     } else {
-      debugger
       return `Top ${this.props.businessCategoryName} Results`;
-
     }
-
   }
+
   render() {
 
     let res, home, cafe, boot;
