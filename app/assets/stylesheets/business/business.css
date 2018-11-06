@@ -673,11 +673,11 @@ font-size: 14px;
 
 .top-category-results {
   display: flex;
-  margin-left: 227px;
-  color: #333;
-  justify-content: space-between;
-  width: 70%;
-  align-items: center;
+      margin-left: 231px;
+      color: #333;
+      justify-content: space-between;
+      width: 69.5%;
+      align-items: center;
 }
 
 .top-results-wrapper3{
@@ -708,7 +708,19 @@ font-size: 14px;
 .sec-2-noise-levels {
   display: flex;
 }
+.no-res-wrapper{
+  padding-right: 265px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
 
+.no-res-wrapper li {
+  padding-bottom: 2px;
+}
+.suggestions {
+  padding-bottom: 4px!important;
+  font-weight: 700;
+}
 .top-wrapper3-sec-3 {
   display: flex;
   justify-content: space-around;

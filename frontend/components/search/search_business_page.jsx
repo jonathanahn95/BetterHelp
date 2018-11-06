@@ -127,15 +127,29 @@ class SearchBusinessPage extends React.Component {
       boot = businessCategory[3].id;
     }
 
-    let searchedBusinesses = this.createBusinessComponent(Business)
+    let searchedBusinesses;
     let searchedBusinesses1 = this.createBusinessComponent(SearchDropDown)
+
+    let bestResults;
+    if (this.props.searchedBusinesses.length > 0) {
+      bestResults = `Best ${this.props.location.search.slice(1)}`
+      searchedBusinesses = this.createBusinessComponent(Business);
+    } else {
+      bestResults = `No results for ${this.props.location.search.slice(1)}`
+      searchedBusinesses =
+      <ul className='no-res-wrapper'>
+        <li className='suggestions'>Suggestions for improving the results:</li>
+        <li>Try a different search.</li>
+        <li>Check the spelling or try alternate spellings.</li>
+        <li>Try a more general search. e.g. "pizza" instead of "pepperoni"</li>
+      </ul>
+    }
 
     let brandName;
     if (this.props.currentUser){
       brandName = 'small-brand-name2'
     } else {
       brandName = 'small-brand-name'
-
     }
     const priceToggles = this.createToggles('price')
    	const noiseToggles = this.createToggles('noise')
@@ -170,7 +184,7 @@ class SearchBusinessPage extends React.Component {
               <div className='top-category-results1'>
               <div className='top-res-name'>
                 <div className='top-results-home'>
-                  Top Search Results
+                  {bestResults}
                 </div>
               </div>
               <div className='top-res-cat'>
@@ -216,5 +230,4 @@ class SearchBusinessPage extends React.Component {
 
 
 }
-
 export default withRouter(SearchBusinessPage);
