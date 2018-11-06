@@ -673,11 +673,11 @@ font-size: 14px;
 
 .top-category-results {
   display: flex;
-      margin-left: 231px;
-      color: #333;
-      justify-content: space-between;
-      width: 69.5%;
-      align-items: center;
+  margin-left: 231px;
+  color: #333;
+  justify-content: space-between;
+  width: 69.5%;
+  align-items: center;
 }
 
 .top-results-wrapper3{

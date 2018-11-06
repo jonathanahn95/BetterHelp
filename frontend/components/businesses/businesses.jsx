@@ -85,6 +85,20 @@ class Businesses extends React.Component {
     }
   }
 
+  renderFilterText(){
+    if ( this.props.businesses.length === 0){
+      debugger
+      return 'No Results'
+    } else if (this.state.price.length > 0 || this.state.noise.length > 0 || this.state.delivery.length > 0){
+      debugger
+      return 'Top Filtered Results';
+    } else {
+      debugger
+      return `Top ${this.props.businessCategoryName} Results`;
+
+    }
+
+  }
   render() {
 
     let res, home, cafe, boot;
@@ -113,6 +127,17 @@ class Businesses extends React.Component {
       selectedBusCategories = this.props.businesses
     }
 
+    if (businesses.length === 0){
+
+      businesses =
+      <ul className='no-res-wrapper'>
+        <li className='suggestions'>Suggestions for improving the results:</li>
+        <li>Try a different search.</li>
+        <li>Check the spelling or try alternate spellings.</li>
+        <li>Try a more general search. e.g. "pizza" instead of "pepperoni"</li>
+      </ul>
+    }
+
     let brandName;
     if (this.props.currentUser){
       brandName = 'small-brand-name2'
@@ -131,6 +156,15 @@ class Businesses extends React.Component {
           <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
         </div>
       </div>
+    } else {
+      map =
+      <div>
+       <div></div>
+       <div className='map-ad'>
+         <BusinessMap id={'map-container'} businesses={this.props.businesses} multiple={true}/>
+         <a href="https://github.com/jonathanahn95/"><img className="under-map-pic" src="https://s3.amazonaws.com/betterhelp-dev/ad.jpg"></img></a>
+       </div>
+     </div>
     }
     return (
       <div>
@@ -164,7 +198,7 @@ class Businesses extends React.Component {
               <div className='top-category-results1'>
               <div className='top-res-name'>
                 <div className='top-results-home'>
-                  Top {this.props.businessCategoryName} Results
+                  {this.renderFilterText()}
                 </div>
               </div>
               <div className='top-res-cat'>
