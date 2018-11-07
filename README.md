@@ -35,5 +35,4 @@ One of BetterHelps core features is the ability to search for relavent businesse
 
 ## Future Implementations
 
-### Friends
 ### Mark reviews as funny, cool, etc
