@@ -50,7 +50,7 @@ export const clearErrors = () => {
 
 
 export const fetchCurrentUser = user => dispatch => {
-  debugger
+  
   return SessionAPIUtil.currentUser(user).then( user => {
     return dispatch(receiveCurrentUser(user));
   });

@@ -23,7 +23,7 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
-.fa  {
+.fa {
   padding-right: 10px;
 }
 
@@ -62,7 +62,7 @@
 }
 .left {
   font-size: 36px;
-  text-shadow: 0 1px rgba(255,255,255,0.7);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.7);
   color: #333;
   font-family: Helvetica;
   font-weight: bold;
@@ -73,13 +73,11 @@
 
 bus-show-pics {
   width: 150px;
-
 }
 .show-pics {
   display: flex;
   height: 200px;
   width: 45%;
-
 }
 
 .right-button {
@@ -93,10 +91,9 @@ bus-show-pics {
   padding: 12px 25px;
   border-radius: 3px;
   border-color: #8d0005;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   background-color: #d90007;
   background: linear-gradient(#d90007, #c91400);
-
 }
 
 .subheader {
@@ -124,7 +121,7 @@ bus-show-pics {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  min-width: 500px
+  min-width: 500px;
 }
 
 .reviews-container {
@@ -135,14 +132,12 @@ bus-show-pics {
   padding-left: 140px;
   margin-left: 25px;
 
-
   list-style: none;
   font-family: Helvetica;
   font-size: 14px;
   letter-spacing: 0.2px;
 
   justify-content: space-between;
-
 }
 
 .fname1 {
@@ -152,7 +147,6 @@ bus-show-pics {
   font-size: 13px;
   font-weight: bold;
   color: #0073bb;
-
 }
 
 .lname1 {
@@ -160,7 +154,6 @@ bus-show-pics {
   font-size: 13px;
   font-weight: bold;
   color: #0073bb;
-
 }
 
 .reviews-container li {
@@ -194,7 +187,6 @@ bus-show-pics {
 .day {
   font-weight: bold;
   font-family: Helvetica;
-
 }
 
 .business-show-container {
@@ -206,14 +198,14 @@ bus-show-pics {
   width: 290px;
   height: 150px;
   margin: auto;
-margin-top: 6px;
-border: 1px solid #ccc;
+  margin-top: 6px;
+  border: 1px solid #ccc;
 }
 
 .business-hours {
   list-style: none;
-      font-size: 14px;
-      width: 83%;
+  font-size: 14px;
+  width: 83%;
 }
 
 .business-hours li {
@@ -228,41 +220,33 @@ border: 1px solid #ccc;
   display: flex;
   font-size: 15px;
   padding: 7px 0;
-
 }
 .more-business-info-container {
   font-family: Helvetica;
-
 }
-
-
 
 .dub-container {
   display: flex;
-  padding-left: 280px;
-  width: 20%;
-  justify-content: space-around;
-
+  /* padding-left: 280px; */
+  /* width: 20%; */
   flex-direction: row-reverse;
 }
 .dub {
   display: inline-block;
-   padding: 5px;
-   border: 1px solid #ccc;
-   border-radius: 3px;
-   font-size: 12px;
-   line-height: 1.5em;
-   color: #999;
-   background: transparent;
-   box-shadow: none;
-   white-space: nowrap;
-   -webkit-transition: all 0.3s ease;
-   transition: all 0.3s ease;
-   height: 20px;
-    width: 20px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 12px;
+  line-height: 1.5em;
+  color: #999;
+  background: transparent;
+  box-shadow: none;
+  white-space: nowrap;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 20px;
+  width: 20px;
 }
-
-
 
 .search-pic-nav-sear-container:hover {
   cursor: pointer;
@@ -273,12 +257,12 @@ border: 1px solid #ccc;
 }
 
 .more-business-info {
-    padding-top: 25px;
+  padding-top: 25px;
   font-weight: bold;
-    margin-bottom: 6px;
-    font-size: 16px;
-    line-height: 1.3125em;
-    color: #d32323;
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 1.3125em;
+  color: #d32323;
 }
 
 .answer {
@@ -289,26 +273,23 @@ border: 1px solid #ccc;
 .bus-address {
   font-weight: bold;
   font-family: Helvetica;
-
 }
 
 .bus-city {
   font-weight: bold;
   font-family: Helvetica;
-
 }
 
 .bus-zipcode {
   font-weight: bold;
   font-family: Helvetica;
-
 }
 
 .info {
   list-style: none;
   width: 23%;
-    background: #fff;
-    border: 1px solid #ccc;
+  background: #fff;
+  border: 1px solid #ccc;
 }
 
 .show-li-container {
@@ -330,7 +311,6 @@ border: 1px solid #ccc;
   font-family: Helvetica;
   font-size: 14px;
   letter-spacing: 0.2px;
-
 }
 
 .bus-website {
@@ -349,7 +329,6 @@ border: 1px solid #ccc;
   letter-spacing: 0.2px;
 
   padding-top: 15px;
-
 }
 
 .today-info-wrapper {
@@ -363,34 +342,34 @@ border: 1px solid #ccc;
 
 .today-hours-wrapper {
   display: flex;
-align-items: center;
-height: 36px;
+  align-items: center;
+  height: 36px;
 }
 
 .price-range-wrapper {
   display: flex;
-align-items: center;
-height: 36px;
+  align-items: center;
+  height: 36px;
 }
 
 .price-range-icon {
   width: 34px;
-display: flex;
-justify-content: center;
-font-weight: 700;
-color: #999;
-padding-right: 10px;
-margin-left: 8px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: #999;
+  padding-right: 10px;
+  margin-left: 8px;
 }
 
 .clock-a-icon {
   width: 34px;
-display: flex;
-justify-content: center;
-font-weight: 700;
-color: #999;
-padding-right: 10px;
-margin-left: 8px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: #999;
+  padding-right: 10px;
+  margin-left: 8px;
 }
 
 .today-hours {
@@ -409,7 +388,7 @@ margin-left: 8px;
   margin-right: 12px;
 }
 
-.today-hour{
+.today-hour {
   font-weight: 700;
   font-size: 13.5px;
 }
@@ -425,12 +404,11 @@ margin-left: 8px;
   font-size: 16px;
   color: #666;
   padding-top: 5px;
-
 }
 
 .bus-show-pics:hover {
   transform: scale(1.2);
-  transition: all 1.0s ease-in-out;
+  transition: all 1s ease-in-out;
   cursor: pointer;
 }
 
@@ -439,21 +417,18 @@ margin-left: 8px;
   object-fit: cover;
 }
 
-
-.bus-state{
+.bus-state {
   font-weight: bold;
   padding-left: 5px;
 }
 
-.bus-zipcode{
+.bus-zipcode {
   padding-left: 5px;
-
 }
 
-.show-info-container{
+.show-info-container {
   display: flex;
   padding-left: 20px;
-
 }
 .show-li-container {
   padding: 10px;
@@ -463,9 +438,8 @@ margin-left: 8px;
   color: gray;
 }
 
-.fa-star{
+.fa-star {
   color: white;
-
 }
 .stars {
   padding-right: 10px;
@@ -481,7 +455,7 @@ margin-left: 8px;
   list-style: none;
 
   justify-content: space-between;
-  PADDING-LEFT: 30px;
+  padding-left: 30px;
   padding-top: 2px;
   height: 25%;
 }
@@ -501,18 +475,17 @@ margin-left: 8px;
   color: #666;
   background-color: #f7f7f7;
   background: linear-gradient(#fff, #f7f7f7);
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .num-reviews {
   color: #666;
   font-weight: normal;
-    font-size: 16px;
-    padding-top: 15px;
+  font-size: 16px;
+  padding-top: 15px;
 }
 
-
-        /* <ul className='ul-nav-bar-item1'>
+/* <ul className='ul-nav-bar-item1'>
           <div className='nav-bar-container'>
             <Link to={`/business_categories/${res}`}><i class="fas fa-utensils"></i><p className='nav-bar-item'>Restaurant</p></Link>
             <Link to={`/business_categories/${home}`}><i class="fas fa-home"></i><p className='nav-bar-item'>Home Services</p></Link>
@@ -524,10 +497,9 @@ margin-left: 8px;
           </div>
         </ul> */
 
-
 .ul-nav-bar-item2-wrapper {
-  background: #fafafa!important;
-width: 100%
+  background: #fafafa !important;
+  width: 100%;
 }
 
 .ul-nav-bar-item2 {
@@ -535,9 +507,8 @@ width: 100%
   justify-content: space-evenly;
   height: 35px;
   width: 97%;
-margin: auto;
-  background: #fafafa!important;
-
+  margin: auto;
+  background: #fafafa !important;
 }
 
 .nav-bar-container1 {
@@ -548,10 +519,10 @@ margin: auto;
   justify-content: space-around;
 }
 
-.nav-bar-container1-links{
+.nav-bar-container1-links {
   width: 25%;
-  border-left: 1px solid #e6e6e6!important;
-  border-right: 1px solid #e6e6e6!important;
+  border-left: 1px solid #e6e6e6 !important;
+  border-right: 1px solid #e6e6e6 !important;
   display: flex;
   height: 100%;
   align-items: center;
@@ -560,10 +531,10 @@ margin: auto;
   text-decoration: none;
   font-family: Arial;
   color: black;
-font-size: 13px;
-font-weight: bold;
+  font-size: 13px;
+  font-weight: bold;
 }
-.review-bar-container1{
+.review-bar-container1 {
   display: flex;
   align-items: center;
   width: 12%;
@@ -572,10 +543,10 @@ font-weight: bold;
   justify-content: space-around;
 }
 
-.review-bar-container1-link{
+.review-bar-container1-link {
   display: flex;
-  border-left: 1px solid #e6e6e6!important;
-  border-right: 1px solid #e6e6e6!important;
+  border-left: 1px solid #e6e6e6 !important;
+  border-right: 1px solid #e6e6e6 !important;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -589,58 +560,56 @@ font-weight: bold;
 }
 
 .bonus-container {
-
-    display: flex;
-    padding-top: 30px;
-        justify-content: space-between;}
+  display: flex;
+  padding-top: 30px;
+  justify-content: space-between;
+}
 
 .three-options {
   display: flex;
 }
 
 .three-options li {
-
-      border-radius: 3px;
-      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-      background: linear-gradient(#fff, #f7f7f7);
-      border-color: #ccc;
-      color: #666;
-      background-color: #f7f7f7;
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0;
-      cursor: pointer;
-      padding: 8px 10px;
-      font-size: 12px;
-      border: 1px solid;
-      margin-right: 4px;
-      width: 100%;
-      display: flex;
-      font-weight: bold;
-      font-family: arial;
-      text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#fff, #f7f7f7);
+  border-color: #ccc;
+  color: #666;
+  background-color: #f7f7f7;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: 12px;
+  border: 1px solid;
+  margin-right: 4px;
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  font-family: arial;
+  text-align: center;
 }
 
 .like {
-
-      border-radius: 3px;
-      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-      background: linear-gradient(#fff, #f7f7f7);
-      border-color: #ccc;
-      color: #666;
-      background-color: #f7f7f7;
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0;
-      cursor: pointer;
-      padding: 8px 10px;
-      font-size: 12px;
-      border: 1px solid;
-      margin-right: 4px;
-      display: flex;
-      font-weight: bold;
-      font-family: arial;
-      text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#fff, #f7f7f7);
+  border-color: #ccc;
+  color: #666;
+  background-color: #f7f7f7;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: 12px;
+  border: 1px solid;
+  margin-right: 4px;
+  display: flex;
+  font-weight: bold;
+  font-family: arial;
+  text-align: center;
 }
 
 .useful {

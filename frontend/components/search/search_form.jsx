@@ -76,7 +76,7 @@ class SearchForm extends React.Component {
         <div>
         <div className='logout-nav'>
           <img onClick={this.toggleClass} className='drop-down-pic' src='https://s3.amazonaws.com/betterhelp-dev/dropdown.png'></img>
-          <div onClick={this.toggleClass} className='caret-drop-down'><i class="fas fa-caret-down"></i></div>
+          <div onClick={this.toggleClass} className='caret-drop-down'><i className="fas fa-caret-down"></i></div>
         </div>
         <i className={hiddenCar}></i>
         <div className={toggle}>
@@ -94,7 +94,7 @@ class SearchForm extends React.Component {
           </div>
           <div className='dropped-down-about2'>
             <div>
-              <i class="fas fa-user"></i>
+              <i className="fas fa-user"></i>
             </div>
             <div className='dropped-down-about-me'>
               <Link className='user-prof-link'to={`/user_prof/${this.props.currentUser.id}`}><p>About Me</p></Link>

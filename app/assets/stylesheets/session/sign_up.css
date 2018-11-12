@@ -1,4 +1,4 @@
-.comment{
+.comment {
   display: flex;
   justify-content: center;
   font-family: Helvetica;
@@ -6,25 +6,22 @@
   font-size: 14px;
 }
 
-
 .fname {
   padding: 6px;
   margin-right: 3px;
   border: 1px solid gray;
   font-size: 14px;
   width: 120px;
-  border-radius: 3px ;
-
+  border-radius: 3px;
 }
 
-.lname{
+.lname {
   padding: 6px;
   font-size: 14px;
 
   border: 1px solid gray;
 
-  border-radius: 3px ;
-
+  border-radius: 3px;
 }
 
 .zipcode {
@@ -34,9 +31,9 @@
   margin-top: 20px;
 
   border: 1px solid gray;
-  margin-bottom:  10px;
+  margin-bottom: 10px;
 
-  border-radius: 3px ;
+  border-radius: 3px;
 }
 
 .test {
@@ -55,7 +52,6 @@
   font-size: 14px;
   margin-top: 10px;
   margin-right: 4px;
-
 }
 .optional {
   color: #999;
@@ -63,9 +59,7 @@
 
   font-family: Helvetica;
   font-size: 12px;
-
 }
-
 
 .submit {
   margin-top: 15px;
@@ -77,7 +71,7 @@
   font-weight: bold;
   border: 1px solid black;
   box-shadow: 5px black;
-  border-radius:  3px;
+  border-radius: 3px;
 }
 
 .submit:hover {
@@ -108,7 +102,7 @@
   padding-right: 15px;
   /* margin-bottom: 5px; */
 }
-.small-brand-name2{
+.small-brand-name2 {
   height: 40px;
   padding-right: 15px;
   padding-left: 170px;
@@ -116,7 +110,7 @@
 .birthday {
   display: flex;
   justify-content: space-between;
-  padding-top: 10px
+  padding-top: 10px;
 }
 
 .birthday select {
@@ -127,7 +121,7 @@
   height: 30px;
   padding: 7px;
   align-items: space-around;
-  width: 90px
+  width: 90px;
 }
 
 .guest-demo {
@@ -142,5 +136,5 @@
   border: 1px solid black;
   box-shadow: 5px black;
 
-  border-radius:  3px;
+  border-radius: 3px;
 }

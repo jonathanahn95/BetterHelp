@@ -5,6 +5,7 @@ import businessCategoriesReducer from './business_categories_reducer';
 import businessesReducer from './businesses_reducer';
 import reviewsReducer from './reviews_reducer';
 import searchReducer from './search_reducer';
+import adjectivesReducer from './adjectives_reducer';
 
 
 
@@ -13,7 +14,8 @@ const entitiesReducer = combineReducers({
   businessCategories: businessCategoriesReducer,
   businesses: businessesReducer,
   reviews: reviewsReducer,
-  searches: searchReducer
+  searches: searchReducer,
+  adjectives: adjectivesReducer
 });
 
 export default entitiesReducer;

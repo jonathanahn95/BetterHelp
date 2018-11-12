@@ -4,8 +4,6 @@
   z-index: 5px;
   margin-top: 20px;
   text-shadow: 2px 2px 8px black;
-
-
 }
 
 .business-categories li {
@@ -19,14 +17,13 @@
   font-weight: 700;
   font-family: Helvetica;
   color: white;
-
 }
 
 .business-categories-container {
   width: 400px;
 }
 
-.one{
+.one {
   color: white;
   padding-right: 5px;
 }

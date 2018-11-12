@@ -2,11 +2,10 @@
   width: 150px;
   height: 150px;
   position: absolute;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #cccccc;
   top: 150px;
   left: 305px;
-  }
-
+}
 
 .user-prof-wrapper {
   background: #f5f5f5;
@@ -17,7 +16,6 @@
   flex-direction: column;
   justify-content: space-around;
 }
-
 
 .user-prof-wrapper2 {
   display: flex;
@@ -73,9 +71,9 @@
 }
 .user-reviews-wrapper {
   width: 31%;
-margin: auto;
-padding: 30px;
-border: 1px solid #e6e6e6;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #e6e6e6;
 }
 
 .user-review-wrapper0 {
@@ -86,8 +84,7 @@ border: 1px solid #e6e6e6;
 
 .user-review-wrapper1 {
   display: flex;
-    justify-content: space-between;
-
+  justify-content: space-between;
 }
 .rev-pic-ad {
   display: flex;
@@ -107,10 +104,9 @@ border: 1px solid #e6e6e6;
 
 .rev-stars {
   padding: 5px 0 0 3px;
-
 }
 
-.rev-date{
+.rev-date {
   font-family: Arial;
   font-size: 13px;
   color: gray;
@@ -127,7 +123,6 @@ border: 1px solid #e6e6e6;
   font-family: Arial;
   font-size: 15px;
   padding: 5px 0 0 3px;
-
 }
 
 .rev-body-wrapper {
@@ -148,22 +143,22 @@ border: 1px solid #e6e6e6;
 }
 .dub-edit {
   font-family: arial;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border: 1px solid;
-    border-radius: 3px;
-    font-size: 13px;
-    line-height: 1.5em;
-    color: #666;
-    cursor: pointer;
-    border-color: #ccc;
-    background-color: #f7f7f7;
-    background: linear-gradient(#fff, #f7f7f7);
-    box-shadow: none;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-    white-space: nowrap;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    height: 20px;
-    width: 108px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border: 1px solid;
+  border-radius: 3px;
+  font-size: 13px;
+  line-height: 1.5em;
+  color: #666;
+  cursor: pointer;
+  border-color: #ccc;
+  background-color: #f7f7f7;
+  background: linear-gradient(#fff, #f7f7f7);
+  box-shadow: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 20px;
+  width: 108px;
 }

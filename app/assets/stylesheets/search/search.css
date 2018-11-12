@@ -8,7 +8,7 @@
 }
 
 .search-sear-container {
-  HEIGHT: 42px;
+  height: 42px;
   border: none;
   width: 800px;
   color: rgb(200, 200, 200);
@@ -18,7 +18,7 @@
 .location-sear-container {
   border: none;
   width: 65%;
-  HEIGHT: 44px;
+  height: 44px;
   width: 800px;
   color: rgb(200, 200, 200);
   font-size: 16px;
@@ -27,16 +27,13 @@
 .search-form-sear-container {
   display: flex;
   width: 100%;
-
 }
-
 
 .sear-ad-cont {
   display: flex;
   flex-direction: column;
   margin-bottom: 580px;
 }
-
 
 .drop-down-sear-container {
   background-color: white;
@@ -60,7 +57,6 @@
 }
 
 .find-sear-container {
-
   padding: 13px 13px 0;
   height: 70%;
   border-radius: 5px 0 0 5px;
@@ -85,12 +81,6 @@
   width: 65%;
 }
 
-
-
-
-
-
-
 .search-pic-nav-sear-container {
   border-radius: 0 4px 4px 0;
   border: 0;
@@ -112,7 +102,7 @@
 .location-nav-sear-container {
   border: none;
   width: 65%;
-  HEIGHT: 34px;
+  height: 34px;
   width: 300px;
   color: rgb(200, 200, 200);
   font-size: 14px;
@@ -134,7 +124,6 @@
 }
 
 .find-nav-sear-container {
-
   padding: 11px 13px 0;
   border-radius: 5px 0 0 5px;
   font-family: sans-serif;
@@ -153,13 +142,11 @@
   font-size: 14px;
 }
 
-
-
 .hide {
   display: none;
 }
 
-.login-signup-nav{
+.login-signup-nav {
   display: flex;
   width: 17%;
   justify-content: space-evenly;
@@ -179,13 +166,13 @@
 
 .signup-sear-nav {
   padding: 10px;
-border-radius: 4px;
-border: solid 1px #c41314;
-background: white;
-color: black;
-font-size: 14px;
-cursor: pointer;
-margin: auto;
+  border-radius: 4px;
+  border: solid 1px #c41314;
+  background: white;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  margin: auto;
 }
 
 .dropped-down-list1 {
@@ -205,9 +192,9 @@ margin: auto;
   font-family: sans-serif;
 }
 .three {
-top: 51px!important;
-right: 285px!important;
-font-size: 30px!important;
-position: absolute!important;
-color: white;
+  top: 51px !important;
+  right: 285px !important;
+  font-size: 30px !important;
+  position: absolute !important;
+  color: white;
 }

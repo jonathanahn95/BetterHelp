@@ -12,10 +12,9 @@ const msp = (state,ownProps) => {
   let reviews = [];
   if (fetchedBusiness){
     reviews = fetchedBusiness.reviews;
-    debugger
   }
 
-  // debugger
+  //
 
   return {
     business: fetchedBusiness,
@@ -33,8 +32,7 @@ const mdp = dispatch => {
     updateReview: review => dispatch(updateReview(review)),
     deleteReview: (id) => dispatch(deleteReview(id)),
     requestAllBusinessCategories: () => dispatch(requestAllBusinessCategories()),
-    fetchCurrentUser: (userId) => dispatch(fetchCurrentUser(userId))
-
+    fetchCurrentUser: (userId) => dispatch(fetchCurrentUser(userId)),
   };
 };
 

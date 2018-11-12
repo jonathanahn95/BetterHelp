@@ -10,20 +10,17 @@
 
 .submit {
   height: 40px;
-
 }
 
 .sear-container {
-  display: flex
+  display: flex;
 }
-
 
 .fa-search {
   color: white;
   font-size: 17px;
 }
 .header {
-
   position: absolute;
   left: 0px;
   right: 0px;
@@ -36,7 +33,6 @@
   padding-top: 40px;
   color: white;
   text-shadow: 2px 2px 8px black;
-
 }
 
 .header-review a {
@@ -59,14 +55,12 @@
   align-items: center;
 }
 
-
 .header-list {
   display: flex;
   padding-right: 160px;
   width: 258px;
   padding-top: 20px;
   text-shadow: 2px 2px 8px black;
-
 }
 
 .header-list a {
@@ -84,15 +78,12 @@
   padding: 11px;
 }
 
-.brand-name{
+.brand-name {
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
   justify-content: center;
 }
-
-
-
 
 .brand {
   margin-top: 140px;
@@ -122,21 +113,17 @@
   border-bottom: 2px solid white;
 }
 
-
-
 .img-logo {
   height: 50px;
   width: 50px;
 }
 
 .about-list {
-
   color: #d4312c;
   align-items: baseline;
   font-size: 16px;
   font-family: Helvetica;
   font-weight: bold;
-
 }
 
 .about-list a {
@@ -149,13 +136,11 @@
 }
 
 .connect-list {
-
   color: #d4312c;
   align-items: baseline;
   font-size: 16px;
   font-family: Helvetica;
   font-weight: bold;
-
 }
 
 .connect-list a {
@@ -173,7 +158,6 @@
   font-weight: bold;
 
   font-family: Helvetica;
-
 }
 .discover-list a {
   padding-right: 80px;
@@ -202,7 +186,6 @@
   font-weight: 700;
   font-size: 21px;
   font-family: Helvetica;
-
 }
 
 .popular-categories {
@@ -232,11 +215,11 @@
   margin-top: 32px;
   border-radius: 5px;
   width: 190px;
-  height: 190px
+  height: 190px;
 }
 .footerImg {
   width: 50%;
-  margin:auto;
+  margin: auto;
 }
 
 .footerImg-container {
@@ -263,16 +246,14 @@
 .splash-pics-container {
   width: 300px;
   height: 295px;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #cccccc;
   border-radius: 4px;
   margin: 12px;
 }
 
-
 .splash-star-review {
   display: flex;
 }
-
 
 .hot-new-sign {
   text-align: center;
@@ -283,7 +264,6 @@
   line-height: 1.3125em;
   color: #d32323;
   font-family: arial;
-
 }
 
 .splash-bus-name {
@@ -291,27 +271,23 @@
   font-weight: bold;
   font-size: 17px;
   margin-top: 9px;
-
 }
 
 .splash-pics-container li {
   padding-left: 11px;
   padding-top: 5px;
-
 }
 
 .fire-opening {
   color: #f15c00;
-margin-top: 6px;
-
+  margin-top: 6px;
 }
 
 .splash-pics-container a {
   text-decoration: none;
-
 }
-.splash-star-num-reviews{
-  padding-top: 8px!important;
+.splash-star-num-reviews {
+  padding-top: 8px !important;
 }
 
 .drop-down-pic {
@@ -325,20 +301,20 @@ margin-top: 6px;
   height: 40px;
   background: #bd1f1f;
   background: #a71c1c;
-  background: rgba(0,0,0,.35);
-  background: rgba(0,0,0,.25);
+  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.25);
   align-items: center;
   display: flex;
   border-radius: 0 4px 4px 0;
 }
 
 .caret-drop-down:hover {
-  background: rgba(0,0,0,.35);
+  background: rgba(0, 0, 0, 0.35);
   cursor: pointer;
 }
 
 .drop-down-pic:hover {
-  background: rgba(0,0,0,.35);
+  background: rgba(0, 0, 0, 0.35);
   cursor: pointer;
 }
 
@@ -393,10 +369,10 @@ margin-top: 6px;
   margin-top: 20px;
   background: white;
   border: 1px solid #ccc;
-  border-color: rgba(0,0,0,0.2);
+  border-color: rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   font-family: sans-serif;
 }
 
@@ -460,7 +436,6 @@ margin-top: 6px;
   border-bottom: 1px solid #e6e6e6;
   margin: auto;
   align-items: center;
-
 }
 
 .dropped-down-about2-wrapper {
@@ -471,9 +446,9 @@ margin-top: 6px;
 
 .fa-user {
   padding-right: 5px;
-  color:gray
+  color: gray;
 }
-.dropped-down-about-me{
+.dropped-down-about-me {
   font-size: 14px;
   line-height: 1.28571em;
   font-weight: bold;

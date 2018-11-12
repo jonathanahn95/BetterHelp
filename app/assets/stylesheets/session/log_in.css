@@ -8,11 +8,11 @@
 .login-head {
   display: flex;
   justify-content: center;
-  margin-top:  20px;
+  margin-top: 20px;
   font-family: Helvetica;
   font-size: 28px;
   font-weight: bold;
-   -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: black;
 }
 
 .formtype-header {
@@ -23,11 +23,7 @@
   font-family: Helvetica;
   font-size: 20px;
   font-weight: bold;
-
-
 }
-
-
 
 .hr-line {
   border: none;
@@ -47,7 +43,6 @@
   margin-left: 300px;
   margin-bottom: 150px;
   width: 300px;
-
 }
 
 .sign-up-link {
@@ -69,9 +64,6 @@
   text-decoration: underline;
 }
 
-
-
-
 .bottom-sign-up-link {
   margin: 5px;
   text-align: right;
@@ -92,11 +84,11 @@
   width: 95%;
   padding: 6px;
   margin-top: 20px;
-  margin-bottom:  8px;
+  margin-bottom: 8px;
   font-size: 14px;
   border: 1px solid gray;
 
-  border-radius: 3px ;
+  border-radius: 3px;
 }
 
 .password {
@@ -105,8 +97,7 @@
   font-size: 14px;
   border: 1px solid gray;
 
-  border-radius: 3px ;
-
+  border-radius: 3px;
 }
 
 .submit {
@@ -120,9 +111,8 @@
   border: 1px solid black;
   box-shadow: 5px black;
 
-  border-radius:  3px;
+  border-radius: 3px;
 }
-
 
 .login-submit {
   margin-top: 45px;
@@ -137,7 +127,7 @@
   border: 1px solid rgb(141, 0, 5);
   box-shadow: 5px black;
 
-  border-radius:  3px;
+  border-radius: 3px;
 }
 
 .login-submit:hover {
