@@ -1,20 +1,18 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import BusinessShow from './business_show';
-import { requestSingleBusiness } from '../../actions/businesses_actions';
-import { deleteReview, updateReview } from '../../actions/reviews_actions';
-import { requestAllBusinessCategories } from '../../actions/business_category_actions';
-import { fetchCurrentUser } from '../../actions/sessions_actions';
+import React from "react";
+import { connect } from "react-redux";
+import BusinessShow from "./business_show";
+import { requestSingleBusiness } from "../../actions/businesses_actions";
+import { deleteReview, updateReview } from "../../actions/reviews_actions";
+import { requestAllBusinessCategories } from "../../actions/business_category_actions";
+import { fetchCurrentUser } from "../../actions/sessions_actions";
 
-
-const msp = (state,ownProps) => {
-  const fetchedBusiness = state.entities.businesses[ownProps.match.params.businessId];
+const msp = (state, ownProps) => {
+  const fetchedBusiness =
+    state.entities.businesses[ownProps.match.params.businessId];
   let reviews = [];
-  if (fetchedBusiness){
+  if (fetchedBusiness) {
     reviews = fetchedBusiness.reviews;
   }
-
-  //
 
   return {
     business: fetchedBusiness,
@@ -25,16 +23,18 @@ const msp = (state,ownProps) => {
   };
 };
 
-
 const mdp = dispatch => {
   return {
-    requestSingleBusiness: (id) => dispatch(requestSingleBusiness(id)),
+    requestSingleBusiness: id => dispatch(requestSingleBusiness(id)),
     updateReview: review => dispatch(updateReview(review)),
-    deleteReview: (id) => dispatch(deleteReview(id)),
-    requestAllBusinessCategories: () => dispatch(requestAllBusinessCategories()),
-    fetchCurrentUser: (userId) => dispatch(fetchCurrentUser(userId)),
+    deleteReview: id => dispatch(deleteReview(id)),
+    requestAllBusinessCategories: () =>
+      dispatch(requestAllBusinessCategories()),
+    fetchCurrentUser: userId => dispatch(fetchCurrentUser(userId))
   };
 };
 
-
-export default connect(msp,mdp)(BusinessShow);
+export default connect(
+  msp,
+  mdp
+)(BusinessShow);

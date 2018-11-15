@@ -14,8 +14,9 @@ class Api::AdjectivesController < ApplicationController
   end
 
   def delete_like
-    user_id = params[:id].to_i
-    @like = Like.find_by(user_id: user_id)
+    review_id = params[:id].to_i
+    user_id = params[:like][:user_id].to_i
+    @like = Like.find_by(user_id: user_id, review_id: review_id)
     @like.destroy
     render 'api/adjectives/show'
   end

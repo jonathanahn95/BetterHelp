@@ -26,10 +26,11 @@ export const createLike = like => {
     data: { like }
   });
 };
-export const deleteLike = id => {
+export const deleteLike = like => {
   return $.ajax({
     method: "DELETE",
-    url: `api/adjectives/likes/${id}`
+    url: `api/adjectives/likes/${like.review_id}`,
+    data: { like }
   });
 };
 export const updateCool = cool => {
