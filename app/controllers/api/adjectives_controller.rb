@@ -50,9 +50,9 @@ class Api::AdjectivesController < ApplicationController
       Cool.create!(user_id: user_id, review_id: @review_id)
       @cools = Cool.where(review_id: @review_id)
       render 'api/adjectives/cool_show'
-    else
+      else
       @user_marked = Cool.where(review_id: @review_id,user_id: user_id)
-      cool = Cool.find_by(user_id: user_id)
+      cool = Cool.find_by(user_id: user_id, review_id: @review_id)
       cool.destroy
       @cools = Cool.where(review_id: @review_id)
       render 'api/adjectives/cool_show'
@@ -70,7 +70,7 @@ class Api::AdjectivesController < ApplicationController
       render 'api/adjectives/useful_show'
     else
       @user_marked = Useful.where(review_id: @review_id,user_id: user_id)
-      useful = Useful.find_by(user_id: user_id)
+      useful = Useful.find_by(user_id: user_id, review_id: @review_id)
       useful.destroy
       @useful = Useful.where(review_id: @review_id)
       render 'api/adjectives/useful_show'
@@ -88,7 +88,7 @@ class Api::AdjectivesController < ApplicationController
       render 'api/adjectives/funny_show'
     else
       @user_marked = Funny.where(review_id: @review_id,user_id: user_id)
-      funny = Funny.find_by(user_id: user_id)
+      funny = Funny.find_by(user_id: user_id, review_id: @review_id)
       funny.destroy
       @funny = Funny.where(review_id: @review_id)
       render 'api/adjectives/funny_show'

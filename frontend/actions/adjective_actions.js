@@ -109,7 +109,6 @@ export const updateUseful = useful => dispatch => {
 };
 
 export const updateFunny = funny => dispatch => {
-  debugger;
   return AdjectivesApiUtil.updateFunny(funny).then(funny => {
     debugger;
     return dispatch(editFunny(funny));

@@ -12,6 +12,12 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+.attribute-count {
+  padding-left: 5px;
 }
 
 .like-toggle {
@@ -31,6 +37,8 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   cursor: pointer;
+  align-items: center;
+  display: flex;
 }
 
 .adjective-ul {

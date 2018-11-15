@@ -47,6 +47,7 @@ class AdjectiveShow extends React.Component {
   toggleCool() {
     this.props.updateCool(this.adjectiveInfo);
   }
+
   toggleUseful() {
     this.props.updateUseful(this.adjectiveInfo);
   }
@@ -79,7 +80,9 @@ class AdjectiveShow extends React.Component {
       coolCount = (
         <li onClick={this.toggleCool} className="toggle-adjective-li">
           <i className="fa fa-grin-stars" />Cool
-          {this.props.cool[this.props.review.id].cools.length}
+          <li className="attribute-count">
+            {this.props.cool[this.props.review.id].cools.length}
+          </li>
         </li>
       );
     } else if (
@@ -90,7 +93,9 @@ class AdjectiveShow extends React.Component {
       coolCount = (
         <li onClick={this.toggleCool} className="adjective-li">
           <i className="fa fa-grin-stars" />Cool
-          {this.props.cool[this.props.review.id].cools.length}
+          <li className="attribute-count">
+            {this.props.cool[this.props.review.id].cools.length}
+          </li>
         </li>
       );
     }
@@ -104,7 +109,9 @@ class AdjectiveShow extends React.Component {
       funnyCount = (
         <li onClick={this.toggleFunny} className="toggle-adjective-li">
           <i className="fa fa-grin-stars" />Funny
-          {this.props.funny[this.props.review.id].funny.length}
+          <li className="attribute-count">
+            {this.props.funny[this.props.review.id].funny.length}
+          </li>
         </li>
       );
     } else if (
@@ -115,7 +122,9 @@ class AdjectiveShow extends React.Component {
       funnyCount = (
         <li onClick={this.toggleFunny} className="adjective-li">
           <i className="fa fa-grin-stars" />Funny
-          {this.props.funny[this.props.review.id].funny.length}
+          <li className="attribute-count">
+            {this.props.funny[this.props.review.id].funny.length}
+          </li>
         </li>
       );
     }
@@ -126,11 +135,12 @@ class AdjectiveShow extends React.Component {
       this.props.useful[this.props.review.id] &&
       this.props.useful[this.props.review.id].useful_count === 1
     ) {
-      debugger;
       usefulCount = (
         <li className="toggle-adjective-li" onClick={this.toggleUseful}>
           <i className="fa fa-grin-stars" />Useful
-          {this.props.useful[this.props.review.id].useful.length}
+          <li className="attribute-count">
+            {this.props.useful[this.props.review.id].useful.length}
+          </li>
         </li>
       );
     } else if (
@@ -141,7 +151,9 @@ class AdjectiveShow extends React.Component {
       usefulCount = (
         <li className="adjective-li" onClick={this.toggleUseful}>
           <i className="fa fa-grin-stars" />Useful
-          {this.props.useful[this.props.review.id].useful.length}
+          <li className="attribute-count">
+            {this.props.useful[this.props.review.id].useful.length}
+          </li>
         </li>
       );
     }
@@ -164,7 +176,6 @@ class AdjectiveShow extends React.Component {
 }
 
 const mapStateToProps = state => {
-  debugger;
   return {
     likes: state.entities.adjectives.likes,
     useful: state.entities.adjectives.useful,
