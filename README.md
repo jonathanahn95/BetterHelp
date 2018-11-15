@@ -33,6 +33,4 @@ One of BetterHelps core features is the ability to search for relavent businesse
   end
 ```
 
-## Future Implementations
 
-### Mark reviews as funny, cool, etc
