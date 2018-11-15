@@ -152,11 +152,9 @@ class AdjectiveShow extends React.Component {
 
         <ul className="adjective-ul">
           <div className="adjective-ul-wrapper">
-            <div>
-              {usefulCount}
-              {funnyCount}
-              {coolCount}
-            </div>
+            {usefulCount}
+            {funnyCount}
+            {coolCount}
           </div>
           {likeIcon}
         </ul>
