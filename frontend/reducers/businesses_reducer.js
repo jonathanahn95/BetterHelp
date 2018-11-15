@@ -1,15 +1,18 @@
-import { RECEIVE_SELECTED_BUSINESS_CATEGORIES  } from '../actions/business_category_actions';
-import { RECEIVE_BUSINESS, RECEIVE_BUSINESSES } from '../actions/businesses_actions';
-import { RECEIVE_REVIEW, REMOVE_REVIEW } from '../actions/reviews_actions';
-import { RECEIVE_SEARCH_RESULTS } from '../actions/search_actions';
-import { merge } from 'lodash';
-
+import { RECEIVE_SELECTED_BUSINESS_CATEGORIES } from "../actions/business_category_actions";
+import {
+  RECEIVE_BUSINESS,
+  RECEIVE_BUSINESSES
+} from "../actions/businesses_actions";
+import { RECEIVE_REVIEW, REMOVE_REVIEW } from "../actions/reviews_actions";
+import { RECEIVE_SEARCH_RESULTS } from "../actions/search_actions";
+import { merge } from "lodash";
 
 export default (state = {}, action) => {
   let businessId;
   let reviewId;
   let newState;
   let reviews;
+  let a;
 
   Object.freeze(state);
   switch (action.type) {
@@ -18,6 +21,8 @@ export default (state = {}, action) => {
     case RECEIVE_BUSINESSES:
       return action.businesses;
     case RECEIVE_BUSINESS:
+      a = merge({}, state, { [action.business.id]: action.business });
+      ;
       return merge({}, state, { [action.business.id]: action.business });
     case RECEIVE_REVIEW:
       newState = merge({}, state);
@@ -27,7 +32,7 @@ export default (state = {}, action) => {
 
       reviews = [];
       newState[businessId].reviews.forEach(review => {
-        if(review.id !== action.review.id) {
+        if (review.id !== action.review.id) {
           reviews.push(review);
         } else {
           reviews.push(action.review);
@@ -44,14 +49,14 @@ export default (state = {}, action) => {
 
       reviews = [];
       newState[businessId].reviews.forEach(review => {
-        if(review.id !== action.review.id) {
+        if (review.id !== action.review.id) {
           reviews.push(review);
         }
       });
       newState[businessId].reviews = reviews;
       return newState;
-      case RECEIVE_SEARCH_RESULTS:
-        return action.results;
+    case RECEIVE_SEARCH_RESULTS:
+      return action.results;
     default:
       return state;
   }

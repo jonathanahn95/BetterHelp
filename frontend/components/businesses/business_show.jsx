@@ -57,6 +57,7 @@ class BusinessShow extends React.Component {
   }
 
   userReviews(review) {
+    // ;
     if (this.props.session === review.user_id) {
       return (
         <div className="user-review-div">
@@ -76,7 +77,11 @@ class BusinessShow extends React.Component {
       );
     } else {
       return (
-        <AdjectiveShow review={review} currentUser={this.props.currentUser} />
+        <AdjectiveShow
+          review={review}
+          currentUser={this.props.currentUser}
+          history={this.props.history}
+        />
       );
     }
   }

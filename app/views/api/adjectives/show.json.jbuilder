@@ -1,11 +1,26 @@
-json.cool do
-  json.cool_count @cool_count
-end
+json.adjectives do
 
-json.funny do
-  json.funny_count @funny_count
-end
+  json.likes do
+    json.set! @like.review_id do
+      json.extract!( @like, :id, :review_id)
+    end
+  end
 
-json.useful do
-  json.useful_count @useful_count
+  json.funny do
+    # json.set! @funny.review_id do
+    #   json.extract!( @funny, :id, :review_id)
+    # end
+  end
+
+  json.cool do
+    # json.set! @cool.review_id do
+    #   json.extract!( @cool, :id, :review_id, @cool_count)
+    # end
+  end
+
+  json.useful do
+    # json.set! @useful.review_id do
+    #   json.extract!( @useful, :id, :review_id)
+    # end
+  end
 end

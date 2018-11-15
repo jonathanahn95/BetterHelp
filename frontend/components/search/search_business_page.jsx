@@ -57,7 +57,6 @@ class SearchBusinessPage extends React.Component {
   addtoArray(field) {
     return e => {
       const val = e.target.value;
-
       let newArr = this.state[field];
       if (newArr.includes(val)) {
         newArr = newArr.filter(ele => ele !== val);

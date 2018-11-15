@@ -5,7 +5,7 @@ class Api::BusinessesController < ApplicationController
   end
 
   def index
-    @businesses = params[:business_category_id] ? Business.where( business_category_id: params[:business_category_id]) : Business.all
+    @businesses = params[:business_category_id] ? Business.includes(:reviews).where( business_category_id: params[:business_category_id]) : Business.includes(:reviews).all
   end
 
   def search

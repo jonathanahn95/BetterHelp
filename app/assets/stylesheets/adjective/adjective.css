@@ -14,6 +14,25 @@
   cursor: pointer;
 }
 
+.like-toggle {
+  color: blue !important;
+  cursor: pointer;
+}
+.toggle-adjective-li {
+  border: 1px solid;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  color: white;
+  font-weight: 700;
+  border-color: #ccc;
+  background: blue;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 .adjective-ul {
   display: flex;
   width: 100%;
