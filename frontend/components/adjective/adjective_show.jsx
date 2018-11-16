@@ -10,7 +10,8 @@ import {
   updateUseful,
   fetchCool,
   fetchFunny,
-  fetchUseful
+  fetchUseful,
+  fetchLike
 } from "../../actions/adjective_actions";
 
 class AdjectiveShow extends React.Component {
@@ -21,7 +22,6 @@ class AdjectiveShow extends React.Component {
     this.toggleFunny = this.toggleFunny.bind(this);
     this.toggleUseful = this.toggleUseful.bind(this);
     if (this.props.currentUser) {
-      debugger;
       this.adjectiveInfo = {
         user_id: this.props.currentUser.id,
         review_id: this.props.review.id
@@ -30,11 +30,11 @@ class AdjectiveShow extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
     if (this.props.currentUser && this.props.currentUser.id) {
       this.props.fetchCool(this.adjectiveInfo);
       this.props.fetchFunny(this.adjectiveInfo);
       this.props.fetchUseful(this.adjectiveInfo);
+      this.props.fetchLike(this.adjectiveInfo);
     } else {
       this.props.fetchCool({
         review_id: this.props.review.id
@@ -49,7 +49,9 @@ class AdjectiveShow extends React.Component {
   }
 
   toggleLike() {
-    if (this.props.likes && this.props.likes[this.props.review.id]) {
+    const likes = this.props.likes;
+    const reviewId = this.props.review.id;
+    if (likes && likes[reviewId] && likes[reviewId].like_count === 1) {
       debugger;
       this.props.deleteLike(this.adjectiveInfo);
     } else {
@@ -59,6 +61,7 @@ class AdjectiveShow extends React.Component {
   }
 
   toggleFunny() {
+    debugger;
     this.props.updateFunny(this.adjectiveInfo);
   }
 
@@ -73,26 +76,19 @@ class AdjectiveShow extends React.Component {
   render() {
     let likeIcon;
     const reviewId = this.props.review.id;
-    const likes = this.props.likes;
-    const cool = this.props.cool;
-    const funny = this.props.funny;
-    const useful = this.props.useful;
 
-    // const { likes, cool, funny, useful } = this.props;
-
-    if (likes && likes[reviewId]) {
+    const { likes, cool, funny, useful } = this.props;
+    if (likes && likes[reviewId] && likes[reviewId].like_count === 1) {
       likeIcon = (
         <li className="adjective-like" onClick={this.toggleLike}>
-          <i
-            onClick={this.toggleLike}
-            className="fa fa-thumbs-up like-toggle"
-          />
+          <i className="fa fa-thumbs-up like-toggle" />
         </li>
       );
     } else {
+      debugger;
       likeIcon = (
         <li className="adjective-like" onClick={this.toggleLike}>
-          <i onClick={this.toggleLike} className="fa fa-thumbs-up" />
+          <i className="fa fa-thumbs-up" />
         </li>
       );
     }
@@ -181,6 +177,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    fetchLike: attribute => dispatch(fetchLike(attribute)),
     fetchCool: attribute => dispatch(fetchCool(attribute)),
     fetchFunny: attribute => dispatch(fetchFunny(attribute)),
     fetchUseful: attribute => dispatch(fetchUseful(attribute)),

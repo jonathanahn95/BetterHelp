@@ -48,7 +48,13 @@ class Splash extends React.Component {
       reviews = this.props.reviews
         .reverse()
         .slice(0, 9)
-        .map(review => <SplashReviews key={review.id} review={review} />);
+        .map(review => (
+          <SplashReviews
+            key={review.id}
+            review={review}
+            currentUser={this.props.currentUser}
+          />
+        ));
     } else {
       reviews = <div />;
     }

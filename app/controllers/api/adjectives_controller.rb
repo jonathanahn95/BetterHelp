@@ -1,11 +1,12 @@
+
 class Api::AdjectivesController < ApplicationController
 
   def create_like
     like_param = params[:like]
     user_id = like_param[:user_id].to_i
-    review_id = like_param[:review_id].to_i
-    @like = Like.new(user_id: user_id, review_id: review_id)
-
+    @review_id = like_param[:review_id].to_i
+    @like = Like.new(user_id: user_id, review_id: @review_id)
+    @user_marked = 1
     if @like.save
       render 'api/adjectives/show'
     else
@@ -14,10 +15,19 @@ class Api::AdjectivesController < ApplicationController
   end
 
   def delete_like
-    review_id = params[:id].to_i
+    @review_id = params[:id].to_i
     user_id = params[:like][:user_id].to_i
-    @like = Like.find_by(user_id: user_id, review_id: review_id)
+    @like = Like.find_by(user_id: user_id, review_id: @review_id)
+    @user_marked = 0
+
     @like.destroy
+    render 'api/adjectives/show'
+  end
+
+  def show_like
+    @review_id =  params[:id].to_i
+    @like = Like.where(review_id: @review_id, user_id: params[:like][:user_id])
+    @user_marked = @like.where(review_id: @review_id, user_id: params[:like][:user_id]).length
     render 'api/adjectives/show'
   end
 

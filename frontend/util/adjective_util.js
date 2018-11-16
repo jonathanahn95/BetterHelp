@@ -1,3 +1,11 @@
+export const fetchLike = like => {
+  debugger;
+  return $.ajax({
+    method: "GET",
+    url: `api/adjectives/like/${like.review_id}`,
+    data: { like }
+  });
+};
 export const fetchCool = cool => {
   return $.ajax({
     method: "GET",
@@ -40,7 +48,6 @@ export const updateCool = cool => {
     data: { cool }
   });
 };
-
 export const updateUseful = useful => {
   debugger;
   return $.ajax({
@@ -49,7 +56,6 @@ export const updateUseful = useful => {
     data: { useful }
   });
 };
-
 export const updateFunny = funny => {
   return $.ajax({
     method: "PATCH",

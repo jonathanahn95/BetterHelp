@@ -35,7 +35,6 @@ export default (state = {}, action) => {
     case UPDATE_FUNNY:
       newState = merge({}, state);
       reviewId = Object.keys(action.payload.adjectives.funny);
-      debugger;
       delete newState.funny[reviewId];
       return merge({}, newState, action.payload.adjectives);
     case RECEIVE_USEFUL:

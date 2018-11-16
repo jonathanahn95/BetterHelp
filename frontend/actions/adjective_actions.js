@@ -64,6 +64,12 @@ export const editUseful = payload => {
   };
 };
 
+export const fetchLike = like => dispatch => {
+  return AdjectivesApiUtil.fetchLike(like).then(like => {
+    debugger;
+    return dispatch(receiveLike(like));
+  });
+};
 export const fetchCool = cool => dispatch => {
   return AdjectivesApiUtil.fetchCool(cool).then(cool => {
     return dispatch(receiveCool(cool));
@@ -90,27 +96,25 @@ export const deleteLike = like => dispatch => {
 
 export const createLike = like => dispatch => {
   return AdjectivesApiUtil.createLike(like).then(like => {
+    debugger;
     return dispatch(receiveLike(like));
   });
 };
 
 export const updateCool = cool => dispatch => {
   return AdjectivesApiUtil.updateCool(cool).then(cool => {
-    debugger;
     return dispatch(editCool(cool));
   });
 };
 
 export const updateUseful = useful => dispatch => {
   return AdjectivesApiUtil.updateUseful(useful).then(useful => {
-    debugger;
     return dispatch(editUseful(useful));
   });
 };
 
 export const updateFunny = funny => dispatch => {
   return AdjectivesApiUtil.updateFunny(funny).then(funny => {
-    debugger;
     return dispatch(editFunny(funny));
   });
 };

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     patch 'adjectives/useful', to: 'adjectives#update_useful'
     patch 'adjectives/funny', to: 'adjectives#update_funny'
     get 'adjectives/cool/:id', to: 'adjectives#show_cool'
+    get 'adjectives/like/:id', to: 'adjectives#show_like'
     get 'adjectives/funny/:id', to: 'adjectives#show_funny'
     get 'adjectives/useful/:id', to: 'adjectives#show_useful'
 

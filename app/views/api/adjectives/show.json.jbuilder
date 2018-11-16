@@ -1,8 +1,9 @@
 json.adjectives do
 
   json.likes do
-    json.set! @like.review_id do
-      json.extract!( @like, :id, :review_id)
+    json.set! @review_id do
+      json.like @like
+      json.like_count @user_marked
     end
   end
 

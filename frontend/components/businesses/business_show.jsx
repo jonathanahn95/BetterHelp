@@ -19,7 +19,6 @@ class BusinessShow extends React.Component {
     this.props.requestAllBusinessCategories();
   }
 
-  /// compoDIdUpdate
   componentWillReceiveProps(nextProps) {
     if (
       this.props.match.params.businessId !== nextProps.match.params.businessId
