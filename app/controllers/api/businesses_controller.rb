@@ -1,11 +1,11 @@
 class Api::BusinessesController < ApplicationController
   def show
-    @business = Business.find(params[:id])
-    @reviews = @business.reviews
+    @business = Business.includes(:reviews).with_attached_photos.find(params[:id])
+    @reviews = @business.reviews.includes(:user).includes(:business)
   end
 
   def index
-    @businesses = params[:business_category_id] ? Business.includes(:reviews).where( business_category_id: params[:business_category_id]) : Business.includes(:reviews).all
+    @businesses = params[:business_category_id] ? Business.includes(:reviews).with_attached_photos.where( business_category_id: params[:business_category_id]) : Business.includes(:reviews).with_attached_photos.all
   end
 
   def search

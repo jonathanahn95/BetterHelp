@@ -22,7 +22,7 @@ export default (state = {}, action) => {
       return action.businesses;
     case RECEIVE_BUSINESS:
       a = merge({}, state, { [action.business.id]: action.business });
-      ;
+
       return merge({}, state, { [action.business.id]: action.business });
     case RECEIVE_REVIEW:
       newState = merge({}, state);

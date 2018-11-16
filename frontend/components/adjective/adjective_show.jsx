@@ -77,6 +77,9 @@ class AdjectiveShow extends React.Component {
     const cool = this.props.cool;
     const funny = this.props.funny;
     const useful = this.props.useful;
+
+    // const { likes, cool, funny, useful } = this.props;
+
     if (likes && likes[reviewId]) {
       likeIcon = (
         <li className="adjective-like" onClick={this.toggleLike}>
