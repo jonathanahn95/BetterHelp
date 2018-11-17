@@ -66,7 +66,6 @@ export const editUseful = payload => {
 
 export const fetchLike = like => dispatch => {
   return AdjectivesApiUtil.fetchLike(like).then(like => {
-    debugger;
     return dispatch(receiveLike(like));
   });
 };
@@ -96,7 +95,6 @@ export const deleteLike = like => dispatch => {
 
 export const createLike = like => dispatch => {
   return AdjectivesApiUtil.createLike(like).then(like => {
-    debugger;
     return dispatch(receiveLike(like));
   });
 };

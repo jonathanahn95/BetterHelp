@@ -48,7 +48,6 @@ export const updateCool = cool => {
   });
 };
 export const updateUseful = useful => {
-  debugger;
   return $.ajax({
     method: "PATCH",
     url: `api/adjectives/useful/`,

@@ -161,8 +161,6 @@ class BusinessShow extends React.Component {
       boot = this.props.businessCategories[3].id;
     }
 
-    console.log(1);
-
     return (
       <div>
         <header className="login-header">

@@ -17,7 +17,6 @@ import {
 class AdjectiveShow extends React.Component {
   constructor(props) {
     super(props);
-    debugger;
     this.toggleLike = this.toggleLike.bind(this);
     this.toggleCool = this.toggleCool.bind(this);
     this.toggleFunny = this.toggleFunny.bind(this);
@@ -31,7 +30,6 @@ class AdjectiveShow extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
     if (this.props.currentUser && this.props.currentUser.id) {
       this.props.fetchCool(this.adjectiveInfo);
       this.props.fetchFunny(this.adjectiveInfo);
@@ -60,7 +58,6 @@ class AdjectiveShow extends React.Component {
   }
 
   toggleCountDisplay() {
-    debugger;
     if (this.props.class === "business-show") {
       return `${this.props.class}-attribute-count`;
     } else {
@@ -70,7 +67,9 @@ class AdjectiveShow extends React.Component {
   toggleLike() {
     const likes = this.props.likes;
     const reviewId = this.props.review.id;
-    if (likes && likes[reviewId] && likes[reviewId].like_count === 1) {
+    if (!this.props.currentUser) {
+      this.props.history.push(`/login`);
+    } else if (likes && likes[reviewId] && likes[reviewId].like_count === 1) {
       this.props.deleteLike(this.adjectiveInfo);
     } else {
       this.props.createLike(this.adjectiveInfo);
@@ -78,15 +77,27 @@ class AdjectiveShow extends React.Component {
   }
 
   toggleFunny() {
-    this.props.updateFunny(this.adjectiveInfo);
+    if (!this.props.currentUser) {
+      this.props.history.push(`/login`);
+    } else {
+      this.props.updateFunny(this.adjectiveInfo);
+    }
   }
 
   toggleCool() {
-    this.props.updateCool(this.adjectiveInfo);
+    if (!this.props.currentUser) {
+      this.props.history.push(`/login`);
+    } else {
+      this.props.updateCool(this.adjectiveInfo);
+    }
   }
 
   toggleUseful() {
-    this.props.updateUseful(this.adjectiveInfo);
+    if (!this.props.currentUser) {
+      this.props.history.push(`/login`);
+    } else {
+      this.props.updateUseful(this.adjectiveInfo);
+    }
   }
 
   render() {

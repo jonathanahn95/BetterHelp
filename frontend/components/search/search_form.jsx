@@ -33,6 +33,7 @@ class SearchForm extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
+    this.props.history.push(`/login`);
     this.props.logout();
   }
 
@@ -178,7 +179,7 @@ class SearchForm extends React.Component {
             placeholder="restaurants, bootcamps, cafes..."
             className={"search" + `-${this.props.className} `}
             minLength={1}
-            debounceTimeout={300}
+            debounceTimeout={100}
             value={this.state.name}
             onChange={this.update("name")}
           />
