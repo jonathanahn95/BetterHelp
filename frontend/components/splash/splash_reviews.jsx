@@ -22,6 +22,7 @@ class SplashReviews extends React.Component {
           review={this.props.review}
           currentUser={this.props.currentUser}
           class="splash"
+          history={this.props.history}
         />
       );
     });

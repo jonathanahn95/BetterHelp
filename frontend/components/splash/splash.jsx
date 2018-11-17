@@ -53,6 +53,7 @@ class Splash extends React.Component {
             key={review.id}
             review={review}
             currentUser={this.props.currentUser}
+            history={this.props.history}
           />
         ));
     } else {
