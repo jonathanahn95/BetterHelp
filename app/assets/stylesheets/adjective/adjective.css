@@ -1,4 +1,13 @@
-.adjective-li {
+.cool-toggle {
+  color: red !important;
+}
+.useful-toggle {
+  color: orange !important;
+}
+.funny-toggle {
+  color: green !important;
+}
+.business-show-adjective-li {
   border: 1px solid;
   padding: 5px 8px;
   font-size: 12px;
@@ -16,7 +25,7 @@
   display: flex;
 }
 
-.attribute-count {
+.business-show-attribute-count {
   padding-left: 5px;
 }
 
@@ -24,36 +33,46 @@
   color: blue !important;
   cursor: pointer;
 }
-.toggle-adjective-li {
+.business-show-toggle-adjective-li {
   border: 1px solid;
   padding: 5px 8px;
   font-size: 12px;
   font-family: sans-serif;
   line-height: 1.5em;
-  color: white;
   font-weight: 700;
-  border-color: #ccc;
-  background: blue;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   cursor: pointer;
   align-items: center;
   display: flex;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.2) 0 -1px;
+  border-color: #007abe;
+  background: #0097ec;
 }
 
-.adjective-ul {
+.business-show-adjective-ul {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
+.splash-adjective-ul {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  cursor: pointer;
+  margin: auto;
+}
 
-.adjective-ul-wrapper {
+.business-show-adjective-ul-wrapper {
   display: flex;
   width: 80%;
   justify-content: space-between;
 }
 
-.adjective-like {
+/* .business-show-adjective-like {
   border: 1px solid;
   padding: 0 0 0 10px;
   font-size: 12px;
@@ -70,6 +89,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+.splash-icon {
+  font-size: 18px;
+}
+.business-show-adjective-like {
+  font-size: 16px;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  color: #666;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-review-div {
@@ -79,11 +113,84 @@
   padding-top: 20px;
 }
 
-.adjective-wrapper {
+.business-show-adjective-wrapper {
   display: flex;
   flex-direction: column;
   padding-top: 25px;
   width: 100%;
+}
+.splash-adjective-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tooltip {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip .splash-tooltiptext {
+  visibility: hidden;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  width: 49px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 160%;
+  right: -21%;
+}
+.tooltip .splash-tooltiptext-useful {
+  visibility: hidden;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  width: 49px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 160%;
+  right: -41%;
+}
+
+.tooltip .splash-tooltiptext-useful::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip .splash-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .splash-tooltiptext {
+  visibility: visible;
+}
+.tooltip:hover .splash-tooltiptext-useful {
+  visibility: visible;
 }
 
 .helpful-review {
@@ -92,4 +199,20 @@
   font-family: sans-serif;
   font-size: 12px;
   color: #666;
+}
+
+.splash-attribute-count {
+  display: none;
+}
+.funny-attribute-count {
+  display: none;
+}
+.cool-attribute-count {
+  display: none;
+}
+
+.splash-adjective-ul-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
 }

@@ -1,5 +1,4 @@
 export const fetchLike = like => {
-  debugger;
   return $.ajax({
     method: "GET",
     url: `api/adjectives/like/${like.review_id}`,

@@ -17,6 +17,7 @@ import {
 class AdjectiveShow extends React.Component {
   constructor(props) {
     super(props);
+    debugger;
     this.toggleLike = this.toggleLike.bind(this);
     this.toggleCool = this.toggleCool.bind(this);
     this.toggleFunny = this.toggleFunny.bind(this);
@@ -30,6 +31,7 @@ class AdjectiveShow extends React.Component {
   }
 
   componentDidMount() {
+    debugger;
     if (this.props.currentUser && this.props.currentUser.id) {
       this.props.fetchCool(this.adjectiveInfo);
       this.props.fetchFunny(this.adjectiveInfo);
@@ -45,6 +47,23 @@ class AdjectiveShow extends React.Component {
       this.props.fetchUseful({
         review_id: this.props.review.id
       });
+      this.props.fetchLike({
+        review_id: this.props.review.id
+      });
+    }
+  }
+
+  helpfulText() {
+    if (this.props.class === "business-show") {
+      return "Was this review ...?";
+    }
+  }
+
+  toggleCountDisplay() {
+    debugger;
+    if (this.props.class === "business-show") {
+      return `${this.props.class}-attribute-count`;
+    } else {
     }
   }
 
@@ -52,16 +71,13 @@ class AdjectiveShow extends React.Component {
     const likes = this.props.likes;
     const reviewId = this.props.review.id;
     if (likes && likes[reviewId] && likes[reviewId].like_count === 1) {
-      debugger;
       this.props.deleteLike(this.adjectiveInfo);
     } else {
-      debugger;
       this.props.createLike(this.adjectiveInfo);
     }
   }
 
   toggleFunny() {
-    debugger;
     this.props.updateFunny(this.adjectiveInfo);
   }
 
@@ -80,14 +96,19 @@ class AdjectiveShow extends React.Component {
     const { likes, cool, funny, useful } = this.props;
     if (likes && likes[reviewId] && likes[reviewId].like_count === 1) {
       likeIcon = (
-        <li className="adjective-like" onClick={this.toggleLike}>
+        <li
+          className={`${this.props.class}-adjective-like`}
+          onClick={this.toggleLike}
+        >
           <i className="fa fa-thumbs-up like-toggle" />
         </li>
       );
     } else {
-      debugger;
       likeIcon = (
-        <li className="adjective-like" onClick={this.toggleLike}>
+        <li
+          className={`${this.props.class}-adjective-like`}
+          onClick={this.toggleLike}
+        >
           <i className="fa fa-thumbs-up" />
         </li>
       );
@@ -96,16 +117,36 @@ class AdjectiveShow extends React.Component {
     let coolCount;
     if (cool && cool[reviewId] && cool[reviewId].cool_count === 1) {
       coolCount = (
-        <li onClick={this.toggleCool} className="toggle-adjective-li">
-          <i className="fa fa-grin-stars" />Cool
-          <li className="attribute-count">{cool[reviewId].cools.length}</li>
+        <li
+          onClick={this.toggleCool}
+          className={`${this.props.class}-toggle-adjective-li`}
+        >
+          <div className="tooltip">
+            <i
+              className={`fa fa-grin-stars cool-toggle ${
+                this.props.class
+              }-icon`}
+            />
+            <li className={`${this.props.class}-tooltiptext`}>Cool</li>
+          </div>
+          <li className={`${this.props.class}-attribute-count`}>
+            {cool[reviewId].cools.length}
+          </li>
         </li>
       );
     } else if (cool && cool[reviewId] && cool[reviewId].cool_count === 0) {
       coolCount = (
-        <li onClick={this.toggleCool} className="adjective-li">
-          <i className="fa fa-grin-stars" />Cool
-          <li className="attribute-count">{cool[reviewId].cools.length}</li>
+        <li
+          onClick={this.toggleCool}
+          className={`${this.props.class}-adjective-li`}
+        >
+          <div className="tooltip">
+            <i className={`fa fa-grin-stars ${this.props.class}-icon`} />
+            <li className={`${this.props.class}-tooltiptext`}>Cool</li>
+          </div>
+          <li className={`${this.props.class}-attribute-count`}>
+            {cool[reviewId].cools.length}
+          </li>
         </li>
       );
     }
@@ -113,16 +154,36 @@ class AdjectiveShow extends React.Component {
     let funnyCount;
     if (funny && funny[reviewId] && funny[reviewId].funny_count === 1) {
       funnyCount = (
-        <li onClick={this.toggleFunny} className="toggle-adjective-li">
-          <i className="fa fa-grin-stars" />Funny
-          <li className="attribute-count">{funny[reviewId].funny.length}</li>
+        <li
+          onClick={this.toggleFunny}
+          className={`${this.props.class}-toggle-adjective-li`}
+        >
+          <div className="tooltip">
+            <i
+              className={`fa fa-grin-squint-tears funny-toggle ${
+                this.props.class
+              }-icon`}
+            />
+            <li className={`${this.props.class}-tooltiptext`}>Funny</li>
+          </div>
+          <li className={`${this.props.class}-attribute-count`}>
+            {funny[reviewId].funny.length}
+          </li>
         </li>
       );
     } else if (funny && funny[reviewId] && funny[reviewId].funny_count === 0) {
       funnyCount = (
-        <li onClick={this.toggleFunny} className="adjective-li">
-          <i className="fa fa-grin-stars" />Funny
-          <li className="attribute-count">{funny[reviewId].funny.length}</li>
+        <li
+          onClick={this.toggleFunny}
+          className={`${this.props.class}-adjective-li`}
+        >
+          <div className="tooltip">
+            <i className={`fa fa-grin-squint-tears ${this.props.class}-icon`} />
+            <li className={`${this.props.class}-tooltiptext`}>Funny</li>
+          </div>
+          <li className={`${this.props.class}-attribute-count`}>
+            {funny[reviewId].funny.length}
+          </li>
         </li>
       );
     }
@@ -130,9 +191,21 @@ class AdjectiveShow extends React.Component {
     let usefulCount;
     if (useful && useful[reviewId] && useful[reviewId].useful_count === 1) {
       usefulCount = (
-        <li className="toggle-adjective-li" onClick={this.toggleUseful}>
-          <i className="fa fa-grin-stars" />Useful
-          <li className="attribute-count">{useful[reviewId].useful.length}</li>
+        <li
+          className={`${this.props.class}-toggle-adjective-li`}
+          onClick={this.toggleUseful}
+        >
+          <div className="tooltip">
+            <i
+              className={`fa fa-lightbulb useful-toggle ${
+                this.props.class
+              }-icon`}
+            />
+            <li className={`${this.props.class}-tooltiptext-useful`}>Useful</li>
+          </div>
+          <li className={`${this.props.class}-attribute-count`}>
+            {useful[reviewId].useful.length}
+          </li>
         </li>
       );
     } else if (
@@ -141,19 +214,27 @@ class AdjectiveShow extends React.Component {
       useful[reviewId].useful_count === 0
     ) {
       usefulCount = (
-        <li className="adjective-li" onClick={this.toggleUseful}>
-          <i className="fa fa-grin-stars" />Useful
-          <li className="attribute-count">{useful[reviewId].useful.length}</li>
-        </li>
+        <span
+          className={`${this.props.class}-adjective-li`}
+          onClick={this.toggleUseful}
+        >
+          <div className="tooltip">
+            <i className={`fa fa-lightbulb ${this.props.class}-icon`} />
+            <li className={`${this.props.class}-tooltiptext-useful`}>Useful</li>
+          </div>
+          <li className={`${this.props.class}-attribute-count`}>
+            {useful[reviewId].useful.length}
+          </li>
+        </span>
       );
     }
 
     return (
-      <div className="adjective-wrapper">
-        <div className="helpful-review">Was this review ...?</div>
+      <div className={`${this.props.class}-adjective-wrapper`}>
+        <div className="helpful-review">{this.helpfulText()}</div>
 
-        <ul className="adjective-ul">
-          <div className="adjective-ul-wrapper">
+        <ul className={`${this.props.class}-adjective-ul`}>
+          <div className={`${this.props.class}-adjective-ul-wrapper`}>
             {usefulCount}
             {funnyCount}
             {coolCount}

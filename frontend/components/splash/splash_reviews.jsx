@@ -7,6 +7,7 @@ import {
   requestSingleBusiness,
   requestAllBusinesses
 } from "../../actions/businesses_actions";
+import AdjectiveShow from "../adjective/adjective_show.jsx";
 
 class SplashReviews extends React.Component {
   componentDidMount() {
@@ -14,22 +15,29 @@ class SplashReviews extends React.Component {
     this.props.requestAllBusinesses();
   }
 
+  asd() {
+    let a = [this.props.review].map(review => {
+      return (
+        <AdjectiveShow
+          review={this.props.review}
+          currentUser={this.props.currentUser}
+          class="splash"
+        />
+      );
+    });
+    return a;
+  }
+
   render() {
     const review = this.props.review;
-    debugger;
+    const b = this.asd();
     const user = this.props.review.user;
     const business = this.props.business;
     const businessLength = Object.values(this.props.business).length;
     let matchedBusiness = business[review.business_id];
     let photo;
     if (matchedBusiness) {
-      // const x = Math.floor(Math.random() * businessLength);
-      // const y = Math.floor(x * 0.5);
-      // if (x > 0 && y < 4){
-      //   photo = matchedBusiness.photos[y].photo_image_url;
-      // } else {
       photo = matchedBusiness.photos[0].photo_image_url;
-      //   }
     } else {
       matchedBusiness = "";
     }
@@ -74,6 +82,7 @@ class SplashReviews extends React.Component {
             </div>
             <div className="activity-review-body">{review.body}</div>
           </div>
+          {b}
         </div>
       </div>
     );

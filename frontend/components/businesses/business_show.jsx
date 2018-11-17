@@ -80,6 +80,7 @@ class BusinessShow extends React.Component {
           review={review}
           currentUser={this.props.currentUser}
           history={this.props.history}
+          class={"business-show"}
         />
       );
     }
