@@ -113,7 +113,6 @@ class Businesses extends React.Component {
         selectedBusCategories.push(business);
       }
     });
-
     let businesses = selectedBusCategories.map((business, idx) => (
       <Business key={business.id} business={business} idx={idx} />
     ));

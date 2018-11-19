@@ -144,10 +144,12 @@ class BusinessShow extends React.Component {
     const reviewAvg = this.props.reviews.forEach(review => {
       reviewScore.push(review.rating);
     });
-    reviewScore =
-      reviewScore.reduce((acc, el) => {
-        return acc + el;
-      }) / this.props.reviews.length;
+    if (reviewScore.length > 0) {
+      reviewScore =
+        reviewScore.reduce((acc, el) => {
+          return acc + el;
+        }) / this.props.reviews.length;
+    }
 
     const busPhotos = this.props.business.photos;
 
