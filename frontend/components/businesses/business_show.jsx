@@ -11,6 +11,7 @@ import { businessInfo } from "./business_info";
 class BusinessShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { 1: "", 2: "hovered", 3: "" };
     this.navigateToEdit = this.navigateToEdit.bind(this);
   }
 
@@ -56,7 +57,6 @@ class BusinessShow extends React.Component {
   }
 
   userReviews(review) {
-    // ;
     if (this.props.session === review.user_id) {
       return (
         <div className="user-review-div">
@@ -147,10 +147,29 @@ class BusinessShow extends React.Component {
       reviewScore.reduce((acc, el) => {
         return acc + el;
       }) / this.props.reviews.length;
+
+    const busPhotos = this.props.business.photos;
+
     const imagesArr = this.props.business.photos.slice(1).map((photo, idx) => {
-      return (
-        <img key={idx} className="bus-show-pics" src={photo.photo_image_url} />
-      );
+      if (idx === 1) {
+        return (
+          <img
+            key={idx}
+            className={`bus-show-pics ${this.state[idx + 1]}`}
+            src={photo.photo_image_url}
+          />
+        );
+      } else {
+        return (
+          <img
+            onMouseOver={() => this.setState({ 1: "hovered", 2: "", 3: "" })}
+            onMouseOut={() => this.setState({ 1: "", 2: "hovered", 3: "" })}
+            key={idx}
+            className="bus-show-pics"
+            src={photo.photo_image_url}
+          />
+        );
+      }
     });
 
     let res, home, cafe, boot;
@@ -273,7 +292,33 @@ class BusinessShow extends React.Component {
                   </li>
                 </div>
               </div>
-              <div className="show-pics">{imagesArr}</div>
+              <div className="show-pics">
+                {" "}
+                <img
+                  onMouseOver={() =>
+                    this.setState({ 1: "hovered", 2: "", 3: "" })
+                  }
+                  onMouseOut={() =>
+                    this.setState({ 1: "", 2: "hovered", 3: "" })
+                  }
+                  className={`bus-show-pics ${this.state[1]}`}
+                  src={busPhotos[0].photo_image_url}
+                />
+                <img
+                  className={`bus-show-pics ${this.state[2]}`}
+                  src={busPhotos[1].photo_image_url}
+                />
+                <img
+                  onMouseOver={() =>
+                    this.setState({ 1: "", 2: "", 3: "hovered" })
+                  }
+                  onMouseOut={() =>
+                    this.setState({ 1: "", 2: "hovered", 3: "" })
+                  }
+                  className={`bus-show-pics ${this.state[3]}`}
+                  src={busPhotos[2].photo_image_url}
+                />
+              </div>
             </div>
           </div>
         </main>

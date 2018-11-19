@@ -211,7 +211,7 @@ class AdjectiveShow extends React.Component {
             <i
               className={`fa fa-lightbulb useful-toggle ${
                 this.props.class
-              }-icon`}
+              }-icon `}
             />
             <li className={`${this.props.class}-tooltiptext-useful`}>Useful</li>
           </div>
