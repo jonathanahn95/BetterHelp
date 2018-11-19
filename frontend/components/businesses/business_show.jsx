@@ -89,24 +89,16 @@ class BusinessShow extends React.Component {
 
   reviewsArr() {
     let reviewsArr = null;
-    if (
-      this.props.reviews.length > 0 &&
-      Object.keys(this.props.users).length > 1
-    ) {
-      debugger;
+    const users = this.props.users;
+    if (this.props.reviews.length > 0 && Object.keys(users).length > 1) {
       reviewsArr = this.props.reviews.map((review, idx) => {
-        debugger;
         return (
           <div key={review.id} className="revi-wrapper">
             <div className="user-name">
               <img className="prof-pic" src={window.profPic} />
 
-              <li className="fname1">
-                {this.props.users[review.user_id].fname}
-              </li>
-              <li className="lname1">
-                {this.props.users[review.user_id].lname}
-              </li>
+              <li className="fname1">{users[review.user_id].fname}</li>
+              <li className="lname1">{users[review.user_id].lname}</li>
             </div>
             <div className="reviews-container">
               <div className="rating-created-at">
@@ -158,28 +150,6 @@ class BusinessShow extends React.Component {
       }) / this.props.reviews.length;
 
     const busPhotos = this.props.business.photos;
-
-    const imagesArr = this.props.business.photos.slice(1).map((photo, idx) => {
-      if (idx === 1) {
-        return (
-          <img
-            key={idx}
-            className={`bus-show-pics ${this.state[idx + 1]}`}
-            src={photo.photo_image_url}
-          />
-        );
-      } else {
-        return (
-          <img
-            onMouseOver={() => this.setState({ 1: "hovered", 2: "", 3: "" })}
-            onMouseOut={() => this.setState({ 1: "", 2: "hovered", 3: "" })}
-            key={idx}
-            className="bus-show-pics"
-            src={photo.photo_image_url}
-          />
-        );
-      }
-    });
 
     let res, home, cafe, boot;
     if (this.props.businessCategories.length > 0) {

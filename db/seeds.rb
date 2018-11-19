@@ -19,7 +19,16 @@ User.create!([
   {fname: 'Lebron', lname: 'James', email: 'king_james@lakers.com', zipcode: 12345, birthday: 'Wed, 03 Mar 2016',password: 123123},
   {fname: 'Steve', lname: 'Bob', email: 'steve_bob@gmail.com', zipcode: 33333, birthday: 'Tues, 03 Feb 1995', password: 123123},
   {fname: 'Tony', lname: 'Stark', email: 'ironman@google.com', zipcode: 32121, birthday: 'Sun, 12 Jan 2003', password: 123123},
-  {fname: 'Guest', lname: 'Demo', email: "guest@demo.org", zipcode: 32121, birthday: 'Sun, 12 Jan 2003', password: 123123}
+  {fname: 'Guest', lname: 'Demo', email: "guest@demo.org", zipcode: 32121, birthday: 'Sun, 12 Jan 2003', password: 123123},
+  {fname: 'Jonathan', lname: 'Ahn', email: "jonathanahn95@gmail.com", zipcode: 32121, birthday: 'Mon, 1 Jan 1995', password: 123123},
+  {fname: 'Steve', lname: 'Rodgers', email: "steverodgers@gmail.com", zipcode: 32121, birthday: 'Mon, 1 Feb 2003', password: 123123},
+  {fname: 'Shawn', lname: 'Carter', email: "shawcarter@gmail.com", zipcode: 32121, birthday: 'Mon, 1 Mar 1995', password: 123123},
+  {fname: 'Warren', lname: 'Buffet', email: "warrnerbuffet@gmail.com", zipcode: 32121, birthday: 'Mon, 1 Dec 1988', password: 123123},
+  {fname: 'Bill', lname: 'Gates', email: "billgates@gmail.com", zipcode: 32121, birthday: 'Mon, 1 Nov 1888', password: 123123},
+  {fname: 'Derek', lname: 'Jeter', email: "derekjeter@gmail.com", zipcode: 32121, birthday: 'Mon, 1 Jan 2000', password: 123123},
+  {fname: 'Denzel', lname: 'Washington', email: "denzelwashington@gmail.com", zipcode: 32121, birthday: 'Mon, 1 Jan 2000', password: 123123},
+  {fname: 'Will', lname: 'Smith', email: "willsmith@gmail.com", zipcode: 32121, birthday: 'Mon, 1 Jan 2000', password: 123123},
+  {fname: 'Margot', lname: 'Robbit', email: "margotrobbie@gmail.com", zipcode: 32121, birthday: 'Mon, 1 Jan 2000', password: 123123}
   ])
 users = User.all
 
@@ -547,71 +556,71 @@ Business.create!([
     {user_id: users[3].id, business_id: businesses[8].id, rating: 4, body: "Good vibes, nice people and an excellent staff that master code. Don't even over think it. Do it." },
     {user_id: users[2].id, business_id: businesses[8].id, rating: 4, body: "The young instructors were very energetic and encouraging and able to communicate their enthusiasm for coding to their students, some of whom came with some knowledge of the subject, and others with none at all. " },
     {user_id: users[1].id, business_id: businesses[8].id, rating: 3, body: "The pace was too slow. Felt as if I could have learned most of the cirriculum by myself at home. Still learned alot but expected much more. " },
-    {user_id: users[0].id, business_id: businesses[8].id, rating: 4, body: "I spent six weeks interviewing which involved technical questions. I was asked to explain the internet, write the reverse method for a string without using .reverse on a whiteboard, construct a multiplayer chess game with thousands of users and describe the caching involved" },
-    {user_id: users[0].id, business_id: businesses[8].id, rating: 4, body: "The instructor I had for my iOS development class was very professional, knowledgeable and dedicated. She is a true master of her craft but on top of that she is an excellent teacher which is a rare combination." },
-    {user_id: users[0].id, business_id: businesses[8].id, rating: 1, body: "I recently withdrew early from the immersive program.  I have never been more disappointed with an experience at a school, which is why I felt compelled to write this, even after receiving a full refund. " },
-    {user_id: users[0].id, business_id: businesses[8].id, rating: 3, body: "Avoid this place at all costs. The course I took here was terrible. Unprofessional, badly taught, unclear, and often beset with many technical problems such as projectors not working, etc. Homework was practically non-existent, even though it was supposed to be weekly. "},
-    {user_id: users[0].id, business_id: businesses[9].id, rating: 4, body: "The young instructors were very energetic and encouraging and able to communicate their enthusiasm for coding to their students, some of whom came with some knowledge of the subject, and others with none at all. " },
-    {user_id: users[0].id, business_id: businesses[9].id, rating: 4, body: "It's the best decision and a risk I've ever made and for people who are looking into it, fear not, listen to your heart or at least, for now, listen to me and just be part of Fullstack. you won't regret it."},
-    {user_id: users[0].id, business_id: businesses[9].id, rating: 4, body: "Everyone's diverse and comes from a different background and zero bias so you can not only focus on just learning but also on making good friends during your time there.  "},
-    {user_id: users[0].id, business_id: businesses[9].id, rating: 5, body: "I am happy I made it and so will you. And I am thankful to everyone at Fullstack who put so much time and effort into this school. It truly is a  special place.  Thanks to David and Nimit for providing this educational platform for growth. "},
-    {user_id: users[0].id, business_id: businesses[9].id, rating: 4, body: "Attending Fullstack Academy was the greatest decision of my life. But it's true. After many years of professional acting and part-time jobs in New York, I wanted to change careers and pursue a new direction in life, and I couldn't be happier with the results."},
-    {user_id: users[0].id, business_id: businesses[10].id, rating: 4, body: "What can I say about  JC landscaping !  I can say one thing Simply The BEST !!!  Joe has the Knowledge and most of all he is Hands On ! One of the Hardest working landscapers out there ." },
-    {user_id: users[0].id, business_id: businesses[10].id, rating: 2, body: "They called back saying they don't service middle Village yet on their website it specifies that, we saw them working on my neighbors block. Not to mention on their Facebook they posted videos of their Recent work done in middle village." },
-    {user_id: users[0].id, business_id: businesses[10].id, rating: 4, body: " Great job by JC! Scary overgrown backyard  - with the right manpower it was cleaned up quickly with and with expertise. They Replaced the lighting (which couldn't even be seen anymore!) trimmed back the neighbor's trees and got rid of all the annoying weeds inbetween the pavers." },
-    {user_id: users[0].id, business_id: businesses[10].id, rating: 4, body: "Joe was great at communicating via text all along the way and sending pictures which I really appreciated since we were at work. We loved his enthusiasm about our project and knew he was putting great thought and care into all that was done. " },
-    {user_id: users[0].id, business_id: businesses[10].id, rating: 5, body: "Service is great! Their designs are awesome and look amazing every time on every job.  Joe has beautified 80% of my neighborhood and we all use his maintenance services as well. He's well known,  friendly, helpful and resourceful. "},
-    {user_id: users[0].id, business_id: businesses[10].id, rating: 5, body: "Don't think I would ever use any other landscaping service besides JC. Even when he's busy...he's worth the wait and will make it up to you somehow.  Thanks for all your great work Joe!!"},
-    {user_id: users[0].id, business_id: businesses[11].id, rating: 4, body: " Great dumplings.  6 per container.  We had the crab and pork.  Very juicy since they are soup based." },
-    {user_id: users[0].id, business_id: businesses[11].id, rating: 4, body: "The General Tso's chicken was excellent with a good amount of sauce. Chow lo mein noodles were very good with smokey flavor and beef with asparagus had excellent meat.  I would return.  " },
-    {user_id: users[0].id, business_id: businesses[11].id, rating: 3, body: "Maybe the dumplings are the way to go here. The other reviewers rave about them but I didn't try it because of the pork. What I did have was average Chinese food, to quote my friend The orange chicken was only a little better than Panda Express."},
-    {user_id: users[0].id, business_id: businesses[11].id, rating: 3, body: "Service was very slow, but the soup dumplings really were excellent."},
-    {user_id: users[0].id, business_id: businesses[11].id, rating: 1, body: "I've had the Joe's Shanghai in Chinatown many times with no complaints. My first time at this location, and it is definitely THE LAST." },
+    {user_id: users[3].id, business_id: businesses[8].id, rating: 4, body: "I spent six weeks interviewing which involved technical questions. I was asked to explain the internet, write the reverse method for a string without using .reverse on a whiteboard, construct a multiplayer chess game with thousands of users and describe the caching involved" },
+    {user_id: users[4].id, business_id: businesses[8].id, rating: 4, body: "The instructor I had for my iOS development class was very professional, knowledgeable and dedicated. She is a true master of her craft but on top of that she is an excellent teacher which is a rare combination." },
+    {user_id: users[5].id, business_id: businesses[8].id, rating: 1, body: "I recently withdrew early from the immersive program.  I have never been more disappointed with an experience at a school, which is why I felt compelled to write this, even after receiving a full refund. " },
+    {user_id: users[6].id, business_id: businesses[8].id, rating: 3, body: "Avoid this place at all costs. The course I took here was terrible. Unprofessional, badly taught, unclear, and often beset with many technical problems such as projectors not working, etc. Homework was practically non-existent, even though it was supposed to be weekly. "},
+    {user_id: users[7].id, business_id: businesses[9].id, rating: 4, body: "The young instructors were very energetic and encouraging and able to communicate their enthusiasm for coding to their students, some of whom came with some knowledge of the subject, and others with none at all. " },
+    {user_id: users[8].id, business_id: businesses[9].id, rating: 4, body: "It's the best decision and a risk I've ever made and for people who are looking into it, fear not, listen to your heart or at least, for now, listen to me and just be part of Fullstack. you won't regret it."},
+    {user_id: users[9].id, business_id: businesses[9].id, rating: 4, body: "Everyone's diverse and comes from a different background and zero bias so you can not only focus on just learning but also on making good friends during your time there.  "},
+    {user_id: users[11].id, business_id: businesses[9].id, rating: 5, body: "I am happy I made it and so will you. And I am thankful to everyone at Fullstack who put so much time and effort into this school. It truly is a  special place.  Thanks to David and Nimit for providing this educational platform for growth. "},
+    {user_id: users[12].id, business_id: businesses[9].id, rating: 4, body: "Attending Fullstack Academy was the greatest decision of my life. But it's true. After many years of professional acting and part-time jobs in New York, I wanted to change careers and pursue a new direction in life, and I couldn't be happier with the results."},
+    {user_id: users[11].id, business_id: businesses[10].id, rating: 4, body: "What can I say about  JC landscaping !  I can say one thing Simply The BEST !!!  Joe has the Knowledge and most of all he is Hands On ! One of the Hardest working landscapers out there ." },
+    {user_id: users[10].id, business_id: businesses[10].id, rating: 2, body: "They called back saying they don't service middle Village yet on their website it specifies that, we saw them working on my neighbors block. Not to mention on their Facebook they posted videos of their Recent work done in middle village." },
+    {user_id: users[9].id, business_id: businesses[10].id, rating: 4, body: " Great job by JC! Scary overgrown backyard  - with the right manpower it was cleaned up quickly with and with expertise. They Replaced the lighting (which couldn't even be seen anymore!) trimmed back the neighbor's trees and got rid of all the annoying weeds inbetween the pavers." },
+    {user_id: users[8].id, business_id: businesses[10].id, rating: 4, body: "Joe was great at communicating via text all along the way and sending pictures which I really appreciated since we were at work. We loved his enthusiasm about our project and knew he was putting great thought and care into all that was done. " },
+    {user_id: users[7].id, business_id: businesses[10].id, rating: 5, body: "Service is great! Their designs are awesome and look amazing every time on every job.  Joe has beautified 80% of my neighborhood and we all use his maintenance services as well. He's well known,  friendly, helpful and resourceful. "},
+    {user_id: users[6].id, business_id: businesses[10].id, rating: 5, body: "Don't think I would ever use any other landscaping service besides JC. Even when he's busy...he's worth the wait and will make it up to you somehow.  Thanks for all your great work Joe!!"},
+    {user_id: users[5].id, business_id: businesses[11].id, rating: 4, body: " Great dumplings.  6 per container.  We had the crab and pork.  Very juicy since they are soup based." },
+    {user_id: users[4].id, business_id: businesses[11].id, rating: 4, body: "The General Tso's chicken was excellent with a good amount of sauce. Chow lo mein noodles were very good with smokey flavor and beef with asparagus had excellent meat.  I would return.  " },
+    {user_id: users[3].id, business_id: businesses[11].id, rating: 3, body: "Maybe the dumplings are the way to go here. The other reviewers rave about them but I didn't try it because of the pork. What I did have was average Chinese food, to quote my friend The orange chicken was only a little better than Panda Express."},
+    {user_id: users[2].id, business_id: businesses[11].id, rating: 3, body: "Service was very slow, but the soup dumplings really were excellent."},
+    {user_id: users[1].id, business_id: businesses[11].id, rating: 1, body: "I've had the Joe's Shanghai in Chinatown many times with no complaints. My first time at this location, and it is definitely THE LAST." },
     {user_id: users[0].id, business_id: businesses[11].id, rating: 2, body: "Mediocre, overpriced Chinese food. Came here for lunch on a weekday and was seated immediately with no wait - somewhat of a bad sign during the midtown lunch rush." },
-    {user_id: users[0].id, business_id: businesses[12].id, rating: 4, body: "We ordered the small margherita pizza with half pepperoni on it, and it was delicious. The crust wasn't too thin but not super thick. Everything was perfectly cooked. Not greasy. Great size for us 3 girls - about 2.5 slices each. " },
-    {user_id: users[0].id, business_id: businesses[12].id, rating: 3, body: "They do not seat you unless every in your party is ready. Nor do that take reservations. We got lucky and sat immediately around lunch time and we had a large group 6 people." },
-    {user_id: users[0].id, business_id: businesses[12].id, rating: 5, body: "I am Italian and I mean I'm actually from there, born and raised in the north west side of it. Living the States since 07. Let me tell you.....This PIZZA is as close as it gets to the Italian one." },
-    {user_id: users[0].id, business_id: businesses[12].id, rating: 4, body: "Usually there is a huge line here and that's pretty obvious from the queue marker outside the restaurant. The servers are very aware that the tables are uneven and make sure there is support underneath constantly so the tables don't wobble. " },
-    {user_id: users[0].id, business_id: businesses[12].id, rating: 5, body: "Probably the best spaghetti with meatballs I've ever had. Their pizza is also very good, it's not the best I've ever had but it's up there. I like that they serve Mexican coke in a glass since it makes everything taste better. This is my second time coming here and it both times it was great." },
-    {user_id: users[0].id, business_id: businesses[12].id, rating: 4, body: "We ordered two different pies, one a white pizza with pancetta and the other a tomato sauce with sausage. Both were excellent! Definitely what I would recommend if you're after a NY style slice! Would come back again for sure!" },
-    {user_id: users[0].id, business_id: businesses[13].id, rating: 4, body: "MaidStay is a great service! Easy to book and very flexible. They do great work. My move out service was done exceptionally well and they completed the whole job with a smile!" },
-    {user_id: users[0].id, business_id: businesses[13].id, rating: 2, body: " quality of cleaning is poor compared to other cleaning service I had use. I booked a move out cleaning and after they are done, the floor is still quite filthy. Fridge cleaning is also sloppy. One of my remote is also lost after the cleaning."},
-    {user_id: users[0].id, business_id: businesses[13].id, rating: 4, body: "The ladies were very thorough and friendly. They did a great job and we'd definitely use the service again." },
-    {user_id: users[0].id, business_id: businesses[13].id, rating: 4, body: "Great service and results! My house looked very clean ! Thank you. I would love to be able to get this service every week!" },
-    {user_id: users[0].id, business_id: businesses[14].id, rating: 4, body: "Roman was excellent, the office staff is very efficient. Super easy to work with and the quality of the work is great. I'd recommend them to anyone!" },
-    {user_id: users[0].id, business_id: businesses[14].id, rating: 4, body: "Excellent service. I sent them a message, and they came over very quickly to help me gain access to my apartment after a key was lost. They removed the cylinder to my door lock, leaving everything else in tact, and did this all very quickly." },
-    {user_id: users[0].id, business_id: businesses[14].id, rating: 5, body: "They're great! Wonderful customer service that took care of me quickly. I needed a security system installed for my new office and they were able to recommend me a great system. " },
-    {user_id: users[0].id, business_id: businesses[14].id, rating: 4, body: "The Install was quick and easy. All around affordable. It doesn't get much better than this!" },
-    {user_id: users[0].id, business_id: businesses[15].id, rating: 4, body: "I am particularly grateful to Manny for being patient with me and my many questions. I do not have a green thumb and appreciate having someone who can give me guidance on lawn and plant maintenance." },
-    {user_id: users[0].id, business_id: businesses[15].id, rating: 5, body: "They ripped out the weeds and sodded the backyard.  The lawn looked great. Since then, they have been maintain the yard.  Each year, the yard looks better than the previous." },
-    {user_id: users[0].id, business_id: businesses[15].id, rating: 4, body: "he clean up was as high quality as the work done on my yard. I would highly recommend Right Lawn Care and would gladly use them again.  Also a five star rating to Mannys wife for the delicious West Indian noodles!" },
-    {user_id: users[0].id, business_id: businesses[15].id, rating: 5, body: "Right Lawn Care is great company. They did an excellent job in my yard. It was looking like the Amazon on steroids. The owner of the company was very professional." },
-    {user_id: users[0].id, business_id: businesses[15].id, rating: 4, body: "I have used this service twice now. They are awesome. They do a fantastic job on both our front and back yards. The result is like night and day. I was actually hesitant to write a review because they are very busy and I want to keep them to myself. " },
-    {user_id: users[0].id, business_id: businesses[16].id, rating: 4, body: "We timed it just right and got in no problem. One of the workers noticed one in our group wasn't drinking her shake, so she changed it out, unsolicited, for one she liked much better." },
-    {user_id: users[0].id, business_id: businesses[16].id, rating: 4, body: "The line was quick when I got there and there was plenty of seating -it was midweek a bit after lunch time. A lot of tourists anytime of the week/day!" },
-    {user_id: users[0].id, business_id: businesses[16].id, rating: 5, body: "It is pretty tight in there during the lunch rush with no real place to sit, but if a seat becomes available your golden! The burger meat is juicy and delicious, the bread is soft and the fries were the best! Pretty sure I'm coming back" },
-    {user_id: users[0].id, business_id: businesses[16].id, rating: 3, body: "Before I ordered I didn't ask what they were going to do about a bun-less burger I just went with the flow. They wrapped my burger with lettuce. I also ordered a glass of wine which was good. It's probably the only fast food burger I'll ever eat." },
+    {user_id: users[1].id, business_id: businesses[12].id, rating: 4, body: "We ordered the small margherita pizza with half pepperoni on it, and it was delicious. The crust wasn't too thin but not super thick. Everything was perfectly cooked. Not greasy. Great size for us 3 girls - about 2.5 slices each. " },
+    {user_id: users[2].id, business_id: businesses[12].id, rating: 3, body: "They do not seat you unless every in your party is ready. Nor do that take reservations. We got lucky and sat immediately around lunch time and we had a large group 6 people." },
+    {user_id: users[3].id, business_id: businesses[12].id, rating: 5, body: "I am Italian and I mean I'm actually from there, born and raised in the north west side of it. Living the States since 07. Let me tell you.....This PIZZA is as close as it gets to the Italian one." },
+    {user_id: users[4].id, business_id: businesses[12].id, rating: 4, body: "Usually there is a huge line here and that's pretty obvious from the queue marker outside the restaurant. The servers are very aware that the tables are uneven and make sure there is support underneath constantly so the tables don't wobble. " },
+    {user_id: users[5].id, business_id: businesses[12].id, rating: 5, body: "Probably the best spaghetti with meatballs I've ever had. Their pizza is also very good, it's not the best I've ever had but it's up there. I like that they serve Mexican coke in a glass since it makes everything taste better. This is my second time coming here and it both times it was great." },
+    {user_id: users[6].id, business_id: businesses[12].id, rating: 4, body: "We ordered two different pies, one a white pizza with pancetta and the other a tomato sauce with sausage. Both were excellent! Definitely what I would recommend if you're after a NY style slice! Would come back again for sure!" },
+    {user_id: users[7].id, business_id: businesses[13].id, rating: 4, body: "MaidStay is a great service! Easy to book and very flexible. They do great work. My move out service was done exceptionally well and they completed the whole job with a smile!" },
+    {user_id: users[8].id, business_id: businesses[13].id, rating: 2, body: " quality of cleaning is poor compared to other cleaning service I had use. I booked a move out cleaning and after they are done, the floor is still quite filthy. Fridge cleaning is also sloppy. One of my remote is also lost after the cleaning."},
+    {user_id: users[9].id, business_id: businesses[13].id, rating: 4, body: "The ladies were very thorough and friendly. They did a great job and we'd definitely use the service again." },
+    {user_id: users[10].id, business_id: businesses[13].id, rating: 4, body: "Great service and results! My house looked very clean ! Thank you. I would love to be able to get this service every week!" },
+    {user_id: users[11].id, business_id: businesses[14].id, rating: 4, body: "Roman was excellent, the office staff is very efficient. Super easy to work with and the quality of the work is great. I'd recommend them to anyone!" },
+    {user_id: users[12].id, business_id: businesses[14].id, rating: 4, body: "Excellent service. I sent them a message, and they came over very quickly to help me gain access to my apartment after a key was lost. They removed the cylinder to my door lock, leaving everything else in tact, and did this all very quickly." },
+    {user_id: users[11].id, business_id: businesses[14].id, rating: 5, body: "They're great! Wonderful customer service that took care of me quickly. I needed a security system installed for my new office and they were able to recommend me a great system. " },
+    {user_id: users[10].id, business_id: businesses[14].id, rating: 4, body: "The Install was quick and easy. All around affordable. It doesn't get much better than this!" },
+    {user_id: users[9].id, business_id: businesses[15].id, rating: 4, body: "I am particularly grateful to Manny for being patient with me and my many questions. I do not have a green thumb and appreciate having someone who can give me guidance on lawn and plant maintenance." },
+    {user_id: users[8].id, business_id: businesses[15].id, rating: 5, body: "They ripped out the weeds and sodded the backyard.  The lawn looked great. Since then, they have been maintain the yard.  Each year, the yard looks better than the previous." },
+    {user_id: users[7].id, business_id: businesses[15].id, rating: 4, body: "he clean up was as high quality as the work done on my yard. I would highly recommend Right Lawn Care and would gladly use them again.  Also a five star rating to Mannys wife for the delicious West Indian noodles!" },
+    {user_id: users[6].id, business_id: businesses[15].id, rating: 5, body: "Right Lawn Care is great company. They did an excellent job in my yard. It was looking like the Amazon on steroids. The owner of the company was very professional." },
+    {user_id: users[5].id, business_id: businesses[15].id, rating: 4, body: "I have used this service twice now. They are awesome. They do a fantastic job on both our front and back yards. The result is like night and day. I was actually hesitant to write a review because they are very busy and I want to keep them to myself. " },
+    {user_id: users[4].id, business_id: businesses[16].id, rating: 4, body: "We timed it just right and got in no problem. One of the workers noticed one in our group wasn't drinking her shake, so she changed it out, unsolicited, for one she liked much better." },
+    {user_id: users[3].id, business_id: businesses[16].id, rating: 4, body: "The line was quick when I got there and there was plenty of seating -it was midweek a bit after lunch time. A lot of tourists anytime of the week/day!" },
+    {user_id: users[2].id, business_id: businesses[16].id, rating: 5, body: "It is pretty tight in there during the lunch rush with no real place to sit, but if a seat becomes available your golden! The burger meat is juicy and delicious, the bread is soft and the fries were the best! Pretty sure I'm coming back" },
+    {user_id: users[1].id, business_id: businesses[16].id, rating: 3, body: "Before I ordered I didn't ask what they were going to do about a bun-less burger I just went with the flow. They wrapped my burger with lettuce. I also ordered a glass of wine which was good. It's probably the only fast food burger I'll ever eat." },
     {user_id: users[0].id, business_id: businesses[17].id, rating: 4, body: "The coaches are incredibly thoughtful and caring, and will motivate you while watching your form.  The other members and guests are also equally wonderful to work out with side by wide and so inspiring.  " },
-    {user_id: users[0].id, business_id: businesses[17].id, rating: 5, body: "Everyone was extremely talented and could make a balloon animal have mythical powers of fitness and nutritional choices. all sorts of levels from beginners to super athletes using suggestions from the adults to pre-choose the drawing of humor. " },
-    {user_id: users[0].id, business_id: businesses[17].id, rating: 4, body: "The coaches are incredibly thoughtful and caring, and will motivate you while watching your form.  The other members and guests are also equally wonderful to work out with side by wide and so inspiring.  " },
-    {user_id: users[0].id, business_id: businesses[17].id, rating: 4, body: "I am absolutely hooked!  I've taken a few of the strength classes here already and each instructor has been great but also add their own method and personality to each class.  " },
-    {user_id: users[0].id, business_id: businesses[17].id, rating: 4, body: "Update:  I am also completely addicted to Cris's MetCon lunchtime classes.  He is one of the best trainers I've ever had - offers excellent explanations and constant support throughout a session." },
-    {user_id: users[0].id, business_id: businesses[17].id, rating: 4, body: "This class isn't for the faint of heart, but it's worth a try for everyone if you want to test your limits. I'd like to try some more classes and witness the progression." },
-    {user_id: users[0].id, business_id: businesses[18].id, rating: 4, body: "LOVE this place! I came for the first time about 3 weeks ago and was immediately hooked, now I can't go a few days without signing up for a class. Luckily I live right around the corner so no complaints there!" },
-    {user_id: users[0].id, business_id: businesses[18].id, rating: 5, body: "This is hands down the best workout in the city. I love working out and I like all kinds of fitness classes but this is truly the best way to spend an hour. Classes have everything - cardio, strength, bodyweight exercises, HIIT, arms, legs, butt, abs, and just enough stretching. " },
-    {user_id: users[0].id, business_id: businesses[18].id, rating: 4, body: "The workout gets results on whatever you are looking to find. Strength, weight loss, state of mind, sense of accomplishment, and just feeling good." },
-    {user_id: users[0].id, business_id: businesses[18].id, rating: 5, body: "If I could give 10 stars I would. Alex always creates a unique workout - cardio, weights, individual work or having a partner. I've been ~20 times, and it's different every time." },
-    {user_id: users[0].id, business_id: businesses[18].id, rating: 5, body: "Best place to get you stronger physically and also mentally. That's how Marine does for and you will get to experience it. " },
-    {user_id: users[0].id, business_id: businesses[19].id, rating: 1, body: "The ice cream was expensive and only one size was available. It was icy and watery soft serve. Last time I'll be trying that item here." },
-    {user_id: users[0].id, business_id: businesses[19].id, rating: 4, body: "This is no longer a cafe in my eyes. This place is a sanctuary for anyone looking for a laugh and a friend. The baristas here are incredible artists and moreso genuinely great human beings. " },
-    {user_id: users[0].id, business_id: businesses[19].id, rating: 5, body: "I left with more than just a satisfying cup of caffeine (which was the best ADD SHOT latte and matcha latte I've ever had in my life); I left with a nickname and a family. " },
-    {user_id: users[0].id, business_id: businesses[19].id, rating: 4, body: "I tried the matcha latte and loved  it - the matcha was freshly whisked and the latte tasted wonderfully smooth and sweet. Next time I'll have to try other coffee and food options; everyone else's looked great!" },
-    {user_id: users[0].id, business_id: businesses[10].id, rating: 4, body: "What can I say about  JC landscaping !  I can say one thing Simply The BEST !!!  Joe has the Knowledge and most of all he is Hands On ! One of the Hardest working landscapers out there ." },
-    {user_id: users[0].id, business_id: businesses[19].id, rating: 4, body: "Awesome place. I love the vibe and the coffee. Their donuts (I forgot where they get them from) and their soft serve are gems!" },
-    {user_id: users[0].id, business_id: businesses[14].id, rating: 5, body: "They were great to deal with! Orbit sets the standard for being a highly competent, honest locksmith at a fair price. Don't hesitate. Call them if you need a locksmith!" },
-    {user_id: users[0].id, business_id: businesses[7].id, rating: 4, body: "Nitro flights were lovely, light and balanced. Definitely super light mouth feels and the white nitro had a nice creaminess to it. Good spot! Wished coffee shops in Chicago did this type of thing more." },
-    {user_id: users[0].id, business_id: businesses[6].id, rating: 4, body: "Super great service and close to Wall Street. This is about what you should expect from a chipotle. Clean, fast, affordable, and delicious!" },
-    {user_id: users[0].id, business_id: businesses[16].id, rating: 4, body: "It's honestly a toss-up between Chick-Fil-A and Shake Shack for best fast food in Manhattan but this Shake Shack location gets a bonus star because of its stellar location beside the Brooklyn Bridge. " },
+    {user_id: users[1].id, business_id: businesses[17].id, rating: 5, body: "Everyone was extremely talented and could make a balloon animal have mythical powers of fitness and nutritional choices. all sorts of levels from beginners to super athletes using suggestions from the adults to pre-choose the drawing of humor. " },
+    {user_id: users[2].id, business_id: businesses[17].id, rating: 4, body: "The coaches are incredibly thoughtful and caring, and will motivate you while watching your form.  The other members and guests are also equally wonderful to work out with side by wide and so inspiring.  " },
+    {user_id: users[3].id, business_id: businesses[17].id, rating: 4, body: "I am absolutely hooked!  I've taken a few of the strength classes here already and each instructor has been great but also add their own method and personality to each class.  " },
+    {user_id: users[4].id, business_id: businesses[17].id, rating: 4, body: "Update:  I am also completely addicted to Cris's MetCon lunchtime classes.  He is one of the best trainers I've ever had - offers excellent explanations and constant support throughout a session." },
+    {user_id: users[5].id, business_id: businesses[17].id, rating: 4, body: "This class isn't for the faint of heart, but it's worth a try for everyone if you want to test your limits. I'd like to try some more classes and witness the progression." },
+    {user_id: users[6].id, business_id: businesses[18].id, rating: 4, body: "LOVE this place! I came for the first time about 3 weeks ago and was immediately hooked, now I can't go a few days without signing up for a class. Luckily I live right around the corner so no complaints there!" },
+    {user_id: users[7].id, business_id: businesses[18].id, rating: 5, body: "This is hands down the best workout in the city. I love working out and I like all kinds of fitness classes but this is truly the best way to spend an hour. Classes have everything - cardio, strength, bodyweight exercises, HIIT, arms, legs, butt, abs, and just enough stretching. " },
+    {user_id: users[8].id, business_id: businesses[18].id, rating: 4, body: "The workout gets results on whatever you are looking to find. Strength, weight loss, state of mind, sense of accomplishment, and just feeling good." },
+    {user_id: users[9].id, business_id: businesses[18].id, rating: 5, body: "If I could give 10 stars I would. Alex always creates a unique workout - cardio, weights, individual work or having a partner. I've been ~20 times, and it's different every time." },
+    {user_id: users[10].id, business_id: businesses[18].id, rating: 5, body: "Best place to get you stronger physically and also mentally. That's how Marine does for and you will get to experience it. " },
+    {user_id: users[11].id, business_id: businesses[19].id, rating: 1, body: "The ice cream was expensive and only one size was available. It was icy and watery soft serve. Last time I'll be trying that item here." },
+    {user_id: users[12].id, business_id: businesses[19].id, rating: 4, body: "This is no longer a cafe in my eyes. This place is a sanctuary for anyone looking for a laugh and a friend. The baristas here are incredible artists and moreso genuinely great human beings. " },
+    {user_id: users[11].id, business_id: businesses[19].id, rating: 5, body: "I left with more than just a satisfying cup of caffeine (which was the best ADD SHOT latte and matcha latte I've ever had in my life); I left with a nickname and a family. " },
+    {user_id: users[10].id, business_id: businesses[19].id, rating: 4, body: "I tried the matcha latte and loved  it - the matcha was freshly whisked and the latte tasted wonderfully smooth and sweet. Next time I'll have to try other coffee and food options; everyone else's looked great!" },
+    {user_id: users[9].id, business_id: businesses[10].id, rating: 4, body: "What can I say about  JC landscaping !  I can say one thing Simply The BEST !!!  Joe has the Knowledge and most of all he is Hands On ! One of the Hardest working landscapers out there ." },
+    {user_id: users[8].id, business_id: businesses[19].id, rating: 4, body: "Awesome place. I love the vibe and the coffee. Their donuts (I forgot where they get them from) and their soft serve are gems!" },
+    {user_id: users[7].id, business_id: businesses[14].id, rating: 5, body: "They were great to deal with! Orbit sets the standard for being a highly competent, honest locksmith at a fair price. Don't hesitate. Call them if you need a locksmith!" },
+    {user_id: users[6].id, business_id: businesses[7].id, rating: 4, body: "Nitro flights were lovely, light and balanced. Definitely super light mouth feels and the white nitro had a nice creaminess to it. Good spot! Wished coffee shops in Chicago did this type of thing more." },
+    {user_id: users[5].id, business_id: businesses[6].id, rating: 4, body: "Super great service and close to Wall Street. This is about what you should expect from a chipotle. Clean, fast, affordable, and delicious!" },
+    {user_id: users[4].id, business_id: businesses[16].id, rating: 4, body: "It's honestly a toss-up between Chick-Fil-A and Shake Shack for best fast food in Manhattan but this Shake Shack location gets a bonus star because of its stellar location beside the Brooklyn Bridge. " },
     {user_id: users[3].id, business_id: businesses[13].id, rating: 5, body: "We scheduled an office cleaning over the weekend and really only expected a superficial cleaning and some mopping as we are an early stage startup and don't make much of a mess. They cleaned the hell out of our place an organized everything" },
     {user_id: users[1].id, business_id: businesses[5].id, rating: 4, body: "Carpet Cleaning NYC Pros are reliable and very experienced. I would recommend!" },
     {user_id: users[2].id, business_id: businesses[0].id, rating: 4, body: 'My friend got a vanilla drink from there I cant recall the name of but it was fabulous.' },
@@ -623,61 +632,104 @@ Business.create!([
 
 
     Funny.create!([
-      { review_id: reviews[0].id, user_id: users[0].id}
-      ])
-    Cool.create!([
-      { review_id: reviews[0].id, user_id: users[0].id}
-      ])
-    Useful.create!([
-      { review_id: reviews[0].id, user_id: users[0].id}
-      ])
-    Funny.create!([
-      { review_id: reviews[0].id, user_id: users[1].id}
-      ])
-    Cool.create!([
-      { review_id: reviews[0].id, user_id: users[1].id}
-      ])
-    Useful.create!([
-      { review_id: reviews[0].id, user_id: users[1].id}
-      ])
-    Funny.create!([
-      { review_id: reviews[0].id, user_id: users[2].id}
-      ])
-    Cool.create!([
-      { review_id: reviews[0].id, user_id: users[2].id}
-      ])
-    Useful.create!([
-      { review_id: reviews[0].id, user_id: users[2].id}
-      ])
-
-
-    Funny.create!([
-      { review_id: reviews[1].id, user_id: users[0].id}
-      ])
-    Cool.create!([
-      { review_id: reviews[1].id, user_id: users[0].id}
-      ])
-    Useful.create!([
-      { review_id: reviews[1].id, user_id: users[0].id}
-      ])
-
-
-    Funny.create!([
+      { review_id: reviews[0].id, user_id: users[0].id},
+      { review_id: reviews[0].id, user_id: users[1].id},
+      { review_id: reviews[0].id, user_id: users[2].id},
+      { review_id: reviews[0].id, user_id: users[3].id},
+      { review_id: reviews[0].id, user_id: users[4].id},
+      { review_id: reviews[0].id, user_id: users[5].id},
+      { review_id: reviews[1].id, user_id: users[0].id},
+      { review_id: reviews[1].id, user_id: users[7].id},
       { review_id: reviews[2].id, user_id: users[0].id}
       ])
     Cool.create!([
+      { review_id: reviews[0].id, user_id: users[0].id},
+      { review_id: reviews[0].id, user_id: users[1].id},
+      { review_id: reviews[0].id, user_id: users[2].id},
+      { review_id: reviews[0].id, user_id: users[3].id},
+      { review_id: reviews[0].id, user_id: users[4].id},
+      { review_id: reviews[0].id, user_id: users[5].id},
+      { review_id: reviews[0].id, user_id: users[6].id},
+      { review_id: reviews[0].id, user_id: users[7].id},
+      { review_id: reviews[0].id, user_id: users[8].id},
+      { review_id: reviews[1].id, user_id: users[0].id},
+      { review_id: reviews[1].id, user_id: users[7].id},
+      { review_id: reviews[1].id, user_id: users[3].id},
       { review_id: reviews[2].id, user_id: users[0].id}
       ])
     Useful.create!([
+      { review_id: reviews[0].id, user_id: users[0].id},
+      { review_id: reviews[0].id, user_id: users[1].id},
+      { review_id: reviews[0].id, user_id: users[2].id},
+      { review_id: reviews[0].id, user_id: users[3].id},
+      { review_id: reviews[0].id, user_id: users[4].id},
+      { review_id: reviews[0].id, user_id: users[6].id},
+      { review_id: reviews[0].id, user_id: users[7].id},
+      { review_id: reviews[0].id, user_id: users[8].id},
+      { review_id: reviews[0].id, user_id: users[9].id},
+      { review_id: reviews[1].id, user_id: users[0].id},
+      { review_id: reviews[1].id, user_id: users[7].id},
+      { review_id: reviews[1].id, user_id: users[3].id},
       { review_id: reviews[2].id, user_id: users[0].id}
+      ])
+
+    Funny.create!([
+      { review_id: reviews[2].id, user_id: users[9].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[2].id, user_id: users[9].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[2].id, user_id: users[9].id}
+      ])
+
+    Funny.create!([
+      { review_id: reviews[2].id, user_id: users[8].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[2].id, user_id: users[8].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[2].id, user_id: users[8].id}
+      ])
+
+    Funny.create!([
+      { review_id: reviews[2].id, user_id: users[10].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[2].id, user_id: users[10].id}
       ])
 
 
     Funny.create!([
       { review_id: reviews[3].id, user_id: users[0].id}
       ])
+    Funny.create!([
+      { review_id: reviews[3].id, user_id: users[1].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[3].id, user_id: users[2].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[3].id, user_id: users[3].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[3].id, user_id: users[4].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[3].id, user_id: users[5].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[3].id, user_id: users[6].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[3].id, user_id: users[7].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[3].id, user_id: users[8].id}
+      ])
     Cool.create!([
-      { review_id: reviews[3].id, user_id: users[0].id}
+      { review_id: reviews[3].id, user_id: users[8].id}
       ])
     Useful.create!([
       { review_id: reviews[3].id, user_id: users[0].id}
@@ -691,25 +743,43 @@ Business.create!([
       { review_id: reviews[4].id, user_id: users[0].id}
       ])
     Useful.create!([
-      { review_id: reviews[4].id, user_id: users[0].id}
-      ])
-    Funny.create!([
-      { review_id: reviews[4].id, user_id: users[1].id}
-      ])
-    Cool.create!([
-      { review_id: reviews[4].id, user_id: users[1].id}
-      ])
-    Useful.create!([
-      { review_id: reviews[4].id, user_id: users[1].id}
-      ])
-    Funny.create!([
       { review_id: reviews[4].id, user_id: users[2].id}
       ])
     Cool.create!([
       { review_id: reviews[4].id, user_id: users[2].id}
       ])
     Useful.create!([
-      { review_id: reviews[4].id, user_id: users[2].id}
+      { review_id: reviews[4].id, user_id: users[3].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[4].id, user_id: users[3].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[4].id, user_id: users[4].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[4].id, user_id: users[4].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[4].id, user_id: users[5].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[4].id, user_id: users[5].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[4].id, user_id: users[6].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[4].id, user_id: users[6].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[4].id, user_id: users[7].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[4].id, user_id: users[7].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[4].id, user_id: users[9].id}
       ])
 
 
@@ -719,8 +789,56 @@ Business.create!([
     Cool.create!([
       { review_id: reviews[5].id, user_id: users[0].id}
       ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[0].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[1].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[2].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[3].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[4].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[5].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[6].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[7].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[8].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[9].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[5].id, user_id: users[10].id}
+      ])
     Useful.create!([
       { review_id: reviews[5].id, user_id: users[0].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[5].id, user_id: users[6].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[5].id, user_id: users[7].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[5].id, user_id: users[8].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[5].id, user_id: users[9].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[5].id, user_id: users[10].id}
       ])
 
 
@@ -897,6 +1015,36 @@ Business.create!([
     Useful.create!([
       { review_id: reviews[16].id, user_id: users[0].id}
       ])
+    Funny.create!([
+      { review_id: reviews[16].id, user_id: users[1].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[16].id, user_id: users[1].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[16].id, user_id: users[1].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[16].id, user_id: users[2].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[16].id, user_id: users[3].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[16].id, user_id: users[4].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[16].id, user_id: users[5].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[16].id, user_id: users[6].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[16].id, user_id: users[7].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[16].id, user_id: users[7].id}
+      ])
 
 
     Funny.create!([
@@ -908,45 +1056,102 @@ Business.create!([
     Useful.create!([
       { review_id: reviews[17].id, user_id: users[0].id}
       ])
+    Funny.create!([
+      { review_id: reviews[17].id, user_id: users[1].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[17].id, user_id: users[1].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[17].id, user_id: users[1].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[17].id, user_id: users[2].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[17].id, user_id: users[3].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[17].id, user_id: users[2].id}
+      ])
 
 
     Funny.create!([
       { review_id: reviews[18].id, user_id: users[0].id}
       ])
+    Funny.create!([
+      { review_id: reviews[18].id, user_id: users[1].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[18].id, user_id: users[2].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[18].id, user_id: users[3].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[18].id, user_id: users[4].id}
+      ])
     Cool.create!([
       { review_id: reviews[18].id, user_id: users[0].id}
       ])
+    Cool.create!([
+      { review_id: reviews[18].id, user_id: users[10].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[18].id, user_id: users[9].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[18].id, user_id: users[8].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[18].id, user_id: users[7].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[18].id, user_id: users[6].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[18].id, user_id: users[5].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[18].id, user_id: users[1].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[18].id, user_id: users[2].id}
+      ])
     Useful.create!([
-      { review_id: reviews[18].id, user_id: users[0].id}
+      { review_id: reviews[18].id, user_id: users[1].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[18].id, user_id: users[2].id}
       ])
 
 
     Funny.create!([
-      { review_id: reviews[19].id, user_id: users[0].id}
+      { review_id: reviews[111].id, user_id: users[0].id}
       ])
     Cool.create!([
-      { review_id: reviews[19].id, user_id: users[0].id}
+      { review_id: reviews[111].id, user_id: users[0].id}
       ])
     Useful.create!([
-      { review_id: reviews[19].id, user_id: users[0].id}
+      { review_id: reviews[111].id, user_id: users[0].id}
       ])
     Funny.create!([
-      { review_id: reviews[19].id, user_id: users[1].id}
+      { review_id: reviews[111].id, user_id: users[1].id}
       ])
     Cool.create!([
-      { review_id: reviews[19].id, user_id: users[1].id}
+      { review_id: reviews[111].id, user_id: users[1].id}
       ])
     Useful.create!([
-      { review_id: reviews[19].id, user_id: users[1].id}
+      { review_id: reviews[111].id, user_id: users[1].id}
       ])
     Funny.create!([
-      { review_id: reviews[19].id, user_id: users[2].id}
+      { review_id: reviews[111].id, user_id: users[2].id}
       ])
     Cool.create!([
-      { review_id: reviews[19].id, user_id: users[2].id}
+      { review_id: reviews[111].id, user_id: users[2].id}
       ])
     Useful.create!([
-      { review_id: reviews[19].id, user_id: users[2].id}
+      { review_id: reviews[111].id, user_id: users[2].id}
       ])
 
 
@@ -959,36 +1164,1241 @@ Business.create!([
     Useful.create!([
       { review_id: reviews[20].id, user_id: users[0].id}
       ])
+    Cool.create!([
+      { review_id: reviews[20].id, user_id: users[1].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[20].id, user_id: users[2].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[20].id, user_id: users[3].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[20].id, user_id: users[4].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[20].id, user_id: users[5].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[20].id, user_id: users[6].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[20].id, user_id: users[7].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[20].id, user_id: users[8].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[20].id, user_id: users[9].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[20].id, user_id: users[10].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[20].id, user_id: users[4].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[20].id, user_id: users[5].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[20].id, user_id: users[6].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[20].id, user_id: users[7].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[20].id, user_id: users[8].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[20].id, user_id: users[9].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[20].id, user_id: users[10].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[20].id, user_id: users[11].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[20].id, user_id: users[11].id}
+      ])
+
+
+    Funny.create!([
+      { review_id: reviews[89].id, user_id: users[10].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[89].id, user_id: users[11].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[89].id, user_id: users[11].id}
+      ])
+
+
+    Useful.create!([
+      { review_id: reviews[22].id, user_id: users[0].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[22].id, user_id: users[1].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[22].id, user_id: users[2].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[22].id, user_id: users[3].id}
+      ])
+
+
+
+    Funny.create!([
+      { review_id: reviews[23].id, user_id: users[1].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[23].id, user_id: users[2].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[23].id, user_id: users[3].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[23].id, user_id: users[4].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[23].id, user_id: users[5].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[23].id, user_id: users[6].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[23].id, user_id: users[7].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[23].id, user_id: users[8].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[23].id, user_id: users[9].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[23].id, user_id: users[10].id}
+      ])
 
 
 
 
 
+    Funny.create!([
+      { review_id: reviews[94].id, user_id: users[1].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[94].id, user_id: users[2].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[94].id, user_id: users[3].id}
+      ])
 
 
-##seed
-##prod bucket
-##json builder
-  #
-  # Photo.create!([
-  #   {business_id: businesses[0].id, image_url: 'assets/chip1.jpg'},
-  #   {business_id: businesses[0].id, image_url: 'assets/chip2.jpg'},
-  #   {business_id: businesses[0].id, image_url: 'assets/chip3.jpg'},
-  #   {business_id: businesses[0].id, image_url: 'assets/chip4.jpg'},
-  #   {business_id: businesses[1].id, image_url: 'assets/shake1.jpg'},
-  #   {business_id: businesses[1].id, image_url: 'assets/shake2.jpg'},
-  #   {business_id: businesses[1].id, image_url: 'assets/shake3.jpg'},
-  #   {business_id: businesses[1].id, image_url: 'assets/shake4.jpg'},
-  #   {business_id: businesses[2].id, image_url: 'assets/jc1.jpg'},
-  #   {business_id: businesses[2].id, image_url: 'assets/jc2.jpg'},
-  #   {business_id: businesses[2].id, image_url: 'assets/jc3.jpg'},
-  #   {business_id: businesses[2].id, image_url: 'assets/jc4.jpg'},
-  #   {business_id: businesses[3].id, image_url: 'assets/bb1.jpg'},
-  #   {business_id: businesses[3].id, image_url: 'assets/bb2.jpg'},
-  #   {business_id: businesses[3].id, image_url: 'assets/bb3.jpg'},
-  #   {business_id: businesses[3].id, image_url: 'assets/bb4.jpg'},
-  #   {business_id: businesses[4].id, image_url: 'assets/aa1.jpg'},
-  #   {business_id: businesses[4].id, image_url: 'assets/aa2.jpg'},
-  #   {business_id: businesses[4].id, image_url: 'assets/aa3.jpg'},
-  #   {business_id: businesses[4].id, image_url: 'assets/aa4.jpg'}
-  #   ])
+
+    Funny.create!([
+      { review_id: reviews[25].id, user_id: users[1].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[25].id, user_id: users[2].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[25].id, user_id: users[3].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[25].id, user_id: users[4].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[25].id, user_id: users[5].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[25].id, user_id: users[6].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[25].id, user_id: users[7].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[25].id, user_id: users[8].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[25].id, user_id: users[9].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[25].id, user_id: users[10].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[88].id, user_id: users[11].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[88].id, user_id: users[11].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[88].id, user_id: users[12].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[88].id, user_id: users[12].id}
+      ])
+
+
+
+
+    Funny.create!([
+      { review_id: reviews[27].id, user_id: users[1].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[27].id, user_id: users[1].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[86].id, user_id: users[1].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[86].id, user_id: users[2].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[86].id, user_id: users[2].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[86].id, user_id: users[2].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[86].id, user_id: users[3].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[86].id, user_id: users[3].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[86].id, user_id: users[10].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[27].id, user_id: users[9].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[27].id, user_id: users[8].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[27].id, user_id: users[7].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[27].id, user_id: users[6].id}
+      ])
+
+
+
+
+
+    Funny.create!([
+      { review_id: reviews[28].id, user_id: users[1].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[28].id, user_id: users[1].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[28].id, user_id: users[1].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[28].id, user_id: users[2].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[28].id, user_id: users[2].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[28].id, user_id: users[2].id}
+      ])
+
+
+    Funny.create!([
+      { review_id: reviews[28].id, user_id: users[3].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[28].id, user_id: users[3].id}
+      ])
+    Funny.create!([
+      { review_id: reviews[28].id, user_id: users[4].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[28].id, user_id: users[4].id}
+      ])
+
+
+    Funny.create!([
+      { review_id: reviews[28].id, user_id: users[5].id}
+      ])
+
+    Funny.create!([
+      { review_id: reviews[28].id, user_id: users[6].id}
+      ])
+    Cool.create!([
+      { review_id: reviews[28].id, user_id: users[6].id}
+      ])
+    Useful.create!([
+      { review_id: reviews[28].id, user_id: users[6].id}
+      ])
+
+
+Funny.create!([
+{ review_id: reviews[29].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[29].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[29].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[29].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[29].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[29].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[29].id, user_id: users[6].id}
+])
+Useful.create!([
+{ review_id: reviews[29].id, user_id: users[6].id}
+])
+
+Funny.create!([
+{ review_id: reviews[31].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[31].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[31].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[31].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[31].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[31].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[31].id, user_id: users[6].id}
+])
+Useful.create!([
+{ review_id: reviews[31].id, user_id: users[6].id}
+])
+Funny.create!([
+{ review_id: reviews[31].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[31].id, user_id: users[7].id}
+])
+Useful.create!([
+{ review_id: reviews[31].id, user_id: users[7].id}
+])
+Funny.create!([
+{ review_id: reviews[31].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[31].id, user_id: users[8].id}
+])
+Useful.create!([
+{ review_id: reviews[31].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[31].id, user_id: users[8].id}
+])
+Useful.create!([
+{ review_id: reviews[31].id, user_id: users[10].id}
+])
+
+
+
+
+Cool.create!([
+{ review_id: reviews[32].id, user_id: users[6].id}
+])
+Useful.create!([
+{ review_id: reviews[32].id, user_id: users[6].id}
+])
+Funny.create!([
+{ review_id: reviews[32].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[32].id, user_id: users[7].id}
+])
+Useful.create!([
+{ review_id: reviews[32].id, user_id: users[7].id}
+])
+Funny.create!([
+{ review_id: reviews[32].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[32].id, user_id: users[8].id}
+])
+Useful.create!([
+{ review_id: reviews[32].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[32].id, user_id: users[8].id}
+])
+Useful.create!([
+{ review_id: reviews[32].id, user_id: users[10].id}
+])
+
+
+
+Cool.create!([
+{ review_id: reviews[33].id, user_id: users[6].id}
+])
+Useful.create!([
+{ review_id: reviews[33].id, user_id: users[6].id}
+])
+Funny.create!([
+{ review_id: reviews[33].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[33].id, user_id: users[7].id}
+])
+Useful.create!([
+{ review_id: reviews[33].id, user_id: users[7].id}
+])
+Funny.create!([
+{ review_id: reviews[33].id, user_id: users[7].id}
+])
+Useful.create!([
+{ review_id: reviews[33].id, user_id: users[8].id}
+])
+Useful.create!([
+{ review_id: reviews[33].id, user_id: users[10].id}
+])
+Useful.create!([
+{ review_id: reviews[33].id, user_id: users[11].id}
+])
+Useful.create!([
+{ review_id: reviews[33].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[33].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[33].id, user_id: users[3].id}
+])
+
+
+Cool.create!([
+{ review_id: reviews[34].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[34].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[34].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[34].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[34].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[34].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[34].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[34].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[34].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[34].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[34].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[34].id, user_id: users[9].id}
+])
+
+
+
+Cool.create!([
+{ review_id: reviews[36].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[36].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[36].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[36].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[36].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[36].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[36].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[36].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[36].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[36].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[36].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[36].id, user_id: users[9].id}
+])
+
+
+
+Cool.create!([
+{ review_id: reviews[35].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[35].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[35].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[35].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[35].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[35].id, user_id: users[3].id}
+])
+Funny.create!([
+{ review_id: reviews[35].id, user_id: users[4].id}
+])
+Funny.create!([
+{ review_id: reviews[35].id, user_id: users[5].id}
+])
+Funny.create!([
+{ review_id: reviews[35].id, user_id: users[6].id}
+])
+Funny.create!([
+{ review_id: reviews[35].id, user_id: users[7].id}
+])
+Funny.create!([
+{ review_id: reviews[35].id, user_id: users[8].id}
+])
+Funny.create!([
+{ review_id: reviews[35].id, user_id: users[9].id}
+])
+
+
+Cool.create!([
+{ review_id: reviews[44].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[44].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[44].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[44].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[44].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[44].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[44].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[44].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[44].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[44].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[44].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[44].id, user_id: users[9].id}
+])
+
+
+Cool.create!([
+{ review_id: reviews[40].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[40].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[40].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[40].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[40].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[40].id, user_id: users[3].id}
+])
+Funny.create!([
+{ review_id: reviews[40].id, user_id: users[4].id}
+])
+Funny.create!([
+{ review_id: reviews[40].id, user_id: users[5].id}
+])
+Funny.create!([
+{ review_id: reviews[40].id, user_id: users[6].id}
+])
+Funny.create!([
+{ review_id: reviews[40].id, user_id: users[7].id}
+])
+Useful.create!([
+{ review_id: reviews[40].id, user_id: users[8].id}
+])
+Useful.create!([
+{ review_id: reviews[40].id, user_id: users[9].id}
+])
+
+Useful.create!([
+{ review_id: reviews[41].id, user_id: users[8].id}
+])
+Useful.create!([
+{ review_id: reviews[41].id, user_id: users[9].id}
+])
+Useful.create!([
+{ review_id: reviews[41].id, user_id: users[8].id}
+])
+Useful.create!([
+{ review_id: reviews[41].id, user_id: users[9].id}
+])
+
+
+
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[9].id}
+])
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[10].id}
+])
+Useful.create!([
+{ review_id: reviews[42].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[42].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[42].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[42].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[42].id, user_id: users[3].id}
+])
+Funny.create!([
+{ review_id: reviews[42].id, user_id: users[4].id}
+])
+Funny.create!([
+{ review_id: reviews[42].id, user_id: users[5].id}
+])
+Funny.create!([
+{ review_id: reviews[42].id, user_id: users[6].id}
+])
+Funny.create!([
+{ review_id: reviews[42].id, user_id: users[7].id}
+])
+Useful.create!([
+{ review_id: reviews[42].id, user_id: users[8].id}
+])
+Useful.create!([
+{ review_id: reviews[42].id, user_id: users[9].id}
+])
+
+
+
+
+Funny.create!([
+{ review_id: reviews[45].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[45].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[45].id, user_id: users[3].id}
+])
+Funny.create!([
+{ review_id: reviews[45].id, user_id: users[4].id}
+])
+Funny.create!([
+{ review_id: reviews[45].id, user_id: users[5].id}
+])
+Funny.create!([
+{ review_id: reviews[45].id, user_id: users[8].id}
+])
+Funny.create!([
+{ review_id: reviews[45].id, user_id: users[6].id}
+])
+Funny.create!([
+{ review_id: reviews[45].id, user_id: users[7].id}
+])
+
+
+
+Cool.create!([
+{ review_id: reviews[48].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[48].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[48].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[48].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[48].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[48].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[48].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[48].id, user_id: users[7].id}
+])
+
+
+
+Cool.create!([
+{ review_id: reviews[51].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[51].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[51].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[51].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[51].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[51].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[51].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[51].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[51].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[51].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[51].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[51].id, user_id: users[9].id}
+])
+
+
+
+Cool.create!([
+{ review_id: reviews[55].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[55].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[55].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[55].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[55].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[55].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[55].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[55].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[55].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[55].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[55].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[55].id, user_id: users[9].id}
+])
+
+
+Cool.create!([
+{ review_id: reviews[57].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[57].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[57].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[57].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[57].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[57].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[57].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[57].id, user_id: users[7].id}
+])
+
+
+Cool.create!([
+{ review_id: reviews[75].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[75].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[75].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[75].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[75].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[75].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[75].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[75].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[75].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[75].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[75].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[75].id, user_id: users[9].id}
+])
+
+
+Cool.create!([
+{ review_id: reviews[65].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[65].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[65].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[65].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[65].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[65].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[65].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[65].id, user_id: users[7].id}
+])
+
+
+
+Cool.create!([
+{ review_id: reviews[82].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[82].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[82].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[82].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[82].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[82].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[82].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[82].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[82].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[82].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[82].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[82].id, user_id: users[9].id}
+])
+
+
+Cool.create!([
+{ review_id: reviews[92].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[92].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[92].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[92].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[92].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[92].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[92].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[92].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[92].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[92].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[92].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[92].id, user_id: users[9].id}
+])
+
+
+
+
+Cool.create!([
+{ review_id: reviews[102].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[102].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[102].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[102].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[102].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[102].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[102].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[102].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[102].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[102].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[102].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[102].id, user_id: users[9].id}
+])
+
+
+Cool.create!([
+{ review_id: reviews[112].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[112].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[112].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[112].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[112].id, user_id: users[2].id}
+])
+Funny.create!([
+{ review_id: reviews[112].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[112].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[112].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[112].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[112].id, user_id: users[7].id}
+])
+Cool.create!([
+{ review_id: reviews[112].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[112].id, user_id: users[9].id}
+])
+
+Cool.create!([
+{ review_id: reviews[88].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[88].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[88].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[88].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[88].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[88].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[88].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[88].id, user_id: users[7].id}
+])
+
+
+Cool.create!([
+{ review_id: reviews[103].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[103].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[103].id, user_id: users[3].id}
+])
+Cool.create!([
+{ review_id: reviews[103].id, user_id: users[4].id}
+])
+Cool.create!([
+{ review_id: reviews[103].id, user_id: users[5].id}
+])
+Cool.create!([
+{ review_id: reviews[103].id, user_id: users[8].id}
+])
+Cool.create!([
+{ review_id: reviews[103].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[103].id, user_id: users[7].id}
+])
+
+
+Funny.create!([
+  { review_id: reviews[99].id, user_id: users[5].id}
+  ])
+
+Funny.create!([
+  { review_id: reviews[99].id, user_id: users[6].id}
+  ])
+Cool.create!([
+  { review_id: reviews[99].id, user_id: users[6].id}
+  ])
+Useful.create!([
+  { review_id: reviews[99].id, user_id: users[6].id}
+  ])
+
+
+  Cool.create!([
+  { review_id: reviews[69].id, user_id: users[6].id}
+  ])
+  Useful.create!([
+  { review_id: reviews[69].id, user_id: users[6].id}
+  ])
+  Funny.create!([
+  { review_id: reviews[69].id, user_id: users[6].id}
+  ])
+  Cool.create!([
+  { review_id: reviews[69].id, user_id: users[7].id}
+  ])
+  Useful.create!([
+  { review_id: reviews[69].id, user_id: users[7].id}
+  ])
+  Funny.create!([
+  { review_id: reviews[69].id, user_id: users[7].id}
+  ])
+  Useful.create!([
+  { review_id: reviews[69].id, user_id: users[8].id}
+  ])
+  Useful.create!([
+  { review_id: reviews[69].id, user_id: users[10].id}
+  ])
+  Useful.create!([
+  { review_id: reviews[69].id, user_id: users[11].id}
+  ])
+  Useful.create!([
+  { review_id: reviews[69].id, user_id: users[1].id}
+  ])
+  Useful.create!([
+  { review_id: reviews[69].id, user_id: users[2].id}
+  ])
+  Useful.create!([
+  { review_id: reviews[69].id, user_id: users[3].id}
+  ])
+
+
+Cool.create!([
+{ review_id: reviews[119].id, user_id: users[6].id}
+])
+Useful.create!([
+{ review_id: reviews[119].id, user_id: users[6].id}
+])
+Funny.create!([
+{ review_id: reviews[119].id, user_id: users[6].id}
+])
+Cool.create!([
+{ review_id: reviews[119].id, user_id: users[7].id}
+])
+Useful.create!([
+{ review_id: reviews[119].id, user_id: users[7].id}
+])
+Funny.create!([
+{ review_id: reviews[119].id, user_id: users[7].id}
+])
+Useful.create!([
+{ review_id: reviews[119].id, user_id: users[8].id}
+])
+Useful.create!([
+{ review_id: reviews[119].id, user_id: users[10].id}
+])
+Useful.create!([
+{ review_id: reviews[119].id, user_id: users[11].id}
+])
+Useful.create!([
+{ review_id: reviews[119].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[119].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[119].id, user_id: users[3].id}
+])
+
+
+
+
+Funny.create!([
+{ review_id: reviews[116].id, user_id: users[1].id}
+])
+Cool.create!([
+{ review_id: reviews[116].id, user_id: users[1].id}
+])
+Useful.create!([
+{ review_id: reviews[116].id, user_id: users[1].id}
+])
+Funny.create!([
+{ review_id: reviews[116].id, user_id: users[2].id}
+])
+Cool.create!([
+{ review_id: reviews[116].id, user_id: users[2].id}
+])
+Useful.create!([
+{ review_id: reviews[116].id, user_id: users[2].id}
+])
+
+Useful.create!([
+{ review_id: reviews[115].id, user_id: users[2].id}
+])
+
+Useful.create!([
+{ review_id: reviews[115].id, user_id: users[3].id}
+])

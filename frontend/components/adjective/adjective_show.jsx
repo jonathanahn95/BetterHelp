@@ -52,6 +52,7 @@ class AdjectiveShow extends React.Component {
   }
 
   helpfulText() {
+    debugger;
     if (this.props.class === "business-show") {
       return "Was this review ...?";
     }
