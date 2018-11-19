@@ -15,15 +15,17 @@ class BusinessToWriteReview extends React.Component {
   render() {
     const review = this.props.business.reviews;
 
-    let reviewScore = [];
-    review.forEach(review => {
+    let reviewScore = [review[0].rating];
+    review.slice(1).forEach(review => {
       reviewScore.push(review.rating);
     });
 
-    reviewScore =
-      reviewScore.reduce((acc, el) => {
-        return acc + el + 0;
-      }) / review.length;
+    if (reviewScore.length > 0) {
+      reviewScore =
+        reviewScore.reduce((acc, el) => {
+          return acc + el;
+        }) / review.length;
+    }
 
     return (
       <div className="write-review-large-wrapper">

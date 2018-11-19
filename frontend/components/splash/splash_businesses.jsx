@@ -7,14 +7,14 @@ class SplashBusinesses extends React.Component {
   render() {
     let business = this.props.business;
     let numReviews = this.props.business.reviews.length;
-    let reviewScore = [];
-    let reviewCount = this.props.business.reviews.forEach(review => {
+    let reviewScore = [this.props.business.reviews[0].rating];
+    let reviewCount = this.props.business.reviews.slice(1).forEach(review => {
       reviewScore.push(review.rating);
     });
 
     reviewScore =
       reviewScore.reduce((acc, el) => {
-        return acc + el + 0;
+        return acc + el;
       }) / numReviews;
 
     return (
