@@ -11,12 +11,11 @@ class SplashBusinesses extends React.Component {
     let reviewCount = this.props.business.reviews.forEach(review => {
       reviewScore.push(review.rating);
     });
-    if (reviewScore.length > 0) {
-      reviewScore =
-        reviewScore.reduce((acc, el) => {
-          return acc + el;
-        }) / numReviews;
-    }
+
+    reviewScore =
+      reviewScore.reduce((acc, el) => {
+        return acc + el;
+      }) / numReviews;
 
     return (
       <div className="splash-pics-container">

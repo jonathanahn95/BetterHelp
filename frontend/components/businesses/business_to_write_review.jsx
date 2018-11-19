@@ -19,12 +19,11 @@ class BusinessToWriteReview extends React.Component {
     review.forEach(review => {
       reviewScore.push(review.rating);
     });
-    if (reviewScore.length > 0) {
-      reviewScore =
-        reviewScore.reduce((acc, el) => {
-          return acc + el;
-        }) / this.props.reviews.length;
-    }
+
+    reviewScore =
+      reviewScore.reduce((acc, el) => {
+        return acc + el;
+      }) / review.length;
 
     return (
       <div className="write-review-large-wrapper">
