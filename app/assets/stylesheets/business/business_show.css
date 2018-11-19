@@ -113,7 +113,7 @@ bus-show-pics {
   font-size: 22px;
   font-family: sans-serif;
   padding-bottom: 15px;
-  width: 46.4%;
+  width: 45%;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -166,7 +166,7 @@ bus-show-pics {
   flex-direction: column;
   width: 87%;
   align-items: flex-end;
-  padding-right: 60px;
+  /* padding-right: 60px; */
   border-right: 1px solid #e6e6e6;
 }
 .header-hours {
@@ -192,7 +192,7 @@ bus-show-pics {
 
 .business-show-container {
   width: 48%;
-  padding-left: 18px;
+  margin-left: 18px;
 }
 
 #show-map-container {
@@ -206,7 +206,7 @@ bus-show-pics {
 .business-hours {
   list-style: none;
   font-size: 14px;
-  width: 83%;
+  width: 38%;
 }
 
 .business-hours li {
@@ -214,7 +214,6 @@ bus-show-pics {
   display: flex;
   justify-content: space-between;
   padding: 5px;
-  width: 42%;
 }
 
 .bus-info {
@@ -392,6 +391,7 @@ bus-show-pics {
 .today-hour {
   font-weight: 700;
   font-size: 13.5px;
+  width: 100%;
 }
 
 .range-type {
