@@ -74,7 +74,6 @@ class SignUpForm extends React.Component {
     //     return {error};
     // });
     const header = this.props.formType;
-    console.log(this.props.errors);
 
     return (
       <div>

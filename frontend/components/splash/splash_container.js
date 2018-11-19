@@ -1,11 +1,11 @@
-import { connect } from 'react-redux';
-import { logout } from  '../../actions/sessions_actions';
-import { requestAllBusinesses } from '../../actions/businesses_actions';
-import { fetchAllUnrelatedReviews } from '../../actions/reviews_actions';
-import { requestAllBusinessCategories } from '../../actions/business_category_actions';
-import Splash from './splash';
+import { connect } from "react-redux";
+import { logout } from "../../actions/sessions_actions";
+import { requestAllBusinesses } from "../../actions/businesses_actions";
+import { fetchAllUnrelatedReviews } from "../../actions/reviews_actions";
+import { requestAllBusinessCategories } from "../../actions/business_category_actions";
+import Splash from "./splash";
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     currentUser: state.entities.users[state.session.id],
     businesses: Object.values(state.entities.businesses),
@@ -19,8 +19,11 @@ const mapDispatchToPros = dispatch => {
     logout: () => dispatch(logout()),
     fetchAllUnrelatedReviews: () => dispatch(fetchAllUnrelatedReviews()),
     requestAllBusinesses: () => dispatch(requestAllBusinesses()),
-    requestAllBusinessCategories: () => dispatch(requestAllBusinessCategories()),
+    requestAllBusinessCategories: () => dispatch(requestAllBusinessCategories())
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToPros)(Splash);
+export default connect(
+  mapStateToProps,
+  mapDispatchToPros
+)(Splash);

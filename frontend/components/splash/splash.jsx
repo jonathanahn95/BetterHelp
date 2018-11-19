@@ -1,4 +1,5 @@
 import React from "react";
+``;
 import { Link } from "react-router-dom";
 import BusinessCategoryIndexContainer from "../business_category/business_category_index_container";
 import SearchFormContainer from "../search/search_form_container";
@@ -44,13 +45,13 @@ class Splash extends React.Component {
     } else {
       businessCategories = <div />;
     }
-    if (this.props.reviews) {
+    if (this.props.reviews.length > 0) {
       reviews = this.props.reviews
         .reverse()
         .slice(0, 9)
-        .map(review => (
+        .map((review, idx) => (
           <SplashReviews
-            key={review.id}
+            key={idx}
             review={review}
             currentUser={this.props.currentUser}
             history={this.props.history}

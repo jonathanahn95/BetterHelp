@@ -19,6 +19,7 @@ class SplashReviews extends React.Component {
     let a = [this.props.review].map(review => {
       return (
         <AdjectiveShow
+          key={review.id}
           review={this.props.review}
           currentUser={this.props.currentUser}
           class="splash"

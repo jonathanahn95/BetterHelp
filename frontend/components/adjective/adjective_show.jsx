@@ -78,7 +78,6 @@ class AdjectiveShow extends React.Component {
 
   toggleFunny() {
     if (!this.props.currentUser) {
-      debugger;
       this.props.history.push(`/login`);
     } else {
       this.props.updateFunny(this.adjectiveInfo);
