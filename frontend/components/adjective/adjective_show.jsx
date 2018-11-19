@@ -129,7 +129,7 @@ class AdjectiveShow extends React.Component {
     let coolCount;
     if (cool && cool[reviewId] && cool[reviewId].cool_count === 1) {
       coolCount = (
-        <li
+        <div
           onClick={this.toggleCool}
           className={`${this.props.class}-toggle-adjective-li`}
         >
@@ -144,11 +144,11 @@ class AdjectiveShow extends React.Component {
           <li className={`${this.props.class}-attribute-count`}>
             {cool[reviewId].cools.length}
           </li>
-        </li>
+        </div>
       );
     } else if (cool && cool[reviewId] && cool[reviewId].cool_count === 0) {
       coolCount = (
-        <li
+        <div
           onClick={this.toggleCool}
           className={`${this.props.class}-adjective-li`}
         >
@@ -159,14 +159,14 @@ class AdjectiveShow extends React.Component {
           <li className={`${this.props.class}-attribute-count`}>
             {cool[reviewId].cools.length}
           </li>
-        </li>
+        </div>
       );
     }
 
     let funnyCount;
     if (funny && funny[reviewId] && funny[reviewId].funny_count === 1) {
       funnyCount = (
-        <li
+        <div
           onClick={this.toggleFunny}
           className={`${this.props.class}-toggle-adjective-li`}
         >
@@ -181,11 +181,11 @@ class AdjectiveShow extends React.Component {
           <li className={`${this.props.class}-attribute-count`}>
             {funny[reviewId].funny.length}
           </li>
-        </li>
+        </div>
       );
     } else if (funny && funny[reviewId] && funny[reviewId].funny_count === 0) {
       funnyCount = (
-        <li
+        <div
           onClick={this.toggleFunny}
           className={`${this.props.class}-adjective-li`}
         >
@@ -196,14 +196,14 @@ class AdjectiveShow extends React.Component {
           <li className={`${this.props.class}-attribute-count`}>
             {funny[reviewId].funny.length}
           </li>
-        </li>
+        </div>
       );
     }
 
     let usefulCount;
     if (useful && useful[reviewId] && useful[reviewId].useful_count === 1) {
       usefulCount = (
-        <li
+        <div
           className={`${this.props.class}-toggle-adjective-li`}
           onClick={this.toggleUseful}
         >
@@ -218,7 +218,7 @@ class AdjectiveShow extends React.Component {
           <li className={`${this.props.class}-attribute-count`}>
             {useful[reviewId].useful.length}
           </li>
-        </li>
+        </div>
       );
     } else if (
       useful &&

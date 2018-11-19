@@ -1,7 +1,7 @@
 class Api::BusinessesController < ApplicationController
   def show
     @business = Business.includes(:reviews).with_attached_photos.find(params[:id])
-    @reviews = @business.reviews.includes(:user).includes(:business)
+    @reviews = @business.reviews.includes(:user).includes(:business).order(created_at: :desc)
   end
 
   def index

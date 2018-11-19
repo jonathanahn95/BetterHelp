@@ -18,6 +18,7 @@ class BusinessShow extends React.Component {
   componentDidMount() {
     this.props.requestSingleBusiness(this.props.match.params.businessId);
     this.props.requestAllBusinessCategories();
+    this.props.fetchAllUsers();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -88,16 +89,24 @@ class BusinessShow extends React.Component {
 
   reviewsArr() {
     let reviewsArr = null;
-
-    if (this.props.reviews.length > 0) {
+    if (
+      this.props.reviews.length > 0 &&
+      Object.keys(this.props.users).length > 1
+    ) {
+      debugger;
       reviewsArr = this.props.reviews.map((review, idx) => {
+        debugger;
         return (
           <div key={review.id} className="revi-wrapper">
             <div className="user-name">
               <img className="prof-pic" src={window.profPic} />
 
-              <li className="fname1">{review.user ? review.user.fname : ""}</li>
-              <li className="lname1">{review.user ? review.user.lname : ""}</li>
+              <li className="fname1">
+                {this.props.users[review.user_id].fname}
+              </li>
+              <li className="lname1">
+                {this.props.users[review.user_id].lname}
+              </li>
             </div>
             <div className="reviews-container">
               <div className="rating-created-at">

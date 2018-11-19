@@ -7,9 +7,9 @@ class Api::ReviewsController < ApplicationController
 
   def index
     if params[:business_id]
-      @reviews = Review.includes(:user).includes(:business).where( business_id: params[:business_id])
+      @reviews = Review.includes(:user).includes(:business).where( business_id: params[:business_id]).order(created_at: :desc)
     else
-      @reviews = Review.includes(:user).includes(:business).all
+      @reviews = Review.includes(:user).includes(:business).all.order(created_at: :desc)
     end
   end
 

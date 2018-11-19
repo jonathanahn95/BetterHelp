@@ -1,5 +1,9 @@
 class Api::UsersController < ApplicationController
 
+  def index
+    @users = User.all
+  end
+
   def create
     @user = User.new(user_params)
     unless user_params["birthday"]["month"].length == 0 || user_params["birthday"]["year"].length == 0|| user_params["birthday"]["day"].length == 0

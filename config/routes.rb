@@ -16,7 +16,7 @@ Rails.application.routes.draw do
     get 'adjectives/funny/:id', to: 'adjectives#show_funny'
     get 'adjectives/useful/:id', to: 'adjectives#show_useful'
 
-    resources :users, only: [:create, :show]
+    resources :users, only: [:create, :show, :index]
     resource :session, only: [:create, :destroy]
     resources :businesses, only: [:index, :create, :show] do
       resources :reviews, only: [:create, :index]

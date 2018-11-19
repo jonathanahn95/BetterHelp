@@ -4,7 +4,7 @@ import BusinessShow from "./business_show";
 import { requestSingleBusiness } from "../../actions/businesses_actions";
 import { deleteReview, updateReview } from "../../actions/reviews_actions";
 import { requestAllBusinessCategories } from "../../actions/business_category_actions";
-import { fetchCurrentUser } from "../../actions/sessions_actions";
+import { fetchAllUsers } from "../../actions/sessions_actions";
 
 const msp = (state, ownProps) => {
   const fetchedBusiness =
@@ -13,8 +13,8 @@ const msp = (state, ownProps) => {
   if (fetchedBusiness) {
     reviews = fetchedBusiness.reviews;
   }
-
   return {
+    users: state.entities.users,
     business: fetchedBusiness,
     reviews: reviews,
     currentUser: state.entities.users[state.session.id],
@@ -30,7 +30,7 @@ const mdp = dispatch => {
     deleteReview: id => dispatch(deleteReview(id)),
     requestAllBusinessCategories: () =>
       dispatch(requestAllBusinessCategories()),
-    fetchCurrentUser: userId => dispatch(fetchCurrentUser(userId))
+    fetchAllUsers: userId => dispatch(fetchAllUsers(userId))
   };
 };
 
