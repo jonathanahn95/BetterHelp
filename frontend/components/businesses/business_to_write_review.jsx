@@ -15,8 +15,8 @@ class BusinessToWriteReview extends React.Component {
   render() {
     const review = this.props.business.reviews;
 
-    let reviewScore = [review[0].rating];
-    review.slice(1).forEach(review => {
+    let reviewScore = [0];
+    review.forEach(review => {
       reviewScore.push(review.rating);
     });
 

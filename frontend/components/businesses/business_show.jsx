@@ -140,8 +140,8 @@ class BusinessShow extends React.Component {
     }
 
     //// reverse mutattes array so orderby in backend.
-    let reviewScore = [this.props.reviews[0].rating];
-    const reviewAvg = this.props.reviews.slice(1).forEach(review => {
+    let reviewScore = [0];
+    const reviewAvg = this.props.reviews.forEach(review => {
       reviewScore.push(review.rating);
     });
 

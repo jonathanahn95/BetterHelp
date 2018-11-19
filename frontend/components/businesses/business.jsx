@@ -17,8 +17,8 @@ class Business extends React.Component {
     const reviewCount = review ? review.length : 0;
     const reviewBody = reviewCount > 0 && review ? review[0].body : "";
 
-    let reviewScore = [review[0].rating];
-    review.slice(1).forEach(review => {
+    let reviewScore = [0];
+    review.forEach(review => {
       reviewScore.push(review.rating);
     });
 
