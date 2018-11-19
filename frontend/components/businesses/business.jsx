@@ -24,7 +24,7 @@ class Business extends React.Component {
 
     reviewScore =
       reviewScore.reduce((acc, el) => {
-        return acc + el;
+        return acc + el + 0;
       }) / review.length;
 
     return (

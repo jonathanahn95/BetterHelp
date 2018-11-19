@@ -147,8 +147,8 @@ class BusinessShow extends React.Component {
 
     reviewScore =
       reviewScore.reduce((acc, el) => {
-        return acc + el;
-      }) / business.reviews.length;
+        return acc + el + 0;
+      }) / this.props.reviews.length;
 
     const busPhotos = this.props.business.photos;
 

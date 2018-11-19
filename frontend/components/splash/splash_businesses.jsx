@@ -14,7 +14,7 @@ class SplashBusinesses extends React.Component {
 
     reviewScore =
       reviewScore.reduce((acc, el) => {
-        return acc + el;
+        return acc + el + 0;
       }) / numReviews;
 
     return (
