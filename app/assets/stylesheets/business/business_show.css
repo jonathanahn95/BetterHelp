@@ -166,7 +166,6 @@ bus-show-pics {
   flex-direction: column;
   width: 87%;
   align-items: flex-end;
-  /* padding-right: 60px; */
   border-right: 1px solid #e6e6e6;
 }
 .header-hours {

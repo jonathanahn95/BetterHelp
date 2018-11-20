@@ -323,12 +323,14 @@
 
 .recent-businesses {
   font-weight: 700;
-  margin-bottom: 6px;
   font-size: 21px;
   line-height: 1.28571em;
   color: #d32323;
-  font-family: Arial;
-  margin: 40px 0 20px 280px;
+  display: flex;
+  font-family: sans-serif;
+  justify-content: flex-end;
+  width: 44%;
+  margin: 40px 0 20px;
 }
 
 .search-pic-write-review-search {
