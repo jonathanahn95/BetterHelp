@@ -628,6 +628,7 @@
   padding-right: 60px;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .top-category-results1 {
@@ -641,18 +642,16 @@
 
 .top-category-results {
   display: flex;
-  margin-left: 231px;
   color: #333;
   justify-content: space-between;
-  width: 69.5%;
+  width: 67.5%;
   align-items: center;
 }
 
 .top-results-wrapper3 {
   display: flex;
-  width: 85%;
+  width: 75%;
   justify-content: space-evenly;
-  margin-left: 120px;
   font-family: sans-serif;
   font-size: 15px;
 }
@@ -663,7 +662,7 @@
 
 .top-wrapper3-sec-2 {
   display: flex;
-  width: 33%;
+  width: 47%;
   justify-content: space-around;
 }
 
