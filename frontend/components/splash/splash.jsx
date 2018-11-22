@@ -48,7 +48,6 @@ class Splash extends React.Component {
     if (this.props.reviews.length > 0) {
       reviews = this.props.reviews
         .reverse()
-        .slice(0, 9)
         .map((review, idx) => (
           <SplashReviews
             key={idx}

@@ -55,6 +55,9 @@
 .drop-down-div {
   padding: 20px;
 }
+.drop-down-div:hover {
+  background-color: #0073bb;
+}
 
 .find-sear-container {
   padding: 13px 13px 0;
