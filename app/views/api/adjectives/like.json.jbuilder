@@ -7,12 +7,15 @@ json.adjectives do
     end
   end
 
+  json.funny do
+
+  end
+
   json.cool do
+
   end
 
   json.useful do
-  end
-  json.funny do
-  end
 
+  end
 end
