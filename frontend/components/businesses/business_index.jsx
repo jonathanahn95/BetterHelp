@@ -132,5 +132,3 @@ class BusinessIndex extends React.Component {
 }
 
 export default withRouter(BusinessIndex);
-
-// <Route path="" component={bic} render(()=>{}</Route>)

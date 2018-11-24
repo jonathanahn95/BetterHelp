@@ -23,17 +23,6 @@ class Businesses extends React.Component {
     this.props.requestAllBusinessCategories();
   }
 
-  // componentDidUpdate(previousProps,nextState) {
-  //   // gets hit anytime comp receive new props/new state
-  //   // works same as componentWillReceiveProps
-  //   if (this.state !== nextState){
-  //     this.props.searchBusinesses(nextState);
-  //   }
-  //   if (previousProps.category !== this.props.category){
-  //     this.props.requestSelectedBusinessCategories(this.props.category);
-  //   }
-  // }
-
   componentWillUpdate(nextProps, nextState) {
     if (this.state !== nextState) {
       this.props.searchBusinesses(this.generateQuery(nextState));

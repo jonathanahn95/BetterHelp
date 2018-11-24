@@ -4,14 +4,6 @@ import { Link } from "react-router-dom";
 import ReactStars from "react-stars";
 
 class Business extends React.Component {
-  // <Link to="/"><img className="small-brand-name" src={window.betterHelpSplash}></img></Link>
-
-  // componentWillReceiveProps(nextProps) {
-  //    if (this.props.match.params.businessId !== nextProps.match.params.businessId) {
-  //      this.props.requestSingleBusiness(nextProps.match.params.businessId);
-  //    }
-  //  }
-
   render() {
     const review = this.props.business.reviews;
     const reviewCount = review ? review.length : 0;
