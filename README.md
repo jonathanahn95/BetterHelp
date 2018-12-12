@@ -14,7 +14,7 @@ BetterHelp is a single-page web application inspired by Yelp. It is a local-sear
 
 
 ### Mark reviews as funny, cool, useful, and like
-BetterHelp uses single table inhertiance to keep code DRY. There is a column `type` on the `adjectives` table which allows creating new class models that inherit from `Adjective`. 
+BetterHelp uses single table inhertiance to keep code DRY. There is a column `type` on the `adjectives` table which allows creating new class models that inherit from `Adjective` giving the child classes access to the parent class. 
 
 ```ruby 
 class Cool < Adjective
@@ -28,7 +28,6 @@ class Cool < Adjective
 
 end
 ```
-
 
 ### Reviews
 Users are able to create, read, update, and delete reviews they have written for relevant businesses. Once a user writes a review, the review is then saved in the database with the `user_id`.
